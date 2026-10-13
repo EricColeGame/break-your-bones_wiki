@@ -1,0 +1,143 @@
+export const metadata = {
+  title: "Glitches de Break Your Bones: Mecânicas, Peculiaridades da Física e Como Usá-las",
+  description: "Um guia prático sobre os glitches de Break your Bones: por que as peculiaridades da física acontecem, quais os jogadores mais relatam e como testá-las sem perder progresso.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+Jogos de ragdoll vivem e morrem pelo seu caos, e *Break Your Bones* não é exceção. Se você já viu seu personagem se dobrar em uma forma fisicamente impossível, você já esbarrou no estranho mundo dos **glitches de Break your Bones**. Entendê-los importa porque as mesmas peculiaridades da física que lançam seu ragdoll em órbita também podem travar seu contador de ossos, congelar a compra de uma melhoria ou apagar uma run bem na véspera de um marco. Este guia detalha as mecânicas que produzem os **glitches de Break your Bones**, quais a comunidade relata com mais frequência e como testá-los sem arriscar seu progresso.
+
+## Por que jogos baseados em física apresentam glitches tão facilmente
+
+*Break Your Bones* é construído em um loop simples: você arremessa, deixa cair e esmaga seu ragdoll para acumular ossos, depois gasta essa moeda em melhorias que permitem sobreviver a quedas maiores. A diversão vem do fato de que quase nada no personagem é pré-programado. Membros, articulações e impulso são todos calculados em tempo real.
+
+Essa escolha de design é exatamente o motivo pelo qual os glitches são tão comuns. Quando dezenas de partes de física colidem em alta velocidade, a engine ocasionalmente resolve a colisão de forma incorreta. O resultado pode ser uma comédia inofensiva — uma perna que dobra para trás, um corpo que vibra contra uma parede — ou algo que realmente afeta sua run, como um ragdoll que nunca é registrado como "aterrissado" e, portanto, nunca paga recompensa.
+
+Relatos da comunidade sugerem que a frequência desses problemas aumenta bastante quando mais objetos estão ativos ao mesmo tempo, e é por isso que servidores cheios tendem a parecer mais instáveis do que servidores vazios.
+
+### Os três ingredientes de quase todo glitch
+
+A maioria dos problemas relatados remonta a uma de três causas principais:
+
+- **Acúmulo de colisões** — partes de física demais sobrepostas em um espaço pequeno.
+- **Dessincronização de rede** — seu cliente e o servidor discordam sobre onde seu ragdoll realmente está.
+- **Conflitos de tempo** — uma melhoria, respawn ou pagamento é acionado no mesmo frame que um evento de física.
+
+Entender em qual categoria um bug se encaixa diz se ele é um truque divertido que vale repetir ou um risco que vale evitar.
+
+## Mecânicas centrais que interagem com glitches
+
+Antes de correr atrás de qualquer exploit, ajuda saber quais sistemas têm mais chance de estar envolvidos. A tabela abaixo relaciona as principais mecânicas ao tipo de comportamento de glitch que os jogadores costumam ver.
+
+| Mecânica | O que ela faz | Interação típica com glitches |
+|---|---|---|
+| Física de ragdoll | Simula membros e articulações em tempo real | Estiramento de membros, clipping, quique infinito |
+| Contador de ossos | Rastreia a moeda ganha com impactos | Pagamentos atrasados, contagem dupla, totais congelados |
+| Loja de melhorias | Gasta ossos em poder e durabilidade | Compra não registrada, cobranças duplicadas |
+| Sistema de respawn | Reinicia seu personagem após uma "morte" | Personagem preso no limbo, colisões fantasma |
+| Replicação do servidor | Sincroniza seu estado com outros jogadores | Rubber-banding, teletransporte de volta ao spawn |
+| Rankings | Classifica jogadores por ossos ganhos | Estatísticas que ficam atrás do seu total real |
+
+Se o seu problema envolve o contador de ossos ou a loja, trate-o como um problema de progressão e pare imediatamente. Se envolve apenas posições dos membros, é quase certamente cosmético.
+
+## Os glitches de Break Your Bones mais relatados
+
+A lista abaixo reflete padrões que aparecem repetidamente na experiência dos jogadores e em relatos da comunidade. A confiabilidade varia conforme a plataforma e a carga do servidor, então trate cada item como "às vezes acontece", e não como um truque garantido.
+
+| Glitch relatado | O que os jogadores descrevem | Confiabilidade | Nível de risco |
+|---|---|---|---|
+| Quique infinito | O ragdoll continua quicando em uma superfície e nunca para | Moderada | Baixo |
+| Atraso no pagamento de ossos | O contador atualiza vários segundos após o impacto | Alta | Baixo |
+| Glitch de estiramento | Membros se estendem muito além do alcance normal | Alta | Baixo |
+| Atravessar parede | O personagem passa parcialmente por geometria fina | Moderada | Médio |
+| Respawn preso | O novo personagem surge dentro de dados de colisão antigos | Baixa | Alto |
+| Compra dupla | Melhoria comprada duas vezes com um clique | Baixa | Alto |
+
+O padrão aqui vale a pena observar: os glitches divertidos de assistir geralmente são os que têm o menor impacto na sua conta, enquanto os que parecem entediantes — um contador atrasado, uma compra que não é registrada — são os que realmente custam seu tempo.
+
+### Por que os glitches "divertidos" geralmente são seguros
+
+Um membro esticado ou um quique infinito é um artefato visual do lado do cliente. O servidor ainda sabe aproximadamente onde seu personagem está, então seu total de ossos e suas melhorias permanecem intactos. São esses os glitches que valem a pena testar, porque o pior resultado possível é uma captura de tela estranha.
+
+### Por que os glitches "entediantes" exigem cautela
+
+Quando o contador de ossos ou a loja se comporta de forma estranha, você está diante de uma dessincronização entre o que vê e o que o servidor registrou. Clicar na loja de novo para "consertar" isso pode resultar em uma cobrança duplicada ou em uma compra que nunca é concluída. Nesses momentos, paciência é genuinamente a melhor estratégia.
+
+## Como testar um glitch sem perder progresso
+
+Se você quer experimentar, faça isso de forma controlada. A rotina a seguir é baseada nas melhores práticas da comunidade e em hábitos gerais de segurança em multiplayer.
+
+| Passo | Ação | Por que ajuda |
+|---|---|---|
+| 1 | Entrar em um servidor com pouca população | Menos objetos de física significa menos variáveis |
+| 2 | Anotar seu total atual de ossos | Dá uma base de comparação |
+| 3 | Reproduzir a configuração duas vezes | Um sucesso pode ser sorte; dois sugerem um padrão |
+| 4 | Verificar seu contador após cada tentativa | Confirma se o servidor registrou algo |
+| 5 | Sair e entrar novamente | Verifica se o efeito persiste ou era visual |
+| 6 | Parar se o progresso parecer errado | Evita agravar um problema de dessincronização |
+
+Seguir essa sequência transforma a experimentação aleatória em algo mais próximo de um teste repetível. Também protege você do pior resultado, que não é um ragdoll quebrado, mas um estado de save corrompido.
+
+## Glitch versus mecânica intencional: como diferenciá-los
+
+Nem tudo que parece estranho é um bug. Alguns dos comportamentos de ragdoll mais dramáticos são exatamente o que os desenvolvedores pretendiam, e confundir design com defeito leva a muito esforço desperdiçado.
+
+| Comportamento | Parece um glitch? | Na verdade é intencional? |
+|---|---|---|
+| Ragdoll voando pelo mapa após um golpe forte | Sim | Muitas vezes sim — essa é a recompensa |
+| Membros dobrando em ângulos impossíveis | Sim | Geralmente uma peculiaridade genuína da física |
+| Ossos concedidos por uma batida espetacular | Não | Loop de recompensa intencional |
+| Personagem sobrevivendo a uma queda que não deveria | Sim | Muitas vezes uma melhoria de durabilidade intencional |
+| Botão da loja não fazendo nada | Sim | Geralmente um problema real de dessincronização |
+
+Uma regra útil: se o comportamento recompensa você com mais ossos ou um espetáculo maior, provavelmente faz parte do design. Se bloqueia uma ação pela qual você já pagou, provavelmente é um glitch.
+
+## Reduzindo o lag para que menos glitches aconteçam
+
+Grande parte das anomalias de física são problemas de desempenho disfarçados. Quando a taxa de quadros cai, a simulação dá passos maiores entre os cálculos, e as colisões são resolvidas de forma mais grosseira. Ajustar melhor sua configuração reduz a frequência com que isso acontece.
+
+- **Reduza as configurações gráficas** se seu dispositivo sofrer durante grandes batidas.
+- **Feche aplicativos em segundo plano** no PC, especialmente qualquer um que use muito a rede.
+- **Prefira uma conexão com fio** se você joga em um desktop; picos de Wi-Fi causam dessincronização.
+- **Evite servidores lotados** quando estiver testando qualquer coisa.
+- **Reinicie o cliente do jogo** entre sessões longas para limpar o estado de física acumulado.
+
+Nenhuma dessas medidas eliminará totalmente os **glitches de Break your Bones**, porque eles fazem parte de como a simulação de física funciona. Mas elas reduzem a frequência de forma confiável, e isso torna suas runs mais previsíveis. Para ter uma ideia geral de como a plataforma lida com física em tempo real em diferentes dispositivos, o [site oficial da Roblox](https://www.roblox.com/) é uma referência útil.
+
+### Diferenças entre plataformas que vale a pena conhecer
+
+Jogadores de celular relatam mais artefatos visuais e mais rubber-banding do que jogadores de PC, em grande parte por causa das taxas de quadros variáveis e do timing de entrada por toque. Sessões de console e PC tendem a ser mais estáveis, mas ainda mostram as mesmas categorias de bugs. Se você está atrás de um **glitch específico de Break your Bones**, teste-o na plataforma em que você realmente joga, em vez de presumir que um clipe de vídeo vai se reproduzir de forma idêntica para você.
+
+## O que fazer quando um glitch quebra sua run
+
+Se algo der errado no meio da sessão, resista à vontade de continuar jogando. O erro mais comum é tentar "forçar a barra" diante de uma dessincronização, o que muitas vezes piora o estado registrado.
+
+1. Pare de interagir com a loja ou os menus de melhoria.
+2. Anote seu total de ossos e a última melhoria que comprou.
+3. Saia do servidor e entre novamente.
+4. Compare seus totais com o que você se lembra.
+5. Se faltar progresso, reporte pelo canal oficial de suporte do jogo, e não em um fórum de fãs.
+
+A maioria dos problemas de pagamento atrasado se resolve sozinha após entrar novamente. Perdas persistentes são as que valem a pena reportar, e anotações claras tornam esse relato muito mais útil.
+
+## Perguntas frequentes
+
+**Os glitches de Break your Bones podem levar a banimento?**
+
+A grande maioria não pode, porque são comportamentos de física não intencionais, e não exploits deliberados. No entanto, abusar intencionalmente de um bug que duplica moeda ou melhorias pode se enquadrar nas regras do jogo contra exploração. Se um glitch dá algo de graça, trate-o como arriscado, e não como esperto.
+
+**Por que os glitches acontecem com mais frequência em servidores cheios?**
+
+Mais ragdolls ativos significam mais cálculos de física simultâneos. Quando a simulação não consegue acompanhar, as colisões são resolvidas com menos precisão, o que produz o clipping, o estiramento e o quique que os jogadores mais relatam.
+
+**Posso consertar um contador de ossos congelado?**
+
+Normalmente, sim. Sair do servidor e entrar novamente resolve a maioria dos problemas de pagamento atrasado, já que o cliente se ressincroniza com o servidor ao carregar. Se o total ainda estiver errado após entrar novamente, é aí que faz sentido abrir um chamado no suporte.
+
+**Os glitches funcionam da mesma forma em todas as plataformas?**
+
+Não. Sessões em celular tendem a mostrar mais artefatos visuais por causa da variação na taxa de quadros, enquanto sessões de PC e console geralmente são mais estáveis. Quaisquer **glitches de Break your Bones** que você veja em um vídeo podem se comportar de maneira diferente no seu dispositivo.
+
+## Considerações finais
+
+Glitches em um jogo de ragdoll não são realmente um defeito a ser eliminado — são um efeito colateral do caos que torna o jogo divertido. A abordagem inteligente é separar o inofensivo do prejudicial: aproveite o estiramento, o quique e as aterrissagens impossíveis, mas tenha cautela com qualquer coisa que mexa na sua contagem de ossos ou nas suas melhorias. Teste em servidores tranquilos, mantenha anotações, entre novamente quando algo parecer errado e você terá a diversão sem o progresso perdido.

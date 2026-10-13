@@ -1,0 +1,128 @@
+export const metadata = {
+  title: "Break your Bones Playhop: Guía del juego de física ragdoll, consejos y trucos",
+  description: "Aprende cómo funciona Break your Bones Playhop, cómo se calculan el daño y la puntuación, además de consejos, notas sobre dispositivos y respuestas a preguntas frecuentes de jugadores.",
+  category: "platforms",
+  date: "2026-10-13",
+}
+
+Pocos juegos de navegador convierten el fracaso en el objetivo principal, pero Break your Bones Playhop hace exactamente eso. Es un juego de ragdoll impulsado por la física en el que lanzas a un desafortunado personaje de dibujos animados contra peligros del entorno y ganas puntos por el daño que la simulación decide repartir. Si alguna vez te has preguntado por qué un juego con un solo botón y un solo objetivo mantiene a los jugadores pulsando "reintentar" durante una hora seguida, la respuesta está en la física, y en un sistema de puntuación más profundo de lo que parece a primera vista.
+
+Break your Bones Playhop pertenece a la misma familia que los clásicos juegos sandbox de ragdoll, pero elimina los menús y la complejidad. Lo que queda es pura causa y efecto: apuntas, sueltas y el motor te dice qué se ha roto.
+
+## ¿Qué es Break your Bones Playhop?
+
+Break your Bones Playhop es un juego de ragdoll gratuito y basado en navegador alojado en Playhop, una plataforma construida en torno a títulos HTML5 de partida instantánea. Controlas a un personaje de dibujos animados flácido, lo lanzas contra el entorno y acumulas puntos según las lesiones que el motor de física calcula al impactar. No hay instalador, ni tutorial largo, y normalmente tampoco hace falta una cuenta: abres la página y estás jugando en cuestión de segundos.
+
+El tono importa aquí. A pesar del título, el juego se apoya en la comedia de golpes y caídas más que en algo gráfico. Las extremidades se doblan en ángulos imposibles, el personaje rebota contra las superficies como un muñeco de goma y el informe de daños se lee como un efecto de sonido de dibujos animados. Eso es una gran parte de por qué atrae a un público tan amplio.
+
+| Característica | Qué esperar |
+|---|---|
+| Plataforma | Playhop (basada en navegador) |
+| Género | Física ragdoll / arcade |
+| Coste | Gratis |
+| Descarga necesaria | No: se ejecuta en el navegador |
+| Cuenta necesaria | Normalmente no |
+| Duración de sesión | Aproximadamente 1–5 minutos por partida |
+| Tono | Comedia de golpes y caídas |
+| Ideal para | Descansos rápidos y perseguir puntuaciones |
+
+Como todo se ejecuta en el navegador, el juego funciona en teléfonos, tabletas y ordenadores de escritorio sin ninguna versión específica por plataforma. Esa accesibilidad es una razón importante por la que el título sigue apareciendo en búsquedas de "juego rápido".
+
+## Cómo jugar a Break your Bones Playhop: paso a paso
+
+El esquema de control es deliberadamente mínimo. En la mayoría de las versiones usas un único gesto de arrastrar y soltar para establecer tanto el ángulo como la fuerza del lanzamiento, y luego ves cómo se desarrolla la física. Algunas versiones añaden un control de toque para saltar o una flecha en pantalla para afinar la trayectoria.
+
+Este es el bucle estándar:
+
+| Paso | Acción | Qué ocurre |
+|---|---|---|
+| 1 | Abre la página de Playhop del juego | El título se carga directamente en tu navegador |
+| 2 | Espera al indicador de carga | Los recursos de física y los sprites se inicializan |
+| 3 | Lee el mensaje en pantalla | El juego te muestra el control de arrastre/lanzamiento |
+| 4 | Arrastra para apuntar a tu personaje | La dirección y la potencia se establecen con la distancia de arrastre |
+| 5 | Suelta para lanzar | El ragdoll sale por los aires |
+| 6 | Observa la caída | El motor resuelve cada colisión en tiempo real |
+| 7 | Lee el informe de daños | Los puntos se contabilizan según las lesiones |
+| 8 | Toca reintentar | Empieza una nueva partida de inmediato |
+
+Todo el ciclo dura segundos, que es exactamente la idea. No hay pantalla de carga entre intentos, ni penalización por fallar, ni ningún recurso que puedas agotar. Ese bucle tan ajustado es lo que convierte una curiosidad de dos minutos en una sesión de treinta minutos.
+
+Merece la pena señalar una cosa: como la física se simula en lugar de estar programada, los lanzamientos idénticos rara vez producen resultados idénticos. Una partida que puntúa bien una vez puede quedarse en nada en el siguiente intento. La experiencia de los jugadores apunta de forma consistente a esta variabilidad como el gancho principal del juego: siempre estás buscando un rebote un poco mejor.
+
+## Explicación de los sistemas de daño y puntuación
+
+La puntuación en Break your Bones Playhop se basa en el tipo y la gravedad del daño que sufre el personaje. Los informes de la comunidad describen una jerarquía aproximada que va desde golpes leves en la parte baja hasta impactos catastróficos que rompen varios huesos en la parte alta. Los valores exactos de puntos varían entre versiones, pero el orden suele mantenerse consistente.
+
+| Tipo de daño | Desencadenante típico | Puntos relativos |
+|---|---|---|
+| Moratones y golpes leves | Contacto a baja velocidad con superficies blandas | Bajos |
+| Esguinces y torceduras | Ángulos extraños de las extremidades al aterrizar | De bajos a medios |
+| Fracturas simples | Impacto directo en una sola extremidad | Medios |
+| Fracturas compuestas | Colisiones a alta velocidad con objetos duros | Altos |
+| Roturas de varios huesos | Colisiones en cadena contra varias superficies | Muy altos |
+| Impactos en la cabeza | Caídas que aterrizan directamente sobre la cabeza | Nivel más alto |
+
+De esta estructura se desprenden algunas observaciones prácticas. Primero, la velocidad vence a la precisión: una caída rápida y caótica suele puntuar más que una lenta y controlada porque genera más eventos de colisión. Segundo, encadenar importa más que cualquier golpe aislado. Una partida que hace rebotar al personaje por tres superficies normalmente superará a una que produce un impacto espectacular pero aislado.
+
+### ¿El entorno cambia la puntuación?
+
+Sí, y de forma significativa. Las superficies duras como el hormigón o el metal transfieren más energía que las blandas, así que la misma caída produce resultados distintos según dónde aterrice. Por eso los jugadores experimentados estudian la disposición del nivel antes de lanzar, en lugar de arrastrar de inmediato.
+
+## Consejos y trucos para conseguir puntuaciones más altas
+
+Mejorar en Break your Bones Playhop tiene menos que ver con los reflejos y más con leer el nivel y entender cómo se mueve la energía por un ragdoll. Estos hábitos separan a los que consiguen puntuaciones altas de los jugadores ocasionales.
+
+- **Apunta a superficies duras, no blandas.** La hierba y los acolchados absorben energía; el hormigón y el metal la devuelven.
+- **Piensa en cadenas, no en golpes aislados.** Busca un ángulo de lanzamiento que envíe al personaje contra un segundo y un tercer obstáculo.
+- **Usa toda la distancia de arrastre con moderación.** La fuerza máxima no siempre es el daño máximo: una caída pronunciada y rápida suele superar a un arco largo y plano.
+- **Vigila la zona de aterrizaje, no el punto de lanzamiento.** La mayoría de los puntos se consiguen en el último segundo de una partida.
+- **Repite el mismo ángulo a propósito.** Los pequeños ajustes en una sola variable te enseñan más que lanzar al azar.
+- **Consulta el informe de daños después de cada partida.** Te dice exactamente qué impacto dio resultado.
+
+| Error común | Por qué te cuesta puntos | Mejor enfoque |
+|---|---|---|
+| Lanzar siempre a máxima potencia | Se pasa de largo por completo de los peligros | Ajusta la fuerza a la zona objetivo |
+| Ignorar la disposición del nivel | Pierde oportunidades de colisiones en cadena | Busca primero superficies duras |
+| Apuntar a la cabeza en cada partida | Alta variabilidad, fallos frecuentes | Consigue primero puntuaciones medias consistentes |
+| Ir con prisa al botón de reintentar | Te salta el desglose de daños | Lee el informe y luego ajusta |
+| Cambiar dos variables a la vez | No puedes saber qué funcionó | Ajusta una sola cosa por intento |
+
+Si quieres un punto de referencia que alcanzar, empieza por superar tu propia media en lugar de perseguir un número de la clasificación. La consistencia en este género viene de ángulos repetibles, no de rebotes afortunados.
+
+## Dispositivos, rendimiento y compatibilidad
+
+Como Break your Bones Playhop se ejecuta en HTML5 dentro del navegador, la experiencia es ampliamente consistente entre hardware. Dicho esto, la plataforma que elijas sí cambia cómo se sienten los controles.
+
+| Dispositivo | Sensación de control | Notas de rendimiento |
+|---|---|---|
+| Escritorio / portátil | Arrastrar con el ratón es preciso | Lo mejor para ajustar trayectorias con precisión |
+| Smartphone | Arrastre táctil, cómodo para el pulgar | Ideal para sesiones cortas |
+| Tableta | Mayor rango de arrastre | Apuntado cómodo, más pesada de sostener |
+| Chromebook / portátil de bajo consumo | Ratón o panel táctil | Bien: el juego es ligero |
+| Navegadores antiguos | Pueden dar tirones o no cargar | Actualiza tu navegador primero |
+
+Si el juego va lento, los culpables habituales son demasiadas pestañas abiertas del navegador, una versión desactualizada del navegador o un modo de ahorro de energía que limita el renderizado. Cerrar las pestañas en segundo plano y activar la aceleración por hardware suele resolverlo. Puedes explorar el catálogo completo y confirmar la versión actual en la [plataforma oficial de juegos Playhop](https://playhop.com/), que aloja este título junto a cientos de otros juegos de partida instantánea.
+
+Una nota más sobre compatibilidad: como no hay descarga, puedes empezar una partida en el móvil durante el trayecto y continuarla luego en un portátil. El progreso en juegos arcade como este suele ser por sesión en lugar de guardarse, así que no hay nada que sincronizar, pero tampoco nada que perder.
+
+## Por qué el juego sigue siendo divertido
+
+Si quitamos el motor de física, Break your Bones Playhop es un juego de un solo control con un único objetivo. Lo que lo mantiene interesante es que el resultado nunca es del todo predecible. La simulación en tiempo real significa que la misma entrada puede producir resultados muy distintos, y esa imprevisibilidad es el mismo mecanismo que convirtió a los juegos sandbox de ragdoll en un género desde el principio.
+
+También tiene una cualidad de bajo riesgo que encaja con los juegos de navegador. No gestionas un archivo guardado ni farmeas una moneda. Lanzas un personaje de dibujos animados contra una pared, lees un informe de daños absurdo y lo haces otra vez. Para un descanso de cinco minutos, es un diseño notablemente eficiente.
+
+Por último, el juego recompensa la curiosidad más que la inversión en habilidad. No necesitas memorizar combos ni practicar ventanas de sincronización. Necesitas experimentar, darte cuenta de qué funcionó y volver a intentarlo con un pequeño ajuste. Es una barrera de entrada baja con un techo sorprendentemente alto para los jugadores a los que les gusta optimizar.
+
+## FAQ
+
+**¿Break your Bones Playhop es gratis?**
+Sí. Como la mayoría de los títulos de la plataforma, Break your Bones Playhop es gratis y se juega en el navegador. Normalmente no hay descarga, ni compra, ni cuenta necesaria para empezar una partida.
+
+**¿Necesito descargar algo para jugar?**
+No. El juego se ejecuta directamente en tu navegador usando HTML5, por eso funciona en teléfonos, tabletas, portátiles y Chromebooks sin una app aparte.
+
+**¿Por qué mis puntuaciones varían tanto entre partidas?**
+Porque la física se simula en tiempo real en lugar de estar preprogramada. Diferencias mínimas en el ángulo o la fuerza de lanzamiento pueden enviar al personaje por una ruta de colisiones completamente distinta, lo que cambia el total de daño.
+
+**¿Cuál es la forma más rápida de mejorar mi puntuación?**
+Céntrate en las colisiones en cadena. Un solo impacto grande vale menos que una caída que hace rebotar al personaje por dos o tres superficies duras. Lee el informe de daños después de cada intento y ajusta una variable a la vez.

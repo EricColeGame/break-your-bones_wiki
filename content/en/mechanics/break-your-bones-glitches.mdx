@@ -1,0 +1,143 @@
+export const metadata = {
+  title: "Break Your Bones Glitches: Mechanics, Physics Quirks, and How to Use Them",
+  description: "A practical guide to Break your Bones glitches: why physics quirks happen, which ones players report most, and how to test them without losing progress.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+Ragdoll games live and die by their chaos, and *Break Your Bones* is no exception. If you have ever watched your character fold into a shape that should not be physically possible, you have already bumped into the strange world of **Break your Bones glitches**. Understanding them matters because the same physics quirks that launch your ragdoll into orbit can also stall your bone counter, freeze an upgrade purchase, or wipe a run right before a milestone. This guide breaks down the mechanics that produce **Break your Bones glitches**, which ones the community reports most often, and how to test them without risking your progress.
+
+## Why Physics-Driven Games Glitch So Easily
+
+*Break Your Bones* is built on a simple loop: you throw, drop, and smash your ragdoll to accumulate bones, then spend that currency on upgrades that let you survive bigger falls. The fun comes from the fact that almost nothing about the character is scripted. Limbs, joints, and momentum are all calculated on the fly.
+
+That design choice is exactly why glitches are so common. When dozens of physics parts collide at high speed, the engine occasionally resolves the collision incorrectly. The result can be harmless comedy — a leg that bends backward, a body that vibrates against a wall — or something that actually affects your run, like a ragdoll that never registers as "landed" and therefore never pays out.
+
+Community reports suggest the frequency of these issues rises sharply as more objects are active at once, which is why busy servers tend to feel more unstable than quiet ones.
+
+### The Three Ingredients of Almost Every Glitch
+
+Most reported issues trace back to one of three root causes:
+
+- **Collision stacking** — too many physics parts overlapping in a small space.
+- **Network desync** — your client and the server disagree about where your ragdoll actually is.
+- **Timing conflicts** — an upgrade, respawn, or payout triggers in the same frame as a physics event.
+
+Understanding which category a bug falls into tells you whether it is a fun trick worth repeating or a hazard worth avoiding.
+
+## Core Mechanics That Interact With Glitches
+
+Before chasing any exploit, it helps to know which systems are most likely to be involved. The table below maps the main mechanics to the kind of glitch behavior players typically see.
+
+| Mechanic | What It Does | Typical Glitch Interaction |
+|---|---|---|
+| Ragdoll physics | Simulates limbs and joints in real time | Limb stretching, clipping, infinite bouncing |
+| Bone counter | Tracks currency earned from impacts | Delayed payouts, double-counting, frozen totals |
+| Upgrade shop | Spends bones on power and durability | Purchase not registering, double charges |
+| Respawn system | Resets your character after a "death" | Character stuck in limbo, ghost collisions |
+| Server replication | Syncs your state with other players | Rubber-banding, teleporting back to spawn |
+| Leaderboards | Ranks players by bones earned | Stats that lag behind your actual total |
+
+If your problem involves the bone counter or the shop, treat it as a progression issue and stop immediately. If it only involves limb positions, it is almost certainly cosmetic.
+
+## The Most Commonly Reported Break Your Bones Glitches
+
+The list below reflects patterns that show up repeatedly in player experience and community reports. Reliability varies by platform and server load, so treat each entry as "sometimes happens" rather than a guaranteed trick.
+
+| Reported Glitch | What Players Describe | Reliability | Risk Level |
+|---|---|---|---|
+| Infinite bounce | Ragdoll keeps bouncing off a surface and never settles | Moderate | Low |
+| Bone payout delay | Counter updates several seconds after the impact | High | Low |
+| Stretch glitch | Limbs extend far beyond normal range | High | Low |
+| Wall clip | Character passes partially through thin geometry | Moderate | Medium |
+| Stuck respawn | New character spawns inside old collision data | Low | High |
+| Double purchase | Upgrade bought twice from one click | Low | High |
+
+The pattern here is worth noting: the glitches that are fun to watch are usually the ones with the least impact on your account, while the ones that feel boring — a delayed counter, a purchase that does not register — are the ones that actually cost you time.
+
+### Why the "Fun" Glitches Are Usually Safe
+
+A stretched limb or an endless bounce is a client-side visual artifact. The server still knows roughly where your character is, so your bone total and upgrades remain untouched. These are the glitches worth experimenting with, because the worst-case outcome is a weird screenshot.
+
+### Why the "Boring" Glitches Deserve Caution
+
+When the bone counter or shop behaves oddly, you are looking at a desync between what you see and what the server recorded. Clicking the shop again to "fix" it can result in a duplicate charge or a purchase that never lands. In those moments, patience is genuinely the best strategy.
+
+## How to Test a Glitch Without Losing Progress
+
+If you want to experiment, do it in a controlled way. The following routine is drawn from community best practices and general multiplayer safety habits.
+
+| Step | Action | Why It Helps |
+|---|---|---|
+| 1 | Join a low-population server | Fewer physics objects means fewer variables |
+| 2 | Note your current bone total | Gives you a baseline to compare against |
+| 3 | Reproduce the setup twice | One success can be luck; two suggests a pattern |
+| 4 | Check your counter after each attempt | Confirms whether the server registered anything |
+| 5 | Log out and rejoin | Verifies whether the effect persists or was visual |
+| 6 | Stop if progress looks wrong | Prevents compounding a desync problem |
+
+Following this sequence turns random experimentation into something closer to a repeatable test. It also protects you from the worst outcome, which is not a broken ragdoll but a broken save state.
+
+## Glitch Versus Intended Mechanic: Telling Them Apart
+
+Not everything that looks strange is a bug. Some of the most dramatic ragdoll behavior is exactly what the developers intended, and mistaking design for a defect leads to a lot of wasted effort.
+
+| Behavior | Looks Like a Glitch? | Actually Intended? |
+|---|---|---|
+| Ragdoll flying across the map after a big hit | Yes | Often yes — that is the payoff |
+| Limbs bending at impossible angles | Yes | Usually a genuine physics quirk |
+| Bones awarded for a spectacular crash | No | Intended reward loop |
+| Character surviving a fall it should not | Yes | Often intended durability upgrade |
+| Shop button doing nothing | Yes | Usually a genuine desync issue |
+
+A useful rule of thumb: if the behavior rewards you with more bones or a bigger spectacle, it is probably part of the design. If it blocks an action you have already paid for, it is probably a glitch.
+
+## Reducing Lag So Fewer Glitches Happen
+
+A large share of physics oddities are performance problems in disguise. When frame rates drop, the simulation takes bigger steps between calculations, and collisions get resolved more crudely. Tightening up your setup reduces how often that happens.
+
+- **Lower your graphics settings** if your device struggles during big crashes.
+- **Close background applications** on PC, especially anything using the network heavily.
+- **Prefer a wired connection** if you play on a desktop; Wi-Fi spikes cause desync.
+- **Avoid crowded servers** when you are testing anything.
+- **Restart the game client** between long sessions to clear accumulated physics state.
+
+None of these will eliminate **Break your Bones glitches** entirely, because they are baked into how physics simulation works. But they reliably cut down the frequency, and that makes your runs more predictable. For a general sense of how the platform handles real-time physics across devices, the [official Roblox website](https://www.roblox.com/) is a useful reference point.
+
+### Platform Differences Worth Knowing
+
+Mobile players report more visual artifacts and more rubber-banding than PC players, largely because of variable frame rates and touch input timing. Console and PC sessions tend to be more stable but still show the same categories of bugs. If you are chasing a specific **Break your Bones glitch**, test it on the platform where you actually play rather than assuming a video clip will reproduce identically for you.
+
+## What to Do When a Glitch Breaks Your Run
+
+If something goes wrong mid-session, resist the urge to keep playing. The most common mistake is trying to "push through" a desync, which often makes the recorded state worse.
+
+1. Stop interacting with the shop or upgrade menus.
+2. Take note of your bone total and the last upgrade you bought.
+3. Leave the server and rejoin.
+4. Compare your totals to what you remember.
+5. If progress is missing, report it through the game's official support channel rather than a fan forum.
+
+Most delayed-payout issues resolve on their own after a rejoin. Persistent losses are the ones worth reporting, and clear notes make that report far more useful.
+
+## Frequently Asked Questions
+
+**Are Break your Bones glitches bannable?**
+
+The vast majority are not, because they are unintended physics behaviors rather than deliberate exploits. However, intentionally abusing a bug that duplicates currency or upgrades can fall under a game's rules against exploiting. If a glitch gives you something for nothing, treat it as risky rather than clever.
+
+**Why do glitches happen more often on busy servers?**
+
+More active ragdolls mean more simultaneous physics calculations. When the simulation cannot keep up, collisions get resolved with less precision, which produces the clipping, stretching, and bouncing that players report most often.
+
+**Can I fix a frozen bone counter?**
+
+Usually, yes. Leaving the server and rejoining resolves most delayed-payout issues, since the client re-syncs with the server on load. If the total is still wrong after a rejoin, that is the point where a support report makes sense.
+
+**Do glitches work the same way on every platform?**
+
+No. Mobile sessions tend to show more visual artifacts because of frame-rate variation, while PC and console sessions are generally more stable. Any **Break your Bones glitches** you see in a video may behave differently on your own device.
+
+## Final Thoughts
+
+Glitches in a ragdoll game are not really a flaw to be eliminated — they are a side effect of the chaos that makes the game fun. The smart approach is to separate the harmless from the harmful: enjoy the stretching, bouncing, and impossible landings, but stay cautious around anything touching your bone count or your upgrades. Test in quiet servers, keep notes, rejoin when something looks off, and you will get the entertainment without the lost progress.

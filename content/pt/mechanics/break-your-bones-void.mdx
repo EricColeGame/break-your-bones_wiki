@@ -1,0 +1,120 @@
+export const metadata = {
+  title: "Mecânica da Void do Break your Bones Explicada: Dano de Queda, Fraturas Ósseas e Regras de Reset",
+  description: "Um guia claro sobre a mecânica da void do Break your Bones — como dano de queda, fraturas ósseas e resets de fora dos limites interagem, além de dicas para sobreviver aos dois.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+Um fêmur quebrado no meio de uma luta contra um chefe já é ruim. Um fêmur quebrado seguido de uma queda na void é pior ainda. Esse castigo duplo é exatamente o motivo pelo qual a interação da **void do Break your Bones** frustra tantos jogadores — um único erro é cobrado duas vezes. Porém, quando você entende como a mecânica da **void do Break your Bones** está conectada, ela deixa de parecer aleatória e começa a parecer uma regra com a qual você pode jogar. Este guia explica o que o estado de fratura óssea realmente faz, como as voids fora dos limites interagem com ele e os hábitos que mantêm você vivo quando o chão desaparece.
+
+## O Que "Break your Bones" e a Void Realmente Significam
+
+Dois sistemas separados estão conversando entre si aqui, e a maior parte da confusão vem de tratá-los como uma coisa só. O sistema de fratura óssea é um *efeito de status* — ele reage ao impacto e muda o que seu personagem consegue fisicamente fazer. A void é um *limite* — um plano de morte invisível que remove você da fase no momento em que você o atravessa.
+
+Nenhum dos dois sistemas conhece ou se importa com o outro por padrão. Essa independência é o motivo pelo qual o resultado parece inconsistente de mapa para mapa e de patch para patch.
+
+| Termo | O que faz | Gatilho típico |
+|---|---|---|
+| Fratura óssea | Aplica um estado persistente de ferimento que limita movimento ou ações | Quedas fortes, impactos pesados, armadilhas roteirizadas |
+| Animação de quebra | Uma cambalhota estilo ragdoll que remove o controle enquanto a fratura é resolvida | Dano cruzando um limite de quebra |
+| Void / plano de morte | Um limite invisível abaixo ou fora do mapa que remove o jogador de jogo | Andar para fora de uma borda, knockback, atravessar geometria |
+| Reset | Retorna você a um checkpoint, ponto de spawn ou última posição segura | Contato com a void, vida chegando a zero |
+| Item de recuperação | Um consumível ou habilidade que limpa o estado de ferimento antecipadamente | Talas, cura, reanimação por aliado |
+
+A conclusão prática: quebrar um osso é algo que acontece *com o seu personagem*, enquanto a void é algo que acontece *com o mapa*. Eles colidem constantemente porque fraturas ósseas geralmente custam a mobilidade que você precisa para evitar cair.
+
+## Como o Loop da Void do Break your Bones Realmente Funciona
+
+A sequência quase sempre segue o mesmo formato. Você sofre um impacto, o limite de quebra é atingido, o controle cai, e a perda de controle é o que te leva para fora da borda. Quando a fase de ragdoll termina, você já passou do ponto sem retorno.
+
+| Etapa | O que acontece | O que você ainda pode controlar |
+|---|---|---|
+| 1 | Impacto forte acontece (queda, knockback, armadilha) | Posicionamento, armadura, vantagens de aterrissagem |
+| 2 | O dano cruza o limite de quebra; estado de ferimento é aplicado | Redução de dano, buffs defensivos |
+| 3 | O movimento é limitado; fase de mancar ou ragdoll começa | Muito pouco — geralmente uma janela curta de timing |
+| 4 | O controle reduzido te carrega em direção à borda do mapa | Nada depois de estar no ar |
+| 5 | Contato com a void dispara um reset ou um segundo evento letal | Nada |
+| 6 | Respawn, com ou sem o ferimento persistindo | Loadout, escolha de checkpoint |
+
+Dependendo de como um determinado jogo é construído, você verá um de três resultados após a etapa 5:
+
+- **Reset misericordioso** — a void apaga o ferimento completamente e você reaparece limpo. Essa é a versão mais amigável e a que a maioria dos jogadores assume ser universal.
+- **Ferimento persistente** — você reaparece ainda quebrado, o que transforma um erro em um loop de recuperação lento e punitivo.
+- **Penalidade acumulada** — a void aplica seu próprio dano letal em cima da fratura, então você perde tanto uma vida quanto um recurso de cura.
+
+Relatos da comunidade sugerem que a versão de "reset misericordioso" é a mais comum em jogos de ação modernos, mas a experiência do jogador varia muito entre títulos e até entre mapas do mesmo título. Se você não tem certeza de qual versão está jogando, teste em algum lugar inofensivo antes de testar em uma arena de chefe.
+
+## Níveis de Gravidade da Fratura Óssea e Comportamento do Reset da Void
+
+A maioria das implementações classifica os ferimentos em níveis aproximados. Os números exatos por trás desses níveis são específicos de cada jogo e frequentemente mudam entre patches, então trate a tabela abaixo como um framework, não como um gráfico fixo. O que importa é reconhecer em qual nível você está, porque suas opções de recuperação encolhem rápido conforme a gravidade aumenta.
+
+| Nível | Indício no jogo | Efeito no movimento | Solução usual |
+|---|---|---|---|
+| Fissura | Leve mancar, leve tom na tela | Perda menor de velocidade | Descanso curto ou cura básica |
+| Moderada | Membro visivelmente fora de lugar, ações restritas | Sem corrida, escalada mais lenta | Tala ou item dedicado |
+| Grave | Estado de apenas engatinhar ou de bruços | Não pode lutar normalmente | Timer longo de cura, ajuda de aliado |
+| Crítica | Efeitos pesados na tela, contagem regressiva | Incapacitado | Reanimação ou reset completo |
+
+A gravidade também decide como a void te trata. Uma fissura raramente impede você de se guiar de volta à segurança, então a void nunca entra em jogo. Uma fratura grave ou crítica remove completamente a capacidade de se guiar, e é por isso que ferimentos de alto nível e mortes por void estão tão fortemente correlacionados.
+
+| Pergunta | Reset da void | Fratura óssea |
+|---|---|---|
+| Causa raiz | Sair da área jogável | Impacto acima do limite de quebra |
+| Modelo de dano | Instantâneo ou baseado em porcentagem | Efeito de status baseado em limite |
+| Duração | Instantânea, seguida de respawn | Persiste até ser curada ou expirar |
+| Contra-jogo | Ficar dentro da geometria, respeitar bordas | Armadura, vantagens de aterrissagem, rotas mais seguras |
+| Interação | Pode cancelar uma fratura ativa | Pode ser cancelada por um reset da void |
+
+Essa última linha é o argumento inteiro em miniatura. Quando a void se resolve *antes* que a fratura termine de ser aplicada, você geralmente ganha uma limpeza gratuita. Quando a fratura se resolve primeiro, você fica com a versão lenta.
+
+## Dicas Práticas para Sobreviver ao Loop da Void do Break your Bones
+
+Sobreviver à combinação da **void do Break your Bones** é, na maior parte, uma questão de remover a segunda metade da equação. Você nem sempre pode evitar uma fratura — knockback existe, armadilhas existem, e chefes trapaceiam — mas você quase sempre pode evitar a queda que a segue.
+
+- **Teste as bordas antes de confiar nelas.** Ande, não corra, ao longo de qualquer borda que você não tenha verificado pessoalmente.
+- **Mantenha um item de cura na reserva.** Nunca gaste sua última tala em uma fissura no meio da luta.
+- **Aprenda o plano de morte.** Muitas voids ficam bem abaixo do chão visível, então a queda que "parece segura" não é segura.
+- **Leia a direção do knockback, não só o tamanho dele.** Ser empurrado *em direção* ao centro do mapa é sobrevivível; ser empurrado para fora raramente é.
+- **Trate habilidades de movimento como ferramentas de recuperação.** Guarde o dash ou o pulo duplo para o momento em que você perde o controle, não para deslocamento.
+- **Lute com as costas voltadas para geometria sólida.** Isso quase não te custa nada e remove a maior parte do risco de void do combate.
+
+| Fator de risco | Mitigação | Por que funciona |
+|---|---|---|
+| Borda não verificada | Testar andando primeiro | Confirma a colisão antes de você comprometer o impulso |
+| Knockback para fora | Posicionar-se com uma parede atrás de você | Converte uma morte por void em um choque contra a parede |
+| Sem cura restante | Reservar um slot de item | Preserva uma opção de recuperação após uma fratura |
+| Ragdoll perto de uma borda | Pré-planejar uma rota de fuga | Dá a você uma direção no instante em que o controle retorna |
+| Inputs de pânico | Desacelerar após uma fratura | Evita o segundo erro que te manda para fora |
+
+Se você tirar apenas um hábito desta seção, que seja a regra da parede atrás de você. É a forma mais barata de desarmar a armadilha da **void do Break your Bones** em qualquer combate que apresente ambas as mecânicas.
+
+## Mitos, Casos Extremos e Relatos da Comunidade
+
+Muito do que circula sobre essa mecânica é folclore. A experiência do jogador é genuinamente útil aqui, mas também é anedótica, então vale a pena separar o que os sistemas realmente fazem do que as pessoas assumem que eles fazem.
+
+| Mito | Realidade |
+|---|---|
+| "A void sempre cura seus ossos." | Apenas em builds que explicitamente limpam efeitos de status no reset. Muitas não fazem isso. |
+| "Você pode controlar no ar para sair de uma fratura." | Geralmente falso depois que a fase de ragdoll começa; verifique seu título específico. |
+| "Dificuldade maior torna a void mais letal." | Às vezes verdadeiro para escalonamento de dano, raramente verdadeiro para o limite em si. |
+| "Uma fratura perto de uma borda é sempre fatal." | Falso — depende inteiramente do nível de gravidade e da direção do knockback. |
+
+Para uma referência neutra sobre como limites fora dos limites e planos de morte são definidos no meio, o [glossário de termos de videogame cobrindo comportamento fora dos limites](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) é um bom ponto de partida. Ele não vai te dizer os números do seu jogo, mas vai evitar que você confunda conceitos relacionados.
+
+Um caso extremo que vale destacar: atravessar geometria. Se você cair *através* do mapa em vez de cair dele, alguns engines registram um contato com a void instantaneamente, enquanto outros registram uma queda normal primeiro. Relatos da comunidade descrevem ambos os comportamentos, às vezes no mesmo jogo em mapas diferentes, então não assuma consistência.
+
+## Perguntas Frequentes
+
+**Cair na void sempre quebra seus ossos?**
+Não. A void é um limite, não um impacto. Ela só quebra seus ossos se o jogo encaminhar o contato com a void através do seu sistema de dano ou de queda. Em muitos títulos, a void simplesmente reseta você, e a interação da **void do Break your Bones** só aparece quando você já estava ferido antes de cair.
+
+**Você pode cancelar a interação da void do Break your Bones?**
+Às vezes, e geralmente por acidente. Se o reset se resolve antes que o status de fratura termine de ser aplicado, o ferimento costuma ser apagado. Raramente existe um botão deliberado para isso — é um artefato de timing de como os dois sistemas se resolvem em ordem.
+
+**A mecânica da void do Break your Bones é idêntica em todos os jogos?**
+Nem de longe. Os valores de limite, os níveis de gravidade, o comportamento do reset e se os ferimentos persistem através do respawn variam por título, modo e patch. Trate qualquer afirmação universal que você ler online com desconfiança e verifique na sua própria build.
+
+**Qual é a recuperação mais rápida após uma fratura perto da void?**
+Chegue a chão sólido antes de se curar. Curar-se enquanto você ainda está em uma borda instável desperdiça o item e frequentemente termina com uma segunda fratura, pior. Estabilize sua posição, depois comprometa o recurso.
+
+A versão curta: fraturas ósseas são um imposto sobre a mobilidade, e a void é quem cobra a dívida. Aprenda a reconhecer o limite, respeite as bordas e mantenha uma rota de fuga na cabeça o tempo todo. Faça isso, e o loop da **void do Break your Bones** deixa de ser um cara ou coroa e se torna apenas mais uma mecânica que você já resolveu.

@@ -1,0 +1,134 @@
+export const metadata = {
+  title: "Física Ragdoll de Break Your Bones Explicada: Como Funcionam as Mecânicas de Quebrar Ossos",
+  description: "Aprenda como funciona a física ragdoll de Break your Bones — limites de impulso, restrições de articulações, estados de fratura e dicas para acumular mais ossos quebrados.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+## Por Que a Física Ragdoll de Break Your Bones É Tão Satisfatória
+
+Poucas coisas nos jogos proporcionam uma alegria instantânea e boba como ver um personagem rolar escada abaixo e ouvir o estalo de uma clavícula. A física ragdoll de Break your Bones transforma esse pequeno prazer em toda uma filosofia de design: um corpo que se dobra, se joga e se fratura com base em forças simuladas de verdade, em vez de animações pré-gravadas. Entender esse sistema importa porque ele muda como você joga — onde você mira, como você cai e por que alguns golpes racham uma costela enquanto outros só machucam o ego.
+
+No seu cerne, a física ragdoll de Break your Bones é um modelo de dano movido por física, sobreposto a um esqueleto articulado. Em vez de reproduzir uma animação de "ai" pré-gravada, o personagem é uma pilha de corpos rígidos conectados por restrições, e cada impacto é medido, ponderado e convertido em lesão. Assim que você entende esse fluxo, o caos deixa de parecer aleatório.
+
+## O Que a Física Ragdoll de Break Your Bones Realmente Simula
+
+Um ragdoll não é um único objeto. É uma coleção de corpos rígidos — geralmente uma pelve, segmentos do torso, cabeça, braços superiores e inferiores, e pernas superiores e inferiores — conectados entre si por restrições que se comportam como articulações. Cada corpo tem massa, arrasto e uma forma de colisão. A engine avança todo o conjunto em pequenos incrementos de tempo, resolve as colisões e aplica os resultados de volta às articulações.
+
+É por causa dessa estrutura que uma pancada na cabeça se comporta de forma diferente de uma pancada na canela. A cabeça fica no topo de uma longa alavanca, então um impulso modesto produz uma grande velocidade angular. A canela está mais próxima do chão e frequentemente apoiada, então absorve menos força rotacional. Bons sistemas de quebra de ossos ponderam essas diferenças em vez de tratar toda colisão como igual.
+
+| Parte do Rig Ragdoll | Equivalente Humano | Papel Típico no Dano | Por Que Importa |
+|---|---|---|---|
+| Corpo da cabeça | Crânio e mandíbula | Alvo de alto valor, baixa massa | Alavanca longa cria rotação violenta |
+| Segmentos do peito / coluna | Caixa torácica, vértebras | Acumulador de dano | Transfere força entre membros e cabeça |
+| Corpo da pelve | Quadris | Ponto de ancoragem | Estabiliza ou desestabiliza todo o rig |
+| Braço superior | Úmero | Membro de contato | Absorve impactos durante quedas |
+| Antebraço e mão | Rádio, ulna | Contato secundário | Costuma ser a primeira coisa a atingir uma superfície |
+| Perna superior | Fêmur | Suporte de carga | Osso mais forte, maior limite de quebra |
+| Perna inferior e pé | Tíbia, fíbula | Membro de aterrissagem | Local comum de fratura em quedas verticais |
+
+A maioria das engines implementa isso com um motor de física como PhysX, Havok, Bullet ou um solver personalizado. O conceito subjacente — articular um personagem com corpos rígidos restritos — está bem documentado na [referência geral sobre implementação de física ragdoll](https://en.wikipedia.org/wiki/Ragdoll_physics), e os mesmos princípios aparecem tanto em um jogo sandbox quanto em um título AAA de ação.
+
+## Como a Física Ragdoll de Break Your Bones Decide Quando um Osso Quebra
+
+Três coisas geralmente precisam se alinhar antes de o jogo declarar uma fratura: força suficiente, a direção certa e uma parte do corpo vulnerável.
+
+### Limites de impulso
+
+Cada osso no rig recebe um valor de limite. Quando uma colisão gera um impulso acima desse número, o osso entra em estado de dano. Abaixo dele, o impacto é apenas cosmético — o ragdoll se debate, mas nada quebra. Os limites costumam ser ajustados por parte do corpo, e é por isso que uma queda sobre os pés é sobrevivível, mas a mesma queda sobre o pescoço não é.
+
+### Acúmulo de dano
+
+Quebras de um único golpe são raras fora de cenários extremos. Mais comumente, o dano se acumula. Um personagem que raspa em um corrimão, quica em uma caixa e depois atinge o chão acumula três impulsos menores que, juntos, cruzam o limite. É por isso que rolagens longas e caóticas produzem mais fraturas do que um único golpe limpo.
+
+### Estados de fratura e feedback
+
+Assim que uma quebra é registrada, o sistema geralmente troca a restrição por uma mais frouxa, adiciona uma pose de claudicação, reproduz um efeito sonoro e marca a lesão no HUD. Implementações mais sofisticadas distinguem níveis de gravidade, e é aí que o vocabulário de anatomia começa a importar.
+
+| Nível de Gravidade | Analogia | Efeito Mecânico | Feedback ao Jogador |
+|---|---|---|---|
+| Estresse | Fissura capilar | Amolecimento leve da restrição | Estalo pequeno, leve claudicação |
+| Fratura simples | Quebra limpa | Amplitude da articulação aumenta bruscamente | Estalo audível, dobra visível |
+| Deslocada | Osso fora de alinhamento | Membro para de suportar peso | Ragdoll arrasta o membro |
+| Composta / catastrófica | Múltiplas quebras | Rig perde integridade estrutural | Colapso total, reset do ragdoll |
+
+## Ragdolls Passivo, Ativo e Parcial Comparados
+
+Nem todo sistema de quebra de ossos é construído da mesma forma. A escolha do tipo de ragdoll molda como o jogo se sente e quanto controle você mantém.
+
+| Tipo de Ragdoll | Como Se Comporta | Prós | Contras |
+|---|---|---|---|
+| Passivo | Totalmente movido por física, sem input | Previsível, barato de rodar | Zero agência do jogador durante a queda |
+| Ativo | Física com equilíbrio e forças musculares | Personagem permanece de pé, parece vivo | Caro, mais difícil de ajustar |
+| Parcial / misto | Animação até o impacto, física depois | O melhor dos dois mundos | Artefatos de mistura, popping |
+| Procedural | Ossos reposicionados pelo solver a cada frame | Extremamente dinâmico | Pode parecer borrachudo sem ajuste |
+
+Muitos sandboxes de ragdoll acabam em uma abordagem parcial ou mista: o personagem se comporta normalmente até uma condição de quebra ser acionada, então entrega o controle ao solver. É nessa transição que mora a maior parte da comédia — e a maior parte dos bugs.
+
+## Dicas para Pontuar Mais Quebras de Ossos
+
+Se seu objetivo é o dano esquelético máximo, a física te dá alavancas claras para puxar.
+
+| Tática | Por Que Funciona | Risco |
+|---|---|---|
+| Mire na cabeça e no pescoço | Alavanca longa amplifica a rotação | Pode encerrar a partida cedo |
+| Encadeie impactos | O dano se acumula entre colisões | Exige terreno aberto |
+| Use altura em vez de velocidade | A gravidade adiciona força vertical consistente | Tempo de preparação maior |
+| Aterrisse sobre os membros, não o torso | Membros têm limites de quebra menores | Menos dano total por golpe |
+| Evite superfícies macias | Corpos macios absorvem impulso | Limita as opções de mapa |
+| Mantenha o ragdoll em movimento | O momento impulsiona impactos secundários | Mais difícil de mirar |
+
+**Dica de experiência do jogador:** o dano mais confiável vem de cadeias controladas, não de acrobacias espetaculares isoladas. Uma queda moderada que faz o ragdoll quicar por três superfícies duras geralmente pontua mais do que uma queda gigante em um piso plano.
+
+### O timing vence a força bruta
+
+Impulso é massa vezes variação de velocidade, então um ragdoll em movimento rápido atingindo um objeto rígido transfere muito mais força do que um lento se inclinando contra ele. Ganhar velocidade antes do contato — deslizando, balançando ou acelerando ladeira abaixo — importa mais do que altura bruta. Relatos da comunidade favorecem consistentemente configurações baseadas em momento exatamente por esse motivo.
+
+## Configurações e Desempenho: Mantendo a Física Estável
+
+Sistemas de quebra de ossos são pesados para o solver. Quando a taxa de quadros cai, os passos de simulação ficam maiores, colisões são perdidas e o ragdoll começa a se comportar como se fosse feito de gelatina. Algumas configurações fazem uma diferença enorme.
+
+| Configuração | O Que Muda | Recomendação |
+|---|---|---|
+| Subpassos de física | Quão finamente as colisões são resolvidas | Aumente se membros atravessarem paredes |
+| Iterações do solver | Precisão da rigidez das articulações | Moderado; mais alto custa mais |
+| Timestep fixo | Consistência da simulação | Mantenha ativado para números de dano estáveis |
+| Limite de quantidade de ragdolls | Quantos corpos simulam ao mesmo tempo | Reduza em hardware fraco |
+| Camadas de colisão | Quais superfícies registram força | Certifique-se de que o terreno esteja incluído |
+| Multiplicador de gravidade | Força da queda | Deixe no padrão a menos que esteja experimentando |
+
+Se você está testando a física ragdoll de Break your Bones em um dispositivo mais fraco, o maior ganho de estabilidade geralmente é travar o timestep da física e reduzir a quantidade simultânea de ragdolls. A fidelidade visual importa muito menos do que um passo de simulação consistente.
+
+## Mitos, Relatos da Comunidade e o Que os Jogadores Erram
+
+| Mito | Realidade |
+|---|---|
+| Mais ossos significa mais realismo | A quantidade de corpos rígidos importa mais do que os rótulos de ossos |
+| Superfícies mais duras sempre quebram mais | A dureza da superfície importa, mas o ângulo e a velocidade importam mais |
+| As quebras são aleatórias | São guiadas por limites e determinísticas com inputs idênticos |
+| Gravidade mais alta sempre ajuda | Adiciona força, mas desestabiliza articulações e causa tunneling |
+| Ragdolls maiores levam mais dano | A distribuição de massa, não o tamanho, impulsiona a transferência de impulso |
+
+**Relatos da comunidade** também apontam para um mal-entendido comum sobre o "modo ragdoll". Os jogadores costumam assumir que a física liga no momento em que um personagem é lançado. Na prática, a maioria dos sistemas roda um estado animado ou ativo primeiro e só muda para um ragdoll completo quando uma condição de quebra é acionada — e é por isso que o primeiro frame de uma queda às vezes parece rígido.
+
+## FAQ
+
+**A física ragdoll de Break your Bones é determinística?**
+
+Em grande parte, sim, dentro de uma única sessão. Dadas condições iniciais idênticas, gravidade e geometria de colisão, os mesmos impulsos devem produzir as mesmas quebras. Pequenas diferenças de ponto flutuante e o timing variável de quadros ainda podem alterar os resultados, e é por isso que duas acrobacias quase idênticas ocasionalmente pontuam de forma diferente.
+
+**Por que meu ragdoll atravessa paredes?**
+
+Isso geralmente é um problema de timestep, não de dano. Quando o passo de simulação é grande demais em relação à velocidade do ragdoll, o solver pula a colisão completamente. Aumentar os subpassos de física ou limitar a velocidade normalmente resolve isso.
+
+**Qual parte do corpo quebra mais facilmente?**
+
+Na maioria dos rigs, o pescoço, os antebraços e as pernas inferiores têm os menores limites. O fêmur e a pelve costumam ser os mais resistentes porque carregam a maior carga e estão envoltos em mais massa.
+
+**Superfícies macias previnem quebras de ossos?**
+
+Elas reduzem a transferência de impulso, então sim — aterrissar em acolchoamento geralmente converte uma fratura em uma contusão. Dito isso, superfícies macias também podem causar ângulos articulares estranhos que produzem quebras no rebote, então não são uma rede de segurança garantida.
+
+## A Conclusão
+
+A física ragdoll de Break your Bones recompensa jogadores que pensam em termos de força, ângulo e acúmulo, em vez de sorte. Mire em partes do corpo de alta alavancagem, encadeie impactos em vez de perseguir um único golpe enorme, e mantenha suas configurações de física estáveis para que a simulação se mantenha honesta. Faça isso, e o estalo satisfatório de uma fratura bem conquistada deixa de ser um acidente e passa a ser uma estratégia.

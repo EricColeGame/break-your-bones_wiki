@@ -1,0 +1,120 @@
+export const metadata = {
+  title: "Break your Bones Void Mechanic Explained: Fall Damage, Bone Breaks, and Reset Rules",
+  description: "A clear guide to the Break your Bones void mechanic — how fall damage, bone breaks, and out-of-bounds resets interact, plus tips to survive both.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+A broken femur in the middle of a boss fight is bad. A broken femur followed by a tumble into the void is worse. That double punishment is exactly why the **Break your Bones void** interaction frustrates so many players — a single mistake gets billed twice. Once you understand how the **Break your Bones void** mechanic is wired together, though, it stops feeling random and starts feeling like a rule you can play around. This guide breaks down what the bone-break state actually does, how out-of-bounds voids interact with it, and the habits that keep you alive when the floor disappears.
+
+## What "Break your Bones" and the Void Actually Mean
+
+Two separate systems are talking to each other here, and most of the confusion comes from treating them as one thing. The bone-break system is a *status effect* — it reacts to impact and changes what your character can physically do. The void is a *boundary* — an invisible kill plane that removes you from the level the moment you cross it.
+
+Neither system knows or cares about the other by default. That independence is why the outcome feels inconsistent from map to map and patch to patch.
+
+| Term | What it does | Typical trigger |
+|---|---|---|
+| Bone break | Applies a persistent injured state that limits movement or actions | Hard falls, heavy impacts, scripted traps |
+| Break animation | A ragdoll-style tumble that removes control while the break resolves | Damage crossing a break threshold |
+| Void / kill plane | An invisible boundary below or outside the map that removes the player from play | Walking off an edge, knockback, clipping geometry |
+| Reset | Returns you to a checkpoint, spawn point, or last safe position | Void contact, health reaching zero |
+| Recovery item | A consumable or ability that clears the injured state early | Splints, healing, teammate revives |
+
+The practical takeaway: breaking a bone is something that happens *to your character*, while the void is something that happens *to the map*. They collide constantly because bone breaks usually cost you the mobility you need to avoid falling.
+
+## How the Break your Bones Void Loop Actually Works
+
+The sequence almost always follows the same shape. You take an impact, the break threshold trips, control drops, and the loss of control is what carries you over the edge. By the time the ragdoll phase ends, you are already past the point of no return.
+
+| Step | What happens | What you can still control |
+|---|---|---|
+| 1 | Hard impact lands (fall, knockback, trap) | Positioning, armor, landing perks |
+| 2 | Damage crosses the break threshold; injured state applies | Damage reduction, defensive buffs |
+| 3 | Movement is limited; limp or ragdoll phase begins | Very little — usually a short timing window |
+| 4 | Reduced control carries you toward the map edge | Nothing once airborne |
+| 5 | Void contact triggers a reset or a second lethal event | Nothing |
+| 6 | Respawn, with or without the injury persisting | Loadout, checkpoint choice |
+
+Depending on how a given game is built, you will see one of three outcomes after step 5:
+
+- **Mercy reset** — the void wipes the injury entirely and you respawn clean. This is the friendliest version and the one most players assume is universal.
+- **Persistent injury** — you respawn still broken, which turns one mistake into a slow, punishing recovery loop.
+- **Stacked penalty** — the void applies its own lethal damage on top of the break, so you lose both a life and a healing resource.
+
+Community reports suggest the "mercy reset" version is the most common in modern action games, but player experience varies wildly between titles and even between maps in the same title. If you are unsure which version you are playing, test it somewhere harmless before you test it in a boss arena.
+
+## Bone Break Severity Tiers and Void Reset Behavior
+
+Most implementations sort injuries into rough tiers. The exact numbers behind those tiers are game-specific and often change between patches, so treat the table below as a framework rather than a fixed chart. What matters is recognizing which tier you are in, because your recovery options shrink fast as severity climbs.
+
+| Tier | In-game cue | Movement effect | Usual fix |
+|---|---|---|---|
+| Hairline | Slight limp, faint screen tint | Minor speed loss | Short rest or basic heal |
+| Moderate | Limb visibly out of place, actions restricted | No sprint, slower climbing | Splint or dedicated item |
+| Severe | Crawl-only or prone state | Cannot fight normally | Long heal timer, teammate assist |
+| Critical | Heavy screen effects, countdown | Incapacitated | Revive or full reset |
+
+Severity also decides how the void treats you. A hairline break rarely stops you from steering back to safety, so the void never comes into play. A severe or critical break removes steering entirely, which is why high-tier injuries and void deaths are so strongly correlated.
+
+| Question | Void reset | Bone break |
+|---|---|---|
+| Root cause | Leaving the playable area | Impact above the break threshold |
+| Damage model | Instant or percentage-based | Threshold-based status effect |
+| Duration | Instant, followed by respawn | Persists until healed or timed out |
+| Counterplay | Stay inside geometry, respect ledges | Armor, landing perks, safer routes |
+| Interaction | Can cancel an active break | Can be cancelled by a void reset |
+
+That last row is the whole argument in miniature. When the void resolves *before* the break finishes applying, you often get a free cleanup. When the break resolves first, you get the slow version.
+
+## Practical Tips to Survive the Break your Bones Void Loop
+
+Surviving the **Break your Bones void** combination is mostly about removing the second half of the equation. You cannot always prevent a break — knockback exists, traps exist, and bosses cheat — but you can almost always prevent the fall that follows it.
+
+- **Test ledges before you trust them.** Walk, do not sprint, along any edge you have not personally verified.
+- **Keep one healing item in reserve.** Never spend your last splint on a hairline break mid-fight.
+- **Learn the kill plane.** Many voids sit well below the visible floor, so the "safe-looking" drop is not safe.
+- **Read knockback direction, not just knockback size.** Being pushed *toward* the map center is survivable; being pushed outward rarely is.
+- **Treat movement abilities as recovery tools.** Save the dash or double jump for the moment you lose control, not for travel.
+- **Fight with your back to solid geometry.** It costs you almost nothing and removes most void risk from the encounter.
+
+| Risk factor | Mitigation | Why it works |
+|---|---|---|
+| Unverified ledge | Walk-test first | Confirms collision before you commit momentum |
+| Outward knockback | Position with a wall behind you | Converts a void death into a wall slam |
+| No healing left | Reserve one item slot | Preserves a recovery option after a break |
+| Ragdoll near an edge | Pre-plan an escape route | Gives you a direction the instant control returns |
+| Panic inputs | Slow down after a break | Prevents the second mistake that sends you off |
+
+If you take only one habit from this section, make it the wall-behind-you rule. It is the single cheapest way to defuse the **Break your Bones void** trap in any encounter that features both mechanics.
+
+## Myths, Edge Cases, and Community Reports
+
+A lot of what circulates about this mechanic is folklore. Player experience is genuinely useful here, but it is also anecdotal, so it is worth separating what the systems actually do from what people assume they do.
+
+| Myth | Reality |
+|---|---|
+| "The void always heals your bones." | Only in builds that explicitly clear status effects on reset. Many do not. |
+| "You can air-control out of a break." | Usually false once the ragdoll phase starts; check your specific title. |
+| "Higher difficulty makes the void deadlier." | Sometimes true for damage scaling, rarely true for the boundary itself. |
+| "A break near an edge is always fatal." | False — it depends entirely on severity tier and knockback direction. |
+
+For a neutral reference on how out-of-bounds boundaries and kill planes are defined across the medium, the [glossary of video game terms covering out-of-bounds behavior](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) is a solid starting point. It will not tell you the numbers for your game, but it will keep you from mixing up related concepts.
+
+One edge case worth flagging: geometry clipping. If you fall *through* the map rather than off it, some engines register a void contact instantly while others register a normal fall first. Community reports describe both behaviors, sometimes within the same game on different maps, so do not assume consistency.
+
+## Frequently Asked Questions
+
+**Does falling into the void always break your bones?**
+No. The void is a boundary, not an impact. It only breaks your bones if the game routes void contact through its damage or fall system. In many titles, the void simply resets you, and the **Break your Bones void** interaction only appears when you were already injured before you fell.
+
+**Can you cancel the Break your Bones void interaction?**
+Sometimes, and usually by accident. If the reset resolves before the break status finishes applying, the injury is often wiped. There is rarely a deliberate button for this — it is a timing artifact of how the two systems resolve in order.
+
+**Is the Break your Bones void mechanic identical in every game?**
+Not remotely. The threshold values, severity tiers, reset behavior, and whether injuries persist through respawn all vary by title, mode, and patch. Treat any universal claim you read online with suspicion and verify it in your own build.
+
+**What is the fastest recovery after a break near the void?**
+Get to solid ground before you heal. Healing while you are still on an unstable edge wastes the item and often ends with a second, worse break. Stabilize your position, then commit the resource.
+
+The short version: bone breaks are a mobility tax, and the void is what collects on the debt. Learn to recognize the threshold, respect the ledges, and keep one escape route in your head at all times. Do that, and the **Break your Bones void** loop stops being a coin flip and becomes just another mechanic you have already solved.

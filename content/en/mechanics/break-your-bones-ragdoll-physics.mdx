@@ -1,0 +1,134 @@
+export const metadata = {
+  title: "Break Your Bones Ragdoll Physics Explained: How Bone-Breaking Mechanics Work",
+  description: "Learn how Break your Bones ragdoll physics works — impulse thresholds, joint constraints, fracture states, and tips to rack up more bone breaks.",
+  category: "mechanics",
+  date: "2026-10-13",
+}
+
+## Why Break Your Bones Ragdoll Physics Feels So Good
+
+Few things in gaming deliver instant, dumb joy like watching a character tumble down a flight of stairs and hearing a collarbone snap. Break your Bones ragdoll physics turns that small pleasure into an entire design philosophy: a body that bends, flops, and fractures based on real simulated forces rather than canned animations. Understanding the system matters because it changes how you play — where you aim, how you fall, and why some hits crack a rib while others just bruise an ego.
+
+At its core, Break your Bones ragdoll physics is a physics-driven damage model layered on top of a jointed skeleton. Instead of playing a pre-recorded "ouch" animation, the character is a stack of rigid bodies connected by constraints, and every impact is measured, weighted, and converted into injury. Once you understand that pipeline, the chaos stops looking random.
+
+## What Break Your Bones Ragdoll Physics Actually Simulates
+
+A ragdoll is not a single object. It is a collection of rigid bodies — usually a pelvis, torso segments, head, upper and lower arms, and upper and lower legs — wired together with constraints that behave like joints. Each body has mass, drag, and a collision shape. The engine steps the whole assembly forward in small time increments, resolves collisions, and applies the results back to the joints.
+
+That structure is why a hit to the head reads differently than a hit to the shin. The head sits at the top of a long lever arm, so a modest impulse produces a large angular velocity. The shin is closer to the ground and often braced, so it absorbs less rotational force. Good bone-breaking systems weight these differences rather than treating every collision as equal.
+
+| Ragdoll Rig Part | Human Equivalent | Typical Role in Damage | Why It Matters |
+|---|---|---|---|
+| Head body | Skull and jaw | High-value target, low mass | Large lever arm creates violent rotation |
+| Chest / spine segments | Ribcage, vertebrae | Damage accumulator | Transfers force between limbs and head |
+| Pelvis body | Hips | Anchor point | Stabilizes or destabilizes the whole rig |
+| Upper arm | Humerus | Contact limb | Absorbs impacts during falls |
+| Forearm and hand | Radius, ulna | Secondary contact | Often the first thing to hit a surface |
+| Upper leg | Femur | Load bearer | Strongest bone, highest break threshold |
+| Lower leg and foot | Tibia, fibula | Landing limb | Common fracture site in vertical falls |
+
+Most engines implement this with a physics engine such as PhysX, Havok, Bullet, or a custom solver. The underlying concept — articulating a character with constrained rigid bodies — is well documented in the [general reference on ragdoll physics implementation](https://en.wikipedia.org/wiki/Ragdoll_physics), and the same principles show up whether the game is a sandbox toy or a AAA action title.
+
+## How Break Your Bones Ragdoll Physics Decides When a Bone Breaks
+
+Three things usually have to line up before the game declares a fracture: enough force, the right direction, and a vulnerable body part.
+
+### Impulse thresholds
+
+Every bone in the rig gets a threshold value. When a collision generates an impulse above that number, the bone enters a damaged state. Below it, the impact is cosmetic — the ragdoll flails, but nothing snaps. Thresholds are typically tuned per body part, which is why a fall onto your feet is survivable but the same fall onto your neck is not.
+
+### Damage accumulation
+
+Single-hit breaks are rare outside of extreme scenarios. More commonly, damage stacks. A character who clips a railing, bounces off a crate, and then hits the floor accumulates three smaller impulses that together cross the threshold. This is why long, chaotic tumbles produce more fractures than one clean wallop.
+
+### Fracture states and feedback
+
+Once a break registers, the system usually swaps the constraint for a looser one, adds a limp pose, plays an audio cue, and tags the injury for the HUD. Higher-end implementations distinguish severity levels, which is where the anatomy vocabulary starts to matter.
+
+| Severity Tier | Analogy | Mechanical Effect | Player-Facing Feedback |
+|---|---|---|---|
+| Stress | Hairline crack | Minor constraint softening | Small pop, slight limp |
+| Simple fracture | Clean break | Joint range increases sharply | Audible crack, visible bend |
+| Displaced | Bone out of alignment | Limb stops bearing weight | Ragdoll drags the limb |
+| Compound / catastrophic | Multiple breaks | Rig loses structural integrity | Full collapse, ragdoll reset |
+
+## Passive, Active, and Partial Ragdolls Compared
+
+Not every bone-breaking system is built the same way. The choice of ragdoll type shapes how the game feels and how much control you keep.
+
+| Ragdoll Type | How It Behaves | Pros | Cons |
+|---|---|---|---|
+| Passive | Fully physics-driven, no input | Predictable, cheap to run | Zero player agency mid-fall |
+| Active | Physics with balance and muscle forces | Character stays upright, feels alive | Expensive, harder to tune |
+| Partial / blended | Animation until impact, physics after | Best of both worlds | Blend artifacts, popping |
+| Procedural | Bones re-posed by solver each frame | Extremely dynamic | Can look rubbery without tuning |
+
+Many ragdoll sandboxes land on a partial or blended approach: the character behaves normally until a break condition triggers, then hands control to the solver. That handoff is where most of the comedy — and most of the bugs — live.
+
+## Tips to Score More Bone Breaks
+
+If your goal is maximum skeletal damage, the physics gives you clear levers to pull.
+
+| Tactic | Why It Works | Risk |
+|---|---|---|
+| Aim for the head and neck | Long lever arm amplifies rotation | Can end the run early |
+| Chain impacts together | Damage accumulates across collisions | Requires open terrain |
+| Use height over speed | Gravity adds consistent vertical force | Longer setup time |
+| Land on limbs, not the torso | Limbs have lower break thresholds | Less overall damage per hit |
+| Avoid soft surfaces | Soft bodies absorb impulse | Limits map options |
+| Keep the ragdoll moving | Momentum drives secondary impacts | Harder to aim |
+
+**Player experience tip:** the most reliable damage comes from controlled chains, not single spectacular stunts. A moderate fall that bounces the ragdoll through three hard surfaces will usually out-score one massive drop onto a flat floor.
+
+### Timing beats brute force
+
+Impulse is mass times change in velocity, so a fast-moving ragdoll hitting a rigid object transfers far more force than a slow one leaning into it. Building speed before contact — sliding, swinging, or accelerating downhill — matters more than raw height. Community reports consistently favor momentum-based setups for exactly this reason.
+
+## Settings and Performance: Keeping the Physics Stable
+
+Bone-breaking systems are solver-heavy. When frame rate drops, the simulation steps get larger, collisions get missed, and the ragdoll starts behaving like it is made of jelly. A few settings make an outsized difference.
+
+| Setting | What It Changes | Recommendation |
+|---|---|---|
+| Physics substeps | How finely collisions resolve | Raise it if limbs pass through walls |
+| Solver iterations | Joint stiffness accuracy | Moderate; higher is costlier |
+| Fixed timestep | Simulation consistency | Keep on for stable damage numbers |
+| Ragdoll count limit | How many bodies simulate at once | Lower it on weak hardware |
+| Collision layers | Which surfaces register force | Make sure terrain is included |
+| Gravity multiplier | Fall force | Leave default unless experimenting |
+
+If you are testing Break your Bones ragdoll physics on a lower-end device, the single biggest stability win is usually locking the physics timestep and reducing simultaneous ragdoll count. Visual fidelity matters far less than a consistent simulation step.
+
+## Myths, Community Reports, and What Players Get Wrong
+
+| Myth | Reality |
+|---|---|
+| More bones means more realistic | Rigid body count matters more than bone labels |
+| Harder surfaces always break more | Surface hardness matters, but angle and velocity matter more |
+| Breaks are random | They are threshold-driven and deterministic given identical inputs |
+| Higher gravity always helps | It adds force but destabilizes joints and causes tunneling |
+| Bigger ragdolls take more damage | Mass distribution, not size, drives impulse transfer |
+
+**Community reports** also point to a common misunderstanding about "ragdoll mode." Players often assume the physics turns on the moment a character is launched. In practice, most systems run an animated or active state first and only switch to a full ragdoll when a break condition fires — which is why the first frame of a fall sometimes looks stiff.
+
+## FAQ
+
+**Is Break your Bones ragdoll physics deterministic?**
+
+Largely yes, within a single session. Given identical starting conditions, gravity, and collision geometry, the same impulses should produce the same breaks. Small floating-point differences and variable frame timing can still change outcomes, which is why two nearly identical stunts occasionally score differently.
+
+**Why does my ragdoll pass through walls?**
+
+This is usually a timestep problem, not a damage problem. When the simulation step is too large relative to the ragdoll's speed, the solver skips the collision entirely. Raising physics substeps or capping velocity normally fixes it.
+
+**Which body part breaks the easiest?**
+
+In most rigs, the neck, forearms, and lower legs have the lowest thresholds. The femur and pelvis are typically the toughest because they carry the most load and are wrapped in the most mass.
+
+**Do soft surfaces prevent bone breaks?**
+
+They reduce impulse transfer, so yes — landing on padding usually converts a fracture into a bruise. That said, soft surfaces can also cause awkward joint angles that produce breaks on the rebound, so they are not a guaranteed safety net.
+
+## The Bottom Line
+
+Break your Bones ragdoll physics rewards players who think in terms of force, angle, and accumulation rather than luck. Aim for high-leverage body parts, chain impacts instead of chasing one huge hit, and keep your physics settings stable so the simulation stays honest. Do that, and the satisfying crack of a well-earned fracture stops being an accident and starts being a strategy.

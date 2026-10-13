@@ -6,7 +6,18 @@
     "description": "Break your Bones Wiki provides gameplay guides, crash challenge walkthroughs, ragdoll physics tips, codes, and useful information to help players break more bones and score bigger crashes.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
-  "nav": {},
+  "nav": {
+    "guide": "Guide",
+    "codes": "Codes",
+    "items": "Items",
+    "progression": "Progression",
+    "mechanics": "Mechanics",
+    "community": "Community",
+    "platforms": "Platforms",
+    "controls": "Controls",
+    "menu": "Menu",
+    "toggleTheme": "Toggle theme"
+  },
   "home": {
     "meta": {
       "title": "Break your Bones Wiki - Codes, Crash Guides, Physics Tips & Upgrades",
@@ -465,7 +476,38 @@
       "secondary": "Play on Roblox"
     }
   },
-  "bosses": {},
+  "guide": {
+    "overviewTitle": "Break your Bones Guides",
+    "overviewDescription": "Step-by-step Break your Bones guides covering beginner basics, leveling, money, and the tips that help you progress faster."
+  },
+  "codes": {
+    "overviewTitle": "Break your Bones Codes",
+    "overviewDescription": "All active Break your Bones codes, how to redeem them, and what each reward gives you."
+  },
+  "items": {
+    "overviewTitle": "Break your Bones Items & Materials",
+    "overviewDescription": "Break your Bones materials, forge recipes, spells, and tier lists so you know what to collect and upgrade next."
+  },
+  "progression": {
+    "overviewTitle": "Break your Bones Progression",
+    "overviewDescription": "Break your Bones progression guides for max level, money farming, rewards, and the fastest routes to grow your account."
+  },
+  "mechanics": {
+    "overviewTitle": "Break your Bones Mechanics",
+    "overviewDescription": "How Break your Bones works under the hood, from ragdoll physics and breaking more bones to the void and known glitches."
+  },
+  "community": {
+    "overviewTitle": "Break your Bones Community",
+    "overviewDescription": "Break your Bones Discord, Reddit, groups, and update news so you can stay connected with other players."
+  },
+  "platforms": {
+    "overviewTitle": "Break your Bones Platforms",
+    "overviewDescription": "Where to play Break your Bones, including online, free, unblocked, and Playhop versions of the game."
+  },
+  "controls": {
+    "overviewTitle": "Break your Bones Controls",
+    "overviewDescription": "Break your Bones controls, obby routes, and 3D ragdoll gameplay basics to help you play with confidence."
+  },
   "shared": {
     "wikiNavigation": "Wiki Navigation",
     "activeCodes": "Active Codes",
@@ -496,10 +538,10 @@
     "officialYoutube": "Gameplay Videos",
     "vvBuilder": "Physics Tips",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Crash Challenges",
-    "bossGuides": "Physics Tips",
-    "buildGuide": "Score Guides",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "allCodes": "All Codes",
+    "physicsTips": "Physics Tips",
+    "scoreGuides": "Score Guides"
   }
 }
