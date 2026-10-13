@@ -9,8 +9,8 @@
   "nav": {},
   "home": {
     "meta": {
-      "title": "My Seafood Stand Wiki — Codes, Recipes, Upgrades & Guides",
-      "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
+      "title": "Break your Bones Wiki - Codes, Crash Guides, Physics Tips & Upgrades",
+      "description": "Complete Break your Bones guide with working codes, crash challenge routes, ragdoll physics tips, upgrade priorities, and score strategies to break more bones."
     },
     "hero": {
       "eyebrow": "Physics Based Action Game",
@@ -34,27 +34,27 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your My Seafood Stand Journey",
+      "title": "Your Break your Bones Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Learn the core loop of Break your Bones, one repeatable break, and the first upgrades that raise your payout per attempt."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "All Codes",
+          "description": "Redeem every working Break your Bones code for free currency, damage boosts, and cosmetic rewards before they expire."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Fastest Leveling",
+          "description": "Plan your falls around the tallest reachable point and stack multipliers so each drop breaks more bones for more XP."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
+          "title": "Best Farming Spots",
+          "description": "Farm materials on hard surfaces, staircases, and chained tumbles that turn one fall into several separate breaks."
         }
       ]
     },
@@ -62,237 +62,367 @@
       "eyebrow": "Popular Pages",
       "title": "Trending Now",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
+        "Beginner Guide",
+        "Working Codes",
+        "Ragdoll Physics",
+        "Upgrade Priorities"
       ],
       "cards": [
         {
           "badge": "Beginner",
           "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
-          "href": "/beginner-guide"
+          "description": "Everything you need from your first launch to a repeatable, profitable break routine.",
+          "href": "/guide/break-your-bones-beginner-guide"
         },
         {
           "badge": "Updated",
-          "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
-          "href": "/codes"
+          "title": "Working Codes",
+          "description": "How Break your Bones codes work, how to redeem them, and how to avoid the most common errors.",
+          "href": "/codes/break-your-bones-codes"
         },
         {
-          "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
-        },
-        {
-          "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
-        },
-        {
-          "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
+          "badge": "Core",
+          "title": "Ragdoll Physics",
+          "description": "How impulse thresholds, damage accumulation, and fracture states decide every bone break.",
+          "href": "/mechanics/break-your-bones-ragdoll-physics"
         },
         {
           "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
+          "title": "Break More Bones",
+          "description": "The techniques and multipliers that turn a single fall into a chain of broken bones.",
+          "href": "/mechanics/break-your-bones-how-to-break-more-bones"
         },
         {
-          "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
+          "badge": "Items",
+          "title": "Materials Guide",
+          "description": "Where to farm basic fragments, refined parts, and rare cores, and when to spend them.",
+          "href": "/items/break-your-bones-materials"
         },
         {
-          "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
+          "badge": "Progression",
+          "title": "Progress Fast",
+          "description": "The fastest way to progress in Break your Bones, from farming spots to upgrade priority.",
+          "href": "/progression/break-your-bones-fastest-way-to-progress"
         },
         {
-          "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
+          "badge": "Guide",
+          "title": "Make Money Fast",
+          "description": "Repeatable money routes that raise your payout per attempt and your attempts per minute.",
+          "href": "/guide/break-your-bones-how-to-make-money"
+        },
+        {
+          "badge": "Mechanics",
+          "title": "Void & Resets",
+          "description": "How severity tiers and the void reset interact, and how to survive both.",
+          "href": "/mechanics/break-your-bones-void"
+        },
+        {
+          "badge": "Platforms",
+          "title": "Play for Free",
+          "description": "Every platform where you can play Break your Bones free and how to start in minutes.",
+          "href": "/platforms/break-your-bones-free"
         }
       ]
     },
     "aboutGame": {
-      "title": "What is My Seafood Stand?",
+      "title": "What is Break your Bones?",
       "paragraphs": [
-        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Break your Bones is a physics-driven ragdoll game built around momentum, impact, and destruction. Instead of avoiding damage, you launch a character into hazards and score by how many bones snap before the run ends. Every break is the result of real simulation inputs such as speed at contact, limb angle, surface hardness, and the multipliers you have stacked on top.",
+        "That single trade-off shapes the whole game. Bigger falls pay more but risk ending the run, so the best players plan routes, chain impacts together, and reinvest their earnings into damage multipliers and launch power. This wiki collects the routes, physics explanations, materials data, and upgrade priorities that help you turn a lucky crash into a repeatable one."
       ],
       "stats": [
         {
-          "label": "Developer",
-          "value": "Midnight Continent"
+          "label": "Genre",
+          "value": "Physics Action"
         },
         {
           "label": "Platform",
-          "value": "Roblox"
+          "value": "Browser & Mobile"
         },
         {
-          "label": "Genre",
-          "value": "Fighting RPG"
+          "label": "Core Goal",
+          "value": "Break Bones"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Score Source",
+          "value": "Bone Count"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
+          "label": "Progression",
+          "value": "Upgrades & Rebirths"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
+          "label": "Resources",
+          "value": "Materials & Cores"
         },
         {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Play Style",
+          "value": "Solo & Co-op"
+        },
+        {
+          "label": "Cost",
+          "value": "Free to Play"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "Explore My Seafood Stand Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "title": "Explore Break your Bones Wiki",
+      "description": "Master the physics-driven chaos with essential beginner routes, working codes, upgrade priorities, complete material data, and the crash techniques that break the most bones.",
       "modules": [
         {
           "order": 1,
-          "name": "My Seafood Stand Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "Break your Bones Beginner Guide",
+          "description": "This module explains the core loop, launch and impact mechanics, scoring, and how new players can build a repeatable, profitable break routine from their very first session.",
+          "href": "/guide/break-your-bones-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "1",
+              "detail": "Learn the controls and one repeatable break, because consistency beats lucky one-offs."
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "2",
+              "detail": "Run a handful of low-risk breaks to build a baseline you can compare against."
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "3",
+              "detail": "Buy the cheapest income upgrade first, since small purchases compound fastest."
+            },
+            {
+              "label": "4",
+              "detail": "Test one slightly bigger break to find your current safe ceiling."
+            },
+            {
+              "label": "5",
+              "detail": "Bank your earnings before pushing again so a bad run cannot erase your progress."
+            },
+            {
+              "label": "6",
+              "detail": "Unlock the next area only when you are comfortable with the current one."
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "Break your Bones Crash Challenges",
+          "description": "This module covers crash scenarios, obstacle interactions, and the techniques that maximize bone-breaking results, so you can discover effective routes for higher damage scores.",
+          "href": "/mechanics/break-your-bones-how-to-break-more-bones",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "Slam",
+              "detail": "Single-limb slam tucks one limb under the body so it takes the full impact and breaks cleanly."
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "Tumble",
+              "detail": "Chained tumble keeps the ragdoll rolling so each rotation produces another contact point."
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "Stairs",
+              "detail": "Staircase bounce turns every step into a separate hard surface and a separate break."
+            },
+            {
+              "label": "Edge",
+              "detail": "Edge landing concentrates force on a platform corner for more damage per contact."
+            },
+            {
+              "label": "Props",
+              "detail": "Vehicle or prop assist lands a moving hit that is often worth more than a long fall."
+            },
+            {
+              "label": "Combo",
+              "detail": "Combo finisher saves your highest drop for the end when your multipliers are already running."
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
+          "name": "Break your Bones Upgrades Guide",
+          "description": "This module organizes the progression systems such as materials, unlockable upgrades, and prestige-style rebirths, and explains which purchases are worth focusing on first.",
+          "href": "/items/break-your-bones-materials",
           "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "S",
+              "detail": "Impact and fall-damage multipliers scale every single run, so buy them before anything else."
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "A",
+              "detail": "Launch power and speed give each attempt more energy and therefore more bones per fall."
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
+              "label": "B",
+              "detail": "Ragdoll control helps you steer the second and third impact into another hard surface."
             },
             {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "C",
+              "detail": "Cosmetic unlocks change how you look but add nothing to your bone count or payout."
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "Break your Bones Physics Tips",
+          "description": "This module provides advanced tips for using ragdoll physics, collisions, and environmental objects to create stronger impacts, aimed at players who want to improve their crash performance.",
+          "href": "/mechanics/break-your-bones-ragdoll-physics",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "Head",
+              "detail": "The head and neck sit on a long lever arm, so a modest impulse creates violent rotation."
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "Chain",
+              "detail": "Damage accumulates across collisions, so long tumbles break more bones than one clean wallop."
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "Hard",
+              "detail": "Concrete, rock, and metal convert energy into fractures while grass and water absorb it."
+            },
+            {
+              "label": "Angle",
+              "detail": "Land on the limb you want to break instead of flat on your back to control the load path."
+            },
+            {
+              "label": "Roll",
+              "detail": "Residual momentum keeps the body tumbling and sets up a second, harder landing."
+            },
+            {
+              "label": "Zones",
+              "detail": "Highlighted map zones and weak-point hits stack extra multipliers on top of the base break."
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "Break your Bones Best Falls",
+          "description": "This module highlights the most effective fall setups, dangerous locations, and impact opportunities, including community-discovered methods for memorable high-scoring crashes.",
+          "href": "/progression/break-your-bones-fastest-way-to-progress",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "Towers",
+              "detail": "The tallest reachable structures give the biggest damage and the most bones per fall."
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "Stairs",
+              "detail": "Staircases and ledges create several hard surfaces inside a single drop."
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "Hazards",
+              "detail": "Traps, vehicles, and props add impact energy that a plain fall cannot match."
+            },
+            {
+              "label": "Flat",
+              "detail": "Flat landings register clean breaks, while slopes and edges reduce the impact."
+            },
+            {
+              "label": "Routes",
+              "detail": "One memorized route beats random jumping because it removes wasted seconds."
+            },
+            {
+              "label": "Events",
+              "detail": "Limited-time events hand out bonus multipliers that stack on your normal payout."
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "Break your Bones Score Guide",
+          "description": "This module explains how damage scores and payouts are calculated, and how players can raise their records through better timing, multiplier stacking, and collision choices.",
+          "href": "/progression/break-your-bones-rewards",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "Speed",
+              "detail": "The speed bonus triggers when you hit the ground above the game's speed threshold."
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "Chain",
+              "detail": "The chain bonus rewards breaking several bones inside a short time window."
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "Weakpoint",
+              "detail": "Weak-point hits on small bones such as a finger, rib, or jaw carry a high multiplier."
+            },
+            {
+              "label": "Zone",
+              "detail": "The zone bonus pays extra when you land inside a highlighted area of the map."
+            },
+            {
+              "label": "Upgrades",
+              "detail": "Upgrade multipliers are permanent and apply to every future run you attempt."
+            },
+            {
+              "label": "Severity",
+              "detail": "Higher severity breaks such as displaced or compound fractures pay more than a hairline crack."
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Break your Bones Controls Guide",
+          "description": "This module is a simple reference for the available controls and gameplay actions, helping players quickly learn how to launch, steer, and manage their crashes.",
+          "href": "/controls/break-your-bones-how-to-play",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "WASD",
+              "detail": "Move and steer your character with WASD or the arrow keys."
+            },
+            {
+              "label": "Space",
+              "detail": "Jump or launch the ragdoll into the hazard to start a run."
+            },
+            {
+              "label": "E / F",
+              "detail": "Interact and grab prompts, including the code box in the lobby."
+            },
+            {
+              "label": "Shift",
+              "detail": "Hold to sprint and build extra speed before a fall."
+            },
+            {
+              "label": "Mouse",
+              "detail": "Look around and re-aim the camera before the next launch."
+            },
+            {
+              "label": "R",
+              "detail": "Reset or respawn instantly so you can chain the next attempt."
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Break your Bones Updates",
+          "description": "This module collects official game updates, version changes, and new content information, so returning players can quickly check recent improvements and additions.",
+          "href": "/community/break-your-bones-update",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Patches",
+              "detail": "Balance patches adjust break thresholds, payout rates, and upgrade costs."
+            },
+            {
+              "label": "Codes",
+              "detail": "New codes usually drop around updates and community milestones."
+            },
+            {
+              "label": "Events",
+              "detail": "Limited-time events add bonus multipliers and exclusive material drops."
+            },
+            {
+              "label": "Maps",
+              "detail": "New areas and hazards expand the routes available for high-scoring falls."
+            },
+            {
+              "label": "Fixes",
+              "detail": "Bug fixes target ragdoll glitches that can end a run or block progress."
+            },
+            {
+              "label": "Notes",
+              "detail": "Read patch notes before a grind session so your route stays efficient."
             }
           ]
         }
@@ -300,27 +430,31 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about My Seafood Stand.",
+      "description": "Quick answers to the most common questions about Break your Bones.",
       "items": [
         {
-          "question": "What is My Seafood Stand?",
-          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Break your Bones?",
+          "answer": "Break your Bones is a physics-driven ragdoll game where you launch a character into hazards and score by how many bones break before the run ends. Bigger, harder, and better-aimed impacts break more bones, which convert into currency, upgrades, and leaderboard standing."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How do I break more bones in Break your Bones?",
+          "answer": "Control the four inputs that decide a break: speed at contact, contact angle, surface hardness, and load path. Build speed with a long fall, land on the limb you want to break, favor concrete and metal over grass or water, and let the ragdoll roll so one landing becomes several impacts."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "How do I redeem Break your Bones codes?",
+          "answer": "Open the Codes, Rewards, or Gift button in the lobby, paste the code exactly as written, and remove any trailing space before you press Redeem. Codes are usually case-sensitive and tied to a single account, so a code that was already used will not pay out twice."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "What should I upgrade first in Break your Bones?",
+          "answer": "Buy the upgrade that helps you on a bad run, not a perfect one. Flat impact and fall-damage multipliers scale every attempt, so they come first, followed by launch power and speed. Cosmetic unlocks are a luxury and never raise your bone count."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "Can I play Break your Bones for free?",
+          "answer": "Yes. Break your Bones is free to play in a browser and on mobile platforms such as Playhop, and it also has a Roblox release. Paid items, when they exist, are usually boosts and cosmetics rather than access to the game itself."
+        },
+        {
+          "question": "Why did my Break your Bones run end early?",
+          "answer": "Most short runs come from a severe or critical break that removes your steering, followed by a fall out of the playable area and a void reset. Test ledges before you trust them, keep a healing item in reserve, and fight with solid geometry behind you so knockback cannot push you off the map."
         }
       ]
     },
