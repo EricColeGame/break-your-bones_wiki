@@ -18,6 +18,11 @@
     "menu": "Menu",
     "toggleTheme": "Toggle theme"
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The guide you are looking for may have moved or has not been added yet.",
+    "browse": "Browse Guides"
+  },
   "home": {
     "meta": {
       "title": "Break your Bones Wiki - Codes, Crash Guides, Physics Tips & Upgrades",

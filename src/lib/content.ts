@@ -248,10 +248,45 @@ const GROUP_TITLES: Record<string, string> = {
 };
 
 // locale → 分组标题映射
-const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {};
+const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
+  es: {
+    guide: "Primeros pasos",
+    codes: "Códigos",
+    items: "Objetos y materiales",
+    progression: "Progresión",
+    mechanics: "Mecánicas",
+    community: "Comunidad",
+    platforms: "Plataformas",
+    controls: "Controles",
+  },
+  pt: {
+    guide: "Primeiros passos",
+    codes: "Códigos",
+    items: "Itens e materiais",
+    progression: "Progressão",
+    mechanics: "Mecânicas",
+    community: "Comunidade",
+    platforms: "Plataformas",
+    controls: "Controles",
+  },
+  de: {
+    guide: "Erste Schritte",
+    codes: "Codes",
+    items: "Items & Materialien",
+    progression: "Fortschritt",
+    mechanics: "Mechaniken",
+    community: "Community",
+    platforms: "Plattformen",
+    controls: "Steuerung",
+  },
+};
 
 // locale → "Overview" 翻译
-const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {};
+const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
+  es: "Descripción general",
+  pt: "Visão geral",
+  de: "Übersicht",
+};
 
 // 分组排序顺序
 const GROUP_ORDER: string[] = [

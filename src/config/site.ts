@@ -33,6 +33,6 @@ export const siteConfig: SiteConfig = {
     discord: "https://www.roblox.com/communities/17327542/High-Effort-Projects",
     youtube: "https://www.youtube.com/results?search_query=break+your+bones+roblox",
   },
-  locales: ["en", "es", "pt", "de", "fr"],
+  locales: ["en", "es", "pt", "de"],
   defaultLocale: "en",
 };
