@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "My Seafood Stand Wiki",
-    "shortName": "My Seafood Stand",
-    "tagline": "Complete Guides, Codes, Recipes & Tier Lists",
-    "description": "Your ultimate guide to My Seafood Stand on Roblox! Explore active codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
+    "name": "Break your Bones Wiki",
+    "shortName": "Break your Bones",
+    "tagline": "Crash Challenges, Physics Tips & Score Guides",
+    "description": "Break your Bones Wiki provides gameplay guides, crash challenge walkthroughs, ragdoll physics tips, codes, and useful information to help players break more bones and score bigger crashes.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
   "nav": {
@@ -30,19 +30,19 @@
       "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
     },
     "hero": {
-      "eyebrow": "Fan-Made Community Wiki",
-      "title": "My Seafood Stand",
-      "description": "Master your restaurant in My Seafood Stand on Roblox. Access all active codes, complete fish & recipe catalog, optimal upgrades, and pro money-making strategies.",
+      "eyebrow": "Physics Based Action Game",
+      "title": "Break your Bones Wiki",
+      "description": "Break your Bones is a physics-based action game focused on bone breaking mechanics, challenges, gameplay strategies, and player progression. Explore crash routes, ragdoll physics tips, and score guides on our community wiki.",
       "stats": [
         "All Codes",
-        "All Fish & Recipes",
-        "Upgrade Guides",
-        "Fast Cash Tips"
+        "Crash Challenges",
+        "Physics Tips",
+        "Score Guides"
       ],
       "primaryCta": "Beginner Guide",
-      "secondaryCta": "Seafood Tier List",
+      "secondaryCta": "Crash Challenges",
       "tertiaryCta": "Active Codes",
-      "videoLabel": "Official media"
+      "videoLabel": "Gameplay Showcase"
     },
     "updates": {
       "title": "Latest Updates",
@@ -342,8 +342,8 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master My Seafood Stand?",
-      "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
+      "title": "Ready to Master Break your Bones?",
+      "description": "From your first ragdoll launch to record-breaking crash scores, our community wiki has you covered with free, up-to-date guides.",
       "primary": "Read the Beginner Guide",
       "secondary": "Play on Roblox"
     }
@@ -379,21 +379,21 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "My Seafood Stand Wiki",
-    "about": "My Seafood Stand Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "Break your Bones Wiki",
+    "about": "Break your Bones Wiki is an independent fan-built guide hub covering crash challenges, ragdoll physics, scoring strategies, and essential game knowledge for new and veteran players alike.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 My Seafood Stand Wiki. Not affiliated with Midnight Continent or Roblox.",
-    "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play My Seafood Stand",
-    "officialDiscord": "Official Discord",
-    "officialYoutube": "Official YouTube",
-    "vvBuilder": "VV Builder (Skill Planner)",
+    "copyright": "2026 Break your Bones Wiki. Not affiliated with the game developers or Roblox.",
+    "description": "Physics-based ragdoll game about breaking bones, chaining big crashes, and unlocking new challenges.",
+    "playGame": "Play Break your Bones",
+    "officialDiscord": "Roblox Community Group",
+    "officialYoutube": "Gameplay Videos",
+    "vvBuilder": "Physics Tips",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
+    "raceGuides": "Crash Challenges",
+    "bossGuides": "Physics Tips",
+    "buildGuide": "Score Guides",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   }

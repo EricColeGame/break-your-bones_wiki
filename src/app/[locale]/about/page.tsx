@@ -3,8 +3,8 @@ import { LegalPage } from "@/components/legal-page";
 export default function AboutPage() {
   return (
     <LegalPage title="About">
-      <p>VV Ultimatum Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.</p>
-      <p>The layout, navigation, article cards, and detail format are reproduced from the target VV: ULTIMATUM wiki pages requested for this implementation.</p>
+      <p>Break your Bones Wiki is an independent fan-built guide hub covering crash challenges, ragdoll physics, scoring strategies, and essential game knowledge for new and veteran players alike.</p>
+      <p>Our mission is to help players launch better runs, understand the physics behind every impact, and get more out of the game with clear, up-to-date guides.</p>
     </LegalPage>
   );
 }

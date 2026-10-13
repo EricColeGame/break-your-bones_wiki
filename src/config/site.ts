@@ -26,12 +26,12 @@ export const siteConfig: SiteConfig = {
   description:
     "Break your Bones Wiki provides gameplay guides, challenge information, mechanics explanations, codes, and useful tips to help players master the physics-based bone-breaking game.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://break-your-bones.wiki",
-  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://break-your-bones.wiki").hostname.replace(/^www\./, "")}`,
-  gameUrl: "https://play.google.com/store/apps/details?id=com.ags.bonebreak.game",
+  supportEmail: "support@break-your-bones.wiki",
+  gameUrl: "https://www.roblox.com/games/123821081589134/Break-your-Bones",
   heroVideoId: "WB7zdU-USTw", // Break your Bones gameplay showcase
   social: {
-    discord: "https://discord.gg/roblox",
-    youtube: "https://www.youtube.com/@roblox",
+    discord: "https://www.roblox.com/communities/17327542/High-Effort-Projects",
+    youtube: "https://www.youtube.com/results?search_query=break+your+bones+roblox",
   },
   locales: ["en", "es", "pt", "de", "fr"],
   defaultLocale: "en",
