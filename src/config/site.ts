@@ -19,15 +19,16 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "My Seafood Stand Wiki",
-  shortName: "My Seafood Stand",
-  logoText: "SS",
-  tagline: "Complete Guides, Codes, Recipes & Tier Lists",
-  description: "Your ultimate guide to My Seafood Stand on Roblox! Explore active working codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top",
-  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top").hostname.replace(/^www\./, "")}`,
-  gameUrl: "https://www.roblox.com/games/my-seafood-stand",
-  heroVideoId: "M8DvcwoFRrk", // Roblox My Seafood Stand codes & gameplay video
+  name: "Break your Bones Wiki",
+  shortName: "Break your Bones",
+  logoText: "B",
+  tagline: "Crash Challenges, Physics Tips & Score Guides",
+  description:
+    "Break your Bones Wiki provides gameplay guides, challenge information, mechanics explanations, codes, and useful tips to help players master the physics-based bone-breaking game.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://break-your-bones.wiki",
+  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://break-your-bones.wiki").hostname.replace(/^www\./, "")}`,
+  gameUrl: "https://play.google.com/store/apps/details?id=com.ags.bonebreak.game",
+  heroVideoId: "WB7zdU-USTw", // Break your Bones gameplay showcase
   social: {
     discord: "https://discord.gg/roblox",
     youtube: "https://www.youtube.com/@roblox",
