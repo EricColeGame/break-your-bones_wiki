@@ -1,3 +1,7 @@
+export const siteLocales = ["en", "es", "pt", "de"] as const;
+
+export type SiteLocale = (typeof siteLocales)[number];
+
 export interface SiteConfig {
   name: string;
   shortName: string;
@@ -14,8 +18,8 @@ export interface SiteConfig {
     twitter?: string;
     tiktok?: string;
   };
-  locales: readonly string[];
-  defaultLocale: string;
+  locales: readonly SiteLocale[];
+  defaultLocale: SiteLocale;
 }
 
 export const siteConfig: SiteConfig = {
@@ -33,6 +37,6 @@ export const siteConfig: SiteConfig = {
     discord: "https://www.roblox.com/communities/17327542/High-Effort-Projects",
     youtube: "https://www.youtube.com/results?search_query=break+your+bones+roblox",
   },
-  locales: ["en", "es", "pt", "de"],
+  locales: siteLocales,
   defaultLocale: "en",
 };
