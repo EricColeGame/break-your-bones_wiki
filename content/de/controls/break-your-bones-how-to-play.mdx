@@ -1,126 +1,89 @@
 export const metadata = {
-  title: "Break Your Bones spielen: Alle Steuerungen, Tipps und Einsteigerleitfaden",
-  description: "Lerne, wie du Break Your Bones spielst – mit vollständiger Steuerungsübersicht, Schritt-für-Schritt-Anleitung für Runs, Tipps zum Punkten und Lösungen für die häufigsten Anfängerfehler.",
+  title: "Break your Bones: Der Roblox-Ragdoll-Physik-Sandbox erklärt",
+  description: "Ein praktischer Leitfaden zu Break your Bones auf Roblox: Was die offizielle Seite dokumentiert, wie die Ragdoll-Sandbox funktioniert und was Spieler im Spiel überprüfen können.",
   category: "controls",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Wenn du jemals Break Your Bones gestartet, deine Figur durch die Luft geschleudert und dann hilflos zugesehen hast, wie sie wie eine Flipperkugel in eine Wand geknallt ist, kennst du die eigentliche Herausforderung bereits: Der Start ist einfach, das Steuern nicht. Zu lernen, wie man Break Your Bones spielt, läuft auf zwei Dinge hinaus – genau zu wissen, was jede Eingabe bewirkt, und zu wissen, wann man aufhören sollte, sein Glück herauszufordern.
+Wenn du kurze Clips gesehen hast, in denen eine blockige Figur eine riesige Treppe hinunterpurzelt und sich auf Arten faltet, die wirklich unangenehm aussehen, hast du wahrscheinlich schon jemanden [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) spielen sehen. Es ist eine Physik-Ragdoll-Sandbox auf Roblox, bei der das Ziel einfach und ein wenig absurd ist: Schleudere eine Figur in Gefahren und lange Stürze, beobachte, wie der Körper auf die Simulation reagiert, und versuche, jeden Knochen zu brechen, den du kannst.
 
-Dieser Leitfaden schlüsselt die Steuerung auf jeder Plattform auf, führt durch einen kompletten Run vom Abschuss bis zur Landung und behandelt die Fehler, die die meisten frühen Versuche beenden. Egal, ob du eine schnelle Antwort auf die Frage suchst, wie man Break Your Bones spielt, oder eine tiefere Erklärung zu Momentum und Timing – alles unten ist so geschrieben, dass es im Spiel verwendet werden kann, nicht nur zum Lesen.
+Dieser Artikel hält sich an das, was der Entwickler tatsächlich bewirbt, trennt das von dem, was Spieler berichten, und ist ehrlich darüber, was einfach nirgendwo offiziell dokumentiert ist.
 
-## Was ist Break Your Bones und wie sieht ein Run aus?
+## Was die offizielle Roblox-Seite tatsächlich sagt
 
-Break Your Bones ist ein physikbasiertes Spiel, das auf Momentum, Aufprall und Ragdoll-Chaos aufbaut. Du steuerst eine Figur, schickst sie in Gefahren und punktest danach, wie viel Bestrafung sie einsteckt, bevor der Run endet. Weil die Figur auf simulierte Physik statt auf geskriptete Animation reagiert, zählen deine Eingaben mehr als deine Reflexe – ein gut getimter Schubs schlägt fast jedes Mal hektisches Button-Mashing.
+Break your Bones ist eine Roblox-Experience, die von der Gruppe **High Effort Projects** erstellt wurde. Der offizielle Place-Eintrag zeigt, dass sie am **5. Juni 2025** erstellt und zuletzt am **13. Oktober 2026** aktualisiert wurde. Sie unterstützt bis zu **20 Spieler pro Server** und hat laut dem offiziellen Eintrag, der am 14. Oktober 2026 abgerufen wurde, etwa **133 Millionen Besuche** angesammelt.
 
-Ein typischer Run durchläuft drei klar getrennte Phasen. Zu erkennen, in welcher Phase du dich befindest, ist der größte Unterschied zwischen neuen und erfahrenen Spielern.
+Die offizielle Beschreibung bewirbt eine kurze, klare Reihe von Features:
 
-| Phase | Was passiert | Dein Ziel |
-|---|---|---|
-| Abschuss | Du wählst Position, Winkel und Stärke | Einen sauberen, kontrollierten ersten Aufprall vorbereiten |
-| Momentum | Deine Figur taumelt, springt und verkettet Treffer | Die Kette am Leben halten, ohne überzukorrigieren |
-| Auslauf | Die Bewegung wird langsamer, die Kette endet, der Punktestand wird fixiert | Das Ergebnis sichern, zurücksetzen und eine Variable anpassen |
+- Versuche, alle deine Knochen zu brechen
+- Ein unterhaltsamer Knochen-Zertrümmerungs-Simulator
+- Schalte neue Ragdolls frei
+- Schleudere dich selbst von einem riesigen Sturz
+- Eine Ragdoll-Physik-Simulation
 
-Neue Spieler neigen dazu, alle drei Phasen gleich zu behandeln – ständige Eingaben, ständige Panik. Erfahrene Spieler behandeln den Abschuss als Vorbereitung, die Momentum-Phase als leichtes Lenkmanöver und den Auslauf als freien Moment, um den nächsten Versuch zu planen.
+Das ist die maßgebliche Liste. Es lohnt sich, festzuhalten, was *nicht* darin steht: kein Codesystem, keine Währungsnamen, keine Shoppreise, keine Schadenswerte, keine Knochen-für-Knochen-Mechaniken und keine Ragdoll-Liste. Wenn du einen Leitfaden siehst, der detaillierte Schadenszahlen oder ein vollständiges Verzeichnis freischaltbarer Charaktere behauptet, behandle ihn als Drittbeobachtung oder reine Vermutung statt als Entwicklerdokumentation.
 
-## Break Your Bones Steuerung: Jede Eingabe erklärt
+Eine häufige Verwechslung: Dies ist **nicht** Broken Bones IV, und es ist **nicht** eine der mobilen Knochenbruch-Apps in App-Stores mit ähnlichen Namen. Es sind separate Produkte mit separaten Mechaniken. Alles, was du über diese Spiele liest, lässt sich nicht hierher übertragen.
 
-Das Steuerungsschema ist klein, aber jede Eingabe hat eine bestimmte Aufgabe. Die folgende Tabelle entspricht der Belegung, die die meisten Builds verwenden. Behandle sie als Ausgangspunkt und überprüfe sie im Steuerungsmenü deines Spiels, da sich Belegungen zwischen Versionen und Plattformen ändern.
+## Wie die Sandbox-Schleife funktioniert
 
-| Aktion | Tastatur (PC) | Gamepad | Touch |
-|---|---|---|---|
-| Bewegen / lenken | WASD oder Pfeiltasten | Linker Stick | On-Screen-Joystick |
-| Kamera umsehen | Maus | Rechter Stick | Wischen |
-| Springen / abschießen | Leertaste | A / Kreuz | Sprungtaste |
-| Interagieren / greifen | E oder F | X / Quadrat | Tipp-Aufforderung |
-| Sprinten / aufladen | Shift (halten) | Trigger (halten) | Sprinttaste halten |
-| Zurücksetzen / respawnen | R | Menü + Auswählen | Menütaste |
-| Pause / Einstellungen | Esc | Start | Pause-Symbol |
+Basierend auf der beworbenen Beschreibung ist die Kernschleife unkompliziert. Du spawst als eine von Ragdoll gesteuerte Figur, du schleuderst dich in etwas Gefährliches oder stürzt aus großer Höhe, und die Physiksimulation erledigt den Rest. Das „Ziel", alle deine Knochen zu brechen, gibt dem Chaos einen scoreboard-ähnlichen Zweck.
 
-Wenn eine Taste nichts zu bewirken scheint, bist du mit ziemlicher Sicherheit in einem Build, der sie neu belegt hat. Öffne das Einstellungsmenü, bevor du annimmst, das Spiel sei kaputt – das löst die Mehrheit der Beschwerden über „meine Steuerung funktioniert nicht“.
+Der Grund, warum dieses Format als Roblox-Experience statt als traditionelles Spiel funktioniert, ist, dass Ragdoll-Physik unvorhersehbare Ergebnisse produziert. Derselbe Sturz von derselben Plattform wird eine Figur nicht zweimal identisch falten. Diese Variabilität ist die Unterhaltung: Spieler teilen Clips von ungewöhnlich dramatischen Aufprällen, lustigen Posen in der Luft und dem gelegentlichen perfekt getimten Schleudern.
 
-### Plattformunterschiede
+Da die offizielle Seite kein Fortschrittssystem, keine Währung und keinen Shop dokumentiert, solltest du nicht annehmen, dass eines in einer bestimmten Form existiert. Was die Seite *bestätigt*, ist, dass **das Freischalten neuer Ragdolls** Teil der Experience ist. Wie du sie freischaltest — Spielzeit, Erfolge, In-Experience-Währung oder etwas anderes — wird offiziell nicht angegeben und sollte im Spiel überprüft werden.
 
-Wo du spielst, verändert, wie präzise du sein kannst. Analoge Eingaben sind bei Korrekturen in der Luft in der Regel besser als digitale, weil du einen Bruchteil der maximalen Kraft anwenden kannst.
+## Praktische Tipps, um mehr daraus zu machen
 
-| Plattform | Beste Eingabe | Praktischer Unterschied |
-|---|---|---|
-| Desktop-Browser | Tastatur + Maus | Schnellste Kameraschwenks; ideal zum schnellen Nachzielen |
-| Eigenständiger PC-Client | Tastatur + Maus oder Gamepad | Gleichmäßigstes Frame-Pacing, daher fühlt sich Timing konsistent an |
-| Konsole | Gamepad | Analoge Lenkung macht kleine Korrekturen deutlich einfacher |
-| Mobil / Touch | Touch | Vereinfachte Aufforderungen, weniger gleichzeitige Eingaben |
+Da der Entwickler keinen Mechanik-Leitfaden veröffentlicht hat, geht es bei den nützlichsten Ratschlägen um die Herangehensweise statt um versteckte Zahlen.
 
-### Neubelegung und Empfindlichkeit
+**Lies die Umgebung, bevor du startest.** Physik-Sandboxen belohnen Experimentieren. Wenn ein Sturz enorm aussieht, ist er es wahrscheinlich auch. Wenn eine Gefahr so aussieht, als würde sie dich eher seitwärts als nach unten schicken, wird sie das wahrscheinlich tun. Beobachtung schlägt hier Vermutungen.
 
-Zwei Anpassungen zahlen sich sofort aus. Erstens: Erhöhe die Kameraempfindlichkeit leicht über den Standard – du willst neu zielen können, ohne die Maus über den ganzen Schreibtisch zu ziehen. Zweitens: Lass die Bewegungsempfindlichkeit in Ruhe, bis du mehrere Runs gespielt hast; beide gleichzeitig zu ändern macht es unmöglich zu erkennen, welche Anpassung geholfen hat.
+**Probiere verschiedene Startwinkel.** Der Pfad eines Ragdolls und die Art, wie seine Gelenke reagieren, hängen stark von der Anfangsgeschwindigkeit und Rotation ab. Kleine Änderungen darin, wie du in einen Sturz oder eine Gefahr eintrittst, können sehr unterschiedliche Ergebnisse produzieren, was nützlich ist, wenn du auf bestimmte Knochenbruch-Ergebnisse aus bist.
 
-## Schritt für Schritt: So spielst du Break Your Bones in deinem ersten Run
+**Spiele mit anderen, wenn du kannst.** Die Server fassen bis zu 20 Spieler, es ist also normalerweise Gesellschaft da. Anderen Spielern bei ihren Versuchen zuzusehen, ist oft schneller, als eine Gefahr selbst herauszufinden, und Multiplayer-Physikinteraktionen können ihr eigenes Chaos hinzufügen.
 
-Wenn du einen wiederholbaren Prozess statt Versuch und Irrtum willst, arbeite diese Schritte der Reihe nach durch. Jeder dauert nur eine Minute und beseitigt eine häufige Quelle von Verwirrung.
+**Prüfe die offizielle Seite und die Community der Gruppe.** Die Beschreibung ist die einzige vom Entwickler verfasste Zusammenfassung, die verfügbar ist, und sie ist knapp an Details. Wenn sich Freischaltbedingungen ändern oder neue Inhalte erscheinen, sind die Update-Historie der Place-Seite und die eigenen Kanäle der Gruppe der Ort, an dem es zuerst auftauchen würde.
 
-1. **Schließe zuerst das Tutorial oder den Übungsbereich ab.** Auch wenn es langsam wirkt, lehrt es das Timing beim Abschuss, das der Hauptmodus voraussetzt.
-2. **Bestätige deine Tastenbelegung.** Öffne den Steuerungsbildschirm und drücke jede Taste einmal physisch. Muskelgedächtnis, das auf der falschen Belegung aufbaut, ist schlimmer als gar kein Muskelgedächtnis.
-3. **Beginne mit einem bewusst schwachen Abschuss.** Dein erstes Ziel ist kein Highscore, sondern zu verstehen, wie deine Figur reagiert.
-4. **Achte auf die Ketten-Aufforderung.** Die meisten Builds signalisieren, wenn noch ein Folgetreffer möglich ist. Diesen Hinweis zu verpassen, ist der Grund, warum Runs scheinbar „zufällig“ enden.
-5. **Halte die Kamera leicht vor deiner Figur.** Dorthin zu schauen, wo du hingehst, ist besser, als dorthin zu schauen, wo du bist.
-6. **Beende den Run zu deinen Bedingungen.** Sobald das Momentum eindeutig stirbt, setze zurück, statt zu warten. In der Totzeit entstehen schlechte Gewohnheiten.
-7. **Ändere pro Versuch nur eine Variable.** Winkel, Kraft oder Startposition – niemals alle drei.
+## Freischaltbares, Währung und Codes: Was dokumentiert ist
 
-| Checkliste für die erste Sitzung | Warum sie wichtig ist |
+Hier gehen viele Online-Leitfäden schief, daher lohnt es sich, direkt zu sein.
+
+| Thema | Offizieller Status |
 |---|---|
-| Tutorial abgeschlossen | Lehrt das Timing beim Abschuss |
-| Tastenbelegung überprüft | Verhindert Phantomprobleme mit der Steuerung |
-| Empfindlichkeit einmal angepasst | Verbessert das Nachzielen mit der Kamera |
-| Fünf Runs mit einer geänderten Variable | Baut echte Intuition auf |
+| Neue Ragdolls freischalten | Als Feature beworben |
+| Knochenbruch-Ziel | Als Feature beworben |
+| Riesensturz-Schleudern | Als Feature beworben |
+| Code-Einlösungssystem | Nicht dokumentiert |
+| Währungsname oder Preise | Nicht dokumentiert |
+| Schadenswerte oder Knochenliste | Nicht dokumentiert |
 
-## Fortgeschrittene Tipps für längere Runs und höhere Punktzahlen
+Zu **Codes im Speziellen**: Die offizielle Roblox-Seite für Break your Bones dokumentiert überhaupt kein Codesystem. Es gibt keine Erwähnung einer Einlösebox, keine Codeliste und keine Entwickleraussage, die bestätigt, dass Codes existieren. Jede Seite, die „funktionierende Codes" für diese Experience präsentiert, präsentiert etwas, das der Entwickler nicht bestätigt hat, und diese Listen sind häufig veraltet, aus anderen Spielen kopiert oder erfunden.
 
-Sobald sich die Grundlagen automatisch anfühlen, geht es im Spiel um Effizienz. Die folgende Tabelle behandelt die Techniken, die lange Ketten von kurzen unterscheiden.
+Wenn du wissen möchtest, ob jemals Codes hinzugefügt werden, ist die zuverlässige Methode, die offizielle Place-Seitenbeschreibung und die eigenen Ankündigungen der High Effort Projects-Gruppe zu prüfen. Wenn der Entwickler ein Code-Feature hinzufügt, wird es dort angegeben. Vertraue keinen Drittanbieterlisten, die nicht auf eine Entwicklerquelle verweisen können.
 
-| Technik | Wann du sie einsetzt | Risiko |
-|---|---|---|
-| Kurze Lenkimpulse | Korrekturen in der Luft | Zu häufiges Antippen kostet schnell Momentum |
-| Verzögerter Abschuss | Wenn du einen steileren Eintrittswinkel willst | Deutlich leichter zu verpassen |
-| Sprungketten | Auf flachen, offenen Strecken | Erfordert einen sauberen Kamerawinkel |
-| Bewusstes Zurücksetzen | Nach einem offensichtlich schlechten Abschuss | Verschwendet einen Run, wenn du gepunktet hast |
-| Kamera vorab ausrichten | Vor jedem Abschuss | Keins, aber unter Druck leicht zu vergessen |
+## Community-Beobachtungen versus offizielle Fakten
 
-Ein paar Gewohnheiten verstärken all das oben Genannte:
+Drittanbieter-Leitfäden und Spielervideos können wirklich nützlich sein, um zu sehen, wie sich das Ragdoll verhält, aber sie sind sekundäre Beobachtungen, keine Dokumentation. Ein Spieler, der einen Clip eines massiven Sturzes zeigt, belegt keine Schadenswerte. Ein Leitfaden, der eine Freischaltmethode beschreibt, belegt nicht die offizielle Freischaltregel, es sei denn, sie stimmt mit den eigenen Aussagen des Entwicklers überein.
 
-- **Kurz antippen, nicht halten.** Eine Lenkeingabe in der Luft zu halten, schießt meist über die gewünschte Korrektur hinaus.
-- **Spät abschießen, nicht früh.** Berichte aus der Community legen konsistent nahe, dass es bessere Eintrittswinkel ergibt, wenn man einen Tick länger wartet, als sich natürlich anfühlt.
-- **Bewusst zurücksetzen.** Behandle einen Reset als Datensammlung, nicht als Niederlage – notiere den verwendeten Abschusswinkel, damit du beim nächsten Mal genau eine Sache ändern kannst.
-- **Spiele in kurzen Sitzungen.** Das Timing der Physik lässt merklich nach, wenn du müde bist, und ein müder Spieler hämmert auf Eingaben, statt sie zu timen.
+Die praktische Regel: Nutze offizielle Quellen für *was das Spiel ist*, und nutze Community-Inhalte für *Ideen, wie man es spielt*. Wenn die beiden in Konflikt geraten, gewinnt die offizielle Seite.
 
-Für Patch Notes, Community-Diskussionen und Versionsverlauf zur PC-Version ist der [offizielle Steam-Store](https://store.steampowered.com/) die zuverlässigste Anlaufstelle, bevor du annimmst, eine Steuerungsänderung sei deine Schuld.
+## FAQ
 
-## Häufige Fehler, die Runs früh beenden
+**Ist Break your Bones dasselbe wie Broken Bones IV?**
+Nein. Es sind separate Roblox-Experiences mit unterschiedlichen Erstellern und unterschiedlichem Design. Mechaniken von einem gelten nicht für das andere.
 
-Die meisten kurzen Runs lassen sich auf einen von wenigen behebbaren Fehlern zurückführen. Finde deinen in der Tabelle und wende die Korrektur zwei oder drei Versuche lang an, bevor du urteilst.
+**Hat Break your Bones Codes?**
+Keine sind dokumentiert. Die offizielle Seite beschreibt kein Codesystem und keine Einlösebox. Prüfe die offizielle Place-Seite und die High Effort Projects-Gruppe auf zukünftige Ankündigungen.
 
-| Fehler | Warum er schadet | Die Lösung |
-|---|---|---|
-| Alle Tasten gleichzeitig hämmern | Physik-Eingaben heben sich gegenseitig auf | Verwende jeweils nur eine Eingabe |
-| Gegen das Ragdoll ankämpfen | Überschreibt das aufgebaute Momentum | Lenke leicht und lass dann los |
-| Ketten-Aufforderung ignorieren | Du setzt zurück, obwohl noch ein Treffer möglich war | Achte auf den Hinweis auf dem Bildschirm |
-| Empfindlichkeit nie ändern | Das Nachzielen mit der Kamera bleibt langsam und ungenau | Einmal anpassen, dann so lassen |
-| Nur Abschüsse mit hoher Kraft üben | Du lernst nie die Kontrolle bei niedriger Geschwindigkeit | Wechsle zwischen beiden ab |
-| Durch Frustration weiterspielen | Das Timing bricht zusammen, Gewohnheiten werden schlechter | Höre nach drei schlechten Runs auf |
+**Wie viele Spieler können einem Server beitreten?**
+Bis zu 20, laut dem offiziellen Eintrag.
 
-Der letzte Punkt ist wichtiger, als die Leute erwarten. Break Your Bones belohnt ruhige, abgewogene Eingaben, und Frustration drückt dich in genau die entgegengesetzte Richtung. Eine fünfminütige Pause führt oft zu einem besseren Run als fünf weitere Versuche.
+**Wer hat es gemacht, und wann?**
+Die Roblox-Gruppe High Effort Projects. Die Place wurde am 5. Juni 2025 erstellt und zuletzt am 13. Oktober 2026 aktualisiert.
 
-## FAQ: Break Your Bones Steuerung und Gameplay
+**Wie schalte ich neue Ragdolls frei?**
+Das Freischalten von Ragdolls wird beworben, aber die Freischaltbedingungen sind auf der offiziellen Seite nicht dokumentiert. Überprüfe es im Spiel oder über die eigenen Kanäle des Entwicklers.
 
-**Was sind die grundlegenden Steuerungen in Break Your Bones?**
-Du brauchst Bewegung oder Lenkung, eine Kamera-Eingabe, eine Sprung- oder Abschuss-Taste, eine Interaktionstaste, einen Sprint- oder Auflade-Modifikator, eine Reset-Taste und eine Pause-Taste. Die genauen Tasten variieren je nach Plattform, also überprüfe sie vor deinem ersten Run im Steuerungsmenü des Spiels.
-
-**Kann man Break Your Bones mit einem Controller spielen?**
-Ja, auf Plattformen, die Gamepads unterstützen. Analoge Sticks machen Korrekturen in der Luft im Allgemeinen einfacher als Tastatureingaben, weil du teilweise Kraft anwenden kannst, statt eines Alles-oder-nichts-Drucks.
-
-**Warum hört meine Figur mitten im Run auf, sich zu bewegen?**
-Das Momentum ist aufgebraucht. Das ist normal – die Physiksimulation verliert bei jedem Aufprall Energie. Die Lösung ist, weniger aggressiv zu lenken und Eingaben zu vermeiden, die gegen deine bestehende Bewegungsrichtung arbeiten.
-
-**Wie lange dauert es, bis man sich damit wohlfühlt, Break Your Bones zu spielen?**
-Die meisten Spieler berichten, dass sich die Steuerung selbst innerhalb weniger Sitzungen natürlich anfühlt, während Timing und Kettenmanagement deutlich länger brauchen. Konzentriere dich pro Versuch auf eine Variable, und die Verbesserungskurve flacht viel schneller ab.
-
-Gut in Break Your Bones zu werden, hängt weniger von schnellen Händen als von Zurückhaltung ab. Lerne die Belegung in- und auswendig, schieße mit weniger Kraft ab, als du für nötig hältst, lenke mit kurzen Impulsen statt mit Halten und ändere immer nur eine Sache. Wenn du das konsequent machst, beginnen die langen Ketten, die einst wie Glück aussahen, wie ein Plan zu wirken.
+**Gibt es eine Währung oder einen Shop?**
+Offiziell nicht dokumentiert. Behandle jeden spezifischen Währungsnamen oder Preis, den du anderswo liest, als unbestätigt, es sei denn, der Entwickler gibt ihn an.

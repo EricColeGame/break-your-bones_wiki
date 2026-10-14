@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "Wiki do Break your Bones",
+    "name": "Break your Bones Wiki",
     "shortName": "Break your Bones",
-    "tagline": "Desafios de colisão, dicas de física e guias de pontuação",
-    "description": "A Wiki do Break your Bones oferece guias de jogo, roteiros de desafios de colisão, dicas de física ragdoll, códigos e informações úteis para ajudar os jogadores a quebrar mais ossos e conseguir colisões com pontuação maior.",
+    "tagline": "Dicas de Ragdoll com Física e Guias de Quebra de Ossos",
+    "description": "O Break your Bones Wiki oferece guias de jogabilidade, dicas de física de ragdoll, técnicas de quebra de ossos e informações úteis sobre a experiência Roblox Break your Bones, da High Effort Projects.",
     "legalNotice": "Wiki de fãs não oficial. Feita por jogadores, para jogadores."
   },
   "nav": {
@@ -21,225 +21,532 @@
   "notFound": {
     "title": "Página não encontrada",
     "description": "O guia que você procura pode ter sido movido ou ainda não foi adicionado.",
-    "browse": "Ver guias"
+    "browse": "Navegar pelos Guias"
   },
   "home": {
     "meta": {
-      "title": "Wiki do Break your Bones: códigos, guias de colisão, dicas de física e upgrades",
-      "description": "Guia completo de Break your Bones com códigos ativos, rotas de desafios de colisão, dicas de física ragdoll, prioridades de upgrade e estratégias de pontuação para quebrar mais ossos."
+      "title": "Break your Bones Wiki - Guias de Física de Ragdoll, Dicas de Quebra de Ossos e Informações",
+      "description": "Wiki comunitária da experiência Roblox Break your Bones, da High Effort Projects. Dicas de física de ragdoll, técnicas de quebra de ossos, ragdolls desbloqueáveis e informações de jogabilidade."
     },
     "hero": {
-      "eyebrow": "Jogo de ação baseado em física",
-      "title": "Wiki do Break your Bones",
-      "description": "Break your Bones é um jogo de ação baseado em física focado em mecânicas de quebra de ossos, desafios, estratégias de jogo e progressão do jogador. Explore rotas de colisão, dicas de física ragdoll e guias de pontuação na nossa wiki da comunidade.",
-      "stats": ["Todos os códigos", "Desafios de colisão", "Dicas de física", "Guias de pontuação"],
-      "primaryCta": "Guia para iniciantes",
-      "secondaryCta": "Desafios de colisão",
-      "tertiaryCta": "Códigos ativos",
-      "videoLabel": "Demonstração de gameplay"
+      "eyebrow": "Sandbox de Ragdoll com Física no Roblox",
+      "title": "Break your Bones Wiki",
+      "description": "Break your Bones é um sandbox de ragdoll com física no Roblox. Lance um personagem contra perigos e quedas enormes para quebrar ossos, desbloqueie novos ragdolls e brinque com uma simulação de física. Explore dicas de quebra de ossos, explicações sobre a física de ragdoll e informações de jogabilidade em nossa wiki comunitária.",
+      "stats": [
+        "Sandbox de Ragdoll com Física",
+        "Dicas de Quebra de Ossos",
+        "Física de Ragdoll",
+        "Quedas Enormes"
+      ],
+      "primaryCta": "Guia para Iniciantes",
+      "secondaryCta": "Dicas de Quebra de Ossos",
+      "tertiaryCta": "Sobre o Jogo",
+      "videoLabel": "Demonstração de Jogabilidade"
     },
     "updates": {
-      "title": "Últimas atualizações",
-      "browse": "Ver todos os guias",
-      "viewAll": "Ver tudo"
+      "title": "Guias Mais Recentes",
+      "browse": "Navegar por Todos os Guias",
+      "viewAll": "Ver Todos"
     },
     "start": {
-      "eyebrow": "Comece aqui",
-      "title": "Sua jornada em Break your Bones",
+      "eyebrow": "Comece Aqui",
+      "title": "Sua Jornada em Break your Bones",
       "cards": [
-        {"number": "1", "title": "Guia para iniciantes", "description": "Aprenda o loop principal de Break your Bones, uma quebra repetível e os primeiros upgrades que aumentam seu pagamento por tentativa."},
-        {"number": "2", "title": "Todos os códigos", "description": "Resgate cada código ativo de Break your Bones por moeda grátis, bônus de dano e recompensas cosméticas antes que expirem."},
-        {"number": "3", "title": "Nivelamento mais rápido", "description": "Planeje suas quedas em torno do ponto mais alto alcançável e acumule multiplicadores para que cada queda quebre mais ossos e renda mais XP."},
-        {"number": "4", "title": "Melhores locais de farm", "description": "Faça farm de materiais em superfícies duras, escadas e quedas encadeadas que transformam uma única queda em várias quebras."}
+        {
+          "number": "1",
+          "title": "Guia para Iniciantes",
+          "description": "Aprenda o loop central de Break your Bones: lançar um ragdoll contra perigos e quedas enormes para quebrar ossos."
+        },
+        {
+          "number": "2",
+          "title": "Dicas de Física de Ragdoll",
+          "description": "Entenda como a simulação de física lida com momento, colisões e comportamento do ragdoll."
+        },
+        {
+          "number": "3",
+          "title": "Desbloqueie Novos Ragdolls",
+          "description": "Descubra como desbloquear novos ragdolls enquanto joga o sandbox de ragdoll com física."
+        },
+        {
+          "number": "4",
+          "title": "Quedas Enormes",
+          "description": "Aprenda a se arremessar de uma queda enorme para impactos maiores e mais ossos quebrados."
+        }
       ]
     },
     "popular": {
-      "eyebrow": "Páginas populares",
-      "title": "Em alta agora",
-      "quickLinks": ["Guia para iniciantes", "Códigos ativos", "Física ragdoll", "Prioridades de upgrade"],
+      "eyebrow": "Páginas Populares",
+      "title": "Em Alta Agora",
+      "quickLinks": [
+        "Guia para Iniciantes",
+        "Física de Ragdoll",
+        "Dicas de Quebra de Ossos",
+        "Ragdolls Desbloqueáveis"
+      ],
       "cards": [
-        {"badge": "Iniciante", "title": "Guia para iniciantes", "description": "Tudo o que você precisa, do primeiro lançamento a uma rotina de quebras repetível e lucrativa.", "href": "/guide/break-your-bones-beginner-guide"},
-        {"badge": "Atualizado", "title": "Códigos ativos", "description": "Como os códigos de Break your Bones funcionam, como resgatá-los e como evitar os erros mais comuns.", "href": "/codes/break-your-bones-codes"},
-        {"badge": "Essencial", "title": "Física ragdoll", "description": "Como os limites de impulso, o acúmulo de dano e os estados de fratura decidem cada quebra de osso.", "href": "/mechanics/break-your-bones-ragdoll-physics"},
-        {"badge": "Popular", "title": "Quebre mais ossos", "description": "As técnicas e os multiplicadores que transformam uma única queda em uma corrente de ossos quebrados.", "href": "/mechanics/break-your-bones-how-to-break-more-bones"},
-        {"badge": "Itens", "title": "Guia de materiais", "description": "Onde farmar fragmentos básicos, peças refinadas e núcleos raros, e quando gastá-los.", "href": "/items/break-your-bones-materials"},
-        {"badge": "Progressão", "title": "Progrida rápido", "description": "A forma mais rápida de progredir em Break your Bones, dos locais de farm à prioridade de upgrade.", "href": "/progression/break-your-bones-fastest-way-to-progress"},
-        {"badge": "Guia", "title": "Ganhe dinheiro rápido", "description": "Rotas de dinheiro repetíveis que aumentam seu pagamento por tentativa e suas tentativas por minuto.", "href": "/guide/break-your-bones-how-to-make-money"},
-        {"badge": "Mecânicas", "title": "Vazio e resets", "description": "Como os níveis de gravidade e o reset do vazio interagem, e como sobreviver aos dois.", "href": "/mechanics/break-your-bones-void"},
-        {"badge": "Plataformas", "title": "Jogue de graça", "description": "Todas as plataformas onde você pode jogar Break your Bones de graça e como começar em minutos.", "href": "/platforms/break-your-bones-free"}
+        {
+          "badge": "Iniciante",
+          "title": "Guia para Iniciantes",
+          "description": "Tudo o que você precisa desde o primeiro lançamento até uma rotina repetível de quebra de ossos.",
+          "href": "/guide/break-your-bones-beginner-guide"
+        },
+        {
+          "badge": "Atualizado",
+          "title": "Códigos",
+          "description": "Informações sobre se Break your Bones tem um sistema de códigos. Nenhum código funcional está documentado na descrição oficial do jogo.",
+          "href": "/codes/break-your-bones-codes"
+        },
+        {
+          "badge": "Principal",
+          "title": "Física de Ragdoll",
+          "description": "Como a simulação de física lida com momento, colisões e comportamento do ragdoll em Break your Bones.",
+          "href": "/mechanics/break-your-bones-ragdoll-physics"
+        },
+        {
+          "badge": "Popular",
+          "title": "Quebre Mais Ossos",
+          "description": "Técnicas e abordagens que ajudam você a quebrar mais ossos a cada lançamento do ragdoll.",
+          "href": "/mechanics/break-your-bones-how-to-break-more-bones"
+        },
+        {
+          "badge": "Itens",
+          "title": "Itens e Desbloqueios",
+          "description": "O que a descrição oficial do jogo diz sobre desbloqueios, incluindo novos ragdolls. Nenhuma loja de itens ou moeda está documentada.",
+          "href": "/items/break-your-bones-materials"
+        },
+        {
+          "badge": "Progressão",
+          "title": "Progrida Rápido",
+          "description": "A maneira mais rápida de progredir em Break your Bones: desbloqueando novos ragdolls e praticando seus lançamentos.",
+          "href": "/progression/break-your-bones-fastest-way-to-progress"
+        },
+        {
+          "badge": "Guia",
+          "title": "Como Quebrar Ossos",
+          "description": "Abordagens repetíveis para lançar seu ragdoll contra perigos e quedas enormes para quebrar mais ossos.",
+          "href": "/guide/break-your-bones-how-to-make-money"
+        },
+        {
+          "badge": "Mecânicas",
+          "title": "Perigos e Quedas",
+          "description": "Como perigos e quedas enormes interagem com a simulação de física de ragdoll em Break your Bones.",
+          "href": "/mechanics/break-your-bones-void"
+        },
+        {
+          "badge": "Plataformas",
+          "title": "Jogue de Graça",
+          "description": "Break your Bones é uma experiência Roblox gratuita. Saiba como jogá-la no Roblox.",
+          "href": "/platforms/break-your-bones-free"
+        }
       ]
     },
     "aboutGame": {
       "title": "O que é Break your Bones?",
       "paragraphs": [
-        "Break your Bones é um jogo ragdoll movido por física, construído em torno de impulso, impacto e destruição. Em vez de evitar dano, você lança um personagem contra os perigos e pontua por quantos ossos se quebram antes do fim da partida. Cada quebra é o resultado de entradas reais de simulação, como velocidade no contato, ângulo dos membros, dureza da superfície e os multiplicadores que você acumulou.",
-        "Essa única troca molda todo o jogo. Quedas maiores pagam mais, mas arriscam encerrar a partida, então os melhores jogadores planejam rotas, encadeiam impactos e reinvestem os ganhos em multiplicadores de dano e potência de lançamento. Esta wiki reúne as rotas, as explicações de física, os dados de materiais e as prioridades de upgrade que ajudam você a transformar uma colisão de sorte em uma repetível."
+        "Break your Bones é um sandbox de ragdoll com física no Roblox, criado pelo grupo High Effort Projects. Nessa experiência, o jogador lança um personagem contra perigos e quedas enormes para quebrar ossos, desbloqueia novos ragdolls e brinca com uma simulação de física. Em vez de evitar dano, você experimenta com momento, impacto e comportamento do ragdoll para ver quantos ossos consegue quebrar.",
+        "A descrição oficial do jogo anuncia apenas o seguinte: tente quebrar todos os seus ossos, um divertido simulador de quebra de ossos, desbloqueie novos ragdolls, arremesse-se de uma queda enorme e uma simulação de física de ragdoll. A descrição não documenta um sistema de códigos, nomes de moedas, preços de itens, valores de dano ou uma loja. Esta wiki reúne as técnicas e explicações de física que ajudam você a aproveitar mais o sandbox."
       ],
       "stats": [
-        {"label": "Gênero", "value": "Ação com física"},
-        {"label": "Plataforma", "value": "Navegador e celular"},
-        {"label": "Objetivo principal", "value": "Quebrar ossos"},
-        {"label": "Fonte de pontos", "value": "Contagem de ossos"},
-        {"label": "Progressão", "value": "Upgrades e renascimentos"},
-        {"label": "Recursos", "value": "Materiais e núcleos"},
-        {"label": "Estilo de jogo", "value": "Solo e cooperativo"},
-        {"label": "Custo", "value": "Grátis para jogar"}
+        {
+          "label": "Gênero",
+          "value": "Sandbox de Ragdoll com Física"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Roblox"
+        },
+        {
+          "label": "Objetivo Principal",
+          "value": "Quebrar Todos os Ossos"
+        },
+        {
+          "label": "Fonte da Pontuação",
+          "value": "Ossos Quebrados"
+        },
+        {
+          "label": "Progressão",
+          "value": "Desbloquear Novos Ragdolls"
+        },
+        {
+          "label": "Estilo de Jogo",
+          "value": "Até 20 Jogadores por Servidor"
+        },
+        {
+          "label": "Criador",
+          "value": "High Effort Projects"
+        },
+        {
+          "label": "Custo",
+          "value": "Grátis para Jogar"
+        }
       ],
-      "cta": "Explorar todos os guias"
+      "cta": "Explorar Todos os Guias"
     },
     "explore": {
-      "title": "Explore a Wiki do Break your Bones",
-      "description": "Domine o caos movido por física com rotas essenciais para iniciantes, códigos ativos, prioridades de upgrade, dados completos de materiais e as técnicas de colisão que quebram mais ossos.",
+      "title": "Explore o Break your Bones Wiki",
+      "description": "Domine o caos movido pela física com rotas essenciais para iniciantes, dicas de física de ragdoll, ragdolls desbloqueáveis e técnicas de quebra de ossos.",
       "modules": [
-        {"order": 1, "name": "Guia para iniciantes de Break your Bones", "description": "Este módulo explica o loop principal, as mecânicas de lançamento e impacto, a pontuação e como os jogadores novos podem construir uma rotina de quebras repetível e lucrativa já na primeira sessão.", "href": "/guide/break-your-bones-beginner-guide", "displayType": "step-by-step", "highlights": [
-          {"label": "1", "detail": "Aprenda os controles e uma quebra repetível, porque a consistência supera os golpes de sorte."},
-          {"label": "2", "detail": "Faça algumas quebras de baixo risco para criar uma base com a qual comparar."},
-          {"label": "3", "detail": "Compre primeiro o upgrade de renda mais barato, já que as compras pequenas se acumulam mais rápido."},
-          {"label": "4", "detail": "Teste uma quebra um pouco maior para encontrar seu teto seguro atual."},
-          {"label": "5", "detail": "Guarde os ganhos antes de arriscar de novo para que uma partida ruim não apague seu progresso."},
-          {"label": "6", "detail": "Desbloqueie a próxima área só quando estiver confortável com a atual."}
-        ]},
-        {"order": 2, "name": "Desafios de colisão de Break your Bones", "description": "Este módulo cobre cenários de colisão, interações com obstáculos e as técnicas que maximizam os resultados de quebra de ossos, para você descobrir rotas eficazes com pontuação de dano maior.", "href": "/mechanics/break-your-bones-how-to-break-more-bones", "displayType": "card-list", "highlights": [
-          {"label": "Batida", "detail": "A batida com um único membro o coloca sob o corpo para que ele receba todo o impacto e quebre de forma limpa."},
-          {"label": "Queda", "detail": "A queda encadeada mantém o ragdoll rolando para que cada giro produza outro ponto de contato."},
-          {"label": "Escadas", "detail": "O quique na escada transforma cada degrau em uma superfície dura separada e em uma quebra separada."},
-          {"label": "Borda", "detail": "O pouso na borda concentra a força em um canto da plataforma para mais dano por contato."},
-          {"label": "Objetos", "detail": "A ajuda de um veículo ou objeto desfere um golpe em movimento que costuma valer mais que uma queda longa."},
-          {"label": "Combo", "detail": "O finalizador de combo guarda sua queda mais alta para o fim, quando seus multiplicadores já estão ativos."}
-        ]},
-        {"order": 3, "name": "Guia de upgrades de Break your Bones", "description": "Este módulo organiza os sistemas de progressão, como materiais, upgrades desbloqueáveis e renascimentos no estilo prestígio, e explica em quais compras vale a pena focar primeiro.", "href": "/items/break-your-bones-materials", "displayType": "tier-grid", "highlights": [
-          {"label": "S", "detail": "Os multiplicadores de impacto e dano por queda escalam cada partida, então compre-os antes de qualquer outra coisa."},
-          {"label": "A", "detail": "A potência de lançamento e a velocidade dão mais energia a cada tentativa e, portanto, mais ossos por queda."},
-          {"label": "B", "detail": "O controle do ragdoll ajuda você a direcionar o segundo e o terceiro impacto para outra superfície dura."},
-          {"label": "C", "detail": "Os desbloqueios cosméticos mudam sua aparência, mas não acrescentam nada à sua contagem de ossos nem ao seu pagamento."}
-        ]},
-        {"order": 4, "name": "Dicas de física de Break your Bones", "description": "Este módulo oferece dicas avançadas para usar a física ragdoll, as colisões e os objetos do ambiente para criar impactos mais fortes, voltado a jogadores que querem melhorar seu desempenho nas colisões.", "href": "/mechanics/break-your-bones-ragdoll-physics", "displayType": "card-list", "highlights": [
-          {"label": "Cabeça", "detail": "A cabeça e o pescoço ficam em um braço de alavanca longo, então um impulso modesto cria uma rotação violenta."},
-          {"label": "Corrente", "detail": "O dano se acumula entre colisões, então quedas longas quebram mais ossos que um único golpe limpo."},
-          {"label": "Duro", "detail": "Concreto, rocha e metal convertem energia em fraturas, enquanto grama e água a absorvem."},
-          {"label": "Ângulo", "detail": "Aterrisse sobre o membro que você quer quebrar em vez de de costas para controlar o caminho da carga."},
-          {"label": "Rolar", "detail": "O impulso residual mantém o corpo rolando e prepara um segundo pouso mais forte."},
-          {"label": "Zonas", "detail": "As zonas destacadas do mapa e os golpes em pontos fracos acumulam multiplicadores extras sobre a quebra base."}
-        ]},
-        {"order": 5, "name": "Melhores quedas de Break your Bones", "description": "Este módulo destaca as configurações de queda mais eficazes, os locais perigosos e as oportunidades de impacto, incluindo métodos descobertos pela comunidade para colisões memoráveis de alta pontuação.", "href": "/progression/break-your-bones-fastest-way-to-progress", "displayType": "card-list", "highlights": [
-          {"label": "Torres", "detail": "As estruturas mais altas alcançáveis dão o maior dano e a maior quantidade de ossos por queda."},
-          {"label": "Escadas", "detail": "Escadas e beiradas criam várias superfícies duras dentro de uma única queda."},
-          {"label": "Perigos", "detail": "Armadilhas, veículos e objetos acrescentam energia de impacto que uma queda simples não iguala."},
-          {"label": "Plano", "detail": "Pousos planos registram quebras limpas, enquanto rampas e bordas reduzem o impacto."},
-          {"label": "Rotas", "detail": "Uma rota memorizada supera o pulo aleatório porque elimina segundos desperdiçados."},
-          {"label": "Eventos", "detail": "Eventos por tempo limitado distribuem multiplicadores extras que se acumulam sobre o seu pagamento normal."}
-        ]},
-        {"order": 6, "name": "Guia de pontuação de Break your Bones", "description": "Este módulo explica como as pontuações de dano e os pagamentos são calculados, e como os jogadores podem bater seus recordes com melhor timing, acúmulo de multiplicadores e escolha de colisões.", "href": "/progression/break-your-bones-rewards", "displayType": "card-list", "highlights": [
-          {"label": "Velocidade", "detail": "O bônus de velocidade é ativado quando você bate no chão acima do limite de velocidade do jogo."},
-          {"label": "Corrente", "detail": "O bônus de corrente recompensa quebrar vários ossos dentro de uma janela de tempo curta."},
-          {"label": "Ponto fraco", "detail": "Golpes em pontos fracos, como um dedo, uma costela ou o maxilar, carregam um multiplicador alto."},
-          {"label": "Zona", "detail": "O bônus de zona paga a mais quando você aterrissa dentro de uma área destacada do mapa."},
-          {"label": "Upgrades", "detail": "Os multiplicadores de upgrade são permanentes e se aplicam a cada partida futura."},
-          {"label": "Gravidade", "detail": "Quebras de maior gravidade, como fraturas deslocadas ou compostas, pagam mais que uma fissura capilar."}
-        ]},
-        {"order": 7, "name": "Guia de controles de Break your Bones", "description": "Este módulo é uma referência simples dos controles disponíveis e das ações de jogo, ajudando os jogadores a aprender rapidamente a lançar, direcionar e gerenciar suas colisões.", "href": "/controls/break-your-bones-how-to-play", "displayType": "code-cards", "highlights": [
-          {"label": "WASD", "detail": "Mova e direcione seu personagem com WASD ou as teclas de seta."},
-          {"label": "Espaço", "detail": "Pule ou lance o ragdoll contra o perigo para começar uma partida."},
-          {"label": "E / F", "detail": "Interaja e pegue objetos, incluindo a caixa de códigos do lobby."},
-          {"label": "Shift", "detail": "Segure para correr e ganhar velocidade extra antes de uma queda."},
-          {"label": "Mouse", "detail": "Olhe ao redor e reposicione a câmera antes do próximo lançamento."},
-          {"label": "R", "detail": "Reinicie ou renasça na hora para encadear a próxima tentativa."}
-        ]},
-        {"order": 8, "name": "Atualizações de Break your Bones", "description": "Este módulo reúne as atualizações oficiais do jogo, as mudanças de versão e as informações sobre conteúdo novo, para que os jogadores que voltam possam conferir rapidamente as melhorias e novidades recentes.", "href": "/community/break-your-bones-update", "displayType": "card-list", "highlights": [
-          {"label": "Patches", "detail": "Os patches de equilíbrio ajustam os limites de quebra, as taxas de pagamento e os custos de upgrade."},
-          {"label": "Códigos", "detail": "Códigos novos costumam surgir junto com atualizações e marcos da comunidade."},
-          {"label": "Eventos", "detail": "Eventos por tempo limitado adicionam multiplicadores extras e drops exclusivos de materiais."},
-          {"label": "Mapas", "detail": "Novas áreas e perigos ampliam as rotas disponíveis para quedas de alta pontuação."},
-          {"label": "Correções", "detail": "As correções de bugs focam falhas do ragdoll que podem encerrar uma partida ou bloquear o progresso."},
-          {"label": "Notas", "detail": "Leia as notas do patch antes de uma sessão de farm para que sua rota continue eficiente."}
-        ]}
+        {
+          "order": 1,
+          "name": "Guia para Iniciantes de Break your Bones",
+          "description": "Este módulo explica o loop central de lançar seu ragdoll contra perigos e quedas enormes, quebrar ossos e desbloquear novos ragdolls enquanto joga o sandbox de física.",
+          "href": "/guide/break-your-bones-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Aprenda os controles e um lançamento repetível contra um perigo para quebrar ossos de forma consistente."
+            },
+            {
+              "label": "2",
+              "detail": "Experimente algumas quedas de baixo risco para estabelecer uma base de como a simulação de física do ragdoll se comporta."
+            },
+            {
+              "label": "3",
+              "detail": "Experimente perigos diferentes para ver quais quebram mais ossos por tentativa."
+            },
+            {
+              "label": "4",
+              "detail": "Teste uma queda um pouco maior para encontrar seu limite seguro atual para quebrar ossos."
+            },
+            {
+              "label": "5",
+              "detail": "Pratique se arremessar de uma queda enorme para aumentar o impacto e a quebra de ossos."
+            },
+            {
+              "label": "6",
+              "detail": "Continue jogando para desbloquear novos ragdolls, como anuncia a descrição oficial."
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Dicas de Quebra de Ossos de Break your Bones",
+          "description": "Este módulo aborda técnicas para lançar seu ragdoll contra perigos e quedas enormes, para que você descubra abordagens eficazes para quebrar mais ossos.",
+          "href": "/mechanics/break-your-bones-how-to-break-more-bones",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Impacto",
+              "detail": "Encolha um membro sob o corpo para que ele receba todo o impacto e quebre completamente."
+            },
+            {
+              "label": "Tombo",
+              "detail": "Mantenha o ragdoll rolando para que cada rotação produza outro ponto de contato."
+            },
+            {
+              "label": "Escadas",
+              "detail": "Escadas transformam cada degrau em uma superfície rígida separada e uma potencial quebra separada."
+            },
+            {
+              "label": "Borda",
+              "detail": "O pouso na borda concentra a força no canto de uma plataforma para mais impacto por contato."
+            },
+            {
+              "label": "Objetos",
+              "detail": "Pousar sobre ou perto de objetos pode adicionar energia de impacto que uma queda simples não consegue igualar."
+            },
+            {
+              "label": "Combo",
+              "detail": "Guarde sua maior queda para o final de uma corrida para que o ragdoll já tenha acumulado momento."
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Guia de Desbloqueios de Break your Bones",
+          "description": "Este módulo organiza o que a descrição oficial diz sobre desbloqueios, como novos ragdolls, e explica o que está e o que não está documentado sobre a progressão.",
+          "href": "/items/break-your-bones-materials",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "A descrição oficial anuncia desbloquear novos ragdolls como um recurso central de progressão."
+            },
+            {
+              "label": "A",
+              "detail": "A descrição oficial anuncia se arremessar de uma queda enorme como uma ação de jogabilidade fundamental."
+            },
+            {
+              "label": "B",
+              "detail": "A descrição oficial anuncia uma simulação de física de ragdoll como o núcleo da experiência."
+            },
+            {
+              "label": "C",
+              "detail": "Nenhum nome de moeda, preço de item, valor de dano ou loja está documentado na descrição oficial."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Dicas de Física de Break your Bones",
+          "description": "Este módulo oferece dicas para usar a física de ragdoll, colisões e objetos do ambiente para criar impactos mais fortes, voltado para jogadores que querem quebrar mais ossos.",
+          "href": "/mechanics/break-your-bones-ragdoll-physics",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Cabeça",
+              "detail": "A cabeça e o pescoço ficam em um braço de alavanca longo, então um impulso modesto pode criar rotação violenta."
+            },
+            {
+              "label": "Corrente",
+              "detail": "O dano pode se acumular entre colisões, então tombos longos podem quebrar mais ossos do que um único golpe limpo."
+            },
+            {
+              "label": "Duro",
+              "detail": "Concreto, rocha e metal convertem energia em fraturas, enquanto grama e água podem absorvê-la."
+            },
+            {
+              "label": "Ângulo",
+              "detail": "Aterrisse sobre o membro que você quer quebrar em vez de de costas para controlar o caminho da carga."
+            },
+            {
+              "label": "Rolar",
+              "detail": "O momento residual mantém o corpo tombando e prepara um segundo pouso mais forte."
+            },
+            {
+              "label": "Zonas",
+              "detail": "Mire em partes específicas do corpo ou superfícies duras para maximizar a chance de quebrar ossos."
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Melhores Quedas de Break your Bones",
+          "description": "Este módulo destaca configurações de queda eficazes, locais perigosos e oportunidades de impacto para quedas memoráveis de quebra de ossos.",
+          "href": "/progression/break-your-bones-fastest-way-to-progress",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Torres",
+              "detail": "As estruturas alcançáveis mais altas proporcionam as maiores quedas e o maior potencial de ossos por queda."
+            },
+            {
+              "label": "Escadas",
+              "detail": "Escadas e beiradas criam várias superfícies rígidas dentro de uma única queda."
+            },
+            {
+              "label": "Perigos",
+              "detail": "Armadilhas, veículos e objetos podem adicionar energia de impacto que uma queda simples não consegue igualar."
+            },
+            {
+              "label": "Plano",
+              "detail": "Pousos planos registram quebras limpas, enquanto inclinações e bordas podem reduzir o impacto."
+            },
+            {
+              "label": "Rotas",
+              "detail": "Uma rota memorizada supera pulos aleatórios porque elimina segundos perdidos."
+            },
+            {
+              "label": "Atualizações",
+              "detail": "O jogo foi atualizado pela última vez em 2026-10-13, então novo conteúdo pode adicionar pontos de queda adicionais."
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Guia de Contagem de Ossos de Break your Bones",
+          "description": "Este módulo explica como a quebra de ossos é descrita no jogo oficial e como os jogadores podem melhorar seus resultados com melhor timing e escolhas de colisão.",
+          "href": "/progression/break-your-bones-rewards",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Velocidade",
+              "detail": "Velocidade maior no momento do contato geralmente leva a um impacto mais forte e mais dano ósseo."
+            },
+            {
+              "label": "Corrente",
+              "detail": "Quebrar vários ossos em rápida sucessão pode resultar em mais ossos quebrados no total."
+            },
+            {
+              "label": "Ponto Fraco",
+              "detail": "Acertos em ossos pequenos como dedos, costelas ou mandíbula podem ser mais fáceis de quebrar do que ossos grandes."
+            },
+            {
+              "label": "Zona",
+              "detail": "Aterrissar dentro de uma área destacada do mapa pode aumentar a chance de quebrar ossos."
+            },
+            {
+              "label": "Melhorias",
+              "detail": "A descrição oficial não documenta melhorias, multiplicadores ou aumentos permanentes de atributos."
+            },
+            {
+              "label": "Gravidade",
+              "detail": "A descrição oficial não documenta níveis de gravidade ou tipos de fratura para ossos quebrados."
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Guia de Controles de Break your Bones",
+          "description": "Este módulo é uma referência simples para os controles disponíveis e ações de jogabilidade, ajudando os jogadores a aprender rapidamente como lançar, dirigir e gerenciar seu ragdoll.",
+          "href": "/controls/break-your-bones-how-to-play",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "WASD",
+              "detail": "Mova e dirija seu personagem com WASD ou as teclas de seta."
+            },
+            {
+              "label": "Espaço",
+              "detail": "Pule ou lance o ragdoll contra um perigo para iniciar uma corrida."
+            },
+            {
+              "label": "E / F",
+              "detail": "Interaja com objetos ou prompts, dependendo do jogo."
+            },
+            {
+              "label": "Shift",
+              "detail": "Segure para correr e ganhar velocidade extra antes de uma queda."
+            },
+            {
+              "label": "Mouse",
+              "detail": "Olhe ao redor e reposicione a câmera antes do próximo lançamento."
+            },
+            {
+              "label": "R",
+              "detail": "Reinicie ou renasça instantaneamente para encadear a próxima tentativa."
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Atualizações de Break your Bones",
+          "description": "Este módulo reúne informações sobre o histórico de atualizações do jogo e informações sobre novos conteúdos, para que jogadores que retornam possam verificar rapidamente melhorias e adições recentes.",
+          "href": "/community/break-your-bones-update",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Patches",
+              "detail": "O registro oficial do Roblox mostra que o jogo foi atualizado pela última vez em 2026-10-13, mas notas de patch não estão documentadas."
+            },
+            {
+              "label": "Códigos",
+              "detail": "Um sistema de códigos não está documentado na descrição oficial do jogo; nenhum código funcional está confirmado."
+            },
+            {
+              "label": "Eventos",
+              "detail": "Eventos por tempo limitado não estão documentados na descrição oficial do jogo."
+            },
+            {
+              "label": "Mapas",
+              "detail": "Novas áreas e perigos podem ser adicionados com o tempo, mas a descrição oficial não os documenta."
+            },
+            {
+              "label": "Correções",
+              "detail": "Correções de bugs podem visar problemas de ragdoll, mas patches específicos não estão documentados."
+            },
+            {
+              "label": "Notas",
+              "detail": "Notas de patch não são publicadas de acordo com o registro oficial do Roblox."
+            }
+          ]
+        }
       ]
     },
     "faq": {
-      "title": "Perguntas frequentes",
-      "description": "Respostas rápidas às perguntas mais comuns sobre Break your Bones.",
+      "title": "Perguntas Frequentes",
+      "description": "Respostas rápidas para as perguntas mais comuns sobre Break your Bones.",
       "items": [
-        {"question": "O que é Break your Bones?", "answer": "Break your Bones é um jogo ragdoll movido por física no qual você lança um personagem contra os perigos e pontua por quantos ossos se quebram antes do fim da partida. Impactos maiores, mais duros e melhor direcionados quebram mais ossos, que se convertem em moeda, upgrades e posição no ranking."},
-        {"question": "Como quebro mais ossos em Break your Bones?", "answer": "Controle as quatro entradas que decidem uma quebra: velocidade no contato, ângulo de contato, dureza da superfície e caminho da carga. Ganhe velocidade com uma queda longa, aterrisse sobre o membro que você quer quebrar, prefira concreto e metal em vez de grama ou água, e deixe o ragdoll rolar para que um pouso vire vários impactos."},
-        {"question": "Como resgato os códigos de Break your Bones?", "answer": "Abra o botão de Códigos, Recompensas ou Presente no lobby, cole o código exatamente como está escrito e remova qualquer espaço no final antes de clicar em Resgatar. Os códigos geralmente diferenciam maiúsculas de minúsculas e ficam vinculados a uma única conta, então um código já usado não paga duas vezes."},
-        {"question": "O que devo melhorar primeiro em Break your Bones?", "answer": "Compre o upgrade que ajuda em uma partida ruim, não em uma perfeita. Os multiplicadores fixos de impacto e dano por queda escalam cada tentativa, então vêm primeiro, seguidos da potência de lançamento e da velocidade. Os desbloqueios cosméticos são um luxo e nunca aumentam sua contagem de ossos."},
-        {"question": "Posso jogar Break your Bones de graça?", "answer": "Sim. Break your Bones é grátis para jogar no navegador e em plataformas móveis como o Playhop, e também tem uma versão no Roblox. Itens pagos, quando existem, costumam ser bônus e cosméticos, e não acesso ao próprio jogo."},
-        {"question": "Por que minha partida de Break your Bones terminou cedo?", "answer": "A maioria das partidas curtas vem de uma quebra grave ou crítica que remove sua capacidade de direção, seguida de uma queda fora da área jogável e um reset pelo vazio. Teste as beiradas antes de confiar nelas, guarde um item de cura na reserva e lute com geometria sólida atrás de você para que o recuo não possa empurrá-lo para fora do mapa."}
+        {
+          "question": "O que é Break your Bones?",
+          "answer": "Break your Bones é uma experiência Roblox da High Effort Projects. É um sandbox de ragdoll com física onde o jogador lança um personagem contra perigos e quedas enormes para quebrar ossos, desbloqueia novos ragdolls e brinca com uma simulação de física."
+        },
+        {
+          "question": "Como quebro mais ossos em Break your Bones?",
+          "answer": "Pratique lançar seu ragdoll contra perigos e quedas enormes. Controle as entradas que decidem uma quebra: velocidade no contato, ângulo de contato, dureza da superfície e caminho da carga. Ganhe velocidade com uma queda longa, aterrisse sobre o membro que quer quebrar, prefira concreto e metal em vez de grama ou água, e deixe o ragdoll rolar para que um pouso se torne vários impactos."
+        },
+        {
+          "question": "Como resgato códigos de Break your Bones?",
+          "answer": "Um sistema de códigos não está documentado na descrição oficial do jogo. Não há recurso confirmado de resgate de códigos, nem botão de Códigos, nem códigos funcionais. Verifique a página oficial do Roblox para quaisquer atualizações."
+        },
+        {
+          "question": "O que devo desbloquear primeiro em Break your Bones?",
+          "answer": "A descrição oficial anuncia apenas desbloquear novos ragdolls como um recurso de progressão. Nenhuma prioridade de melhoria, moeda ou loja está documentada. Desbloqueie novos ragdolls enquanto joga e experimente com a simulação de física de ragdoll."
+        },
+        {
+          "question": "Posso jogar Break your Bones de graça?",
+          "answer": "Sim. Break your Bones é uma experiência Roblox gratuita. Você pode jogá-la na plataforma Roblox com até 20 jogadores por servidor."
+        },
+        {
+          "question": "Por que minha corrida em Break your Bones terminou cedo?",
+          "answer": "A maioria das corridas curtas vem de uma quebra severa do ragdoll que remove sua direção, seguida por uma queda para fora da área jogável. Teste beiradas antes de confiar nelas e tente manter geometria sólida atrás de você para que o ragdoll não caia do mapa."
+        }
       ]
     },
     "finalCta": {
-      "title": "Pronto para dominar Break your Bones?",
-      "description": "Do primeiro lançamento ragdoll aos recordes de colisão, nossa wiki da comunidade cobre você com guias gratuitos e atualizados.",
-      "primary": "Ler o guia para iniciantes",
-      "secondary": "Jogar no Roblox"
+      "title": "Pronto para Dominar Break your Bones?",
+      "description": "Do seu primeiro lançamento de ragdoll a quebras de ossos recordes, nossa wiki comunitária tem tudo o que você precisa com guias gratuitos e atualizados.",
+      "primary": "Leia o Guia para Iniciantes",
+      "secondary": "Jogue no Roblox"
     }
   },
   "guide": {
     "overviewTitle": "Guias de Break your Bones",
-    "overviewDescription": "Guias passo a passo de Break your Bones cobrindo o básico para iniciantes, nivelamento, dinheiro e as dicas que ajudam você a progredir mais rápido."
+    "overviewDescription": "Guias passo a passo de Break your Bones cobrindo o básico para iniciantes, técnicas de quebra de ossos e dicas que ajudam você a quebrar mais ossos."
   },
   "codes": {
     "overviewTitle": "Códigos de Break your Bones",
-    "overviewDescription": "Todos os códigos ativos de Break your Bones, como resgatá-los e o que cada recompensa oferece."
+    "overviewDescription": "Informações sobre se Break your Bones tem um sistema de códigos. Nenhum código funcional está documentado na descrição oficial do jogo."
   },
   "items": {
-    "overviewTitle": "Itens e materiais de Break your Bones",
-    "overviewDescription": "Materiais, receitas de forja, feitiços e listas de tiers de Break your Bones para você saber o que coletar e melhorar a seguir."
+    "overviewTitle": "Itens e Desbloqueios de Break your Bones",
+    "overviewDescription": "O que a descrição oficial do jogo diz sobre desbloqueios, incluindo novos ragdolls. Nenhuma moeda, loja ou preço de item está documentado."
   },
   "progression": {
-    "overviewTitle": "Progressão de Break your Bones",
-    "overviewDescription": "Guias de progressão de Break your Bones para nível máximo, farm de dinheiro, recompensas e as rotas mais rápidas para crescer sua conta."
+    "overviewTitle": "Progressão em Break your Bones",
+    "overviewDescription": "Informações de progressão de Break your Bones, incluindo desbloquear novos ragdolls e praticar sua técnica de quebra de ossos."
   },
   "mechanics": {
     "overviewTitle": "Mecânicas de Break your Bones",
-    "overviewDescription": "Como Break your Bones funciona por dentro, da física ragdoll e de como quebrar mais ossos até o vazio e os bugs conhecidos."
+    "overviewDescription": "Como Break your Bones funciona nos bastidores, desde física de ragdoll e quebrar mais ossos até perigos e quedas enormes."
   },
   "community": {
     "overviewTitle": "Comunidade de Break your Bones",
-    "overviewDescription": "Discord, Reddit, grupos e notícias de atualizações de Break your Bones para você continuar conectado a outros jogadores."
+    "overviewDescription": "Notícias de atualizações e informações da comunidade de Break your Bones. Nenhum Discord ou subreddit oficial está documentado."
   },
   "platforms": {
     "overviewTitle": "Plataformas de Break your Bones",
-    "overviewDescription": "Onde jogar Break your Bones, incluindo as versões online, grátis, desbloqueada e no Playhop do jogo."
+    "overviewDescription": "Onde jogar Break your Bones. É uma experiência Roblox gratuita da High Effort Projects."
   },
   "controls": {
     "overviewTitle": "Controles de Break your Bones",
-    "overviewDescription": "Controles de Break your Bones, rotas de obby e noções básicas do jogo ragdoll em 3D para ajudar você a jogar com confiança."
+    "overviewDescription": "Controles de Break your Bones e noções básicas de jogabilidade de ragdoll em 3D para ajudar você a jogar com confiança."
   },
   "shared": {
-    "wikiNavigation": "Navegação da wiki",
-    "activeCodes": "Códigos ativos",
+    "wikiNavigation": "Navegação da Wiki",
+    "activeCodes": "Códigos",
     "updated": "Atualizado",
-    "viewAllCodes": "Ver todos os códigos",
+    "viewAllCodes": "Ver informações de códigos",
     "playOnRoblox": "Jogar no Roblox",
     "inThisSection": "Nesta seção",
     "tableOfContents": "Índice",
-    "nextSteps": "Próximos passos",
-    "needHelp": "Precisa de ajuda?",
-    "relatedReading": "Leitura relacionada",
-    "relatedGuides": "Guias relacionados",
-    "readMore": "Ler mais",
+    "nextSteps": "Próximos Passos",
+    "needHelp": "Precisa de Ajuda?",
+    "relatedReading": "Leitura Relacionada",
+    "relatedGuides": "Guias Relacionados",
+    "readMore": "Leia mais",
     "officialMedia": "Mídia oficial",
     "home": "Início",
-    "noGuidesAvailable": "Ainda não há guias disponíveis. Volte em breve!"
+    "noGuidesAvailable": "Nenhum guia disponível ainda. Volte em breve!"
   },
   "footer": {
-    "aboutTitle": "Wiki do Break your Bones",
-    "about": "A Wiki do Break your Bones é um hub de guias independente feito por fãs, cobrindo desafios de colisão, física ragdoll, estratégias de pontuação e conhecimentos essenciais do jogo tanto para jogadores novos quanto veteranos.",
-    "quickLinks": "Links rápidos",
+    "aboutTitle": "Break your Bones Wiki",
+    "about": "Break your Bones Wiki é um hub de guias independente feito por fãs, cobrindo física de ragdoll, técnicas de quebra de ossos e conhecimentos essenciais do jogo para jogadores novos e veteranos.",
+    "quickLinks": "Links Rápidos",
     "guides": "Guias",
     "legal": "Legal",
-    "copyright": "2026 Wiki do Break your Bones. Sem afiliação com os desenvolvedores do jogo ou com o Roblox.",
-    "description": "Jogo ragdoll baseado em física sobre quebrar ossos, encadear grandes colisões e desbloquear novos desafios.",
-    "playGame": "Jogar Break your Bones",
-    "officialDiscord": "Grupo da comunidade no Roblox",
-    "officialYoutube": "Vídeos de gameplay",
-    "vvBuilder": "Dicas de física",
-    "beginnerGuide": "Guia para iniciantes",
+    "copyright": "2026 Break your Bones Wiki. Não afiliado aos desenvolvedores do jogo ou ao Roblox.",
+    "description": "Sandbox de ragdoll com física no Roblox sobre quebrar ossos, encadear grandes quedas e desbloquear novos ragdolls.",
+    "playGame": "Jogue Break your Bones",
+    "officialDiscord": "Grupo Comunitário do Roblox",
+    "officialYoutube": "Vídeos de Jogabilidade",
+    "vvBuilder": "Dicas de Física",
+    "beginnerGuide": "Guia para Iniciantes",
     "privacyPolicy": "Política de Privacidade",
     "termsOfService": "Termos de Serviço",
-    "allCodes": "Todos os códigos",
-    "physicsTips": "Dicas de física",
-    "scoreGuides": "Guias de pontuação"
+    "allCodes": "Códigos",
+    "physicsTips": "Dicas de Física",
+    "scoreGuides": "Guias de Contagem de Ossos"
   }
 }

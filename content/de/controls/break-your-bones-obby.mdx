@@ -1,161 +1,77 @@
 export const metadata = {
-  title: "Break Your Bones Obby Steuerungsguide: Jede Tastenbelegung, jeder Sprung und jeder Trick",
-  description: "Meistere die Steuerung der Break your Bones Obby auf PC, Mobilgerät und Konsole. Lerne Bewegung, Kamera und Sprungtiming, um jede Stage unversehrt zu überleben.",
+  title: "Break your Bones: Eine Physik-Ragdoll-Sandbox auf Roblox",
+  description: "Break your Bones ist eine Ragdoll-Sandbox von High Effort Projects auf Roblox. Erfahre, wie sie gespielt wird, was verifiziert ist und was nicht dokumentiert ist.",
   category: "controls",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Ein einziger falsch getimter Sprung genügt. In der Break your Bones Obby *ist* die Steuerung das Spiel — jede Stage ist auf präzise Bewegung ausgelegt, und eine einzige panische Eingabe kann dich von einer Plattform stoßen und direkt in einen Respawn befördern. Ob du ein Neuling bist, der noch WASD lernt, oder ein Veteran, der einen sauberen No-Death-Run jagt: Wenn du die Steuerung der Break your Bones Obby verstehst, entscheidet das über einen reibungslosen Clear oder eine lange, frustrierende Session. Dieser Guide schlüsselt jede Eingabe, jede Plattform und jede Gewohnheit auf, die deinen Charakter — und deine Knochen — in einem Stück halten.
+Break your Bones ist eine Roblox-Erfahrung, die auf einer einfachen, chaotischen Idee basiert: Wirf eine Ragdoll-Figur in Gefahren und harte Landungen und beobachte dann, wie eine Physiksimulation den Rest erledigt. Die offizielle Seite beschreibt es als einen „lustigen Knochen-Zertrümmerungs-Simulator", in dem du „versuchst, alle deine Knochen zu brechen", neue Ragdolls freischaltest und „dich von einem riesigen Sturz flingst". Es ist nicht die Mobile-Games mit ähnlichen Namen und es ist nicht Broken Bones IV. Wenn du eine Physik-Sandbox statt eines geskripteten Story-Spiels suchst, ist dies der richtige Ort auf Roblox.
 
-## Warum die Steuerung in der Break your Bones Obby alles entscheidet
+Der offizielle Eintrag nennt als Ersteller die Gruppe High Effort Projects, den Ort als am 5. Juni 2025 erstellt und zuletzt aktualisiert am 13. Oktober 2026, mit bis zu 20 Spielern pro Server. Die Besuchszahl liegt bei etwa 133 Millionen. Diese Zahlen stammen von Roblox selbst, nicht von einem Drittanbieter-Tracker, also behandle sie als verlässliche Grundlage.
 
-Obby-Spiele sehen von außen simpel aus: rennen, springen, nicht fallen. In der Praxis baut die Break your Bones Obby genau auf dieser Prämisse auf. Der Name selbst ist eine Warnung. Die Stages sind so gestaltet, dass eine schlampige Eingabe dich nicht nur Zeit kostet — sie kostet dich Fortschritt, manchmal den Wert mehrerer Checkpoints.
+## Beworbene Funktionen: Was die offizielle Seite tatsächlich sagt
 
-Deshalb verbringen die besten Spieler ihre ersten Minuten in einer neuen Obby damit, die Bewegung zu testen, statt zu rennen. Sie prüfen, wie weit ein Sprung tatsächlich trägt, wie rutschig die Oberfläche ist und wie stark die Kamera beim Drehen schwenkt. Diese drei Variablen entscheiden über fast jeden Fehlschlag.
+Die offizielle Beschreibung ist kurz, und das ist wichtig. Sie bewirbt fünf Dinge: der Versuch, alle deine Knochen zu brechen, ein Knochen-Zertrümmerungs-Simulator, das Freischalten neuer Ragdolls, dich von einem riesigen Sturz zu flingen und eine Ragdoll-Physiksimulation. Das ist der gesamte dokumentierte Funktionsumfang.
 
-Die folgende Tabelle ordnet die zentralen Steuerungsfähigkeiten den genauen Situationen zu, in denen sie dich retten.
+Beachte, was fehlt. Es gibt keine Erwähnung von Codes, Währungsnamen, Gegenstandspreisen, einem Shop, Schadenswerten, Upgrade-Bäumen oder einer spezifischen Ragdoll-Liste. Wenn ein Guide oder Video diese Details behauptet, beobachtet es entweder das Spiel, wie es sich derzeit verhält, oder wiederholt etwas, das nie offiziell niedergeschrieben wurde. Nichts davon ist dasselbe wie Entwicklerdokumentation.
 
-| Steuerungsfähigkeit | Was sie verhindert | Wo sie am wichtigsten ist |
-|---|---|---|
-| Sprungtiming | Zu weit oder zu kurz über Lücken springen | Lückensprünge, bewegliche Plattformen |
-| Kameraführung | Blindlandungen und Fehleinschätzungen | Spiraltürme, rotierende Balken |
-| Momentumkontrolle | Abrutschen von Kanten | Rutschige oder eisige Stages |
-| Shift-Lock-Disziplin | Abdriften von schmalen Balken | Balancierbalken, schmale Stege |
-| Reset-Disziplin | In einer ausweglosen Situation feststecken | Checkpoint-Wiederherstellung |
+Da die Beschreibung die Autorität für die Identität ist, ist die praktische Schlussfolgerung eindeutig: Erwarte ein Physik-Spielzeug, kein Progressions-RPG. Die Zeile „neue Ragdolls freischalten" sagt dir, dass es eine Form von freischaltbarem Inhalt gibt, aber sie sagt nicht, wie das Freischalten funktioniert.
 
-Nichts davon erfordert schnelle Reflexe. Es erfordert Konstanz, und Konstanz kommt daher, dass du deine Eingaben in- und auswendig kennst.
+## Wie die Loop abläuft, basierend auf beworbenen Funktionen
 
-## Break Your Bones Obby Steuerungs-Cheat-Sheet
+Die Kern-Loop ist, wie beschrieben, kurz: positioniere eine Ragdoll, wende Kraft an, beobachte die Physik, wiederhole. Der „riesige Sturz" ist das Aushängeschild-Setup, und das Knochenbruch-Ziel gibt jedem Versuch einen punktzahlähnlichen Zweck. „Alle" deine Knochen zu brechen impliziert eine endliche, zählbare Menge von Knochen pro Ragdoll, obwohl die offizielle Seite keine Zahl nennt.
 
-Bevor du eine einzige Plattform berührst, präge dir die Grundlagen ein. Das sind die Standard-Roblox-Eingaben, auf die sich fast jede Obby — auch diese — stützt. Die genauen Belegungen können je nach Einstellungen des Spiels und deinem Gerät leicht abweichen, also betrachte dies als deine Ausgangsreferenz.
+Was eine Ragdoll-Sandbox funktionieren lässt, ist Konsistenz. Du möchtest, dass derselbe Start ungefähr dasselbe Ergebnis liefert, damit du aus Fehlern lernen kannst. Du möchtest auch genug Varianz, damit wiederholte Versuche interessant bleiben. Physik-Engines handhaben diese Spannung auf natürliche Weise, und eine Ragdoll-Simulation stützt sich stark darauf. Deshalb belohnen diese Spiele Geduld mehr als Reflexe: Du testest ein System, du bekämpfst keinen Gegner.
 
-| Aktion | PC | Mobilgerät | Konsole |
-|---|---|---|---|
-| Bewegen | W / A / S / D | Linker Thumbstick | Linker Stick |
-| Springen | Leertaste | Sprungtaste (rechts) | A / Cross |
-| Kamera | Mausbewegung | Bildschirm wischen | Rechter Stick |
-| Zoom rein / raus | Scrollrad | Pinch-Geste | Schultertasten |
-| Shift-Lock | Maus-Lock-Umschalter | Normalerweise nicht verfügbar | Normalerweise nicht verfügbar |
-| Charakter zurücksetzen | Esc-Menü → Reset | Menü → Reset | Menü → Reset |
-| Menü öffnen | Esc | Menü-Symbol | Start / Options |
+## Community-Beobachtungen versus dokumentierte Fakten
 
-Ein paar praktische Hinweise, die durchweg gelten:
+Guides und Videos von Drittanbietern beschreiben oft Dinge, die die offizielle Seite nicht erwähnt. Ordne diese Behauptungen als Community-Beobachtungen ein, nicht als offizielle Dokumentation. Hier ist die klare Trennung:
 
-- **Springen ist ein Tippen, kein Halten.** Die Sprungeingabe gedrückt zu halten, lässt dich in einer Standard-Obby nicht höher springen. Es macht dein Timing nur schlampig.
-- **Reset ist ein Werkzeug, keine Strafe.** Wenn du irgendwo landest, wo du nicht mehr wegkommst, ist ein Reset schneller, als herumzuwackeln und auf eine Lösung zu hoffen.
-- **Die Kamerarichtung steuert die Bewegungsrichtung** auf PC und Konsole. Wenn deine Kamera auf eine Wand zeigt, bewegst du dich mit „Vorwärts" in die Wand.
-- **Achte auf eigene Buttons.** Manche Obbys fügen Sprint-, Doppelsprung- oder Dash-Symbole hinzu. Wenn eine Stage unmöglich wirkt, schau zuerst an die Bildschirmränder, bevor du deinen Händen die Schuld gibst.
+| Kategorie | Status |
+| --- | --- |
+| Physik-Ragdoll-Sandbox, Knochenbruch-Ziel | Auf der offiziellen Seite beworben |
+| Neue Ragdolls freischalten | Beworben, Methode nicht spezifiziert |
+| Riesiger Sturz, dich selbst flingen | Beworben |
+| Bis zu 20 Spieler pro Server | Offizieller Roblox-Eintrag |
+| Codes, Shop, Preise, Schadenszahlen | Nicht dokumentiert |
 
-Eine vollständige Übersicht der Standard-Eingaben der Plattform findest du im offiziellen Support-Artikel von Roblox zum Thema [wie man Roblox auf jedem Gerät spielt](https://en.help.roblox.com/hc/en-us/articles/203314100-How-to-Play-Roblox) — das ist die zuverlässigste Referenz.
+Wenn dir jemand eine bestimmte Anzahl von Knochen, einen Währungsnamen oder einen funktionierenden Code nennt, frage, woher das stammt. Wenn die Antwort „die offizielle Seite" ist, ist sie fast sicher falsch, weil nichts davon dort geschrieben steht. Wenn die Antwort „Ich habe es im Spiel gesehen" ist, ist das eine Community-Beobachtung und könnte korrekt sein.
 
-## Steuerungsunterschiede je Plattform
+## Codes: Keine sind dokumentiert, und wie man richtig nachprüft
 
-Die Break your Bones Obby spielt sich anders, je nachdem, was du in der Hand hältst. Keines dieser Setups ist strikt besser — sie belohnen nur unterschiedliche Gewohnheiten.
+Dies ist die häufigste Quelle schlechter Informationen rund um jede beliebte Roblox-Erfahrung. Viele Spiele haben ein Code-System, also nehmen Spieler an, dass jedes Spiel eines hat. Die offizielle Break your Bones-Seite dokumentiert kein Code-System, keine Einlösebox und keine Codes.
 
-### PC-Steuerung
+Das bedeutet nicht, dass ein Entwickler niemals eines hinzufügen könnte. Es bedeutet, dass zum Zeitpunkt des offiziellen Eintrags nichts zum Einlösen existiert. Der korrekte Weg zur Überprüfung ist, die offizielle Spielseite unter https://www.roblox.com/games/123821081589134/Break-your-Bones zu öffnen und die Beschreibung selbst zu lesen und dann die Community-Kanäle des Entwicklers zu prüfen, wie die Gruppenseite von High Effort Projects und alle dort aufgeführten Social-Links. Das sind die einzigen Orte, an denen ein Code legitim zuerst erscheinen würde.
 
-Der PC bietet dir die größte Präzision. Eine mausgesteuerte Kamera lässt dich deine Sicht sofort herumschnappen, und die Tastatur liefert dir saubere, getrennte Eingaben. Das ist das Setup, das die meisten geschwindigkeitsorientierten Spieler bevorzugen.
+Sei skeptisch gegenüber jeder Seite, die eine Code-Liste für dieses Spiel veröffentlicht. Seiten, die Code-Listen für Traffic generieren, veröffentlichen häufig erfundene Zeichenfolgen, und das Einlösen eines gefälschten Codes verschwendet deine Zeit und kann dich zu zwielichtigen Seiten führen. Wenn ein Code nicht auf der offiziellen Seite oder einem offiziellen Entwicklerkanal erscheint, behandle ihn als unbestätigt.
 
-- **WASD** für die Bewegung, wobei **A** und **D** für feine seitliche Korrekturen auf Balken genutzt werden.
-- **Leertaste** für Sprünge — lass einen Daumen oder Finger darauf ruhen.
-- **Maus** für die Kamera; kleine, konstante Bewegungen schlagen große Schwünge.
-- **Shift-Lock** ist dein bester Freund auf schmalen Stegen und dein Feind bei langen Sprüngen, weil es deine Blickrichtung fixiert.
+## Tipps, die sich aus dem beworbenen Design ergeben
 
-### Mobile Steuerung
+Da das Spiel eine Physiksimulation ist, geht es bei den nützlichsten Gewohnheiten um Kontrolle und Beobachtung statt um auswendig gelernte Eingaben. Die offizielle Seite dokumentiert keine Hotkeys oder Steuerungsschemata, also sollten alle spezifischen Tastenbelegungen, die du anderswo liest, im Spiel überprüft werden.
 
-Touch-Steuerung ist am verzeihendsten fürs Gelegenheitsspiel und am gnadenlosesten in Präzisionsstages. Der linke Thumbstick übernimmt die Bewegung, die Sprungtaste sitzt rechts, und die Kamerasteuerung erfolgt per Wischen.
+- Lass einen Start zu Ende laufen, bevor du ihn beurteilst. Physiksimulationen lösen sich mit der Zeit auf, und ein Ergebnis, das mitten im Flug wie ein Fehlschlag aussieht, kann in einem vollen Bruch enden.
+- Ändere jeweils nur eine Variable. Wenn du Fallhöhe, Winkel und Ragdoll-Auswahl gleichzeitig anpasst, kannst du nicht sagen, welche Änderung wichtig war.
+- Beobachte den Boden, nicht die Ragdoll. Die Oberfläche und der Landepunkt bestimmen das Ergebnis normalerweise mehr als die Pose in der Luft.
+- Nutze kurze Sitzungen, um Ragdolls zu vergleichen. Sobald du mehr als eine freigeschaltet hast, führe dasselbe Setup mit jeder durch, damit der Vergleich fair ist.
+- Erwarte Server-Schwankungen. Mit bis zu 20 Spielern pro Server kann das Physikverhalten leicht von einem Solo-Server abweichen. Wenn ein Ergebnis inkonsistent erscheint, notiere es, anstatt anzunehmen, dass du einen Fehler gemacht hast.
 
-| Stärke | Schwäche |
-|---|---|
-| Einfach überall zu erlernen und zu spielen | Thumbstick-Drift auf winzigen Plattformen |
-| Kamera-Wischen fühlt sich natürlich an | Platzierung der Sprungtaste kann Fehltipps verursachen |
-| Keine Hardware nötig | Shift-Lock-artige Winkel sind schwerer zu halten |
-
-Die Erfahrung der Community deutet darauf hin, dass Mobile-Spieler am meisten davon profitieren, die Kamerempfindlichkeit zu senken und mit zwei Daumen statt mit einer Hand zu spielen.
-
-### Konsolen-Steuerung
-
-Die Konsole liegt zwischen den beiden. Analogsticks bieten eine flüssige Bewegung, aber die Kameradrehgeschwindigkeit ist langsamer als bei einer Maus.
-
-- **Linker Stick** für die Bewegung — sanft drücken für Präzision, nicht voll durchdrücken.
-- **A / Cross** für den Sprung.
-- **Rechter Stick** für die Kamera; halte deinen Daumen leicht.
-- **Schultertasten** für den Zoom, was bei langen Sichtlinien-Sprüngen hilft.
-
-| Plattform | Größte Stärke | Größte Schwäche | Am besten für |
-|---|---|---|---|
-| PC | Kamerapräzision | Erfordert Schreibtisch-Setup | Speedruns, schwere Stages |
-| Mobilgerät | Portabilität | Touch-Genauigkeit | Gelegentliches Clearen |
-| Konsole | Flüssige analoge Bewegung | Langsamere Kameradrehungen | Bequeme lange Sessions |
-
-## Bewegungstechniken, die deine Knochen retten
-
-Rohe Eingaben bringen dich nur bis zu einem gewissen Punkt. Das sind die Gewohnheiten, die Spieler, die Stages clearen, von Spielern trennen, die ständig respawnen.
-
-**Erst die Kamera, dann die Bewegung.** Drehe auf PC und Konsole deine Kamera zuerst auf deinen Landepunkt, *bevor* du dich bewegst. Dein Charakter folgt der Kamera, also bedeutet eine vorausgerichtete Kamera einen geradlinigen Sprung statt eines gekrümmten, unvorhersehbaren.
-
-**Laufe bis zum Rand, dann springe.** Spring nicht aus drei Schritten Entfernung und hoffe. Laufe, bis dein Charakter direkt an der Kante der Plattform steht, halte an, dann springe. Das gibt dir maximale Distanz und einen wiederholbaren Referenzpunkt.
-
-**Tippe den Sprung am Höhepunkt deines Anlaufs an.** Wenn du auf eine Lücke zuläufst, springe etwas vor der Kante — nicht danach. Danach zu springen bedeutet, dass du bereits fällst.
-
-**Nutze Shift-Lock gezielt.** Auf einem zwei Studs breiten Balken hält Shift-Lock dich nach vorne ausgerichtet und verhindert versehentliches seitliches Abdriften. Bei einem langen Sprung über eine Lücke schalte es aus, damit du dich in der Luft korrigieren kannst.
-
-**Halte deine Landezone auf dem Bildschirm.** Wenn du nicht sehen kannst, wo du landest, rätst du. Zoome auf Stages mit großen Sprüngen leicht heraus, damit die nächste Plattform sichtbar bleibt.
-
-**Überstürze nichts nach einem Sturz.** Die häufigste Ursache für eine Todessträhne ist Frustration. Atme einmal durch, richte deine Kamera neu aus und beginne den Abschnitt erneut mit derselben Routine.
-
-**Lerne den Respawn-Rhythmus.** Wisse, zu welchem Checkpoint du zurückkehrst und wie lang der Rückweg ist. Stages, die brutal wirken, haben oft einfach einen langen Erholungsweg.
-
-## Häufige Steuerungsfehler und wie man sie behebt
-
-Die meisten Spieler scheitern nicht, weil die Obby unfair ist. Sie scheitern wegen eines kleinen, wiederholbaren Eingabefehlers. So diagnostizierst du deinen.
-
-| Fehler | Warum er passiert | Die Lösung |
-|---|---|---|
-| Die Sprungeingabe gedrückt halten | Gewohnheit aus anderen Genres | Einmal pro Sprung tippen, vollständig loslassen |
-| Gegen die Kamera ankämpfen | Drehen während des Springens | Kamera ausrichten, dann springen |
-| Über Plattformen hinausschießen | Mit voller Geschwindigkeit in jeden Sprung rennen | Zwei Schritte vor der Kante auf Schrittgeschwindigkeit gehen |
-| Von rutschigen Stages abrutschen | Bewegung mit voller Geschwindigkeit auf reibungsarmen Oberflächen | Bewegung in kurzen Stößen tippen statt zu halten |
-| Zu früh auf beweglichen Plattformen springen | Das Eintreffen der Plattform vorwegnehmen | Warte, bis die Plattform unter dir ist, dann springe |
-| Bei jedem Sturz Lag die Schuld geben | Echte Latenzprobleme gemischt mit schlechtem Timing | Grafik-Einstellungen senken und auf einer frühen Stage testen |
-| Reset ignorieren | Versuch, sich aus einer ausweglosen Stelle zu befreien | Sofort resetten und Zeit sparen |
-
-Wenn du nur einen davon behebst, behebe den ersten. Spieler, die die Sprungtaste gedrückt halten, verlieren mehr Runs als Spieler, die irgendetwas anderes falsch machen.
-
-## Einstellungen und eine einfache Übungsroutine
-
-Deine Steuerungseinstellungen sind genauso wichtig wie deine Hände. Ein fünfminütiges Setup kann dir eine Stunde voller Wiederholungsversuche ersparen.
-
-| Einstellung | Empfohlener Ausgangspunkt | Warum es hilft |
-|---|---|---|
-| Kamerempfindlichkeit | Niedrig bis mittel | Verhindert Überschießen beim Wischen oder Mausbewegen |
-| Kameramodus | Classic / Follow | Hält deine Sicht vorhersehbar |
-| Shift-Lock | Umschalten, nicht halten | Leichter auf Balken zu kontrollieren |
-| Grafikqualität | Niedriger bei Lag | Konstante Bildrate bedeutet konstante Sprünge |
-| Zoom-Stufe | Leicht herausgezoomt | Hält Landezonen sichtbar |
-| Eingabegerät | Was auch immer du am meisten gewohnt bist | Konstanz schlägt rohe Präzision |
-
-Sobald deine Einstellungen fixiert sind, fahre vor dem Versuch schwerer Stages dieses Warm-up:
-
-1. **Fünf Minuten auf der ersten Stage.** Kein Rennen — nur saubere, bedachte Sprünge.
-2. **Drei No-Death-Versuche auf einem mittleren Abschnitt.** Derselbe Abschnitt, wiederholt.
-3. **Ein vollständiger Run ohne erlaubte Resets.** Zwingt dich, vorsichtig zu spielen.
-4. **Analysiere deine Tode.** Frage dich, ob jeder Sturz Timing, Kamera oder Geschwindigkeit war.
-
-Community-Berichte zeigen durchweg, dass Spieler, die sich so aufwärmen, schwierige Abschnitte schneller clearen als Spieler, die direkt in die härteste Stage springen.
+Keiner dieser Tipps garantiert Erfolg. Sie sind Überlegungen, die darauf basieren, wie sich Physik-Sandboxen im Allgemeinen verhalten, nicht auf dokumentierten Mechaniken für dieses spezifische Spiel.
 
 ## FAQ
 
-**Was sind die grundlegenden Steuerungseingaben in der Break your Bones Obby?**
-Auf dem PC verwendest du WASD zum Bewegen, die Leertaste zum Springen und die Maus zur Kamerasteuerung. Auf dem Mobilgerät nutzt du den linken Thumbstick, die Sprungtaste und Bildschirmwische. Auf der Konsole verwendest du den linken Stick, die Sprungtaste und den rechten Stick.
+Ist Break your Bones dasselbe wie Broken Bones IV?
+Nein. Es sind separate Roblox-Erfahrungen. Break your Bones wurde von der Gruppe High Effort Projects erstellt und am 5. Juni 2025 erstellt.
 
-**Kann man die Break your Bones Obby auf dem Mobilgerät spielen?**
-Ja. Touch-Steuerung funktioniert für die meisten Stages gut, allerdings sind Präzisionsbalken ohne Maus schwieriger. Die Kamerempfindlichkeit zu senken hilft sehr.
+Ist es dasselbe wie die mobilen Knochenbruch-Apps?
+Nein. Das sind separate Mobile-Games. Dieser Artikel behandelt nur die Roblox-Erfahrung mit der Place-ID 123821081589134.
 
-**Warum falle ich ständig, obwohl ich rechtzeitig auf Springen drücke?**
-Die wahrscheinlichste Ursache ist, dass du die Sprungeingabe gedrückt hältst, statt sie anzutippen, oder dass du springst, nachdem du die Plattformkante bereits verlassen hast. Laufe bis zur Kante, halte an, dann tippe.
+Gibt es Codes?
+Auf der offiziellen Seite sind keine dokumentiert. Prüfe die offizielle Roblox-Seite und die Gruppe sowie die Community-Links des Entwicklers, um dies zu bestätigen, und ignoriere Code-Listen von Drittanbietern, die keine offizielle Quelle nennen können.
 
-**Gibt es einen Sprint oder Doppelsprung in der Break your Bones Obby?**
-Manche Obbys fügen zusätzliche Bewegungsmöglichkeiten als Bildschirmtasten oder Items hinzu. Wenn eine Stage mit Standardbewegung unmöglich erscheint, prüfe deinen Bildschirm auf eigene Symbole, bevor du annimmst, dass dir eine Eingabe fehlt.
+Hat es einen Shop oder eine Währung?
+Nicht dokumentiert. Die offizielle Beschreibung erwähnt das Freischalten neuer Ragdolls, beschreibt aber keinen Shop, keine Preise und keine Währung.
 
-Meistere die Eingaben, halte deine Kamera unter Kontrolle, und die Break your Bones Obby fühlt sich nicht mehr wie eine Bestrafung an, sondern wie ein Rhythmus. Deine Knochen werden es dir danken.
+Wie viele Knochen gibt es?
+Die offizielle Seite nennt keine Zahl. Du kannst es im Spiel überprüfen, da das Ziel darin besteht, alle zu brechen.
+
+Der sicherste Weg, Break your Bones zu verstehen, ist, die offizielle Beschreibung zu lesen, ein paar Runden zu spielen und alles andere als Hypothese zu behandeln. Das hält deine Erwartungen mit dem abgeglichen, was der Entwickler tatsächlich bewirbt.

@@ -1,124 +1,73 @@
 export const metadata = {
-  title: "Break your Bones Como Subir de Nível Rápido: Guia de Progressão, Dicas de XP e Rotinas",
-  description: "Um guia prático de como subir de nível em Break your Bones, cobrindo fontes de XP, rotinas eficientes, timing de multiplicadores e os erros que travam seu progresso.",
+  title: "Guia de Break your Bones no Roblox: Física Ragdoll, Desbloqueios e o que Está Documentado",
+  description: "Um guia prático de Break your Bones no Roblox: como funciona o sandbox de física ragdoll, o que está oficialmente documentado e o que verificar no jogo.",
   category: "guide",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-## Por Que Subir de Nível com Eficiência Muda Tudo em Break your Bones
+Se você já viu clipes de um personagem quadrado caindo de um penhasco e se dobrando em uma forma impossível, provavelmente já conhece Break your Bones, o sandbox de física ragdoll do grupo High Effort Projects, do Roblox. A proposta é refrescantemente simples: lance um personagem contra perigos e quedas longas, veja a simulação assumir o controle e trabalhe para quebrar todos os ossos do corpo. Não há campanha de história nem escada competitiva para grindar — a diversão vem da própria física e do gotejar lento de novos ragdolls para arremessar por aí.
 
-Toda sessão em Break your Bones termina do mesmo jeito: você despenca por uma escada, vê o contador de dano disparar e depois encara uma barra de nível que mal se moveu. Se isso soa familiar, você não está sozinho. A maioria dos jogadores trata o jogo como puro caos e nunca aprende os sistemas que rodam por baixo dele. Entender corretamente **como subir de nível em Break your Bones** transforma uma hora aleatória de confusão em progresso constante e repetível — e é esse progresso que desbloqueia novas fases, ferramentas mais fortes e os cosméticos que todo mundo realmente quer.
+Este guia se mantém próximo do que a página oficial do Roblox realmente diz, e rotula claramente qualquer coisa que venha de guias de terceiros em vez do desenvolvedor. Se você quiser acompanhar, pode abrir a experiência aqui: [Break your Bones no Roblox](https://www.roblox.com/games/123821081589134/Break-your-Bones).
 
-Este guia cobre **como subir de nível em Break your Bones** em uma ordem prática: de onde a experiência realmente vem, quais rotinas compensam por minuto jogado e os hábitos que drenam seu tempo sem você perceber. Nada aqui depende de um patch específico, então continua útil mesmo depois de mudanças de balanceamento.
+## O que Break your Bones Realmente É
 
-## De Onde a Experiência Realmente Vem
+Break your Bones é um sandbox de física ragdoll publicado pelo grupo High Effort Projects. De acordo com o registro oficial do Roblox, o lugar foi criado em 5 de junho de 2025, foi atualizado pela última vez em 13 de outubro de 2026, suporta até 20 jogadores por servidor e acumulou aproximadamente 133 milhões de visitas. Esses números o tornam um dos brinquedos de física mais populares da plataforma, o que vale ter em mente: os servidores enchem, e a experiência claramente ainda está sendo mantida.
 
-O maior equívoco dos jogadores novos é achar que tempo jogado equivale a níveis ganhos. Na prática, sistemas de progressão como esse recompensam *ações*, não presença. Ficar parado num canto por vinte minutos não rende nada; dez minutos de movimento constante podem render várias vezes mais.
+A descrição oficial é curta e consistente. Ela anuncia uma forma de "tentar quebrar todos os seus ossos", chama a si mesma de "simulador divertido de esmagar ossos", promete que você pode "desbloquear novos ragdolls", convida você a "se arremessar de uma queda enorme" e descreve tudo como uma "simulação de física ragdoll". Esse é todo o conjunto de recursos anunciado. Observe o que não está lá: sem moeda, sem listagens de loja, sem valores de dano, sem sistema de códigos, sem nomes de ragdolls. Se um vídeo ou artigo afirma esses detalhes específicos, trate como uma observação, não como documentação.
 
-Relatos da comunidade apontam sempre para o mesmo punhado de gatilhos de XP, embora os valores exatos mudem entre atualizações:
+## O Loop Principal: Cair, Rolar, Quebrar
 
-| Fonte de XP | Gatilho Típico | Consistência | Melhor Para |
-|---|---|---|---|
-| Dano causado | Impactos em você mesmo ou em outros | Alta | Ganho constante de fundo |
-| Quebra de ossos | Eventos específicos de fratura durante uma queda | Média | Picos explosivos |
-| Altura e impacto | Quedas de distâncias maiores | Média | Runs curtas de alto valor |
-| Objetivos | Concluir metas ou desafios da rodada | Alta | Base confiável |
-| Tarefas diárias | Conclusão pela primeira vez a cada dia | Muito alta | Níveis iniciais rápidos |
-| Bônus de evento | Multiplicadores por tempo limitado | Variável | Janelas curtas e enormes |
+O apelo de um sandbox de ragdoll é que o personagem deixa de ser um personagem e se torna um objeto. Em vez de correr e pular com controle total, você entrega o controle no momento em que é lançado, e a simulação decide o resto. Quedas de altura, colisões com perigos e aterrissagens desajeitadas alimentam essa simulação.
 
-O padrão que aparece repetidas vezes na experiência dos jogadores é que **variedade vence repetição**. Uma run que mistura objetivos, grandes quedas e eventos de dano quase sempre rende mais do que uma run que spamma uma única ação, porque a maioria dos sistemas aplica retornos decrescentes a gatilhos idênticos repetidos.
+O objetivo anunciado — quebrar todos os seus ossos — dá uma direção ao caos. Em vez de se arremessar aleatoriamente, você está efetivamente tentando encontrar a queda, o ângulo ou o perigo que produz a destruição mais completa. É aí que reside o valor de replay: a mesma queda raramente se desenrola de forma idêntica duas vezes, porque o solucionador de física responde à sua orientação inicial, ao seu momento e aonde você faz o primeiro contato.
 
-Se você quer contexto sobre como esses loops de recompensa são desenhados em geral, este explicador sobre [como funcionam os sistemas de pontos de experiência nos jogos](https://en.wikipedia.org/wiki/Experience_point) é uma ótima introdução.
+Como a página oficial não documenta números de dano nem um sistema de saúde osso por osso, você deve verificar como a quebra é rastreada jogando. Uma abordagem prática: escolha uma queda repetível, registre quantas quebras visíveis você obtém, depois varie um único fator — ângulo de lançamento, velocidade de corrida ou altura da queda — antes de mudar qualquer outra coisa. Essa é uma forma razoável de raciocinar sobre um simulador de física sem inventar fórmulas que as fontes nunca nos deram.
 
-### O Problema do Soft Cap
+## Desbloqueando Novos Ragdolls
 
-Quase todo sistema de progressão inclui um soft cap: o ponto em que repetir a mesma ação começa a render menos XP por tentativa. Você vai sentir isso antes de conseguir medir. Se sua barra de nível se move visivelmente mais devagar do que há dez minutos, você bateu no soft cap do que estava fazendo.
+"Desbloquear novos ragdolls" é uma das poucas declarações de progressão que o desenvolvedor realmente faz. Ela diz que há uma coleção a expandir, e que alguns ragdolls não estão disponíveis desde o início. Ela não diz como o desbloqueio funciona, se o progresso é salvo por conta, se os desbloqueios estão ligados a conquistas, marcos ou tempo de jogo, ou se algum deles é por tempo limitado.
 
-A solução é simples e frequentemente ignorada — troque de atividade. Alternar entre três ou quatro fontes diferentes de XP mantém cada uma mais próxima do seu valor total.
+Essa lacuna é importante, porque guias de terceiros costumam preenchê-la com detalhes que soam confiantes. Trate-os como observações secundárias, não como documentação do desenvolvedor. Se você quer saber como um ragdoll específico é obtido, o caminho confiável é verificar a interface dentro do jogo diretamente — procure um seletor de ragdoll, armário ou menu — e depois confirmar nos próprios canais da comunidade do desenvolvedor. High Effort Projects é um grupo do Roblox, então a página do grupo e qualquer espaço comunitário vinculado são onde os anúncios oficiais apareceriam primeiro.
 
-### Multiplicadores São Timing, Não Habilidade
+| Pergunta | O que a página oficial diz | Como verificar |
+| --- | --- | --- |
+| Quantos ragdolls existem? | Não documentado | Verifique o menu de seleção no jogo |
+| Como os ragdolls são desbloqueados? | Apenas que eles podem ser desbloqueados | Procure marcos ou menus no jogo |
+| Existem códigos? | Nenhum sistema de códigos documentado | Verifique a página oficial e a comunidade do grupo |
+| O progresso é salvo? | Não documentado | Teste entre sessões no jogo |
 
-Multiplicadores se acumulam, e empilhá-los é a coisa de maior impacto que um jogador de nível médio pode aprender. Eventos de fim de semana, bônus de grupo e boosts temporários todos multiplicam o mesmo número base. Usar um é bom. Usar três ao mesmo tempo é onde os níveis realmente saltam.
+## Códigos, Moeda e Outras Alegações Não Documentadas
 
-O erro é queimar um multiplicador durante jogo de baixa atividade. Se você ativa um boost e depois passa metade dele andando por um menu, você pagou o preço cheio por nada.
+Buscas por Break your Bones frequentemente incluem a palavra "códigos". De acordo com o registro oficial do Roblox obtido em 14 de outubro de 2026, não há sistema de resgate de códigos documentado na página do jogo. Isso não significa automaticamente que um nunca possa existir — desenvolvedores adicionam recursos —, mas significa que nenhuma lista de códigos funcionais pode estar precisa hoje, porque não há um lugar documentado para inserir um código.
 
-## Break your Bones Como Subir de Nível Rápido: Oito Táticas Que Funcionam
+A mesma cautela se aplica a nomes de moedas, preços de loja, custos de upgrade e valores de dano. Nenhum deles aparece na descrição oficial. Se você encontrar uma tabela detalhada de preços, é especulação, uma observação de uma versão passada ou copiada de um jogo diferente. Isso importa por duas razões relacionadas: vários jogos mobile usam palavras semelhantes em seus títulos, e outra experiência do Roblox, Broken Bones IV, é um projeto separado com seus próprios sistemas. Mecânicas desses jogos não devem ser assumidas como existentes aqui.
 
-Estas estão ordenadas aproximadamente por quanto ajudam em relação a quanto esforço custam.
+O hábito prático é simples. Antes de confiar em qualquer número específico sobre esta experiência, pergunte de onde ele veio. Se a resposta for "a página do Roblox", é verificável. Se a resposta for "um guia", é uma alegação que vale a pena testar no jogo.
 
-| # | Tática | Esforço | Impacto | Melhor Usar Quando |
-|---|---|---|---|---|
-| 1 | Encadear ações sem tempo morto | Baixo | Alto | Toda sessão |
-| 2 | Jogar o modo de maior densidade disponível | Baixo | Alto | Você quer XP bruto |
-| 3 | Terminar objetivos antes de farmar livremente | Baixo | Médio | Início de uma sessão |
-| 4 | Empilhar multiplicadores durante eventos | Médio | Muito alto | Janelas de evento |
-| 5 | Jogar em blocos focados de 30–45 minutos | Baixo | Médio | Rotina diária |
-| 6 | Melhorar o dano antes dos cosméticos | Médio | Alto | Início e meio de jogo |
-| 7 | Juntar-se a um grupo para bônus compartilhados | Médio | Médio | Noites, fins de semana |
-| 8 | Alternar atividades quando os ganhos diminuem | Baixo | Médio | Sempre que sentir um cap |
+## Jogando Bem em um Sandbox de Física
 
-Algumas delas merecem mais detalhes.
+Como o jogo é uma simulação e não um teste de habilidade, "ficar melhor" significa principalmente entender como a simulação se comporta. Alguns hábitos ajudam:
 
-**Encadear ações** significa nunca ficar parado. Entre objetivos, continue se movendo, continue caindo, continue interagindo. O tempo morto é o motivo mais comum de uma sessão parecer longa mas apenas produtiva na aparência.
+- Observe o ponto de primeiro contato. Onde a massa do seu personagem aterrissa determina como o resto do corpo segue, o que geralmente é o que produz os resultados mais dramáticos.
+- Mude uma variável por vez. Altura, ângulo e velocidade interagem, então isolá-los torna seus resultados significativos.
+- Use os servidores de 20 jogadores a seu favor. Os lançamentos de outros jogadores são informação gratuita sobre o que os perigos e as quedas realmente fazem.
+- Espere inconsistência. A física ragdoll é deliberadamente instável; uma queda que estilhaça tudo uma vez pode produzir um tombo leve na próxima.
 
-**Melhorar o dano primeiro** importa porque a produção de dano alimenta diretamente sua principal fonte de XP. Um setup mais forte significa que cada run seguinte rende mais, o que se acumula ao longo de dezenas de sessões. Compras de cosméticos não se acumulam em nada.
+Como a experiência foi atualizada pela última vez em 13 de outubro de 2026, o comportamento que você vê hoje pode não corresponder a vídeos mais antigos. O comportamento atual no jogo supera qualquer clipe arquivado.
 
-**Alternar atividades** é o contraponto aos soft caps. Quando uma fonte desacelera, troque imediatamente para outra em vez de grindar com mais força na mesma parede.
+## FAQ
 
-## Quatro Rotinas de Nivelamento Comparadas
+**Break your Bones é o mesmo que Broken Bones IV?**
+Não. São experiências separadas do Roblox, de criadores diferentes, com sistemas diferentes. Não carregue suposições entre elas.
 
-Jogadores diferentes têm quantidades diferentes de tempo. Veja como as abordagens comuns se comparam entre si.
+**Break your Bones tem códigos?**
+Nenhum sistema de códigos está documentado na página oficial do Roblox em 14 de outubro de 2026. Para verificar mudanças, consulte a [página oficial do jogo](https://www.roblox.com/games/123821081589134/Break-your-Bones) e a comunidade do grupo High Effort Projects.
 
-| Rotina | Duração da Sessão | Foco | Melhor Para | Principal Desvantagem |
-|---|---|---|---|---|
-| Varredura de missões diárias | 15–20 min | Objetivos + diárias | Jogadores ocupados, quem mantém sequência | Teto baixo por sessão |
-| Rotação de speedrun | 20–30 min | Grandes quedas, resets rápidos | XP explosivo, picos de nível | Exige foco |
-| Grind de sobrevivência | 45–60 min | Dano ao longo do tempo | Ganho constante de fundo | Entediante, fácil de se dispersar |
-| Farm em co-op | 60+ min | Bônus compartilhados + eventos | Push de fim de semana | Depende de um grupo |
+**Quantos jogadores podem entrar em um servidor?**
+Até 20, segundo o registro oficial do Roblox.
 
-Para a maioria das pessoas, o padrão semanal mais forte é uma **varredura de missões diárias todos os dias** mais uma ou duas sessões mais longas de co-op no fim de semana. Essa combinação captura o valor diário confiável e os grandes multiplicadores de evento sem exigir horas toda noite.
+**Preciso quebrar todos os ossos para progredir?**
+A descrição oficial apresenta quebrar todos os seus ossos como o objetivo, mas não explica como a progressão ou os desbloqueios estão ligados a isso. Verifique no jogo.
 
-## Erros Comuns Que Travam a Progressão
-
-| Erro | Por Que Prejudica | A Solução |
-|---|---|---|
-| Farmar uma única ação por horas | Soft caps cortam os ganhos | Alterne a cada 20–30 minutos |
-| Guardar multiplicadores "para depois" | Eventos expiram; boosts ficam sem uso | Gaste-os durante o pico de atividade |
-| Comprar cosméticos primeiro | Sem efeito na geração de XP | Melhore dano e mobilidade |
-| Ignorar tarefas diárias | XP grátis e de alto valor desperdiçado | Faça-as primeiro, todos os dias |
-| Jogar distraído | Tempo morto não rende nada | Sessões curtas e focadas |
-| Nunca mudar de modo | O teto de um modo se torna o seu | Experimente o modo que você evita |
-
-O último é subestimado. Jogadores costumam se acomodar em um único modo familiar e depois se perguntam por que o progresso estagnou. Relatos da comunidade descrevem regularmente um salto de nível depois de simplesmente experimentar um modo que haviam ignorado por semanas.
-
-## Como Acompanhar se Você Está Realmente Melhorando
-
-Adivinhar é o inimigo da eficiência. Acompanhe algumas coisas simples e o quadro fica óbvio em uma semana.
-
-| Métrica | Onde Encontrar | Por Que Importa |
-|---|---|---|
-| XP por sessão | Progresso da barra de nível | Mostra se sua rotina funciona |
-| Tempo até o próximo nível | Progresso dividido pela duração da sessão | Revela soft caps cedo |
-| Tempo ativo vs. ocioso | Sua própria estimativa aproximada | Expõe minutos desperdiçados |
-| Uso de multiplicadores | Inventário de boosts | Evita boosts desperdiçados |
-| Melhor modo da semana | Anotações de sessão | Diz onde investir seu tempo |
-
-Anote isso depois de cada sessão por uma semana. A maioria dos jogadores descobre que um modo ou uma rotina está rendendo muito mais do que os outros, e que uma parte de cada sessão foi gasta sem fazer nada de útil.
-
-## Juntando Tudo
-
-Aprender **como subir de nível em Break your Bones** tem menos a ver com truques secretos e mais com respeitar alguns fundamentos: continue se movendo, termine objetivos primeiro, empilhe multiplicadores durante eventos, alterne atividades antes que os soft caps mordam e melhore as coisas que geram XP em vez das que apenas ficam bonitas. Faça isso de forma consistente e a barra de nível deixa de ser uma fonte de frustração.
-
-## Perguntas Frequentes
-
-**Quanto tempo leva para subir de nível em Break your Bones?**
-Os níveis iniciais passam rápido — muitas vezes vários em uma única sessão focada. Os níveis posteriores desaceleram visivelmente porque os requisitos aumentam e os soft caps se aplicam com mais frequência. Tarefas diárias e multiplicadores de evento são a forma mais rápida de manter o ritmo durante o trecho lento.
-
-**Existe um único método mais rápido para subir de nível em Break your Bones?**
-Se você tiver que escolher um, empilhe multiplicadores durante um evento ativo enquanto conclui objetivos, em vez de farmar livremente. Essa combinação supera consistentemente todo o resto na experiência dos jogadores, mas depende de um evento estar ativo.
-
-**Multiplicadores realmente importam tanto assim?**
-Sim. Como os multiplicadores se acumulam sobre o mesmo valor base, empilhar dois ou três durante uma janela de alta atividade pode superar uma sessão normal inteira. O segredo é ativá-los quando você sabe que vai jogar ativamente durante toda a duração.
-
-**Devo jogar sozinho ou em grupo para subir de nível mais rápido?**
-Sozinho você tem controle total do ritmo, o que combina com sessões curtas e focadas. Grupos normalmente adicionam bônus compartilhados e tornam sessões mais longas mais agradáveis, o que indiretamente aumenta seu XP porque você joga mais tempo sem parar. Teste os dois por uma semana e compare seus números registrados.
+**É grátis para jogar?**
+A página oficial não anuncia um requisito pago. Verifique a página atual para quaisquer detalhes de acesso antes de jogar.

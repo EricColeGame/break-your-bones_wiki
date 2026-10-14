@@ -1,120 +1,97 @@
 export const metadata = {
-  title: "Mecánica del vacío de Break your Bones explicada: daño por caída, fracturas de huesos y reglas de reinicio",
-  description: "Una guía clara sobre la mecánica del vacío de Break your Bones — cómo interactúan el daño por caída, las fracturas de huesos y los reinicios fuera de límites, además de consejos para sobrevivir a ambos.",
+  title: "Break Your Bones en Roblox: Cómo funciona el sandbox de ragdolls",
+  description: "Una guía fundamentada sobre Break your Bones en Roblox: qué confirma la página oficial, cómo se juega la física de ragdoll y qué sigue sin documentarse.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Un fémur roto en mitad de una pelea contra un jefe es malo. Un fémur roto seguido de una caída al vacío es peor. Ese doble castigo es exactamente por lo que la interacción del **vacío de Break your Bones** frustra a tantos jugadores: un solo error se cobra dos veces. Sin embargo, una vez que entiendes cómo está conectada la mecánica del **vacío de Break your Bones**, deja de sentirse aleatoria y empieza a sentirse como una regla con la que puedes jugar. Esta guía desglosa qué hace realmente el estado de fractura de huesos, cómo interactúan con él los vacíos fuera de límites y los hábitos que te mantienen vivo cuando el suelo desaparece.
+Break your Bones es un sandbox de física de Roblox construido sobre una premisa simple y morbosamente divertida: lanzar un personaje ragdoll contra cosas y ver cuánto daño sufre el esqueleto. Creado por el grupo High Effort Projects, la experiencia se publicó el 5 de junio de 2025 y seguía recibiendo actualizaciones hasta el 13 de octubre de 2026, según el registro oficial de Roblox. Admite hasta 20 jugadores por servidor y ha acumulado aproximadamente 133 millones de visitas — cifras que sugieren que a mucha gente le gusta ver cómo un cuerpo de dibujo animado rebota por una escalera.
 
-## Qué significan realmente "Break your Bones" y el vacío
+Este artículo se ciñe a lo que está realmente documentado. La página oficial de [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) anuncia una lista corta de características y nada más: romperte todos los huesos, un simulador de destrozar huesos, desbloquear nuevos ragdolls, lanzarte desde una caída enorme y física de ragdoll. No hay un sistema de códigos publicado, ni lista de monedas, ni tabla de precios, ni tabla de daño. Todo lo que vaya más allá de esa lista proviene de la observación de los jugadores, no de la documentación de los desarrolladores, y debe tratarse en consecuencia.
 
-Aquí hay dos sistemas separados que se comunican entre sí, y la mayor parte de la confusión viene de tratarlos como una sola cosa. El sistema de fractura de huesos es un *efecto de estado*: reacciona al impacto y cambia lo que tu personaje puede hacer físicamente. El vacío es un *límite*: un plano de muerte invisible que te elimina del nivel en el momento en que lo cruzas.
+## Qué dice realmente la descripción oficial
 
-Ninguno de los dos sistemas conoce ni le importa el otro por defecto. Esa independencia es la razón por la que el resultado se siente inconsistente de un mapa a otro y de un parche a otro.
+El listado de Roblox es deliberadamente escueto. Sus características anunciadas son:
 
-| Término | Qué hace | Desencadenante típico |
+- Intenta romperte todos los huesos
+- Un divertido simulador de destrozar huesos
+- Desbloquea nuevos ragdolls
+- Lánzate desde una caída enorme
+- Una simulación de física de ragdoll
+
+Ese es todo el conjunto de características verificadas. Fíjate en lo que está ausente: no se mencionan códigos, ni el nombre de una moneda del juego, ni el inventario de una tienda, ni niveles de mejora, ni mecánicas de conteo de huesos, ni peligros específicos. Si ves una guía que afirma conocer el número exacto de huesos del modelo o el valor de daño de una caída concreta, esa información no procede de la página oficial.
+
+La conclusión estructural importante es que Break your Bones es un **sandbox**, no un RPG de progresión. El bucle es experimentación con la física más desbloqueos de ragdolls. Ese enfoque explica casi todo sobre cómo se juega.
+
+## Cómo funciona el bucle de física de ragdoll
+
+Según las características anunciadas, la interacción principal es sencilla: tu personaje se convierte en un ragdoll impulsado por la física, le aplicas fuerza — mediante un lanzamiento, una caída o un peligro del entorno — y la simulación resuelve qué le ocurre al cuerpo. La "caída enorme" mencionada en la descripción es el ejemplo más claro: te lanzas desde las alturas, la gravedad hace su trabajo y el ragdoll reacciona al impacto.
+
+Como el juego es una simulación de física y no un conjunto de animaciones programadas, los resultados varían. La posición, el ángulo, la velocidad y aquello sobre lo que aterrizas influyen en el resultado. Esa variabilidad es el atractivo — es la misma razón por la que a los jugadores les gusta apilar objetos en otros títulos sandbox. También significa que ninguna guía puede darte un método garantizado para un resultado concreto, porque la propia simulación es la variable.
+
+Un enfoque práctico para jugadores nuevos:
+
+1. Empieza con la caída enorme. Se anuncia explícitamente y no requiere desbloqueos.
+2. Prueba distintas superficies de aterrizaje y ángulos de entrada en lugar de repetir la misma caída.
+3. Observa cómo se asienta el ragdoll — la respuesta física es el contenido.
+4. Usa servidores multijugador para observar qué hacen otros jugadores. Con hasta 20 jugadores por servidor, normalmente pasa algo.
+
+## Desbloquear nuevos ragdolls
+
+"Desbloquea nuevos ragdolls" es el único elemento de progresión que nombra la descripción oficial. No explica la condición de desbloqueo, si los desbloqueos son permanentes, cuántos ragdolls existen ni si alguno es de pago.
+
+Las guías de terceros a veces describen métodos de desbloqueo, pero esas son observaciones de la comunidad y no documentación de los desarrolladores, y pueden quedar obsoletas rápidamente — el lugar se actualizó por última vez el 13 de octubre de 2026, un día antes de escribir esto, así que la versión actual puede diferir de cualquier guía escrita antes. La forma fiable de comprobarlo es abrir el juego y mirar la interfaz que aparezca dentro del juego para seleccionar ragdolls.
+
+| Pregunta | Respuesta documentada | Cómo verificarlo |
 |---|---|---|
-| Fractura de hueso | Aplica un estado de herido persistente que limita el movimiento o las acciones | Caídas fuertes, impactos pesados, trampas programadas |
-| Animación de fractura | Una caída al estilo ragdoll que elimina el control mientras se resuelve la fractura | Daño que cruza un umbral de fractura |
-| Vacío / plano de muerte | Un límite invisible debajo o fuera del mapa que saca al jugador de la partida | Caminar fuera de un borde, empuje, atravesar geometría |
-| Reinicio | Te devuelve a un punto de control, punto de aparición o última posición segura | Contacto con el vacío, salud que llega a cero |
-| Objeto de recuperación | Un consumible o habilidad que elimina el estado de herido antes de tiempo | Férulas, curación, reanimaciones de compañeros |
+| ¿Cuántos ragdolls existen? | No documentado | Consulta el menú de ragdolls del juego |
+| ¿Cómo se desbloquean? | No documentado | Juega y observa el aviso de desbloqueo |
+| ¿Algún ragdoll es de pago? | No documentado | Consulta la tienda del juego o los avisos de Robux |
+| ¿Los ragdolls cambian la física? | No documentado | Prueba la misma caída con distintos ragdolls |
 
-La conclusión práctica: romperse un hueso es algo que le pasa *a tu personaje*, mientras que el vacío es algo que le pasa *al mapa*. Colisionan constantemente porque las fracturas de huesos suelen costarte la movilidad que necesitas para evitar caerte.
+Esa tabla está intencionadamente casi vacía en la columna de respuestas. Rellenarla con conjeturas sería peor que dejarla en blanco.
 
-## Cómo funciona realmente el bucle del vacío de Break your Bones
+## Códigos, moneda y otros sistemas sin documentar
 
-La secuencia casi siempre sigue la misma forma. Recibes un impacto, se activa el umbral de fractura, pierdes el control y esa pérdida de control es lo que te lleva por el borde. Para cuando termina la fase de ragdoll, ya has pasado el punto de no retorno.
+Las búsquedas de códigos de Break your Bones son habituales, y la respuesta honesta es que **la página oficial de Roblox no documenta ningún sistema de códigos**. No se describe ninguna caja de canje, no se publica ninguna lista de códigos y no se hace referencia a ninguna publicación de los desarrolladores en el listado. Si existen códigos, no forman parte del conjunto de características anunciadas y no pueden confirmarse a partir de fuentes oficiales.
 
-| Paso | Qué ocurre | Qué puedes controlar todavía |
-|---|---|---|
-| 1 | Aterriza un impacto fuerte (caída, empuje, trampa) | Posicionamiento, armadura, ventajas de aterrizaje |
-| 2 | El daño cruza el umbral de fractura; se aplica el estado de herido | Reducción de daño, mejoras defensivas |
-| 3 | El movimiento se limita; comienza la fase de cojera o ragdoll | Muy poco: normalmente una breve ventana de tiempo |
-| 4 | El control reducido te lleva hacia el borde del mapa | Nada una vez estás en el aire |
-| 5 | El contacto con el vacío activa un reinicio o un segundo evento letal | Nada |
-| 6 | Reapareces, con o sin la lesión persistente | Equipamiento, elección de punto de control |
+Lo mismo se aplica a la moneda. No aparece ningún nombre de moneda en la descripción. Tampoco aparecen precios de objetos. Cualquier artículo que cite un precio concreto, el nombre de una moneda o una fórmula de daño está trabajando con suposiciones o con una versión antigua, no con documentación.
 
-Dependiendo de cómo esté construido un juego concreto, verás uno de tres resultados después del paso 5:
+Para comprobarlo tú mismo:
 
-- **Reinicio piadoso** — el vacío elimina la lesión por completo y reapareces limpio. Esta es la versión más amable y la que la mayoría de los jugadores asume como universal.
-- **Lesión persistente** — reapareces todavía roto, lo que convierte un error en un bucle de recuperación lento y castigador.
-- **Penalización acumulada** — el vacío aplica su propio daño letal además de la fractura, así que pierdes tanto una vida como un recurso de curación.
+- Abre la página oficial y lee la descripción completa — es corta, así que puedes leerla entera.
+- Mira la página del grupo High Effort Projects en Roblox por si hay anuncios de los desarrolladores.
+- Únete al juego y busca cualquier campo de introducción de códigos en los menús. Si no hay ninguno, no hay nada que canjear.
 
-Los informes de la comunidad sugieren que la versión de "reinicio piadoso" es la más común en los juegos de acción modernos, pero la experiencia del jugador varía muchísimo entre títulos e incluso entre mapas de un mismo título. Si no estás seguro de qué versión estás jugando, pruébalo en algún lugar inofensivo antes de probarlo en una arena de jefe.
+Si los desarrolladores añaden un sistema de códigos más adelante, la página del grupo es donde con más probabilidad se anunciaría primero.
 
-## Niveles de gravedad de las fracturas de huesos y comportamiento del reinicio por vacío
+## Jugar con otros y ajustar expectativas
 
-La mayoría de las implementaciones clasifican las lesiones en niveles aproximados. Los números exactos detrás de esos niveles son específicos de cada juego y a menudo cambian entre parches, así que toma la siguiente tabla como un marco de referencia y no como una tabla fija. Lo que importa es reconocer en qué nivel estás, porque tus opciones de recuperación se reducen rápidamente a medida que sube la gravedad.
+Los servidores admiten hasta 20 jugadores, lo que convierte Break your Bones tanto en un juguete social como en un sandbox en solitario. La simulación de física se ejecuta para todos en el servidor, así que las partidas multijugador tienden a ser caóticas en el buen sentido.
 
-| Nivel | Señal en el juego | Efecto en el movimiento | Solución habitual |
-|---|---|---|---|
-| Fisura | Ligera cojera, tenue tinte en pantalla | Pérdida menor de velocidad | Descanso breve o curación básica |
-| Moderada | Extremidad visiblemente fuera de lugar, acciones restringidas | Sin esprintar, escalada más lenta | Férula u objeto dedicado |
-| Grave | Estado de solo gatear o boca abajo | No puede luchar con normalidad | Temporizador de curación largo, ayuda de compañero |
-| Crítica | Efectos intensos en pantalla, cuenta atrás | Incapacitado | Reanimación o reinicio completo |
+Dos expectativas que conviene plantear con honestidad:
 
-La gravedad también decide cómo te trata el vacío. Una fisura rara vez te impide dirigirte de vuelta a un lugar seguro, así que el vacío nunca entra en juego. Una fractura grave o crítica elimina por completo la dirección, y por eso las lesiones de nivel alto y las muertes por vacío están tan fuertemente correlacionadas.
+- **Ninguna guía garantiza un resultado concreto.** Los sandboxes de física son no deterministas por diseño. Puedes mejorar tus probabilidades de obtener un resultado interesante variando tu enfoque, pero no puedes programarlo.
+- **Sin documentar significa sin documentar.** Los conteos de huesos, los valores de daño, los umbrales de desbloqueo y el contenido de la tienda simplemente no están publicados. Trata cualquier número concreto que leas en otro sitio como no verificado hasta que lo confirmes en el juego.
 
-| Pregunta | Reinicio por vacío | Fractura de hueso |
-|---|---|---|
-| Causa raíz | Salir del área jugable | Impacto por encima del umbral de fractura |
-| Modelo de daño | Instantáneo o basado en porcentaje | Efecto de estado basado en umbral |
-| Duración | Instantánea, seguida de reaparición | Persiste hasta que se cura o se agota el tiempo |
-| Contra juego | Mantente dentro de la geometría, respeta los bordes | Armadura, ventajas de aterrizaje, rutas más seguras |
-| Interacción | Puede cancelar una fractura activa | Puede ser cancelada por un reinicio por vacío |
+Break your Bones se entiende mejor como un patio de juegos de física con una temática de humor negro, no como un juego de optimización de estadísticas. La descripción oficial promete un simulador de destrozar huesos con ragdolls desbloqueables y una gran caída. Eso es exactamente lo que ofrece, y el resto es cosa tuya descubrirlo jugando.
 
-Esa última fila es todo el argumento en miniatura. Cuando el vacío se resuelve *antes* de que la fractura termine de aplicarse, a menudo obtienes una limpieza gratis. Cuando la fractura se resuelve primero, obtienes la versión lenta.
+## FAQ
 
-## Consejos prácticos para sobrevivir al bucle del vacío de Break your Bones
+**¿Break your Bones es lo mismo que Broken Bones IV?**
+No. Son experiencias de Roblox distintas, con creadores diferentes y descripciones oficiales diferentes. No debe darse por hecho que las mecánicas de una se apliquen a la otra.
 
-Sobrevivir a la combinación del **vacío de Break your Bones** consiste sobre todo en eliminar la segunda mitad de la ecuación. No siempre puedes evitar una fractura —existen los empujes, existen las trampas y los jefes hacen trampa—, pero casi siempre puedes evitar la caída que la sigue.
+**¿Break your Bones tiene códigos?**
+La página oficial de Roblox no documenta ningún sistema de códigos, ninguna caja de canje ni ninguna lista de códigos. Consulta la página oficial y el grupo High Effort Projects por si hay anuncios futuros.
 
-- **Prueba los bordes antes de confiar en ellos.** Camina, no esprintes, por cualquier borde que no hayas verificado personalmente.
-- **Mantén un objeto de curación en reserva.** Nunca gastes tu última férula en una fisura en mitad de una pelea.
-- **Aprende el plano de muerte.** Muchos vacíos están bastante por debajo del suelo visible, así que la caída que "parece segura" no lo es.
-- **Lee la dirección del empuje, no solo su magnitud.** Ser empujado *hacia* el centro del mapa es sobrevivible; ser empujado hacia fuera rara vez lo es.
-- **Trata las habilidades de movimiento como herramientas de recuperación.** Guarda el dash o el doble salto para el momento en que pierdas el control, no para desplazarte.
-- **Lucha con la espalda contra geometría sólida.** No te cuesta casi nada y elimina la mayor parte del riesgo de vacío en el encuentro.
+**¿Cuántos jugadores pueden unirse a un servidor?**
+Hasta 20, según el registro oficial de Roblox.
 
-| Factor de riesgo | Mitigación | Por qué funciona |
-|---|---|---|
-| Borde no verificado | Prueba caminando primero | Confirma la colisión antes de comprometer tu impulso |
-| Empuje hacia fuera | Colócate con una pared detrás de ti | Convierte una muerte por vacío en un golpe contra la pared |
-| Sin curación restante | Reserva una ranura de objeto | Conserva una opción de recuperación después de una fractura |
-| Ragdoll cerca de un borde | Planifica una ruta de escape de antemano | Te da una dirección en el instante en que recuperas el control |
-| Entradas de pánico | Baja el ritmo después de una fractura | Evita el segundo error que te hace caer |
+**¿Quién lo hizo?**
+El grupo de Roblox High Effort Projects. El lugar se creó el 5 de junio de 2025.
 
-Si solo te llevas un hábito de esta sección, que sea la regla de la pared detrás de ti. Es la forma más barata de desactivar la trampa del **vacío de Break your Bones** en cualquier encuentro que incluya ambas mecánicas.
+**¿Cómo desbloqueo ragdolls?**
+El desbloqueo se anuncia, pero el método no está documentado. Consulta el menú de ragdolls del juego para ver el requisito actual.
 
-## Mitos, casos límite e informes de la comunidad
-
-Mucho de lo que circula sobre esta mecánica es folclore. La experiencia de los jugadores es genuinamente útil aquí, pero también es anecdótica, así que vale la pena separar lo que los sistemas hacen realmente de lo que la gente asume que hacen.
-
-| Mito | Realidad |
-|---|---|
-| "El vacío siempre cura tus huesos." | Solo en versiones que eliminan explícitamente los efectos de estado al reiniciar. Muchas no lo hacen. |
-| "Puedes controlar en el aire para salir de una fractura." | Normalmente falso una vez que comienza la fase de ragdoll; comprueba tu título concreto. |
-| "Una dificultad más alta hace que el vacío sea más letal." | A veces es cierto para el escalado de daño, rara vez para el límite en sí. |
-| "Una fractura cerca de un borde siempre es fatal." | Falso: depende por completo del nivel de gravedad y de la dirección del empuje. |
-
-Para una referencia neutral sobre cómo se definen los límites fuera de límites y los planos de muerte en todo el medio, el [glosario de términos de videojuegos que cubre el comportamiento fuera de límites](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) es un buen punto de partida. No te dirá los números de tu juego, pero evitará que confundas conceptos relacionados.
-
-Un caso límite que vale la pena señalar: el atravesar geometría. Si caes *a través* del mapa en lugar de caerte de él, algunos motores registran un contacto con el vacío al instante, mientras que otros registran primero una caída normal. Los informes de la comunidad describen ambos comportamientos, a veces dentro del mismo juego en mapas diferentes, así que no asumas consistencia.
-
-## Preguntas frecuentes
-
-**¿Caerse al vacío siempre te rompe los huesos?**
-No. El vacío es un límite, no un impacto. Solo te rompe los huesos si el juego canaliza el contacto con el vacío a través de su sistema de daño o de caída. En muchos títulos, el vacío simplemente te reinicia, y la interacción del **vacío de Break your Bones** solo aparece cuando ya estabas herido antes de caer.
-
-**¿Puedes cancelar la interacción del vacío de Break your Bones?**
-A veces, y normalmente por accidente. Si el reinicio se resuelve antes de que el estado de fractura termine de aplicarse, la lesión a menudo se elimina. Rara vez hay un botón deliberado para esto: es un artefacto de sincronización de cómo se resuelven ambos sistemas en orden.
-
-**¿La mecánica del vacío de Break your Bones es idéntica en todos los juegos?**
-Ni de lejos. Los valores de umbral, los niveles de gravedad, el comportamiento del reinicio y si las lesiones persisten tras reaparecer varían según el título, el modo y el parche. Trata con escepticismo cualquier afirmación universal que leas en internet y verifícala en tu propia versión.
-
-**¿Cuál es la recuperación más rápida después de una fractura cerca del vacío?**
-Llega a suelo sólido antes de curarte. Curarte mientras sigues en un borde inestable desperdicia el objeto y a menudo termina con una segunda fractura peor. Estabiliza tu posición y luego compromete el recurso.
-
-La versión corta: las fracturas de huesos son un impuesto a la movilidad, y el vacío es quien cobra la deuda. Aprende a reconocer el umbral, respeta los bordes y mantén siempre una ruta de escape en la cabeza. Si haces eso, el bucle del **vacío de Break your Bones** deja de ser una moneda al aire y se convierte en una mecánica más que ya has resuelto.
+**¿Puedo romperme todos los huesos?**
+Ese es el objetivo declarado en la descripción oficial — "intenta romperte todos los huesos". Que una partida concreta lo consiga depende de la simulación de física, y no se ha publicado ningún conteo de huesos verificado.

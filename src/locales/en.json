@@ -2,8 +2,8 @@
   "site": {
     "name": "Break your Bones Wiki",
     "shortName": "Break your Bones",
-    "tagline": "Crash Challenges, Physics Tips & Score Guides",
-    "description": "Break your Bones Wiki provides gameplay guides, crash challenge walkthroughs, ragdoll physics tips, codes, and useful information to help players break more bones and score bigger crashes.",
+    "tagline": "Physics Ragdoll Tips & Bone-Smashing Guides",
+    "description": "Break your Bones Wiki provides gameplay guides, ragdoll physics tips, bone-smashing techniques, and useful information about the Roblox experience Break your Bones by High Effort Projects.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
   "nav": {
@@ -25,26 +25,26 @@
   },
   "home": {
     "meta": {
-      "title": "Break your Bones Wiki - Codes, Crash Guides, Physics Tips & Upgrades",
-      "description": "Complete Break your Bones guide with working codes, crash challenge routes, ragdoll physics tips, upgrade priorities, and score strategies to break more bones."
+      "title": "Break your Bones Wiki - Ragdoll Physics Guides, Bone-Smashing Tips & Info",
+      "description": "Community wiki for the Roblox experience Break your Bones by High Effort Projects. Ragdoll physics tips, bone-smashing techniques, unlockable ragdolls, and gameplay information."
     },
     "hero": {
-      "eyebrow": "Physics Based Action Game",
+      "eyebrow": "Roblox Physics Ragdoll Sandbox",
       "title": "Break your Bones Wiki",
-      "description": "Break your Bones is a physics-based action game focused on bone breaking mechanics, challenges, gameplay strategies, and player progression. Explore crash routes, ragdoll physics tips, and score guides on our community wiki.",
+      "description": "Break your Bones is a physics ragdoll sandbox on Roblox. Launch a character into hazards and huge drops to smash bones, unlock new ragdolls, and play with a physics simulation. Explore bone-smashing tips, ragdoll physics explanations, and gameplay information on our community wiki.",
       "stats": [
-        "All Codes",
-        "Crash Challenges",
-        "Physics Tips",
-        "Score Guides"
+        "Physics Ragdoll Sandbox",
+        "Bone-Smashing Tips",
+        "Ragdoll Physics",
+        "Huge Drops"
       ],
       "primaryCta": "Beginner Guide",
-      "secondaryCta": "Crash Challenges",
-      "tertiaryCta": "Active Codes",
+      "secondaryCta": "Bone-Smashing Tips",
+      "tertiaryCta": "About the Game",
       "videoLabel": "Gameplay Showcase"
     },
     "updates": {
-      "title": "Latest Updates",
+      "title": "Latest Guides",
       "browse": "Browse All Guides",
       "viewAll": "View All"
     },
@@ -55,22 +55,22 @@
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Learn the core loop of Break your Bones, one repeatable break, and the first upgrades that raise your payout per attempt."
+          "description": "Learn the core loop of Break your Bones: launching a ragdoll into hazards and huge drops to smash bones."
         },
         {
           "number": "2",
-          "title": "All Codes",
-          "description": "Redeem every working Break your Bones code for free currency, damage boosts, and cosmetic rewards before they expire."
+          "title": "Ragdoll Physics Tips",
+          "description": "Understand how the physics simulation handles momentum, collisions, and ragdoll behavior."
         },
         {
           "number": "3",
-          "title": "Fastest Leveling",
-          "description": "Plan your falls around the tallest reachable point and stack multipliers so each drop breaks more bones for more XP."
+          "title": "Unlock New Ragdolls",
+          "description": "Find out how to unlock new ragdolls as you play the physics ragdoll sandbox."
         },
         {
           "number": "4",
-          "title": "Best Farming Spots",
-          "description": "Farm materials on hard surfaces, staircases, and chained tumbles that turn one fall into several separate breaks."
+          "title": "Huge Drops",
+          "description": "Learn how to fling yourself from a huge drop for bigger impacts and more bone smashes."
         }
       ]
     },
@@ -79,63 +79,63 @@
       "title": "Trending Now",
       "quickLinks": [
         "Beginner Guide",
-        "Working Codes",
         "Ragdoll Physics",
-        "Upgrade Priorities"
+        "Bone-Smashing Tips",
+        "Unlockable Ragdolls"
       ],
       "cards": [
         {
           "badge": "Beginner",
           "title": "Beginner Guide",
-          "description": "Everything you need from your first launch to a repeatable, profitable break routine.",
+          "description": "Everything you need from your first launch to a repeatable bone-smashing routine.",
           "href": "/guide/break-your-bones-beginner-guide"
         },
         {
           "badge": "Updated",
-          "title": "Working Codes",
-          "description": "How Break your Bones codes work, how to redeem them, and how to avoid the most common errors.",
+          "title": "Codes",
+          "description": "Information about whether Break your Bones has a code system. No working codes are documented in the official game description.",
           "href": "/codes/break-your-bones-codes"
         },
         {
           "badge": "Core",
           "title": "Ragdoll Physics",
-          "description": "How impulse thresholds, damage accumulation, and fracture states decide every bone break.",
+          "description": "How the physics simulation handles momentum, collisions, and ragdoll behavior in Break your Bones.",
           "href": "/mechanics/break-your-bones-ragdoll-physics"
         },
         {
           "badge": "Popular",
           "title": "Break More Bones",
-          "description": "The techniques and multipliers that turn a single fall into a chain of broken bones.",
+          "description": "Techniques and approaches that help you smash more bones with each ragdoll launch.",
           "href": "/mechanics/break-your-bones-how-to-break-more-bones"
         },
         {
           "badge": "Items",
-          "title": "Materials Guide",
-          "description": "Where to farm basic fragments, refined parts, and rare cores, and when to spend them.",
+          "title": "Items & Unlocks",
+          "description": "What the official game description says about unlocks, including new ragdolls. No item shop or currency is documented.",
           "href": "/items/break-your-bones-materials"
         },
         {
           "badge": "Progression",
           "title": "Progress Fast",
-          "description": "The fastest way to progress in Break your Bones, from farming spots to upgrade priority.",
+          "description": "The fastest way to progress in Break your Bones by unlocking new ragdolls and practicing your launches.",
           "href": "/progression/break-your-bones-fastest-way-to-progress"
         },
         {
           "badge": "Guide",
-          "title": "Make Money Fast",
-          "description": "Repeatable money routes that raise your payout per attempt and your attempts per minute.",
+          "title": "How to Smash Bones",
+          "description": "Repeatable approaches to launch your ragdoll into hazards and huge drops to smash more bones.",
           "href": "/guide/break-your-bones-how-to-make-money"
         },
         {
           "badge": "Mechanics",
-          "title": "Void & Resets",
-          "description": "How severity tiers and the void reset interact, and how to survive both.",
+          "title": "Hazards & Drops",
+          "description": "How hazards and huge drops interact with the ragdoll physics simulation in Break your Bones.",
           "href": "/mechanics/break-your-bones-void"
         },
         {
           "badge": "Platforms",
           "title": "Play for Free",
-          "description": "Every platform where you can play Break your Bones free and how to start in minutes.",
+          "description": "Break your Bones is a free Roblox experience. Learn how to play it on Roblox.",
           "href": "/platforms/break-your-bones-free"
         }
       ]
@@ -143,37 +143,37 @@
     "aboutGame": {
       "title": "What is Break your Bones?",
       "paragraphs": [
-        "Break your Bones is a physics-driven ragdoll game built around momentum, impact, and destruction. Instead of avoiding damage, you launch a character into hazards and score by how many bones snap before the run ends. Every break is the result of real simulation inputs such as speed at contact, limb angle, surface hardness, and the multipliers you have stacked on top.",
-        "That single trade-off shapes the whole game. Bigger falls pay more but risk ending the run, so the best players plan routes, chain impacts together, and reinvest their earnings into damage multipliers and launch power. This wiki collects the routes, physics explanations, materials data, and upgrade priorities that help you turn a lucky crash into a repeatable one."
+        "Break your Bones is a physics ragdoll sandbox on Roblox, created by the group High Effort Projects. In this experience, the player launches a character into hazards and huge drops to smash bones, unlocks new ragdolls, and plays with a physics simulation. Instead of avoiding damage, you experiment with momentum, impact, and ragdoll behavior to see how many bones you can break.",
+        "The official game description advertises only the following: try to break all of your bones, a fun bone-smashing simulator, unlock new ragdolls, fling yourself from a huge drop, and a ragdoll physics simulation. The description does not document a code system, currency names, item prices, damage values, or a shop. This wiki collects the techniques and physics explanations that help you get more out of the sandbox."
       ],
       "stats": [
         {
           "label": "Genre",
-          "value": "Physics Action"
+          "value": "Physics Ragdoll Sandbox"
         },
         {
           "label": "Platform",
-          "value": "Browser & Mobile"
+          "value": "Roblox"
         },
         {
           "label": "Core Goal",
-          "value": "Break Bones"
+          "value": "Break All Bones"
         },
         {
           "label": "Score Source",
-          "value": "Bone Count"
+          "value": "Bones Broken"
         },
         {
           "label": "Progression",
-          "value": "Upgrades & Rebirths"
-        },
-        {
-          "label": "Resources",
-          "value": "Materials & Cores"
+          "value": "Unlock New Ragdolls"
         },
         {
           "label": "Play Style",
-          "value": "Solo & Co-op"
+          "value": "Up to 20 Players per Server"
+        },
+        {
+          "label": "Creator",
+          "value": "High Effort Projects"
         },
         {
           "label": "Cost",
@@ -184,117 +184,117 @@
     },
     "explore": {
       "title": "Explore Break your Bones Wiki",
-      "description": "Master the physics-driven chaos with essential beginner routes, working codes, upgrade priorities, complete material data, and the crash techniques that break the most bones.",
+      "description": "Master the physics-driven chaos with essential beginner routes, ragdoll physics tips, unlockable ragdolls, and bone-smashing techniques.",
       "modules": [
         {
           "order": 1,
           "name": "Break your Bones Beginner Guide",
-          "description": "This module explains the core loop, launch and impact mechanics, scoring, and how new players can build a repeatable, profitable break routine from their very first session.",
+          "description": "This module explains the core loop of launching your ragdoll into hazards and huge drops, smashing bones, and unlocking new ragdolls as you play the physics sandbox.",
           "href": "/guide/break-your-bones-beginner-guide",
           "displayType": "step-by-step",
           "highlights": [
             {
               "label": "1",
-              "detail": "Learn the controls and one repeatable break, because consistency beats lucky one-offs."
+              "detail": "Learn the controls and one repeatable launch into a hazard to smash bones consistently."
             },
             {
               "label": "2",
-              "detail": "Run a handful of low-risk breaks to build a baseline you can compare against."
+              "detail": "Try a few low-risk drops to build a baseline for how the ragdoll physics simulation behaves."
             },
             {
               "label": "3",
-              "detail": "Buy the cheapest income upgrade first, since small purchases compound fastest."
+              "detail": "Experiment with different hazards to see which ones break more bones per attempt."
             },
             {
               "label": "4",
-              "detail": "Test one slightly bigger break to find your current safe ceiling."
+              "detail": "Test one slightly bigger drop to find your current safe ceiling for smashing bones."
             },
             {
               "label": "5",
-              "detail": "Bank your earnings before pushing again so a bad run cannot erase your progress."
+              "detail": "Practice flinging yourself from a huge drop to increase impact and bone breakage."
             },
             {
               "label": "6",
-              "detail": "Unlock the next area only when you are comfortable with the current one."
+              "detail": "Keep playing to unlock new ragdolls as the official description advertises."
             }
           ]
         },
         {
           "order": 2,
-          "name": "Break your Bones Crash Challenges",
-          "description": "This module covers crash scenarios, obstacle interactions, and the techniques that maximize bone-breaking results, so you can discover effective routes for higher damage scores.",
+          "name": "Break your Bones Bone-Smashing Tips",
+          "description": "This module covers techniques for launching your ragdoll into hazards and huge drops, so you can discover effective approaches for smashing more bones.",
           "href": "/mechanics/break-your-bones-how-to-break-more-bones",
           "displayType": "card-list",
           "highlights": [
             {
               "label": "Slam",
-              "detail": "Single-limb slam tucks one limb under the body so it takes the full impact and breaks cleanly."
+              "detail": "Tuck one limb under the body so it takes the full impact and breaks cleanly."
             },
             {
               "label": "Tumble",
-              "detail": "Chained tumble keeps the ragdoll rolling so each rotation produces another contact point."
+              "detail": "Keep the ragdoll rolling so each rotation produces another contact point."
             },
             {
               "label": "Stairs",
-              "detail": "Staircase bounce turns every step into a separate hard surface and a separate break."
+              "detail": "Staircases turn every step into a separate hard surface and a separate potential break."
             },
             {
               "label": "Edge",
-              "detail": "Edge landing concentrates force on a platform corner for more damage per contact."
+              "detail": "Edge landing concentrates force on a platform corner for more impact per contact."
             },
             {
               "label": "Props",
-              "detail": "Vehicle or prop assist lands a moving hit that is often worth more than a long fall."
+              "detail": "Landing on or near props can add impact energy that a plain fall cannot match."
             },
             {
               "label": "Combo",
-              "detail": "Combo finisher saves your highest drop for the end when your multipliers are already running."
+              "detail": "Save your highest drop for the end of a run so the ragdoll has already built momentum."
             }
           ]
         },
         {
           "order": 3,
-          "name": "Break your Bones Upgrades Guide",
-          "description": "This module organizes the progression systems such as materials, unlockable upgrades, and prestige-style rebirths, and explains which purchases are worth focusing on first.",
+          "name": "Break your Bones Unlocks Guide",
+          "description": "This module organizes what the official description says about unlocks, such as new ragdolls, and explains what is and is not documented about progression.",
           "href": "/items/break-your-bones-materials",
           "displayType": "tier-grid",
           "highlights": [
             {
               "label": "S",
-              "detail": "Impact and fall-damage multipliers scale every single run, so buy them before anything else."
+              "detail": "The official description advertises unlocking new ragdolls as a core progression feature."
             },
             {
               "label": "A",
-              "detail": "Launch power and speed give each attempt more energy and therefore more bones per fall."
+              "detail": "The official description advertises flinging yourself from a huge drop as a key gameplay action."
             },
             {
               "label": "B",
-              "detail": "Ragdoll control helps you steer the second and third impact into another hard surface."
+              "detail": "The official description advertises a ragdoll physics simulation as the core of the experience."
             },
             {
               "label": "C",
-              "detail": "Cosmetic unlocks change how you look but add nothing to your bone count or payout."
+              "detail": "No currency names, item prices, damage values, or a shop are documented in the official description."
             }
           ]
         },
         {
           "order": 4,
           "name": "Break your Bones Physics Tips",
-          "description": "This module provides advanced tips for using ragdoll physics, collisions, and environmental objects to create stronger impacts, aimed at players who want to improve their crash performance.",
+          "description": "This module provides tips for using ragdoll physics, collisions, and environmental objects to create stronger impacts, aimed at players who want to smash more bones.",
           "href": "/mechanics/break-your-bones-ragdoll-physics",
           "displayType": "card-list",
           "highlights": [
             {
               "label": "Head",
-              "detail": "The head and neck sit on a long lever arm, so a modest impulse creates violent rotation."
+              "detail": "The head and neck sit on a long lever arm, so a modest impulse can create violent rotation."
             },
             {
               "label": "Chain",
-              "detail": "Damage accumulates across collisions, so long tumbles break more bones than one clean wallop."
+              "detail": "Damage can accumulate across collisions, so long tumbles may break more bones than one clean wallop."
             },
             {
               "label": "Hard",
-              "detail": "Concrete, rock, and metal convert energy into fractures while grass and water absorb it."
+              "detail": "Concrete, rock, and metal convert energy into fractures while grass and water may absorb it."
             },
             {
               "label": "Angle",
@@ -306,20 +306,20 @@
             },
             {
               "label": "Zones",
-              "detail": "Highlighted map zones and weak-point hits stack extra multipliers on top of the base break."
+              "detail": "Aim for specific body parts or hard surfaces to maximize the chance of breaking bones."
             }
           ]
         },
         {
           "order": 5,
-          "name": "Break your Bones Best Falls",
-          "description": "This module highlights the most effective fall setups, dangerous locations, and impact opportunities, including community-discovered methods for memorable high-scoring crashes.",
+          "name": "Break your Bones Best Drops",
+          "description": "This module highlights effective drop setups, dangerous locations, and impact opportunities for memorable bone-smashing crashes.",
           "href": "/progression/break-your-bones-fastest-way-to-progress",
           "displayType": "card-list",
           "highlights": [
             {
               "label": "Towers",
-              "detail": "The tallest reachable structures give the biggest damage and the most bones per fall."
+              "detail": "The tallest reachable structures give the biggest drops and the most potential bones per fall."
             },
             {
               "label": "Stairs",
@@ -327,59 +327,59 @@
             },
             {
               "label": "Hazards",
-              "detail": "Traps, vehicles, and props add impact energy that a plain fall cannot match."
+              "detail": "Traps, vehicles, and props can add impact energy that a plain fall cannot match."
             },
             {
               "label": "Flat",
-              "detail": "Flat landings register clean breaks, while slopes and edges reduce the impact."
+              "detail": "Flat landings register clean breaks, while slopes and edges may reduce the impact."
             },
             {
               "label": "Routes",
               "detail": "One memorized route beats random jumping because it removes wasted seconds."
             },
             {
-              "label": "Events",
-              "detail": "Limited-time events hand out bonus multipliers that stack on your normal payout."
+              "label": "Updates",
+              "detail": "The game was last updated on 2026-10-13, so new content may add additional drop spots."
             }
           ]
         },
         {
           "order": 6,
-          "name": "Break your Bones Score Guide",
-          "description": "This module explains how damage scores and payouts are calculated, and how players can raise their records through better timing, multiplier stacking, and collision choices.",
+          "name": "Break your Bones Bone Count Guide",
+          "description": "This module explains how bone-smashing is described in the official game and how players can improve their results through better timing and collision choices.",
           "href": "/progression/break-your-bones-rewards",
           "displayType": "card-list",
           "highlights": [
             {
               "label": "Speed",
-              "detail": "The speed bonus triggers when you hit the ground above the game's speed threshold."
+              "detail": "Higher speed at the moment of contact generally leads to a harder impact and more bone damage."
             },
             {
               "label": "Chain",
-              "detail": "The chain bonus rewards breaking several bones inside a short time window."
+              "detail": "Breaking several bones in quick succession can result in more total bones broken."
             },
             {
               "label": "Weakpoint",
-              "detail": "Weak-point hits on small bones such as a finger, rib, or jaw carry a high multiplier."
+              "detail": "Hits on small bones such as fingers, ribs, or jaw may be easier to break than large bones."
             },
             {
               "label": "Zone",
-              "detail": "The zone bonus pays extra when you land inside a highlighted area of the map."
+              "detail": "Landing inside a highlighted area of the map may increase the chance of breaking bones."
             },
             {
               "label": "Upgrades",
-              "detail": "Upgrade multipliers are permanent and apply to every future run you attempt."
+              "detail": "The official description does not document upgrades, multipliers, or permanent stat boosts."
             },
             {
               "label": "Severity",
-              "detail": "Higher severity breaks such as displaced or compound fractures pay more than a hairline crack."
+              "detail": "The official description does not document severity tiers or fracture types for broken bones."
             }
           ]
         },
         {
           "order": 7,
           "name": "Break your Bones Controls Guide",
-          "description": "This module is a simple reference for the available controls and gameplay actions, helping players quickly learn how to launch, steer, and manage their crashes.",
+          "description": "This module is a simple reference for the available controls and gameplay actions, helping players quickly learn how to launch, steer, and manage their ragdoll.",
           "href": "/controls/break-your-bones-how-to-play",
           "displayType": "code-cards",
           "highlights": [
@@ -389,15 +389,15 @@
             },
             {
               "label": "Space",
-              "detail": "Jump or launch the ragdoll into the hazard to start a run."
+              "detail": "Jump or launch the ragdoll into a hazard to start a run."
             },
             {
               "label": "E / F",
-              "detail": "Interact and grab prompts, including the code box in the lobby."
+              "detail": "Interact with objects or prompts, depending on the game."
             },
             {
               "label": "Shift",
-              "detail": "Hold to sprint and build extra speed before a fall."
+              "detail": "Hold to sprint and build extra speed before a drop."
             },
             {
               "label": "Mouse",
@@ -412,33 +412,33 @@
         {
           "order": 8,
           "name": "Break your Bones Updates",
-          "description": "This module collects official game updates, version changes, and new content information, so returning players can quickly check recent improvements and additions.",
+          "description": "This module collects information about the game's update history and new content information, so returning players can quickly check recent improvements and additions.",
           "href": "/community/break-your-bones-update",
           "displayType": "card-list",
           "highlights": [
             {
               "label": "Patches",
-              "detail": "Balance patches adjust break thresholds, payout rates, and upgrade costs."
+              "detail": "The official Roblox record shows the game was last updated on 2026-10-13, but patch notes are not documented."
             },
             {
               "label": "Codes",
-              "detail": "New codes usually drop around updates and community milestones."
+              "detail": "A code system is not documented in the official game description; no working codes are confirmed."
             },
             {
               "label": "Events",
-              "detail": "Limited-time events add bonus multipliers and exclusive material drops."
+              "detail": "Limited-time events are not documented in the official game description."
             },
             {
               "label": "Maps",
-              "detail": "New areas and hazards expand the routes available for high-scoring falls."
+              "detail": "New areas and hazards may be added over time, but the official description does not document them."
             },
             {
               "label": "Fixes",
-              "detail": "Bug fixes target ragdoll glitches that can end a run or block progress."
+              "detail": "Bug fixes may target ragdoll glitches, but specific patches are not documented."
             },
             {
               "label": "Notes",
-              "detail": "Read patch notes before a grind session so your route stays efficient."
+              "detail": "Patch notes are not published according to the official Roblox record."
             }
           ]
         }
@@ -450,74 +450,74 @@
       "items": [
         {
           "question": "What is Break your Bones?",
-          "answer": "Break your Bones is a physics-driven ragdoll game where you launch a character into hazards and score by how many bones break before the run ends. Bigger, harder, and better-aimed impacts break more bones, which convert into currency, upgrades, and leaderboard standing."
+          "answer": "Break your Bones is a Roblox experience by High Effort Projects. It is a physics ragdoll sandbox where the player launches a character into hazards and huge drops to smash bones, unlocks new ragdolls, and plays with a physics simulation."
         },
         {
           "question": "How do I break more bones in Break your Bones?",
-          "answer": "Control the four inputs that decide a break: speed at contact, contact angle, surface hardness, and load path. Build speed with a long fall, land on the limb you want to break, favor concrete and metal over grass or water, and let the ragdoll roll so one landing becomes several impacts."
+          "answer": "Practice launching your ragdoll into hazards and huge drops. Control the inputs that decide a break: speed at contact, contact angle, surface hardness, and load path. Build speed with a long fall, land on the limb you want to break, favor concrete and metal over grass or water, and let the ragdoll roll so one landing becomes several impacts."
         },
         {
           "question": "How do I redeem Break your Bones codes?",
-          "answer": "Open the Codes, Rewards, or Gift button in the lobby, paste the code exactly as written, and remove any trailing space before you press Redeem. Codes are usually case-sensitive and tied to a single account, so a code that was already used will not pay out twice."
+          "answer": "A code system is not documented in the official game description. There is no confirmed code redemption feature, no Codes button, and no working codes. Check the official Roblox page for any updates."
         },
         {
-          "question": "What should I upgrade first in Break your Bones?",
-          "answer": "Buy the upgrade that helps you on a bad run, not a perfect one. Flat impact and fall-damage multipliers scale every attempt, so they come first, followed by launch power and speed. Cosmetic unlocks are a luxury and never raise your bone count."
+          "question": "What should I unlock first in Break your Bones?",
+          "answer": "The official description only advertises unlocking new ragdolls as a progression feature. No upgrade priorities, currency, or shop are documented. Unlock new ragdolls as you play and experiment with the ragdoll physics simulation."
         },
         {
           "question": "Can I play Break your Bones for free?",
-          "answer": "Yes. Break your Bones is free to play in a browser and on mobile platforms such as Playhop, and it also has a Roblox release. Paid items, when they exist, are usually boosts and cosmetics rather than access to the game itself."
+          "answer": "Yes. Break your Bones is a free Roblox experience. You can play it on the Roblox platform with up to 20 players per server."
         },
         {
           "question": "Why did my Break your Bones run end early?",
-          "answer": "Most short runs come from a severe or critical break that removes your steering, followed by a fall out of the playable area and a void reset. Test ledges before you trust them, keep a healing item in reserve, and fight with solid geometry behind you so knockback cannot push you off the map."
+          "answer": "Most short runs come from a severe ragdoll break that removes your steering, followed by a fall out of the playable area. Test ledges before you trust them, and try to keep solid geometry behind you so the ragdoll does not tumble off the map."
         }
       ]
     },
     "finalCta": {
       "title": "Ready to Master Break your Bones?",
-      "description": "From your first ragdoll launch to record-breaking crash scores, our community wiki has you covered with free, up-to-date guides.",
+      "description": "From your first ragdoll launch to record-breaking bone smashes, our community wiki has you covered with free, up-to-date guides.",
       "primary": "Read the Beginner Guide",
       "secondary": "Play on Roblox"
     }
   },
   "guide": {
     "overviewTitle": "Break your Bones Guides",
-    "overviewDescription": "Step-by-step Break your Bones guides covering beginner basics, leveling, money, and the tips that help you progress faster."
+    "overviewDescription": "Step-by-step Break your Bones guides covering beginner basics, bone-smashing techniques, and the tips that help you smash more bones."
   },
   "codes": {
     "overviewTitle": "Break your Bones Codes",
-    "overviewDescription": "All active Break your Bones codes, how to redeem them, and what each reward gives you."
+    "overviewDescription": "Information about whether Break your Bones has a code system. No working codes are documented in the official game description."
   },
   "items": {
-    "overviewTitle": "Break your Bones Items & Materials",
-    "overviewDescription": "Break your Bones materials, forge recipes, spells, and tier lists so you know what to collect and upgrade next."
+    "overviewTitle": "Break your Bones Items & Unlocks",
+    "overviewDescription": "What the official game description says about unlocks, including new ragdolls. No currency, shop, or item prices are documented."
   },
   "progression": {
     "overviewTitle": "Break your Bones Progression",
-    "overviewDescription": "Break your Bones progression guides for max level, money farming, rewards, and the fastest routes to grow your account."
+    "overviewDescription": "Break your Bones progression information, including unlocking new ragdolls and practicing your bone-smashing technique."
   },
   "mechanics": {
     "overviewTitle": "Break your Bones Mechanics",
-    "overviewDescription": "How Break your Bones works under the hood, from ragdoll physics and breaking more bones to the void and known glitches."
+    "overviewDescription": "How Break your Bones works under the hood, from ragdoll physics and breaking more bones to hazards and huge drops."
   },
   "community": {
     "overviewTitle": "Break your Bones Community",
-    "overviewDescription": "Break your Bones Discord, Reddit, groups, and update news so you can stay connected with other players."
+    "overviewDescription": "Break your Bones update news and community information. No official Discord or subreddit is documented."
   },
   "platforms": {
     "overviewTitle": "Break your Bones Platforms",
-    "overviewDescription": "Where to play Break your Bones, including online, free, unblocked, and Playhop versions of the game."
+    "overviewDescription": "Where to play Break your Bones. It is a free Roblox experience by High Effort Projects."
   },
   "controls": {
     "overviewTitle": "Break your Bones Controls",
-    "overviewDescription": "Break your Bones controls, obby routes, and 3D ragdoll gameplay basics to help you play with confidence."
+    "overviewDescription": "Break your Bones controls and 3D ragdoll gameplay basics to help you play with confidence."
   },
   "shared": {
     "wikiNavigation": "Wiki Navigation",
-    "activeCodes": "Active Codes",
+    "activeCodes": "Codes",
     "updated": "Updated",
-    "viewAllCodes": "View all codes",
+    "viewAllCodes": "View codes information",
     "playOnRoblox": "Play on Roblox",
     "inThisSection": "In this section",
     "tableOfContents": "Table of Contents",
@@ -532,12 +532,12 @@
   },
   "footer": {
     "aboutTitle": "Break your Bones Wiki",
-    "about": "Break your Bones Wiki is an independent fan-built guide hub covering crash challenges, ragdoll physics, scoring strategies, and essential game knowledge for new and veteran players alike.",
+    "about": "Break your Bones Wiki is an independent fan-built guide hub covering ragdoll physics, bone-smashing techniques, and essential game knowledge for new and veteran players alike.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
     "copyright": "2026 Break your Bones Wiki. Not affiliated with the game developers or Roblox.",
-    "description": "Physics-based ragdoll game about breaking bones, chaining big crashes, and unlocking new challenges.",
+    "description": "Physics ragdoll sandbox on Roblox about breaking bones, chaining big drops, and unlocking new ragdolls.",
     "playGame": "Play Break your Bones",
     "officialDiscord": "Roblox Community Group",
     "officialYoutube": "Gameplay Videos",
@@ -545,8 +545,8 @@
     "beginnerGuide": "Beginner Guide",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "allCodes": "All Codes",
+    "allCodes": "Codes",
     "physicsTips": "Physics Tips",
-    "scoreGuides": "Score Guides"
+    "scoreGuides": "Bone Count Guides"
   }
 }

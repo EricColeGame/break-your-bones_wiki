@@ -1,120 +1,97 @@
 export const metadata = {
-  title: "Die Break-your-Bones-Void-Mechanik erklärt: Fallschaden, Knochenbrüche und Reset-Regeln",
-  description: "Ein klarer Leitfaden zur Break-your-Bones-Void-Mechanik – wie Fallschaden, Knochenbrüche und Out-of-Bounds-Resets zusammenspielen, plus Tipps, um beides zu überleben.",
+  title: "Break Your Bones auf Roblox: So funktioniert der Ragdoll-Sandbox",
+  description: "Ein fundierter Leitfaden zu Break your Bones auf Roblox: Was die offizielle Seite bestätigt, wie die Ragdoll-Physik abläuft und was undokumentiert bleibt.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Ein gebrochener Oberschenkel mitten in einem Bosskampf ist schlimm. Ein gebrochener Oberschenkel, gefolgt von einem Sturz in den Void, ist schlimmer. Genau diese doppelte Bestrafung sorgt dafür, dass die **Break your Bones Void**-Interaktion so viele Spieler frustriert – ein einziger Fehler wird zweimal abgerechnet. Wenn du jedoch einmal verstanden hast, wie die **Break your Bones Void**-Mechanik zusammengesetzt ist, fühlt sie sich nicht mehr zufällig an, sondern wie eine Regel, mit der du spielen kannst. Dieser Leitfaden erklärt, was der Knochenbruch-Zustand tatsächlich bewirkt, wie Out-of-Bounds-Voids damit interagieren und welche Gewohnheiten dich am Leben halten, wenn der Boden verschwindet.
+Break your Bones ist ein Roblox-Physik-Sandbox, der auf einer einfachen, morbide komischen Prämisse aufbaut: Wirf eine Ragdoll-Figur gegen Dinge und sieh, wie viel Schaden das Skelett nimmt. Entwickelt von der Gruppe High Effort Projects, wurde das Erlebnis am 5. Juni 2025 veröffentlicht und erhielt laut dem offiziellen Roblox-Eintrag noch am 13. Oktober 2026 Updates. Es unterstützt bis zu 20 Spieler pro Server und hat rund 133 Millionen Besuche angehäuft — Zahlen, die darauf hindeuten, dass viele Leute gerne zusehen, wie ein Cartoon-Körper eine Treppe hinunterprallt.
 
-## Was „Break your Bones“ und der Void eigentlich bedeuten
+Dieser Artikel hält sich an das, was tatsächlich dokumentiert ist. Die offizielle Seite für [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) bewirbt eine kurze Liste von Features und nichts weiter: alle deine Knochen brechen, ein Knochen-Zertrümmerungs-Simulator, neue Ragdolls freischalten, sich selbst von einem riesigen Sturz fliegen lassen und Ragdoll-Physik. Es gibt kein veröffentlichtes Code-System, keine Währungsliste, keine Preisliste und keine Schadenstabelle. Alles über diese Liste hinaus stammt aus Spielerbeobachtungen, nicht aus Entwicklerdokumentation, und sollte entsprechend behandelt werden.
 
-Hier sprechen zwei getrennte Systeme miteinander, und die meiste Verwirrung entsteht dadurch, dass man sie als eines betrachtet. Das Knochenbruch-System ist ein *Statuseffekt* – es reagiert auf Aufprall und verändert, was deine Figur körperlich tun kann. Der Void ist eine *Grenze* – eine unsichtbare Kill-Plane, die dich aus dem Level entfernt, sobald du sie überquerst.
+## Was die offizielle Beschreibung tatsächlich sagt
 
-Keines der Systeme kennt oder interessiert sich standardmäßig für das andere. Diese Unabhängigkeit ist der Grund, warum sich das Ergebnis von Map zu Map und von Patch zu Patch inkonsistent anfühlt.
+Der Roblox-Eintrag ist bewusst knapp gehalten. Seine beworbenen Features sind:
 
-| Begriff | Was es bewirkt | Typischer Auslöser |
+- Versuche, alle deine Knochen zu brechen
+- Ein lustiger Knochen-Zertrümmerungs-Simulator
+- Neue Ragdolls freischalten
+- Fliege dich selbst von einem riesigen Sturz
+- Eine Ragdoll-Physik-Simulation
+
+Das ist der gesamte verifizierte Funktionsumfang. Beachte, was fehlt: keine Erwähnung von Codes, kein Name einer In-Game-Währung, kein Shop-Inventar, keine Upgrade-Stufen, keine Knochenzähl-Mechaniken und keine spezifischen Gefahren. Wenn du einen Leitfaden siehst, der behauptet, die genaue Anzahl der Knochen im Modell oder den Schadenswert eines bestimmten Sturzes zu kennen, stammt diese Information nicht von der offiziellen Seite.
+
+Die wichtige strukturelle Erkenntnis ist, dass Break your Bones eine **Sandbox** ist, kein Progressions-RPG. Die Schleife besteht aus Physik-Experimenten plus Ragdoll-Freischaltungen. Diese Einordnung erklärt fast alles darüber, wie das Spiel abläuft.
+
+## Wie die Ragdoll-Physik-Schleife funktioniert
+
+Basierend auf den beworbenen Features ist die Kerninteraktion unkompliziert: Deine Figur wird zu einer physikgesteuerten Ragdoll, du wendest Kraft auf sie an — durch einen Flug, einen Sturz oder eine Umgebungsgefahr — und die Simulation entscheidet, was mit dem Körper passiert. Der in der Beschreibung erwähnte „riesige Sturz" ist das klarste Beispiel: Du katapultierst dich aus der Höhe, die Schwerkraft erledigt die Arbeit und die Ragdoll reagiert beim Aufprall.
+
+Da das Spiel eine Physik-Simulation und kein scripted Animation-Set ist, variieren die Ergebnisse. Position, Winkel, Geschwindigkeit und das, worauf du landest, beeinflussen das Resultat. Diese Variabilität ist der Reiz — es ist derselbe Grund, warum Spieler gerne Objekte in anderen Sandbox-Titeln stapeln. Es bedeutet auch, dass kein Leitfaden dir eine garantierte Methode für ein bestimmtes Ergebnis geben kann, weil die Simulation selbst die Variable ist.
+
+Ein praktischer Ansatz für neue Spieler:
+
+1. Beginne mit dem riesigen Sturz. Er wird ausdrücklich beworben und erfordert keine Freischaltungen.
+2. Probiere verschiedene Landeoberflächen und Eintrittswinkel aus, anstatt denselben Sturz zu wiederholen.
+3. Beobachte, wie sich die Ragdoll niederlegt — die Physik-Reaktion ist der Inhalt.
+4. Nutze Multiplayer-Server, um zu beobachten, was andere Spieler tun. Bei bis zu 20 Spielern pro Server passiert normalerweise immer etwas.
+
+## Neue Ragdolls freischalten
+
+„Neue Ragdolls freischalten" ist das einzige Progressionselement, das die offizielle Beschreibung nennt. Sie erklärt nicht die Freischaltbedingung, ob Freischaltungen dauerhaft sind, wie viele Ragdolls existieren oder ob welche kostenpflichtig sind.
+
+Drittanbieter-Leitfäden beschreiben manchmal Freischaltmethoden, aber das sind Community-Beobachtungen und keine Entwicklerdokumentation, und sie können schnell veralten — der Ort wurde zuletzt am 13. Oktober 2026 aktualisiert, einen Tag vor diesem Artikel, sodass der aktuelle Build von jedem früher verfassten Leitfaden abweichen kann. Der zuverlässige Weg zur Überprüfung ist, das Spiel zu öffnen und sich die Benutzeroberfläche anzusehen, die im Spiel für die Ragdoll-Auswahl erscheint.
+
+| Frage | Dokumentierte Antwort | So überprüfen |
 |---|---|---|
-| Knochenbruch | Verursacht einen anhaltenden verletzten Zustand, der Bewegung oder Aktionen einschränkt | Starke Stürze, schwere Aufprälle, geskriptete Fallen |
-| Bruchanimation | Ein Ragdoll-artiger Sturz, der die Kontrolle entzieht, während der Bruch abläuft | Schaden, der einen Bruchschwellenwert überschreitet |
-| Void / Kill-Plane | Eine unsichtbare Grenze unterhalb oder außerhalb der Map, die den Spieler aus dem Spiel entfernt | Von einer Kante gehen, Rückstoß, durch Geometrie clippen |
-| Reset | Bringt dich zu einem Checkpoint, Spawnpunkt oder letzten sicheren Position zurück | Void-Kontakt, Gesundheit auf null |
-| Wiederherstellungsgegenstand | Ein Verbrauchsgegenstand oder eine Fähigkeit, die den verletzten Zustand vorzeitig aufhebt | Schienen, Heilung, Wiederbelebung durch Teammitglieder |
+| Wie viele Ragdolls existieren? | Nicht dokumentiert | In-Game-Ragdoll-Menü prüfen |
+| Wie schaltet man sie frei? | Nicht dokumentiert | Spielen und den Freischalt-Prompt beobachten |
+| Sind Ragdolls kostenpflichtig? | Nicht dokumentiert | In-Game-Shop oder Robux-Prompts prüfen |
+| Verändern Ragdolls die Physik? | Nicht dokumentiert | Denselben Sturz mit verschiedenen Ragdolls testen |
 
-Die praktische Erkenntnis: Einen Knochen zu brechen ist etwas, das *deiner Figur* passiert, während der Void etwas ist, das *der Map* passiert. Sie kollidieren ständig, weil Knochenbrüche dir meist genau die Mobilität nehmen, die du brauchst, um einen Sturz zu vermeiden.
+Diese Tabelle ist absichtlich auf der Antwortseite größtenteils leer. Sie mit Vermutungen zu füllen wäre schlimmer, als sie leer zu lassen.
 
-## Wie die Break your Bones Void-Schleife tatsächlich funktioniert
+## Codes, Währung und andere undokumentierte Systeme
 
-Die Abfolge hat fast immer dieselbe Form. Du nimmst einen Aufprall, der Bruchschwellenwert wird ausgelöst, die Kontrolle fällt weg, und genau dieser Kontrollverlust trägt dich über die Kante. Wenn die Ragdoll-Phase endet, bist du bereits über den Punkt ohne Wiederkehr hinaus.
+Die Suche nach Break your Bones Codes ist verbreitet, und die ehrliche Antwort ist, dass **die offizielle Roblox-Seite überhaupt kein Code-System dokumentiert**. Es gibt keine beschriebene Einlösebox, keine veröffentlichte Code-Liste und keinen im Eintrag referenzierten Entwicklerbeitrag. Wenn Codes existieren, gehören sie nicht zum beworbenen Funktionsumfang und können nicht aus offiziellen Quellen bestätigt werden.
 
-| Schritt | Was passiert | Was du noch kontrollieren kannst |
-|---|---|---|
-| 1 | Harter Aufprall trifft ein (Sturz, Rückstoß, Falle) | Positionierung, Rüstung, Landeperks |
-| 2 | Schaden überschreitet den Bruchschwellenwert; verletzter Zustand wird angewendet | Schadensreduktion, defensive Buffs |
-| 3 | Bewegung ist eingeschränkt; Humpel- oder Ragdoll-Phase beginnt | Sehr wenig – meist ein kurzes Zeitfenster |
-| 4 | Reduzierte Kontrolle trägt dich zum Map-Rand | Nichts, sobald du in der Luft bist |
-| 5 | Void-Kontakt löst einen Reset oder ein zweites tödliches Ereignis aus | Nichts |
-| 6 | Respawn, mit oder ohne fortbestehende Verletzung | Loadout, Checkpoint-Wahl |
+Dasselbe gilt für Währung. In der Beschreibung erscheint kein Währungsname. Es erscheinen auch keine Artikelpreise. Jeder Artikel, der einen bestimmten Preis, einen Münznamen oder eine Schadensformel zitiert, arbeitet mit Annahmen oder einem älteren Build, nicht mit Dokumentation.
 
-Je nachdem, wie ein bestimmtes Spiel aufgebaut ist, siehst du nach Schritt 5 eines von drei Ergebnissen:
+Um es selbst zu überprüfen:
 
-- **Gnaden-Reset** – der Void löscht die Verletzung vollständig und du respawnst sauber. Das ist die freundlichste Version und die, von der die meisten Spieler annehmen, sie sei universell.
-- **Fortbestehende Verletzung** – du respawnst weiterhin gebrochen, was aus einem Fehler eine langsame, bestrafende Erholungsschleife macht.
-- **Gestapelte Strafe** – der Void verursacht zusätzlich zum Bruch seinen eigenen tödlichen Schaden, sodass du sowohl ein Leben als auch eine Heilressource verlierst.
+- Öffne die offizielle Seite und lies die vollständige Beschreibung — sie ist kurz, du kannst sie komplett lesen.
+- Sieh dir die Gruppenseite von High Effort Projects auf Roblox für Entwicklerankündigungen an.
+- Tritt dem Spiel bei und suche in den Menüs nach einem Code-Eingabefeld. Wenn keines vorhanden ist, gibt es nichts einzulösen.
 
-Community-Berichte legen nahe, dass die „Gnaden-Reset“-Version in modernen Actionspielen am häufigsten vorkommt, aber die Spielerfahrung variiert stark zwischen Titeln und sogar zwischen Maps desselben Titels. Wenn du unsicher bist, welche Version du spielst, teste es an einem harmlosen Ort, bevor du es in einer Bossarena testest.
+Wenn die Entwickler später ein Code-System hinzufügen, wird es am wahrscheinlichsten zuerst auf der Gruppenseite angekündigt.
 
-## Schweregrade von Knochenbrüchen und Void-Reset-Verhalten
+## Mit anderen spielen und Erwartungen setzen
 
-Die meisten Implementierungen sortieren Verletzungen in grobe Stufen. Die genauen Zahlen hinter diesen Stufen sind spielspezifisch und ändern sich oft zwischen Patches, also betrachte die folgende Tabelle als Rahmen und nicht als festes Schema. Wichtig ist, zu erkennen, in welcher Stufe du dich befindest, denn deine Erholungsoptionen schrumpfen schnell, je höher die Schwere steigt.
+Server fassen bis zu 20 Spieler, was Break your Bones ebenso zu einem sozialen Spielzeug wie zu einer Solo-Sandbox macht. Die Physik-Simulation läuft für alle auf dem Server, daher sind Multiplayer-Sessions tendenziell auf gute Weise chaotisch.
 
-| Stufe | Hinweis im Spiel | Bewegungseffekt | Übliche Behebung |
-|---|---|---|---|
-| Haarstrich | Leichtes Humpeln, schwacher Bildschirmfarbschleier | Geringer Geschwindigkeitsverlust | Kurze Rast oder einfache Heilung |
-| Mittel | Gliedmaße sichtbar fehl am Platz, Aktionen eingeschränkt | Kein Sprint, langsameres Klettern | Schiene oder spezieller Gegenstand |
-| Schwer | Nur kriechen oder liegend | Kann nicht normal kämpfen | Langer Heil-Timer, Unterstützung durch Teammitglied |
-| Kritisch | Starke Bildschirmeffekte, Countdown | Handlungsunfähig | Wiederbelebung oder vollständiger Reset |
+Zwei Erwartungen, die man ehrlich setzen sollte:
 
-Die Schwere entscheidet auch, wie der Void mit dir umgeht. Ein Haarstrich-Bruch hindert dich selten daran, zurück zur Sicherheit zu steuern, also kommt der Void nie ins Spiel. Ein schwerer oder kritischer Bruch entfernt das Steuern vollständig, weshalb hochstufige Verletzungen und Void-Tode so stark korrelieren.
+- **Kein Leitfaden garantiert ein bestimmtes Ergebnis.** Physik-Sandboxen sind von Natur aus nicht deterministisch. Du kannst deine Chancen auf ein interessantes Ergebnis verbessern, indem du deinen Ansatz variierst, aber du kannst es nicht scripten.
+- **Undokumentiert bedeutet undokumentiert.** Knochenzahlen, Schadenswerte, Freischaltschwellen und Shop-Inhalte sind schlicht nicht veröffentlicht. Behandle jede konkrete Zahl, die du anderswo liest, als unbestätigt, bis du sie im Spiel bestätigst.
 
-| Frage | Void-Reset | Knochenbruch |
-|---|---|---|
-| Grundursache | Verlassen des spielbaren Bereichs | Aufprall über dem Bruchschwellenwert |
-| Schadensmodell | Sofort oder prozentbasiert | Schwellenwertbasierter Statuseffekt |
-| Dauer | Sofort, gefolgt von Respawn | Bleibt, bis geheilt oder Zeit abgelaufen |
-| Gegenstrategie | In der Geometrie bleiben, Kanten respektieren | Rüstung, Landeperks, sicherere Routen |
-| Interaktion | Kann einen aktiven Bruch abbrechen | Kann durch einen Void-Reset abgebrochen werden |
+Break your Bones versteht man am besten als einen Physik-Spielplatz mit düster-komischem Thema, nicht als ein Spiel zur Stat-Optimierung. Die offizielle Beschreibung verspricht einen Knochen-Zertrümmerungs-Simulator mit freischaltbaren Ragdolls und einem großen Sturz. Genau das liefert es, und den Rest entdeckst du durch Spielen.
 
-Diese letzte Zeile ist das ganze Argument in Miniaturform. Wenn der Void *bevor* der Bruch vollständig angewendet wird, aufgelöst wird, bekommst du oft eine kostenlose Bereinigung. Wenn der Bruch zuerst aufgelöst wird, bekommst du die langsame Version.
+## FAQ
 
-## Praktische Tipps, um die Break your Bones Void-Schleife zu überleben
+**Ist Break your Bones dasselbe wie Broken Bones IV?**
+Nein. Es sind separate Roblox-Erlebnisse mit unterschiedlichen Entwicklern und unterschiedlichen offiziellen Beschreibungen. Mechaniken des einen sollten nicht als auf das andere zutreffend angenommen werden.
 
-Die **Break your Bones Void**-Kombination zu überleben, dreht sich hauptsächlich darum, die zweite Hälfte der Gleichung zu entfernen. Du kannst einen Bruch nicht immer verhindern – Rückstoß existiert, Fallen existieren und Bosse schummeln –, aber du kannst fast immer den darauffolgenden Sturz verhindern.
+**Hat Break your Bones Codes?**
+Die offizielle Roblox-Seite dokumentiert kein Code-System, keine Einlösebox und keine Code-Liste. Prüfe die offizielle Seite und die High Effort Projects Gruppe auf zukünftige Ankündigungen.
 
-- **Teste Kanten, bevor du ihnen vertraust.** Gehe, nicht sprinten, entlang jeder Kante, die du nicht selbst überprüft hast.
-- **Halte einen Heilgegenstand in Reserve.** Gib deine letzte Schiene niemals für einen Haarstrich-Bruch mitten im Kampf aus.
-- **Lerne die Kill-Plane.** Viele Voids liegen weit unter dem sichtbaren Boden, also ist der „sicher aussehende“ Absturz nicht sicher.
-- **Lies die Rückstoßrichtung, nicht nur die Rückstoßstärke.** Zur Map-Mitte *hin* geschoben zu werden, ist überlebbar; nach außen geschoben zu werden, selten.
-- **Behandle Bewegungsfähigkeiten als Erholungswerkzeuge.** Spare den Dash oder Doppelsprung für den Moment, in dem du die Kontrolle verlierst, nicht fürs Reisen.
-- **Kämpfe mit dem Rücken zu solider Geometrie.** Es kostet dich fast nichts und entfernt das meiste Void-Risiko aus dem Kampf.
+**Wie viele Spieler können einem Server beitreten?**
+Bis zu 20, laut dem offiziellen Roblox-Eintrag.
 
-| Risikofaktor | Gegenmaßnahme | Warum es funktioniert |
-|---|---|---|
-| Nicht überprüfte Kante | Zuerst im Gehen testen | Bestätigt die Kollision, bevor du Schwung einsetzt |
-| Rückstoß nach außen | Mit einer Wand im Rücken positionieren | Verwandelt einen Void-Tod in einen Wandaufprall |
-| Keine Heilung übrig | Einen Gegenstandsplatz reservieren | Bewahrt eine Erholungsoption nach einem Bruch |
-| Ragdoll nahe einer Kante | Vorab einen Fluchtweg planen | Gibt dir eine Richtung, sobald die Kontrolle zurückkehrt |
-| Panikeingaben | Nach einem Bruch langsamer werden | Verhindert den zweiten Fehler, der dich hinausbefördert |
+**Wer hat es gemacht?**
+Die Roblox-Gruppe High Effort Projects. Der Ort wurde am 5. Juni 2025 erstellt.
 
-Wenn du nur eine Gewohnheit aus diesem Abschnitt mitnimmst, dann die Regel mit der Wand im Rücken. Sie ist die einfachste Möglichkeit, die **Break your Bones Void**-Falle in jedem Kampf zu entschärfen, der beide Mechaniken enthält.
+**Wie schalte ich Ragdolls frei?**
+Das Freischalten wird beworben, aber die Methode ist nicht dokumentiert. Prüfe das In-Game-Ragdoll-Menü auf die aktuelle Voraussetzung.
 
-## Mythen, Sonderfälle und Community-Berichte
-
-Vieles, was über diese Mechanik kursiert, ist Folklore. Spielerfahrung ist hier wirklich nützlich, aber sie ist auch anekdotisch, daher lohnt es sich, zu trennen, was die Systeme tatsächlich tun, von dem, was Leute annehmen, dass sie tun.
-
-| Mythos | Realität |
-|---|---|
-| „Der Void heilt immer deine Knochen.“ | Nur in Builds, die Statuseffekte beim Reset ausdrücklich entfernen. Viele tun das nicht. |
-| „Du kannst dich aus einem Bruch heraus in der Luft steuern.“ | Normalerweise falsch, sobald die Ragdoll-Phase beginnt; prüfe deinen konkreten Titel. |
-| „Höhere Schwierigkeit macht den Void tödlicher.“ | Manchmal wahr für Schadensskalierung, selten wahr für die Grenze selbst. |
-| „Ein Bruch nahe einer Kante ist immer tödlich.“ | Falsch – es hängt vollständig von Schweregrad und Rückstoßrichtung ab. |
-
-Für eine neutrale Referenz dazu, wie Out-of-Bounds-Grenzen und Kill-Planes im Medium definiert werden, ist das [Glossar der Videospielbegriffe mit Out-of-Bounds-Verhalten](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) ein solider Ausgangspunkt. Es verrät dir nicht die Zahlen für dein Spiel, aber es bewahrt dich davor, verwandte Konzepte zu verwechseln.
-
-Ein erwähnenswerter Sonderfall: Geometrie-Clipping. Wenn du *durch* die Map fällst statt von ihr herunter, registrieren manche Engines sofort einen Void-Kontakt, während andere zuerst einen normalen Sturz registrieren. Community-Berichte beschreiben beide Verhaltensweisen, manchmal im selben Spiel auf verschiedenen Maps, also gehe nicht von Konsistenz aus.
-
-## Häufig gestellte Fragen
-
-**Bricht der Sturz in den Void immer deine Knochen?**
-Nein. Der Void ist eine Grenze, kein Aufprall. Er bricht dir nur dann die Knochen, wenn das Spiel den Void-Kontakt durch sein Schadens- oder Fallsystem leitet. In vielen Titeln setzt der Void dich einfach zurück, und die **Break your Bones Void**-Interaktion erscheint nur, wenn du bereits verletzt warst, bevor du gefallen bist.
-
-**Kannst du die Break your Bones Void-Interaktion abbrechen?**
-Manchmal, und meistens versehentlich. Wenn der Reset aufgelöst wird, bevor der Bruchstatus vollständig angewendet ist, wird die Verletzung oft gelöscht. Es gibt selten einen bewussten Button dafür – es ist ein Timing-Artefakt der Reihenfolge, in der die beiden Systeme aufgelöst werden.
-
-**Ist die Break your Bones Void-Mechanik in jedem Spiel identisch?**
-Nicht im Entferntesten. Die Schwellenwerte, Schweregrade, Reset-Verhalten und ob Verletzungen den Respawn überdauern, variieren je nach Titel, Modus und Patch. Behandle jede universelle Behauptung, die du online liest, mit Skepsis und verifiziere sie in deinem eigenen Build.
-
-**Was ist die schnellste Erholung nach einem Bruch nahe dem Void?**
-Erreiche festen Boden, bevor du heilst. Zu heilen, während du noch auf einer instabilen Kante stehst, verschwendet den Gegenstand und endet oft mit einem zweiten, schlimmeren Bruch. Stabilisiere deine Position, dann setze die Ressource ein.
-
-Die Kurzfassung: Knochenbrüche sind eine Mobilitätssteuer, und der Void ist das, was die Schuld eintreibt. Lerne, den Schwellenwert zu erkennen, respektiere die Kanten und behalte jederzeit einen Fluchtweg im Kopf. Wenn du das tust, ist die **Break your Bones Void**-Schleife kein Münzwurf mehr, sondern nur eine weitere Mechanik, die du bereits gelöst hast.
+**Kann ich jeden Knochen brechen?**
+Das ist das erklärte Ziel in der offiziellen Beschreibung — „versuche, alle deine Knochen zu brechen." Ob ein bestimmter Durchlauf es erreicht, hängt von der Physik-Simulation ab, und es ist keine verifizierte Knochenzahl veröffentlicht.

@@ -1,134 +1,87 @@
 export const metadata = {
-  title: "Física ragdoll de Break Your Bones explicada: cómo funcionan las mecánicas de rotura de huesos",
-  description: "Aprende cómo funciona la física ragdoll de Break your Bones: umbrales de impulso, restricciones de articulaciones, estados de fractura y consejos para conseguir más roturas de huesos.",
+  title: "Break your Bones: cómo funciona el sandbox de ragdolls de Roblox",
+  description: "Una mirada objetiva a Break your Bones en Roblox: lo que confirma la página oficial, lo que afirman las guías de terceros y lo que simplemente no está documentado.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-## Por qué la física ragdoll de Break your Bones se siente tan bien
+La experiencia de Roblox **Break your Bones** toma una idea simple y morbosamente divertida y la convierte en un patio de juegos de física. Lanzas a un personaje desde una cornisa, lo envías hacia peligros y observas cómo un ragdoll se sacude mientras el juego contabiliza el daño. Es un sandbox sobre la destrucción más que una aventura impulsada por la historia, y su atractivo proviene del mismo bucle que hace satisfactorios a muchos juegos de física: montar un escenario caótico, verlo desarrollarse e intentar superarlo.
 
-Pocas cosas en los videojuegos producen una alegría instantánea y absurda como ver a un personaje caer rodando por una escalera y oír cómo se rompe una clavícula. La física ragdoll de Break your Bones convierte ese pequeño placer en toda una filosofía de diseño: un cuerpo que se dobla, se desploma y se fractura según fuerzas simuladas reales, no según animaciones pregrabadas. Entender el sistema importa porque cambia cómo juegas: dónde apuntas, cómo caes y por qué algunos golpes rompen una costilla mientras que otros solo hieren el ego.
+Este artículo se ciñe a lo que realmente se puede verificar. La página oficial de Roblox es la autoridad sobre la identidad del juego y las características anunciadas. Las guías de la comunidad se tratan como observaciones secundarias, no como documentación del desarrollador. Todo lo que no está documentado se señala como no documentado, para que sepas la diferencia entre un hecho confirmado y un rumor.
 
-En esencia, la física ragdoll de Break your Bones es un modelo de daño impulsado por la física superpuesto a un esqueleto articulado. En lugar de reproducir una animación de "ay" pregrabada, el personaje es una pila de cuerpos rígidos conectados por restricciones, y cada impacto se mide, se pondera y se convierte en lesión. Una vez que entiendes ese flujo, el caos deja de parecer aleatorio.
+## Lo que confirma la página oficial de Roblox
 
-## Qué simula realmente la física ragdoll de Break your Bones
+Según el registro oficial de Roblox, **Break your Bones** fue creado por el grupo **High Effort Projects**. El lugar se creó el 5 de junio de 2025 y se actualizó por última vez el 13 de octubre de 2026. Los servidores admiten hasta 20 jugadores, y el juego ha acumulado aproximadamente 133 millones de visitas según el registro obtenido el 14 de octubre de 2026. Esos son los números que reporta la propia plataforma.
 
-Un ragdoll no es un único objeto. Es una colección de cuerpos rígidos —normalmente una pelvis, segmentos del torso, cabeza, brazos superiores e inferiores, y piernas superiores e inferiores— conectados entre sí con restricciones que se comportan como articulaciones. Cada cuerpo tiene masa, resistencia y una forma de colisión. El motor avanza todo el conjunto en pequeños incrementos de tiempo, resuelve las colisiones y aplica los resultados de vuelta a las articulaciones.
+La descripción oficial anuncia una breve lista de características:
 
-Esa estructura es la razón por la que un golpe en la cabeza se lee de forma distinta a un golpe en la espinilla. La cabeza está en la parte superior de un brazo de palanca largo, así que un impulso moderado produce una gran velocidad angular. La espinilla está más cerca del suelo y a menudo está apoyada, por lo que absorbe menos fuerza rotacional. Los buenos sistemas de rotura de huesos ponderan estas diferencias en lugar de tratar cada colisión como igual.
+- Intenta romperte todos los huesos.
+- Un divertido simulador de romper huesos.
+- Desbloquea nuevos ragdolls.
+- Lánzate desde una caída enorme.
+- Una simulación de física de ragdoll.
 
-| Parte del rig ragdoll | Equivalente humano | Papel típico en el daño | Por qué importa |
-|---|---|---|---|
-| Cuerpo de la cabeza | Cráneo y mandíbula | Objetivo de alto valor, poca masa | El gran brazo de palanca crea una rotación violenta |
-| Segmentos de pecho / columna | Caja torácica, vértebras | Acumulador de daño | Transfiere fuerza entre extremidades y cabeza |
-| Cuerpo de la pelvis | Caderas | Punto de anclaje | Estabiliza o desestabiliza todo el rig |
-| Brazo superior | Húmero | Extremidad de contacto | Absorbe impactos durante las caídas |
-| Antebrazo y mano | Radio, cúbito | Contacto secundario | A menudo es lo primero que golpea una superficie |
-| Pierna superior | Fémur | Portador de carga | Hueso más fuerte, mayor umbral de rotura |
-| Pierna inferior y pie | Tibia, peroné | Extremidad de aterrizaje | Punto común de fractura en caídas verticales |
+Esa descripción es deliberadamente corta. No enumera un sistema de códigos, nombres de monedas, precios de objetos, valores de daño ni una tienda. Si has visto una guía que promete una lista de códigos activos, trátala con escepticismo. No hay ninguna caja de canje documentada en la página oficial, y el desarrollador no ha confirmado ningún código funcional. La respuesta honesta a "¿hay códigos?" es: no hay ninguno documentado. Para comprobarlo tú mismo, abre la página oficial y mira la descripción, luego revisa los canales de la comunidad del desarrollador por si hay anuncios. Si el desarrollador no lo ha publicado, no está confirmado.
 
-La mayoría de los motores lo implementan con un motor de físicas como PhysX, Havok, Bullet o un solucionador personalizado. El concepto subyacente —articular un personaje con cuerpos rígidos restringidos— está bien documentado en la [referencia general sobre la implementación de física ragdoll](https://en.wikipedia.org/wiki/Ragdoll_physics), y los mismos principios aparecen tanto si el juego es un sandbox de juguete como si es un título de acción AAA.
+## El bucle central: física de ragdoll y romper huesos
 
-## Cómo decide la física ragdoll de Break your Bones cuándo se rompe un hueso
+La premisa anunciada es sencilla. Controlas a un personaje, lo pones en peligro y la simulación de física de ragdoll hace el resto. El objetivo es romper tantos huesos como sea posible, y el juego lo plantea como una métrica de puntuación o progreso.
 
-Normalmente tienen que alinearse tres cosas antes de que el juego declare una fractura: fuerza suficiente, la dirección correcta y una parte vulnerable del cuerpo.
+Lo que hace que esto funcione como sandbox es que la física no son animaciones predefinidas. Un ragdoll se comporta como un conjunto suelto de articulaciones y extremidades, así que la misma caída puede producir resultados distintos según el ángulo, la velocidad y lo que el personaje golpee en su descenso. Esa variabilidad es precisamente el punto. Recompensa la experimentación: distintos puntos de lanzamiento, distintos peligros, distintas posiciones del cuerpo.
 
-### Umbrales de impulso
+La descripción oficial menciona "una caída enorme", lo que sugiere que la verticalidad es una parte central del diseño. Una caída larga le da tiempo al ragdoll para ganar impulso y te ofrece una vista clara del impacto. Más allá de eso, la disposición específica del mapa, los nombres de los peligros individuales y el daño exacto que inflige cada uno no están documentados en la descripción oficial.
 
-Cada hueso del rig recibe un valor de umbral. Cuando una colisión genera un impulso por encima de ese número, el hueso entra en un estado dañado. Por debajo, el impacto es cosmético: el ragdoll se sacude, pero nada se rompe. Los umbrales suelen ajustarse por parte del cuerpo, y por eso una caída sobre los pies es sobrevivible, pero la misma caída sobre el cuello no lo es.
+| Confirmado por la página oficial | No documentado |
+| --- | --- |
+| Grupo creador: High Effort Projects | Nombres de monedas o precios de tienda |
+| Lugar creado el 5 de junio de 2025; actualizado el 13 de octubre de 2026 | Valores de daño o fórmulas de rotura de huesos |
+| Hasta 20 jugadores por servidor | Una lista completa de ragdolls |
+| Unos 133 millones de visitas (registro obtenido el 14 de octubre de 2026) | Cualquier sistema de canje de códigos |
+| Anunciado: romper huesos, desbloquear ragdolls, caída enorme, física de ragdoll | Teclas de acceso rápido, notas del parche o hoja de ruta de lanzamiento |
 
-### Acumulación de daño
+## Desbloquear nuevos ragdolls
 
-Las roturas de un solo golpe son raras fuera de escenarios extremos. Lo más común es que el daño se acumule. Un personaje que roza una barandilla, rebota en una caja y luego golpea el suelo acumula tres impulsos menores que, juntos, cruzan el umbral. Por eso las caídas largas y caóticas producen más fracturas que un único golpe limpio.
+"Desbloquea nuevos ragdolls" es uno de los pocos ganchos de progresión que anuncia el desarrollador. En la práctica, esto suele significar jugar lo suficiente o lograr lo suficiente para obtener acceso a modelos de personaje adicionales o variantes de ragdoll. Lo que no está documentado es la condición de desbloqueo de ningún ragdoll específico. No hay una lista oficial de ragdolls, ni un requisito declarado, ni un precio.
 
-### Estados de fractura y retroalimentación
+Las guías de terceros a veces describen métodos de desbloqueo, pero esas son observaciones de la comunidad, no documentación del desarrollador. Pueden ser útiles como punto de partida, pero también pueden quedar obsoletas tras una actualización. La forma fiable de comprobarlo es mirar dentro del propio juego. Abre el menú o la pantalla de progresión, observa qué aparece como bloqueado y lee cualquier texto del juego que describa el requisito. Si el juego no indica un requisito, entonces no está documentado, punto final.
 
-Una vez que se registra una rotura, el sistema suele cambiar la restricción por una más floja, añade una pose de cojera, reproduce una señal de audio y etiqueta la lesión para el HUD. Las implementaciones más avanzadas distinguen niveles de gravedad, y ahí es donde el vocabulario anatómico empieza a importar.
+Vale la pena señalar que el juego se actualizó por última vez el 13 de octubre de 2026, un día antes de obtener el registro. Un juego activo cambia. Cualquier guía escrita antes de esa fecha puede describir sistemas que ya no existen.
 
-| Nivel de gravedad | Analogía | Efecto mecánico | Retroalimentación para el jugador |
-|---|---|---|---|
-| Estrés | Fisura capilar | Suavizado menor de la restricción | Pequeño chasquido, ligera cojera |
-| Fractura simple | Rotura limpia | El rango articular aumenta bruscamente | Crujido audible, flexión visible |
-| Desplazada | Hueso desalineado | La extremidad deja de soportar peso | El ragdoll arrastra la extremidad |
-| Compuesta / catastrófica | Roturas múltiples | El rig pierde integridad estructural | Colapso total, reinicio del ragdoll |
+## Jugar con la simulación de física
 
-## Comparación entre ragdolls pasivos, activos y parciales
+Lo más interesante de **Break your Bones** es que es menos un juego que hay que superar y más un juguete con el que trastear. La simulación de física de ragdoll es la atracción principal. Puedes dedicar una sesión a perseguir tu mejor marca personal, o puedes dedicar una sesión simplemente a observar qué pasa cuando un personaje roza una esquina a alta velocidad.
 
-No todos los sistemas de rotura de huesos están construidos igual. La elección del tipo de ragdoll determina cómo se siente el juego y cuánto control conservas.
+Algunos hábitos prácticos ayudan:
 
-| Tipo de ragdoll | Cómo se comporta | Ventajas | Desventajas |
-|---|---|---|---|
-| Pasivo | Totalmente controlado por la física, sin entrada | Predecible, barato de ejecutar | Cero agencia del jugador durante la caída |
-| Activo | Física con equilibrio y fuerzas musculares | El personaje se mantiene erguido, se siente vivo | Costoso, más difícil de ajustar |
-| Parcial / combinado | Animación hasta el impacto, física después | Lo mejor de ambos mundos | Artefactos de mezcla, saltos visuales |
-| Procedimental | Los huesos son reubicados por el solucionador cada fotograma | Extremadamente dinámico | Puede verse gomoso sin ajuste |
+- **Observa toda la caída.** La física interesante suele ocurrir durante el descenso, no solo en el impacto.
+- **Cambia una variable a la vez.** Si quieres entender qué hace un peligro, mantén el lanzamiento igual y cambia solo el objetivo.
+- **Usa el servidor multijugador.** Con hasta 20 jugadores por servidor, los intentos de otras personas son una fuente gratuita de ideas. Puedes ver ángulos y enfoques que no se te habrían ocurrido.
+- **Vuelve a comprobar tras las actualizaciones.** Como el lugar se actualizó hace poco, el comportamiento puede cambiar. Si algo se siente distinto, puede que realmente sea distinto.
 
-Muchos sandboxes de ragdoll acaban optando por un enfoque parcial o combinado: el personaje se comporta con normalidad hasta que se activa una condición de rotura, y entonces el control pasa al solucionador. En ese traspaso es donde vive la mayor parte de la comedia —y la mayor parte de los bugs.
+Puedes encontrar la experiencia oficial en [Break your Bones en Roblox](https://www.roblox.com/games/123821081589134/Break-your-Bones). Esa página es el mejor lugar para confirmar la descripción actual, el número de jugadores y el estado de actualización.
 
-## Consejos para conseguir más roturas de huesos
+## Separar los hechos de las conjeturas
 
-Si tu objetivo es el máximo daño esquelético, la física te da palancas claras que accionar.
+La mayor trampa con un juego como este es asumir que las afirmaciones populares son oficiales. Roblox tiene varios juegos con nombres similares, incluido un título diferente que a menudo se llama Broken Bones IV y varias aplicaciones móviles de romper huesos en las tiendas de aplicaciones. Esos son productos separados con mecánicas separadas. No importes suposiciones de ellos a este juego. Los ragdolls, la progresión y cualquier sistema aquí pertenecen al lugar de High Effort Projects y a nada más.
 
-| Táctica | Por qué funciona | Riesgo |
-|---|---|---|
-| Apunta a la cabeza y el cuello | El brazo de palanca largo amplifica la rotación | Puede terminar la partida antes de tiempo |
-| Encadena impactos | El daño se acumula entre colisiones | Requiere terreno abierto |
-| Usa altura en lugar de velocidad | La gravedad añade fuerza vertical constante | Más tiempo de preparación |
-| Aterriza sobre las extremidades, no sobre el torso | Las extremidades tienen umbrales de rotura más bajos | Menos daño general por golpe |
-| Evita superficies blandas | Los cuerpos blandos absorben impulso | Limita las opciones de mapa |
-| Mantén el ragdoll en movimiento | El impulso provoca impactos secundarios | Más difícil de apuntar |
-
-**Consejo de experiencia de jugador:** el daño más fiable proviene de cadenas controladas, no de acrobacias espectaculares únicas. Una caída moderada que hace rebotar al ragdoll por tres superficies duras normalmente puntuará más que una caída enorme sobre un suelo plano.
-
-### El timing vence a la fuerza bruta
-
-El impulso es masa por cambio de velocidad, así que un ragdoll que se mueve rápido y golpea un objeto rígido transfiere mucha más fuerza que uno lento que se apoya en él. Ganar velocidad antes del contacto —deslizándose, balanceándose o acelerando cuesta abajo— importa más que la altura bruta. Los informes de la comunidad favorecen sistemáticamente las configuraciones basadas en el momento por esta misma razón.
-
-## Ajustes y rendimiento: mantener la física estable
-
-Los sistemas de rotura de huesos consumen mucho solucionador. Cuando caen los fotogramas por segundo, los pasos de simulación se agrandan, se pierden colisiones y el ragdoll empieza a comportarse como si estuviera hecho de gelatina. Unos pocos ajustes marcan una diferencia enorme.
-
-| Ajuste | Qué cambia | Recomendación |
-|---|---|---|
-| Subpasos de física | Con qué precisión se resuelven las colisiones | Súbelo si las extremidades atraviesan paredes |
-| Iteraciones del solucionador | Precisión de la rigidez articular | Moderado; más alto es más costoso |
-| Paso de tiempo fijo | Consistencia de la simulación | Déjalo activado para cifras de daño estables |
-| Límite de cantidad de ragdolls | Cuántos cuerpos se simulan a la vez | Bájalo en hardware débil |
-| Capas de colisión | Qué superficies registran fuerza | Asegúrate de incluir el terreno |
-| Multiplicador de gravedad | Fuerza de caída | Déjalo por defecto salvo que estés experimentando |
-
-Si estás probando la física ragdoll de Break your Bones en un dispositivo de gama baja, la mayor mejora de estabilidad suele ser bloquear el paso de tiempo de la física y reducir la cantidad de ragdolls simultáneos. La fidelidad visual importa mucho menos que un paso de simulación consistente.
-
-## Mitos, informes de la comunidad y errores de los jugadores
-
-| Mito | Realidad |
-|---|---|
-| Más huesos significa más realismo | La cantidad de cuerpos rígidos importa más que las etiquetas de los huesos |
-| Las superficies más duras siempre rompen más | La dureza de la superficie importa, pero el ángulo y la velocidad importan más |
-| Las roturas son aleatorias | Están guiadas por umbrales y son deterministas con entradas idénticas |
-| Más gravedad siempre ayuda | Añade fuerza, pero desestabiliza las articulaciones y causa tunneling |
-| Los ragdolls más grandes reciben más daño | La distribución de masa, no el tamaño, impulsa la transferencia de impulso |
-
-**Los informes de la comunidad** también señalan un malentendido común sobre el «modo ragdoll». Los jugadores suelen asumir que la física se activa en el momento en que se lanza a un personaje. En la práctica, la mayoría de los sistemas ejecutan primero un estado animado o activo y solo cambian a un ragdoll completo cuando se activa una condición de rotura, y por eso el primer fotograma de una caída a veces parece rígido.
+Cuando una afirmación no está en la página oficial, la etiqueta correcta es "no documentado". Eso no es una crítica al juego. Solo significa que el desarrollador ha elegido mantener la descripción minimalista, lo cual es habitual en los sandbox de física. La interfaz dentro del juego y las propias publicaciones de la comunidad del desarrollador son donde aparecerían primero los nuevos detalles.
 
 ## Preguntas frecuentes
 
-**¿La física ragdoll de Break your Bones es determinista?**
+**¿Break your Bones es gratis?**
+La página oficial de Roblox es el lugar para confirmar los detalles de acceso. Las experiencias de Roblox generalmente se pueden jugar a través de la plataforma, y la página mostrará si se aplica algún acceso de pago.
 
-En gran medida sí, dentro de una misma sesión. Dadas condiciones iniciales, gravedad y geometría de colisión idénticas, los mismos impulsos deberían producir las mismas roturas. Pequeñas diferencias de coma flotante y una sincronización variable de fotogramas aún pueden cambiar los resultados, y por eso dos acrobacias casi idénticas a veces puntúan distinto.
+**¿Hay códigos para Break your Bones?**
+No hay ninguno documentado. La descripción oficial no menciona un sistema de códigos ni una caja de canje. Revisa la página oficial y los canales de la comunidad del desarrollador por si hay anuncios.
 
-**¿Por qué mi ragdoll atraviesa paredes?**
+**¿Cuántos jugadores pueden unirse a un servidor?**
+Hasta 20 jugadores por servidor, según el registro oficial.
 
-Normalmente es un problema de paso de tiempo, no de daño. Cuando el paso de simulación es demasiado grande en relación con la velocidad del ragdoll, el solucionador omite por completo la colisión. Subir los subpasos de física o limitar la velocidad suele solucionarlo.
+**¿Quién hizo el juego?**
+El grupo de Roblox High Effort Projects.
 
-**¿Qué parte del cuerpo se rompe más fácilmente?**
+**¿Cómo desbloqueo nuevos ragdolls?**
+La página oficial dice que puedes desbloquear nuevos ragdolls, pero no indica los requisitos. Revisa el menú del juego o la pantalla de progresión para ver las condiciones actuales.
 
-En la mayoría de los rigs, el cuello, los antebrazos y las piernas inferiores tienen los umbrales más bajos. El fémur y la pelvis suelen ser los más resistentes porque soportan la mayor carga y están envueltos en la mayor masa.
-
-**¿Las superficies blandas evitan las roturas de huesos?**
-
-Reducen la transferencia de impulso, así que sí: aterrizar sobre acolchado normalmente convierte una fractura en un moretón. Dicho esto, las superficies blandas también pueden causar ángulos articulares incómodos que producen roturas en el rebote, así que no son una red de seguridad garantizada.
-
-## Conclusión
-
-La física ragdoll de Break your Bones recompensa a los jugadores que piensan en términos de fuerza, ángulo y acumulación en lugar de suerte. Apunta a partes del cuerpo con gran palanca, encadena impactos en vez de perseguir un único golpe enorme y mantén estables tus ajustes de física para que la simulación siga siendo honesta. Haz eso, y el satisfactorio crujido de una fractura bien merecida dejará de ser un accidente y empezará a ser una estrategia.
+**¿Es lo mismo que Broken Bones IV?**
+No. Son experiencias de Roblox diferentes. No se debe asumir que las mecánicas de una se apliquen a la otra.

@@ -1,145 +1,100 @@
 export const metadata = {
-  title: "Controles do Ragdoll 3D Break Your Bones: Guia Completo de Movimento e Dano",
-  description: "Aprenda todos os controles do ragdoll 3D Break Your Bones: mira do lançamento, rotação de câmera, pontuação de dano nos ossos e reset para teclado, toque e controle.",
+  title: "Guia de Break your Bones no Roblox: Ragdolls, Quedas e Física",
+  description: "Um guia prático de Break your Bones no Roblox: como funciona o sandbox de ragdoll, o que a página oficial confirma e o que os jogadores precisam testar no jogo.",
   category: "controls",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Jogos de física ragdoll dependem totalmente de como eles se sentem nas suas mãos, e o **ragdoll de Break your Bones 3D** não é exceção. Se você não consegue mirar um lançamento, girar a câmera ou acionar uma quebra de osso limpa na hora certa, tudo se transforma em movimentos aleatórios em vez de caos cômico. Aprender o esquema de controle do **ragdoll de Break your Bones 3D** é a forma mais rápida de sair das quedas acidentais para a destruição deliberada e de alta pontuação.
+Break your Bones é um sandbox de física do Roblox sobre exatamente o que o nome diz: machucar um ragdoll de todas as formas criativas que o mapa permitir. Você lança um personagem de uma queda enorme, o direciona para perigos e assiste à simulação fazer estrago. Este artigo se atém ao que a página oficial do Roblox realmente documenta, separa isso do que os jogadores relatam e mostra como verificar qualquer outra coisa por conta própria, em vez de confiar em uma lista aleatória da internet.
 
-Este guia percorre cada camada de entrada — toque, teclado e mouse, e controle — além dos hábitos de timing que separam uma queda desajeitada de um esqueleto totalmente estilhaçado. Os controles variam um pouco entre versões e plataformas, então trate os mapas abaixo como um ponto de partida confiável, e não como uma regra fixa.
+Se você quiser ver a fonte da verdade, a página oficial do jogo está aqui: [Break your Bones no Roblox](https://www.roblox.com/games/123821081589134/Break-your-Bones).
 
-## Como Funciona o Esquema de Controle do Ragdoll 3D Break Your Bones
+## O que Break your Bones realmente é
 
-A maioria dos jogos sandbox de ragdoll divide a entrada em quatro camadas. Quando você as enxerga separadamente, você para de apertar botões em pânico e começa a planejar.
+De acordo com o registro oficial do Roblox (consultado em 14 de outubro de 2026), Break your Bones é um place criado pelo grupo High Effort Projects. O place foi criado em 5 de junho de 2025 e foi atualizado pela última vez em 13 de outubro de 2026. Os servidores comportam até 20 jogadores, e a experiência tem cerca de 133 milhões de visitas. Esses números importam porque mostram que este é um sandbox mantido ativamente e muito jogado, e não um experimento abandonado.
 
-| Camada | O que faz | Entradas típicas | Quando usar |
-|---|---|---|---|
-| Lançamento | Aplica força ao ragdoll | Arrastar, segurar o mouse, gatilho | Início de cada tentativa |
-| Câmera | Enquadra a trajetória | Deslizar, arrastar com o botão direito, analógico direito | Antes e durante o voo |
-| Tempo | Desacelera o passo da física | Botão, toque, tecla | Pouco antes do impacto |
-| Sistema | Reiniciar, recomeçar, menus | Botões, teclas | Entre tentativas |
+A descrição oficial anuncia uma lista curta de recursos e nada mais:
 
-Aqui está um mapa prático de atribuições padrão. Relatos da comunidade de jogadores de celular e desktop sugerem que essas atribuições são as mais comuns entre títulos de ragdoll semelhantes.
+- Tente quebrar todos os seus ossos.
+- Um "simulador divertido de esmagar ossos".
+- Desbloqueie novos ragdolls.
+- Se arremesse de uma queda enorme.
+- Uma simulação de física de ragdoll.
 
-| Ação | Toque | Teclado + mouse | Controle |
-|---|---|---|---|
-| Mirar e lançar | Arraste para longe do ragdoll | Segure o clique esquerdo, arraste, solte | Segure RT e mova o analógico rapidamente |
-| Definir potência | Distância do arrasto | Distância do arrasto | Segurar o gatilho e arrastar |
-| Girar a câmera | Deslizar com um dedo | Arrastar com o botão direito | Analógico direito |
-| Zoom in / out | Gesto de pinça | Roda de rolagem | D-pad ou botões superiores |
-| Câmera lenta | Ícone de relógio na tela | Barra de espaço | LB / L1 |
-| Reiniciar ragdoll | Seta de reiniciar | R | Back / Select |
-| Pausar ou menu | Ícone de pausa | Esc | Start |
+Esse é todo o conjunto de recursos documentado. Não há menção a moeda, loja, sistema de códigos, valores de dano ou uma lista nomeada de ragdolls. Se você vir um guia afirmando o contrário, trate-o como não verificado até confirmar dentro do jogo ou na página oficial.
 
-Se você joga mais de um sandbox de física, ajuda comparar as convenções de entrada do gênero. Navegar pela [tag de jogos de física ragdoll da Steam](https://store.steampowered.com/tags/en/Ragdoll/) é uma forma rápida de ver como outros títulos lidam com o mesmo problema.
+Também vale ser preciso sobre a identidade. Este não é Broken Bones IV, e não é nenhum dos aplicativos mobile com nomes parecidos, como Break Bones: Fall Challenge ou os vários títulos de quebrar ossos no Google Play. Esses são produtos separados, com mecânicas separadas. Conselhos escritos para eles não se aplicam aqui.
 
-## Controles de Lançamento: Mira, Potência e Rotação
+## Como funciona o loop principal
 
-Lançar é a habilidade central. Na maioria das versões, você puxa para trás a partir do ragdoll como um estilingue e depois solta para disparar. Algumas versões usam arrasto direto, em que o ragdoll segue o seu dedo. De qualquer forma, quatro variáveis decidem o resultado.
+O loop descrito pelo desenvolvedor é simples e movido pela física. Você controla ou lança um ragdoll, o expõe a perigos e quedas longas, e a simulação decide o que acontece com o corpo. O objetivo é quebrar todos os ossos. Desbloquear novos ragdolls dá a você corpos diferentes para arremessar, o que é o principal gancho de progressão que a descrição oficial confirma.
 
-| Variável | Como você controla | O que muda | Melhor uso |
-|---|---|---|---|
-| Comprimento do arrasto | Até onde você puxa | Força do lançamento | Grande altura e quedas longas |
-| Ângulo do arrasto | Direção da puxada | Trajetória | Atingir uma superfície específica |
-| Rotação | Movimento circular antes de soltar | Rotação em voo | Impactos com membros primeiro |
-| Momento de soltar | Quando você solta | Correções no ar | Encadear várias quebras |
+O que a página oficial não documenta é o detalhe mecânico que as pessoas costumam perguntar:
 
-Alguns hábitos que ajudam de forma consistente:
+- Nenhuma lista de ossos ou contagem de ossos publicada.
+- Nenhum valor de dano por perigo ou por altura de queda.
+- Nenhum tempo de respawn ou cooldown documentado.
+- Nenhum controle ou atalho documentado.
 
-- **Puxe para trás, não empurre para frente.** A mira estilo estilingue dá mais controle sobre o ângulo do que arrastar na direção do voo.
-- **Um arrasto mais longo não é automaticamente melhor.** A força máxima muitas vezes joga o ragdoll em um quique raso e de pouco dano. Força média com um ângulo acentuado geralmente quebra mais.
-- **Adicione rotação de propósito.** Um ragdoll que aterrissa com um membro primeiro tende a quebrar mais articulações do que um que cai de costas, reto.
-- **Solte no topo do arco da sua puxada.** Soltar no meio da puxada geralmente deixa o lançamento fraco.
+Essa lacuna é normal para um sandbox de física, e é o principal motivo pelo qual guias de terceiros sobre este jogo tendem a ser suposições. A resposta honesta para "como quebro o último osso" é que depende da build atual, e a única forma confiável de descobrir é jogar e observar.
 
-### Mirando em Zonas de Impacto de Alto Valor
+## Recursos anunciados vs. observações da comunidade vs. incógnitas
 
-Onde o ragdoll aterrissa importa tanto quanto a força com que ele bate. A experiência dos jogadores sugere que o dano tende a se concentrar nessas áreas.
+Manter essas três categorias separadas vai economizar muito tempo perdido.
 
-| Zona alvo | Por que importa | Como abordá-la |
+| Categoria | Exemplos | Confiabilidade |
 |---|---|---|
-| Cabeça | Geralmente a quebra de maior valor | Ângulo acentuado, força forte |
-| Coluna e tronco | Muitas vezes desencadeia reações em cadeia | Trajetória reta e rápida |
-| Membros | Mais fáceis de quebrar, menor valor em pontos | Lançamentos com rotação |
-| Articulações | Dobram em direções que não deveriam | Alinhe com a câmera lenta |
+| Anunciado pelo desenvolvedor | Objetivo de quebrar ossos, desbloqueios de ragdoll, queda enorme, simulação de física | Autoritativo |
+| Observações da comunidade | Quais perigos parecem eficientes, rotas populares, preferências de ragdoll | Secundário, pode estar desatualizado |
+| Não documentado | Códigos, moeda, preços, fórmulas de dano, taxas de drop, notas de patch | Desconhecido, verifique no jogo |
 
-## Controles de Câmera, Zoom e Câmera Lenta
+Guias de terceiros são observações secundárias, não documentação do desenvolvedor. Quando um deles diz que uma queda específica é a forma mais rápida de quebrar ossos, isso é a experiência de um jogador, não uma especificação. Pode ter sido verdade no dia em que foi escrito e falso após a próxima atualização.
 
-A câmera é o controle mais subutilizado em qualquer jogo de ragdoll. Iniciantes lançam primeiro e ajustam a visão depois; jogadores experientes fazem o contrário.
+O erro oposto é pior: tratar um sistema não documentado como se existisse. Um exemplo comum são os códigos. A descrição oficial não documenta nenhum recurso de resgate de códigos e nenhum código. Se um site diz que tem códigos funcionais de Break your Bones, essa alegação não é sustentada pela própria página do desenvolvedor. A forma correta de verificar é abrir a página oficial do Roblox, ler a descrição e quaisquer notas do desenvolvedor ali, e procurar os canais de comunidade do próprio grupo. Se o desenvolvedor não publicou um sistema de códigos, não há nada legítimo para resgatar.
 
-| Ação da câmera | Toque | Desktop | Quando ajuda |
-|---|---|---|---|
-| Orbitar | Deslizar com um dedo | Arrastar com o botão direito | Ajustar o ângulo antes do lançamento |
-| Aproximar | Pinça para fora | Rolar para cima | Ver detalhes dos ossos no impacto |
-| Afastar | Pinça para dentro | Rolar para baixo | Avaliar trajetórias longas |
-| Recentralizar | Toque duplo ou botão | Atalho, se disponível | Recuperar após um giro descontrolado |
+## Abordagem prática para novos jogadores
 
-Três regras que vale a pena internalizar:
+Comece com as duas coisas para as quais o desenvolvedor explicitamente aponta: a queda enorme e os perigos no mapa. Cair de altura é o método anunciado, então é o primeiro experimento natural. Depois, vá expandindo.
 
-1. **Ajuste a câmera antes de puxar.** Ajustar no meio do voo custa a mira que você já tinha.
-2. **Afastar para planejar, aproximar para o dano.** Visões amplas mostram o arco; visões próximas mostram quais ossos racharam.
-3. **Acione a câmera lenta um instante antes do impacto, não no impacto.** A janela é curta, e relatos da comunidade sugerem que jogadores que a acionam cedo conseguem leituras mais precisas de onde o ragdoll vai aterrissar.
+Uma ordem sensata:
 
-Se a câmera parecer errada, verifique se há uma configuração de inverter Y ou inverter X no menu de opções. Muitos jogadores descobrem que o padrão está invertido e culpam a própria mira por semanas.
+1. Faça a grande queda algumas vezes e observe como o ragdoll se comporta na aterrissagem. Sandboxes de física recompensam observação mais do que reflexos.
+2. Teste cada perigo que encontrar e anote quais partes do corpo ele parece afetar. Faça isso em um servidor privado ou com pouca gente, se preferir não competir por um lugar.
+3. Alterne entre os ragdolls que você desbloqueou. Corpos diferentes se comportam de forma diferente sob a física, e essa diferença costuma ser o ponto principal de desbloqueá-los.
+4. Volte após as atualizações. O place foi atualizado pela última vez em 13 de outubro de 2026, o que significa que a build está mudando ativamente e qualquer coisa que você memorizou pode mudar.
 
-## Interpretando o Feedback de Dano nos Ossos Como um Profissional
+Como os servidores comportam até 20 jogadores, você pode ocasionalmente encontrar os pontos de lançamento populares lotados. Isso é uma realidade social do jogo, não um bug, e mudar para um servidor mais tranquilo é uma solução normal.
 
-Os sistemas de pontuação nesses jogos são visuais e sonoros em primeiro lugar. Aprender os sinais transforma adivinhação em técnica repetível.
+## O que este jogo não é
 
-| Sinal | O que ele indica | O que fazer em seguida |
-|---|---|---|
-| Som agudo de estalo | Um osso acabou de quebrar | Confirme com o contador de pontos |
-| Cor destacada no osso | Dano recente naquele osso | Mire na mesma área de novo |
-| Sobreposição de esqueleto ou raio-X | Mapa completo dos ossos | Mire nos ossos intactos |
-| Popup de pontuação | Pontos concedidos pelo acerto | Compare com o seu último lançamento |
-| Ragdoll fica mole | Dano estrutural grave | Reinicie e busque uma queda mais alta |
+Definir expectativas corretamente importa, porque o nome atrai o público errado.
 
-Um modelo mental útil: seu primeiro lançamento deve ser uma missão de reconhecimento. Observe quais ossos se acendem e depois ajuste o ângulo para que o segundo lançamento caia sobre os que ainda estão intactos. Perseguir um único golpe dramático é divertido, mas espalhar o dano pelo esqueleto geralmente produz um total maior.
+Break your Bones não é um jogo de combate, não é uma experiência de história e não é um RPG de progressão com níveis e fichas de atributos. A descrição oficial não menciona combate, missões ou estatísticas de personagem. Ela descreve uma simulação com a qual você brinca. Se você procura objetivos estruturados, provavelmente esta não é a experiência que deseja.
 
-## Exercícios de Prática, Dicas Pro e Correções de Controle
+Também não é o mesmo jogo que Broken Bones IV, apesar da semelhança superficial nos nomes, e não é os aplicativos mobile de quebrar ossos. Compartilhar um tema não é compartilhar código, mecânicas ou progressão. Não leve conselhos de um para o outro.
 
-Quinze minutos focados valem mais do que uma hora de lançamentos aleatórios. Aqui está um plano de exercícios que cobre cada camada de controle.
+## Uma observação sobre "completar" o jogo
 
-| Exercício | Tempo | Objetivo |
-|---|---|---|
-| Escada de potência | 3 min | Aprender como a distância do arrasto se mapeia na distância percorrida |
-| Controle de rotação | 3 min | Completar uma rotação inteira antes do impacto |
-| Disciplina de câmera | 3 min | Enquadrar um alvo sem mover a câmera no meio do voo |
-| Precisão da câmera lenta | 3 min | Acionar a câmera lenta a um instante do impacto |
-| Sequência de combo | 3 min | Encadear três quebras separadas em uma tentativa |
+O objetivo anunciado é quebrar todos os seus ossos. O desenvolvedor não publicou uma lista de ossos, então não há checklist oficial a seguir. Alguns jogadores mantêm suas próprias anotações; essas anotações são observações pessoais, não cânone. Se a conquista for rastreada no jogo, a interface é a autoridade, não uma wiki.
 
-Dicas adicionais da experiência dos jogadores:
-
-- **Mude sua sensibilidade cedo.** A sensibilidade padrão da câmera geralmente é alta demais para mirar com precisão em telas de toque.
-- **Use um dedo para a câmera e um para o lançamento.** Arrastos com multitoque são a causa número um de giros descontrolados da câmera.
-- **Reinicie com frequência.** Um ragdoll mole raramente produz bons números em um acerto seguinte.
-- **Assista às reprises, se o jogo oferecer.** Desacelerar o seu próprio lançamento revela exatamente onde sua mira desviou.
-
-### Corrigindo Problemas Comuns de Controle
-
-| Problema | Causa provável | Solução |
-|---|---|---|
-| O ragdoll não lança | O arrasto começou fora do personagem | Comece o arrasto diretamente sobre o ragdoll |
-| A câmera gira descontroladamente | Dois dedos na tela ao mesmo tempo | Use um dedo para a câmera e um para o lançamento |
-| A câmera lenta não ativa | Habilidade em recarga | Espere o ícone recarregar |
-| Teclado ignorado no desktop | Janela do jogo sem foco | Clique primeiro na janela do jogo |
-| A mira parece invertida | Configuração de inversão da câmera ativada | Ative ou desative inverter Y ou X nas opções |
-| As entradas parecem atrasadas | Apps em segundo plano ou economia de bateria | Feche apps e desative a economia de energia |
+Isso também significa que nenhum guia, incluindo este, pode prometer que você vai terminar rapidamente. O enquadramento honesto é: experimente, observe a física e deixe a simulação mostrar o que funcionou.
 
 ## FAQ
 
-**Quais são os controles básicos do ragdoll 3D Break your Bones?**
+**Break your Bones tem códigos?**
+Nenhum é documentado. A descrição oficial do Roblox não lista nenhum recurso de resgate de códigos e nenhum código. Verifique a página oficial e os canais de comunidade do próprio grupo do desenvolvedor para qualquer anúncio futuro, em vez de confiar em listas de códigos de terceiros.
 
-Você tem quatro camadas: lançamento (arrastar ou segurar para aplicar força), câmera (deslizar, arrastar com o botão direito ou analógico direito), tempo (um botão ou tecla de câmera lenta) e sistema (reiniciar, pausar, menu). Aprenda primeiro o lançamento e a câmera — eles respondem pela maior parte da sua pontuação.
+**Quantos jogadores por servidor?**
+Até 20, de acordo com o registro oficial do Roblox.
 
-**Posso mudar os controles?**
+**Quem fez?**
+O grupo do Roblox High Effort Projects. O place foi criado em 5 de junho de 2025.
 
-A maioria das versões de jogos de física ragdoll oferece remapeamento limitado, geralmente para inversão e sensibilidade da câmera, em vez de reatribuição completa. Os controles de toque geralmente são fixos, enquanto as versões para desktop às vezes suportam remapeamento de teclas pelo menu de configurações do jogo ou pelo launcher.
+**É o mesmo que Broken Bones IV?**
+Não. São experiências separadas do Roblox, e mecânicas de uma não devem ser presumidas na outra.
 
-**Existe um controle de câmera lenta e quando devo usá-lo?**
+**Como desbloqueio novos ragdolls?**
+O desenvolvedor confirma que os ragdolls são desbloqueáveis, mas não documentou as condições de desbloqueio. Verifique a interface no jogo para os requisitos atuais.
 
-Sim, na maioria das versões. Use-o pouco antes de o ragdoll fazer contato, não depois. Acioná-lo tarde demais significa que o impacto já foi resolvido, e acioná-lo cedo demais desperdiça a janela antes que você possa reagir.
-
-**Por que meu ragdoll quebra menos ossos na potência máxima?**
-
-A força máxima geralmente achata a trajetória, então o ragdoll aterrissa de lado e absorve o impacto por uma área ampla. Um lançamento de potência média com um ângulo acentuado e alguma rotação concentra o impacto nas articulações e nos membros, o que tende a produzir mais quebras por tentativa.
+**Por onde devo começar?**
+Pela queda enorme, já que é o único método que o desenvolvedor anuncia explicitamente. Depois, explore os perigos e compare os ragdolls.

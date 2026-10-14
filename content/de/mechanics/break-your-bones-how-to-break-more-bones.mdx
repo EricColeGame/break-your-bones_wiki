@@ -1,115 +1,85 @@
 export const metadata = {
-  title: "Break Your Bones: Wie du mit smarter Physik und Combos mehr Knochen brichst",
-  description: "Lerne die Kernmechaniken hinter Break Your Bones: wie du mit besseren Aufprallwinkeln, Combo-Stacking und klügeren Upgrade-Entscheidungen mehr Knochen brichst.",
+  title: "Break your Bones auf Roblox: Ragdoll-Physik, Freischaltungen und was tatsächlich dokumentiert ist",
+  description: "Ein fundierter Leitfaden zu Break your Bones auf Roblox: wie der Ragdoll-Sandkasten funktioniert, was die offizielle Seite bestätigt und was Spieler weiterhin selbst testen müssen.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-In Break Your Bones wird dein Punktestand in Brüchen geschrieben — und der Unterschied zwischen einem Run mit zwei Knochen und einem mit zehn Knochen ist fast nie Glück. Spieler, die Aufprallgeschwindigkeit, Kontaktwinkel und Multiplikator-Stacking verstehen, übertreffen konstant Spieler, die einfach von der höchsten Sache springen, die sie finden können. Wenn du dich je gefragt hast, wie du mehr Knochen brichst, ohne stundenlang zu grinden, zerlegt dieser Leitfaden die Mechaniken, die den Schaden tatsächlich steuern.
+Wenn du dich jemals in den Roblox-Charts aufgehalten hast, hast du wahrscheinlich ein Vorschaubild eines schlaffen Charakters gesehen, der von einer Klippe stürzt. Dieses Bild gehört zu Break your Bones, einem Physik-Sandkasten der Gruppe High Effort Projects. Der Ort wurde am 5. Juni 2025 erstellt und laut seinem offiziellen Roblox-Eintrag zuletzt am 13. Oktober 2026 aktualisiert. Zum Zeitpunkt des Schreibens verzeichnet er rund 133 Millionen Besuche und unterstützt bis zu 20 Spieler pro Server.
 
-Diese Unterscheidung ist wichtig, denn die meisten fehlgeschlagenen Runs entstehen nicht durch mangelndes Können. Sie entstehen dadurch, dass Energie in die falsche Oberfläche, die falsche Gliedmaße oder den falschen Moment fließt. Sobald du das System hinter der Simulation erkennen kannst, wird jeder Versuch zu einem Test, den du planen kannst, statt zu einem Glücksspiel, das du wiederholst.
+Diese Kombination – eine einfache Prämisse, eine Physik-Engine und ein gemeinsamer Server – erklärt den Großteil der Anziehungskraft des Spiels. Sie sorgt aber auch für viel Verwirrung online, weil das meiste, was über das Spiel kursiert, reine Vermutung ist. Dieser Artikel trennt, was der Entwickler tatsächlich bewirbt, von dem, was die Community beobachtet, und ist ehrlich über die Lücken.
 
-## Warum die Knochenzahl in Break Your Bones der wahre Punktestand ist
+## Was Break your Bones tatsächlich ist
 
-Die Rangliste in Break Your Bones belohnt weder die zurückgelegte Strecke noch, wie dramatisch der Crash aussah. Sie belohnt die Anzahl der Knochen, die beim Sturz gebrochen sind. Diese eine Zahl bestimmt deinen Rang, deine Währung und wie schnell du die Upgrades freischaltest, die den nächsten Versuch leichter machen.
+Gehe auf die offizielle Seite unter [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) und du findest eine kurze Beschreibung. Sie besagt im Wesentlichen, dass du versuchst, alle deine Knochen zu brechen, dass es ein lustiger Knochen-Zertrümmerungs-Simulator ist, dass du neue Ragdolls freischaltest, dass du dich von einem riesigen Sturz flingst und dass es eine Ragdoll-Physiksimulation ist.
 
-Neue Spieler nehmen meist an, die Knochenzahl sei zufällig. Ist sie nicht. Das Spiel führt eine kontinuierliche Physiksimulation aus, und jeder Bruch ist das Ergebnis einer kleinen Menge von Eingaben: Geschwindigkeit im Moment des Kontakts, der Winkel der Gliedmaße, die Härte der Oberfläche und alle Multiplikatoren, die du oben drauf gestapelt hast. Ändere eine Eingabe und das Ergebnis ändert sich. Kontrolliere alle vier und du hörst auf, auf einen großen Run zu hoffen, und fängst an, einen aufzubauen.
+Das ist das ganze Versprechen. Beachte, was dort nicht steht: keine Erwähnung von Währung, kein Shop-Inventar, keine Schadenswerte, kein Code-System. Die offizielle Beschreibung dokumentiert nichts davon, und dieser Artikel wird es nicht erfinden.
 
-Es gibt außerdem einen Effekt zweiter Ordnung, den erfahrene Spieler ständig ausnutzen. Ein Knochen, der früh bricht, verändert, wie sich der Körper danach bewegt. Ein gebrochenes Bein versetzt den Torso in einen anderen Spin, was oft eine zweite, härtere Landung vorbereitet. Mit anderen Worten: Dein erster Bruch ist nicht das Ende des Runs — er ist das Setup für den Rest.
+Was die Seite bestätigt, ist die Struktur. Es ist eine Roblox-Erfahrung im Sandbox-Genre, aufgebaut um Ragdoll-Physik, veröffentlicht unter der Gruppe High Effort Projects und für bis zu 20 Spieler gleichzeitig ausgelegt. Die Formulierung „brich alle deine Knochen" ist das Ziel, das der Entwickler dir vor Augen führt. Die Zeile „fling dich von einem riesigen Sturz" verrät dir die beabsichtigte Methode.
 
-## Die Physik, die entscheidet, ob ein Knochen bricht
+## Der Kern-Loop: Abschießen, Fallen, Brechen, Wiederholen
 
-Der meiste Frust in diesem Genre entsteht daraus, die Ragdoll wie eine Figur zu behandeln, die man steuert. Ist sie nicht. Sie ist eine Sammlung von Massen, die durch Gelenke verbunden sind, und sie reagiert auf Kräfte genauso wie ein reales Objekt. Berichte aus der Community weisen konsistent auf vier Variablen hin, die entscheiden, ob eine Landung einen Bruch erzeugt oder nur ein Abprallen.
+Der beworbene Loop ist kurz und mechanisch. Du bewegst eine Figur in eine Gefahr, lässt sie aus der Höhe fallen oder setzt sie anderweitig Kräften aus, die die Physik-Engine auflöst. Wenn du jemals gesehen hast, wie ein Ragdoll in einem Spiel nach einer schlechten Landung in sich zusammenfällt, verstehst du die visuelle Sprache hier bereits.
 
-| Aufprallfaktor | Was er steuert | Wie du ihn nutzt |
-| --- | --- | --- |
-| Geschwindigkeit beim Kontakt | Gesamtenergie, die auf den Körper übertragen wird | Baue Geschwindigkeit vor dem Aufprall auf; ein langer Fall schlägt meist einen kurzen Sprung |
-| Kontaktwinkel | Wie die Kraft durch eine Gliedmaße wandert | Lande auf der Gliedmaße, die du brechen willst, nicht flach auf dem Rücken |
-| Oberflächenhärte | Wie viel Energie der Boden absorbiert | Bevorzuge Beton, Fels und Metall gegenüber Gras, Sand oder Wasser |
-| Lastpfad | Welcher Knochen die Kraft zuerst aufnimmt | Geh mit Arm oder Bein voran, um eine Landung in mehrere Brüche zu verwandeln |
-| Restimpuls | Ob der Körper weiter taumelt | Lass die Ragdoll rollen, statt die Animation abzubrechen |
+Daraus folgen zwei Designentscheidungen. Erstens: Das Ragdoll ist der Star – das Spiel verlangt nicht, dass du gegen etwas kämpfst, es verlangt, dass du beobachtest, wie ein Körper auf Physik reagiert. Zweitens: Der „riesige Sturz" ist ein bewusstes Herzstück, keine Nebenaktivität, weil er die dramatischsten Ergebnisse liefert.
 
-Das Physikmodell dahinter ist gut dokumentiert — wenn du verstehen willst, warum Ragdolls so herumrudern, ist [der Katalog physikbasierter Sandbox-Spiele auf Steam](https://store.steampowered.com/tags/en/Physics/) ein guter Ort, um zu sehen, wie verschiedene Titel dieselbe zugrunde liegende Simulation abstimmen.
+Was nicht dokumentiert ist: das konkrete Schadensmodell, ob einzelne Knochen separat oder als Gruppe verfolgt werden, ob es eine Abschlussbelohnung für „alle Knochen" gibt und ob Gefahren statisch oder rotierend sind. Diese Details sind im Spiel sichtbar, fehlen aber im offiziellen Eintrag.
 
-Eine praktische Regel: Energie, die absorbiert wird, ist Energie, die nichts bricht. Weiches Terrain, flache Landungen und kurze Stürze absorbieren alle Energie. Hartes Terrain, Kantenlandungen und lange Stürze wandeln sie in Schaden um. Wenn sich ein Run schwach anfühlt, frag dich, welche der drei du falsch gemacht hast.
+| Frage | Was die offizielle Seite sagt | Wie man es überprüft |
+|---|---|---|
+| Wie viele Spieler pro Server? | Bis zu 20 (laut Roblox-Eintrag) | Prüfe die Spielerzahl auf der Spielseite |
+| Gibt es ein Code-System? | Kein Code-System ist dokumentiert | Suche nach einem Code-Feld in der UI oder einem Entwicklerbeitrag |
+| Gibt es freischaltbare Ragdolls? | Ja, „neue Ragdolls freischalten" | Spiele und achte auf Freischaltbenachrichtigungen |
+| Wie wird Schaden berechnet? | Nicht dokumentiert | Teste selbst Stürze aus bekannten Höhen |
+| Wer hat es gemacht? | High Effort Projects | Der Ersteller wird auf der Spielseite angezeigt |
 
-## Wie du mehr Knochen brichst: Techniken, die funktionieren
+## Neue Ragdolls freischalten
 
-Technik zählt mehr als reine Höhe, sobald du die Anfängerkarten hinter dir hast. Das sind die Ansätze, die in Runs mit hoher Punktzahl immer wieder auftauchen, ungefähr geordnet nach ihrer Schwierigkeit.
+Die offizielle Beschreibung nennt einen Fortschritts-Hook und nur einen: „neue Ragdolls freischalten". Das ist ein bedeutsames Detail, weil es uns sagt, dass das Spiel eine Form von Bindungs-Loop hat, aber die offizielle Seite sagt nicht, wie Freischaltungen verdient werden. Sie nennt keine Währung, listet keine Preise auf, beschreibt kein XP-System und erwähnt keinen Shop oder keine Kiste.
 
-- **Single-Limb-Slam.** Zieh eine Gliedmaße unter den Körper, damit sie den vollen Aufprall abbekommt. Einfach, wiederholbar und die Grundlage für alles andere.
-- **Ketten-Taumel.** Widerstehe nach dem ersten Bruch dem Drang, die Bewegung zu stoppen. Lass den Körper einen Hang oder eine Treppe hinunterrollen, damit jede Drehung einen weiteren Kontaktpunkt erzeugt.
-- **Treppen-Abpraller.** Treppen sind ein getarnter Multiplikator: Jede Stufe ist eine eigene harte Oberfläche, also kann ein Sturz mehrere unterschiedliche Aufpralle erzeugen.
-- **Kantenlandung.** Ziele auf die Ecke einer Plattform statt auf die Mitte. Kraft auf eine kleine Fläche zu konzentrieren, erzeugt meist mehr Brüche als ein breiter, flacher Aufprall.
-- **Fahrzeug- oder Requisitenhilfe.** Von etwas Bewegtem getroffen zu werden, ist oft mehr wert als ein langer Fall, aber es ist viel schwerer zu zielen.
-- **Combo-Finisher.** Heb dir deinen höchsten Sturz für das Ende einer Kette auf, wenn deine Multiplikatoren schon laufen.
+Community-Leitfäden und Videos präsentieren Freischaltungswege oft als gesicherte Tatsache. Behandle diese als Beobachtungen Dritter und nicht als Entwicklerdokumentation. Sie mögen korrekt, unvollständig oder nach einem Patch veraltet sein, und das Spiel wurde am 13. Oktober 2026 aktualisiert, was frisch genug ist, dass ältere Leitfäden möglicherweise nicht den aktuellen Build widerspiegeln.
 
-| Technik | Schwierigkeit | Typischer Ertrag |
-| --- | --- | --- |
-| Single-Limb-Slam | Niedrig | Ein bis zwei Knochen |
-| Ketten-Taumel | Mittel | Drei bis fünf Knochen |
-| Treppen-Abpraller | Mittel | Mehrere Brüche pro Treppenlauf |
-| Kantenlandung | Mittel | Höherer Schaden pro Kontakt |
-| Fahrzeug- oder Requisitenhilfe | Hoch | Große, aber unbeständige Summen |
-| Combo-Finisher | Hoch | Multipliziert eine bestehende Serie |
+Wenn du wissen willst, wie Freischaltungen gerade jetzt funktionieren, ist der zuverlässige Weg unkompliziert:
 
-Wenn du gerade erst anfängst, jage nicht den Optionen mit hoher Schwierigkeit hinterher. Ein Spieler, der bei jedem Versuch einen sauberen Single-Limb-Slam landet, verdient mehr als ein Spieler, der bei zehn Versuchen einen spektakulären Crash landet.
+1. Spiele eine Session und achte auf Bildschirmbenachrichtigungen, wenn du einen Meilenstein erreichst.
+2. Prüfe die offizielle Spielseite auf Aktualisierungen der Beschreibung.
+3. Suche nach einem Community-Bereich, einer Gruppenseite oder einem Social-Kanal von High Effort Projects, wo der Entwickler postet.
+4. Vergleiche Notizen mit anderen Spielern im Server selbst und bestätige dann durch Testen.
 
-## Multiplikatoren stapeln: Einen Bruch in fünf verwandeln
+## Die Multiplayer-Sandkasten-Ebene
 
-Hier öffnet sich die Lücke zwischen durchschnittlichen und Elite-Spielern wirklich. In Break Your Bones wird Schaden nicht nur addiert — er wird multipliziert. Mehrere Systeme laufen gleichzeitig, und der Run wird erst dann wirklich groß, wenn zwei oder mehr davon sich überschneiden.
+Mit bis zu 20 Spielern pro Server ist Break your Bones kein einsames Physikspielzeug. Andere Spieler sind normalerweise sichtbar, was die Erfahrung auf Arten prägt, die die offizielle Beschreibung nicht ausführt. Physik-Sandkästen dieser Art neigen dazu, gemeinsame Spektakel zu erzeugen: Jemand findet einen hohen Punkt, jemand anderes kopiert ihn, und der Server sammelt sich um dieselbe Gefahr.
 
-| Multiplikator-Quelle | Wie du sie auslöst | Hinweise |
-| --- | --- | --- |
-| Geschwindigkeitsbonus | Triff den Boden über einem Geschwindigkeitsschwellenwert | Oft gedeckelt, also staple stattdessen andere Quellen |
-| Kettenbonus | Brich Knochen innerhalb eines kurzen Zeitfensters | Der Timer setzt sich bei einer weichen Landung meist zurück |
-| Schwachpunkt-Treffer | Brich einen kleinen Knochen wie Finger, Rippe oder Kiefer | Niedriger Grundschaden, hoher Multiplikatorwert |
-| Zonenbonus | Lande innerhalb eines markierten Bereichs der Karte | Achte vor dem Sprung auf markierte Oberflächen |
-| Upgrade-Multiplikator | Kaufe ihn im Fortschrittsbaum | Permanent, gilt für jeden zukünftigen Run |
+Hier zählen auch Leistungserwartungen. Ragdoll-Physik ist rechenintensiver als eine statische Szene, und ein überfüllter Server mit mehreren aktiven Körpern ist eine andere Erfahrung als ein ruhiger. Wenn sich deine Session ruckelig anfühlt, ist der Versuch eines weniger bevölkerten Servers ein vernünftiger erster Schritt – obwohl der Entwickler keine Leistungsrichtlinien veröffentlicht hat, ist das also eine praktische Gewohnheit und keine offizielle Empfehlung.
 
-Der häufigste Fehler hier ist, diese als separate Ziele zu behandeln. Sind sie nicht. Ein starker Run sieht meist so aus: Baue Geschwindigkeit bei einem langen Sturz auf, lande auf einem kleinen Knochen, um den Schwachpunkt-Bonus auszulösen, halte die Kette am Leben, indem du in eine zweite harte Oberfläche rollst, und beende den Run innerhalb eines Zonenbonus, während der Ketten-Timer noch läuft.
+## Über Codes und In-Game-Währung
 
-Timing ist alles. Berichte aus der Community legen nahe, dass die meisten Kettenfenster kurz sind — lang genug, um zwei oder drei Aufpralle zu verbinden, aber nicht lang genug, um zu einer besseren Stelle zu laufen. Plane deine Route, bevor du springst, nicht nachdem du gelandet bist.
+Suche nach Break your Bones und du stößt schnell auf Seiten, die Codes versprechen. Sei hier vorsichtig.
 
-## Upgrades: Wohin deine Knochen fließen sollten
+Die offizielle Roblox-Beschreibung dokumentiert kein Code-Einlösungssystem. Es wird kein Code-Feld erwähnt, kein Währungsname genannt und keine Artikelpreise aufgelistet. Das beweist nicht, dass kein Code-System existiert – es bedeutet, dass keines vom Entwickler auf der Seite dokumentiert ist, die es normalerweise ankündigen würde.
 
-Jeder Run wird in Währung umgewandelt, und jeder Kauf verändert dauerhaft deine Schaden-Obergrenze. Sie schlecht auszugeben ist der schnellste Weg, hängen zu bleiben.
+Deshalb kann kein Artikel dir ehrlich eine Liste funktionierender Codes geben. Wer eine veröffentlicht, rät entweder, recycelt Codes aus einem anderen Spiel oder zieht sie aus einer Mobile-App mit ähnlichem Namen. Break Bones: Fall Challenge, die verschiedenen Knochenbruch-Apps auf Google Play und die Roblox-Erfahrung Broken Bones IV sind alle separate Produkte mit eigenen Systemen. Mechaniken und Codes übertragen sich nicht zwischen ihnen.
 
-| Upgrade-Typ | Priorität | Warum es zählt |
-| --- | --- | --- |
-| Aufprall- oder Fallschaden-Multiplikator | Hoch | Skaliert jeden einzelnen Run, den du versuchst |
-| Abschusskraft oder Geschwindigkeit | Hoch | Mehr Energie pro Versuch bedeutet mehr Brüche pro Versuch |
-| Ragdoll-Kontrolle | Mittel | Hilft dir, den zweiten und dritten Aufprall zu zielen |
-| Knochenspezifische Boni | Mittel | Exzellent, sobald du diese Knochen zuverlässig triffst |
-| Kosmetische Freischaltungen | Niedrig | Kein Effekt auf die Knochenzahl |
-
-Eine gute Faustregel: Kaufe das Upgrade, das dir bei einem schlechten Run hilft, nicht das, das dir bei einem perfekten hilft. Flache Schadensmultiplikatoren machen genau das. Nischen-Boni zahlen sich erst aus, wenn deine Technik schon konstant ist.
-
-## Fehler, die dich still und leise Brüche kosten
-
-| Fehler | Was er dich kostet |
-| --- | --- |
-| Die Animation früh abbrechen | Tötet die Taumelkette, bevor sie sich entwickelt |
-| Flach auf dem Rücken landen | Verteilt die Kraft, statt sie zu konzentrieren |
-| Terrain-Typ ignorieren | Weicher Boden absorbiert die Energie, die du gebraucht hättest |
-| Höhe über Winkel jagen | Lange Stürze mit schlechten Winkeln erzeugen einen Bruch |
-| Upgrades zufällig kaufen | Verschwendet Währung für Perks mit geringer Wirkung |
-| Eine gescheiterte Route wiederholen | Gleiche Eingaben, gleiches Ergebnis |
-
-Der letzte Punkt verdient Betonung. Wenn ein Sprung dreimal hintereinander zwei Knochen erzeugt hat, wird er ein viertes Mal zwei Knochen erzeugen. Ändere die Oberfläche, die Gliedmaße oder den Eintrittswinkel — und ändere immer nur eine Sache auf einmal, damit du wirklich lernst, was funktioniert hat.
+Wenn du prüfen willst, ob Codes jemals kommen, tu Folgendes: Öffne die offizielle Seite und lies die Beschreibung sorgfältig, suche dann nach einer Gruppe oder Community-Seite von High Effort Projects. Entwickler kündigen diese Art von Feature dort an, wo Spieler bereits zusammenkommen. Wenn dort nichts ist, gibt es nichts einzulösen.
 
 ## FAQ
 
-**Wie breche ich mehr Knochen, ohne Upgrades zu kaufen?**
-Konzentriere dich zuerst auf die Technik. Saubere Single-Limb-Landungen auf harten Oberflächen, Ketten-Taumel über Treppen und Kantenlandungen erhöhen deine Knochenzahl spürbar, bevor du auch nur eine Münze ausgibst. Upgrades verstärken gute Runs; sie erzeugen sie nicht.
+**Ist Break your Bones dasselbe wie Broken Bones IV?**
+Nein. Es sind verschiedene Roblox-Erfahrungen von verschiedenen Erstellern.
 
-**Bedeutet ein Sturz aus größerer Höhe in Break Your Bones immer mehr Brüche?**
-Nein. Höhe hilft nur, wenn du deine Geschwindigkeit hältst und auf einer harten Oberfläche in einem guten Winkel landest. Ein kontrollierter Sturz auf Beton schlägt meist einen chaotischen Fall auf Gras, selbst wenn der Gras-Fall doppelt so lang ist.
+**Wie viele Leute können gleichzeitig spielen?**
+Bis zu 20 pro Server, laut dem offiziellen Roblox-Eintrag.
 
-**Was ist der schnellste Weg, meine Punktzahl in Break Your Bones zu erhöhen?**
-Staple Multiplikatoren. Lande einen sauberen Bruch, um die Kette zu starten, halte die Ragdoll in Bewegung in eine zweite harte Oberfläche und beende den Run innerhalb eines Zonenbonus, während der Ketten-Timer noch aktiv ist. Das Überschneiden von zwei oder mehr Multiplikatoren erzeugt die größten Runs.
+**Wann wurde das Spiel veröffentlicht?**
+Der Ort wurde am 5. Juni 2025 erstellt. Er wurde zuletzt am 13. Oktober 2026 aktualisiert.
 
-**Funktionieren Community-Tricks wirklich?**
-Viele schon, aber behandle sie als Ausgangspunkte, nicht als Regeln. Die Erfahrung der Spieler variiert je nach Karte und danach, wie die Physik-Engine in einem bestimmten Update abgestimmt ist. Teste jede Technik selbst und behalte die Teile, die konstant Brüche erzeugen.
+**Wie schalte ich neue Ragdolls frei?**
+Die offizielle Beschreibung bestätigt, dass Freischaltungen existieren, erklärt aber nicht die Methode. Prüfe die UI des Spiels und die Community-Kanäle des Entwicklers für aktuelle Details.
 
-Die Kurzfassung: Verstehe die Physik, lande gezielt, halte die Kette am Leben und gib deine Währung für Upgrades aus, die jedem Run helfen. Wenn du diese vier Dinge tust, ist „wie brichst du mehr Knochen" kein Rätsel mehr — es wird zur Routine.
+**Gibt es Codes?**
+Auf der offiziellen Seite sind keine dokumentiert. Verifiziere dort, bevor du einer Drittanbieter-Liste vertraust.
+
+**Muss ich jeden Knochen brechen, um voranzukommen?**
+Die Beschreibung rahmt „brich alle deine Knochen" als das Ziel, beschreibt aber keine Abschlussbelohnung oder Fortschrittsanforderung.
+
+Der sicherste Weg, Break your Bones zu genießen, ist, es als das zu behandeln, was der Entwickler sagt, dass es ist: ein Physik-Sandkasten darüber, ein Ragdoll in Dinge zu schleudern und die Ergebnisse zu beobachten. Alles darüber hinaus – Freischaltungsraten, Knochenverfolgung, versteckte Features – wird am besten im Spiel oder auf der offiziellen Seite bestätigt statt auf Treu und Glauben hingenommen.

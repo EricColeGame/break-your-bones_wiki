@@ -1,115 +1,85 @@
 export const metadata = {
-  title: "Break Your Bones: Cómo romper más huesos con físicas y combos más inteligentes",
-  description: "Aprende las mecánicas clave de Break Your Bones: cómo romper más huesos con mejores ángulos de impacto, acumulación de combos y decisiones de mejora más inteligentes.",
+  title: "Break your Bones en Roblox: física ragdoll, desbloqueos y lo que realmente está documentado",
+  description: "Una guía fundamentada sobre Break your Bones en Roblox: cómo funciona el sandbox de ragdoll, qué confirma la página oficial y qué tienen que comprobar los jugadores por su cuenta.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-En Break Your Bones, tu puntuación se escribe en fracturas, y la diferencia entre una partida de dos huesos y una de diez casi nunca es suerte. Los jugadores que entienden la velocidad de impacto, el ángulo de contacto y la acumulación de multiplicadores rinden de forma constante mejor que quienes simplemente se lanzan desde lo más alto que encuentran. Si alguna vez te has preguntado cómo romper más huesos sin pasarte horas farmeando, esta guía desglosa las mecánicas que realmente controlan el daño.
+Si has pasado algún tiempo en las listas de Roblox, probablemente hayas visto una miniatura de un personaje flácido cayendo por un borde. Esa imagen pertenece a Break your Bones, un sandbox de física del grupo High Effort Projects. El lugar se creó el 5 de junio de 2025 y se ha actualizado tan recientemente como el 13 de octubre de 2026, según su registro oficial de Roblox. En el momento de escribir esto, acumula aproximadamente 133 millones de visitas y admite hasta 20 jugadores por servidor.
 
-Esa distinción importa porque la mayoría de las partidas fallidas no se deben a falta de habilidad. Se deben a invertir energía en la superficie equivocada, la extremidad equivocada o el momento equivocado. Una vez que ves el sistema que hay detrás de la simulación, cada intento se convierte en una prueba que puedes planificar en lugar de una apuesta que repites.
+Esa combinación —una premisa simple, un motor de física y un servidor compartido— explica la mayor parte del atractivo del juego. Pero también genera mucha confusión en internet, porque la mayor parte de lo que circula sobre el juego son conjeturas. Este artículo separa lo que el desarrollador realmente anuncia de lo que observa la comunidad, y es honesto sobre los vacíos.
 
-## Por qué el número de huesos es la puntuación real en Break Your Bones
+## Qué es realmente Break your Bones
 
-La clasificación de Break Your Bones no premia la distancia recorrida ni lo espectacular que pareció el golpe. Premia el número de huesos que se rompieron durante la caída. Ese único número determina tu rango, tu moneda y la rapidez con la que desbloqueas las mejoras que facilitan el siguiente intento.
+Ve a la página oficial en [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) y encontrarás una descripción breve. Dice, en esencia, que intentas romperte todos los huesos, que es un divertido simulador de romper huesos, que desbloqueas nuevos ragdolls, que te lanzas desde una caída enorme y que es una simulación de física ragdoll.
 
-Los jugadores nuevos suelen asumir que el número de huesos es aleatorio. No lo es. El juego ejecuta una simulación física continua, y cada rotura es el resultado de un pequeño conjunto de entradas: la velocidad en el momento del contacto, el ángulo de la extremidad, la dureza de la superficie y los multiplicadores que hayas acumulado encima. Cambia una entrada y cambia el resultado. Controla las cuatro y dejarás de esperar una gran partida para empezar a construirla.
+Ese es todo el planteamiento. Fíjate en lo que no está ahí: no se menciona moneda, no hay inventario de tienda, no hay valores de daño, no hay sistema de códigos. La descripción oficial no documenta nada de eso, y este artículo no va a inventarlo.
 
-También hay un efecto secundario que los jugadores experimentados explotan constantemente. Un hueso que se rompe pronto cambia cómo se mueve el cuerpo después. Una pierna rota lanza el torso a un giro distinto, lo que a menudo prepara un segundo aterrizaje más duro. En otras palabras, tu primera rotura no es el final de la partida: es la preparación para el resto.
+Lo que sí confirma la página es la estructura. Es una experiencia de Roblox del género sandbox, construida en torno a la física ragdoll, publicada bajo el grupo High Effort Projects y diseñada para hasta 20 jugadores a la vez. El enfoque de "romperte todos los huesos" es el objetivo que el desarrollador te pone delante. La frase "lanzarte desde una caída enorme" te indica el método previsto.
 
-## La física que decide si un hueso se rompe
+## El bucle principal: lanzar, caer, romper, repetir
 
-La mayor parte de la frustración en este género viene de tratar el ragdoll como un personaje que conduces. No lo es. Es un conjunto de masas conectadas por articulaciones, y responde a la fuerza igual que lo haría un objeto real. Los informes de la comunidad señalan de forma consistente cuatro variables que deciden si un aterrizaje produce una fractura o solo un rebote.
+El bucle anunciado es corto y mecánico. Llevas a un personaje hacia un peligro, lo dejas caer desde altura o lo sometes de otro modo a fuerzas que el motor de física resolverá. Si alguna vez has visto un ragdoll en un juego doblarse sobre sí mismo tras un mal aterrizaje, ya entiendes el lenguaje visual de aquí.
 
-| Factor de impacto | Qué controla | Cómo usarlo |
-| --- | --- | --- |
-| Velocidad en el contacto | Energía total entregada al cuerpo | Gana velocidad antes del impacto; una caída larga suele superar a un salto corto |
-| Ángulo de contacto | Cómo viaja la fuerza por la extremidad | Aterriza sobre la extremidad que quieras romper, no de espaldas |
-| Dureza de la superficie | Cuánta energía absorbe el suelo | Prefiere hormigón, roca y metal antes que hierba, arena o agua |
-| Ruta de carga | Qué hueso recibe la fuerza primero | Guía con un brazo o una pierna para convertir un aterrizaje en varias roturas |
-| Momento residual | Si el cuerpo sigue rodando | Deja que el ragdoll ruede en lugar de cancelar la animación |
+De eso se derivan dos decisiones de diseño. Primero, el ragdoll es el protagonista: el juego no te pide que luches contra nada, te pide que observes cómo un cuerpo reacciona a la física. Segundo, la "caída enorme" es un elemento central deliberado, no una actividad secundaria, porque produce los resultados más dramáticos.
 
-El modelo físico que hay detrás está bien documentado: si quieres entender por qué los ragdolls se sacuden como lo hacen, [el catálogo de juegos sandbox con físicas en Steam](https://store.steampowered.com/tags/en/Physics/) es un buen lugar para ver cómo distintos títulos ajustan la misma simulación subyacente.
+Lo que no está documentado: el modelo de daño específico, si los huesos individuales se rastrean por separado o como un grupo, si hay una recompensa de finalización por "todos los huesos", y si los peligros son estáticos o rotativos. Esos detalles son visibles al jugar pero están ausentes del registro oficial.
 
-Una regla práctica: la energía que se absorbe es energía que no rompe nada. El terreno blando, los aterrizajes planos y las caídas cortas absorben energía. El terreno duro, los aterrizajes en bordes y las caídas largas la convierten en daño. Cuando una partida se sienta floja, pregúntate cuál de esas tres cosas hiciste mal.
+| Pregunta | Qué dice la página oficial | Cómo verificarlo |
+|---|---|---|
+| ¿Cuántos jugadores por servidor? | Hasta 20 (según el registro de Roblox) | Consulta el recuento de jugadores en la página del juego |
+| ¿Hay un sistema de códigos? | No se documenta ningún sistema de códigos | Busca un campo de códigos en la interfaz o una publicación del desarrollador |
+| ¿Hay ragdolls desbloqueables? | Sí, "desbloquea nuevos ragdolls" | Juega y observa las notificaciones de desbloqueo |
+| ¿Cómo se calcula el daño? | No documentado | Prueba caídas desde alturas conocidas tú mismo |
+| ¿Quién lo hizo? | High Effort Projects | El creador aparece en la página del juego |
 
-## Cómo romper más huesos: técnicas que funcionan
+## Desbloquear nuevos ragdolls
 
-La técnica importa más que la altura bruta una vez superas los mapas de principiante. Estos son los enfoques que aparecen una y otra vez en las partidas con puntuaciones altas, ordenados más o menos por lo difícil que resulta ejecutarlos.
+La descripción oficial nombra un gancho de progresión y solo uno: "desbloquea nuevos ragdolls". Es un detalle significativo porque nos dice que el juego tiene alguna forma de bucle de retención, pero la página oficial no dice cómo se ganan los desbloqueos. No nombra una moneda, no lista precios, no describe un sistema de XP ni menciona una tienda o caja.
 
-- **Golpe con una sola extremidad.** Recoge una extremidad bajo el cuerpo para que reciba todo el impacto. Sencillo, repetible y la base de todo lo demás.
-- **Caída encadenada.** Tras la primera rotura, resiste la tentación de dejar de moverte. Deja que el cuerpo ruede cuesta abajo o por una escalera para que cada giro produzca otro punto de contacto.
-- **Rebote en escalera.** Las escaleras son un multiplicador disfrazado: cada escalón es una superficie dura distinta, así que una caída puede generar varios impactos diferenciados.
-- **Aterrizaje en el borde.** Apunta a la esquina de una plataforma en vez de al centro. Concentrar la fuerza en un área pequeña suele producir más roturas que un impacto amplio y plano.
-- **Ayuda de vehículo u objeto.** Que te golpee algo en movimiento suele valer más que una caída larga, pero es mucho más difícil de apuntar.
-- **Remate de combo.** Reserva tu caída más alta para el final de una cadena, cuando tus multiplicadores ya están activos.
+Las guías y vídeos de la comunidad a menudo presentan las rutas de desbloqueo como hechos establecidos. Trátalos como observaciones de terceros, no como documentación del desarrollador. Pueden ser precisos, incompletos u obsoletos tras un parche, y el juego se actualizó el 13 de octubre de 2026, lo cual es lo bastante reciente como para que las guías más antiguas no reflejen la versión actual.
 
-| Técnica | Dificultad | Recompensa típica |
-| --- | --- | --- |
-| Golpe con una sola extremidad | Baja | Uno o dos huesos |
-| Caída encadenada | Media | Tres a cinco huesos |
-| Rebote en escalera | Media | Varias roturas por tramo |
-| Aterrizaje en el borde | Media | Más daño por contacto |
-| Ayuda de vehículo u objeto | Alta | Totales grandes pero inconsistentes |
-| Remate de combo | Alta | Multiplica una racha existente |
+Si quieres saber cómo funcionan los desbloqueos ahora mismo, el camino fiable es sencillo:
 
-Si acabas de empezar, no persigas las opciones de alta dificultad. Un jugador que clava un golpe limpio con una sola extremidad en cada intento ganará más que uno que logra un choque espectacular una de cada diez veces.
+1. Juega una sesión y observa las notificaciones en pantalla cuando alcances un hito.
+2. Consulta la página oficial del juego para ver actualizaciones de la descripción.
+3. Busca un espacio comunitario, página de grupo o canal social de High Effort Projects donde publique el desarrollador.
+4. Compara notas con otros jugadores en el propio servidor y luego confirma probando.
 
-## Acumular multiplicadores: convertir una rotura en cinco
+## La capa de sandbox multijugador
 
-Aquí es donde la brecha entre jugadores medios y élite se abre de verdad. En Break Your Bones, el daño no solo se suma: se multiplica. Varios sistemas funcionan a la vez, y la partida solo se vuelve realmente grande cuando dos o más se solapan.
+Con hasta 20 jugadores por servidor, Break your Bones no es un juguete de física solitario. Otros jugadores normalmente son visibles, lo que da forma a la experiencia de maneras que la descripción oficial no detalla. Los sandbox de física de este tipo tienden a producir espectáculos compartidos: alguien encuentra un punto alto, otro lo copia y el servidor se agolpa alrededor del mismo peligro.
 
-| Fuente de multiplicador | Cómo activarlo | Notas |
-| --- | --- | --- |
-| Bono de velocidad | Golpear el suelo por encima de un umbral de velocidad | Suele tener tope, así que acumula otras fuentes |
-| Bono de cadena | Romper huesos dentro de una ventana corta de tiempo | El temporizador normalmente se reinicia con un aterrizaje suave |
-| Golpe en punto débil | Romper un hueso pequeño como un dedo, una costilla o la mandíbula | Daño base bajo, valor de multiplicador alto |
-| Bono de zona | Aterrizar dentro de un área resaltada del mapa | Fíjate en las superficies marcadas antes de saltar |
-| Multiplicador de mejora | Comprarlo en el árbol de progresión | Permanente, se aplica a todas las partidas futuras |
+Aquí también importan las expectativas de rendimiento. La física ragdoll es computacionalmente más pesada que una escena estática, y un servidor lleno con múltiples cuerpos activos es una experiencia distinta a la de uno tranquilo. Si tu sesión va mal, probar un servidor menos poblado es un primer paso razonable, aunque el desarrollador no ha publicado ninguna guía de rendimiento, así que eso es un hábito práctico más que una recomendación oficial.
 
-El error más común aquí es tratar estos elementos como objetivos separados. No lo son. Una buena partida suele ser así: gana velocidad en una caída larga, aterriza sobre un hueso pequeño para activar el bono de punto débil, mantén la cadena viva rodando hacia una segunda superficie dura y termina dentro de un bono de zona mientras el temporizador de cadena sigue corriendo.
+## Sobre códigos y moneda del juego
 
-El momento lo es todo. Los informes de la comunidad sugieren que la mayoría de las ventanas de cadena son cortas: suficientes para conectar dos o tres impactos, pero no para caminar hasta un punto mejor. Planifica tu ruta antes de saltar, no después de aterrizar.
+Busca Break your Bones y pronto te toparás con páginas que prometen códigos. Ten cuidado aquí.
 
-## Mejoras: en qué deberías gastar tus huesos
+La descripción oficial de Roblox no documenta ningún sistema de canje de códigos. No se menciona ningún campo de códigos, no se da ningún nombre de moneda y no se listan precios de objetos. Eso no prueba que no exista un sistema de códigos: significa que el desarrollador no documenta ninguno en la página que normalmente lo anunciaría.
 
-Cada partida se convierte en moneda, y cada compra cambia permanentemente tu techo de daño. Gastarla mal es la forma más rápida de estancarte.
+Por eso, ningún artículo puede honestamente darte una lista de códigos funcionales. Quien publique una está adivinando, reciclando códigos de otro juego o sacándolos de una app móvil con un nombre similar. Break Bones: Fall Challenge, las diversas apps de romper huesos en Google Play y la experiencia de Roblox Broken Bones IV son todos productos separados con sus propios sistemas. Las mecánicas y los códigos no se transfieren entre ellos.
 
-| Tipo de mejora | Prioridad | Por qué importa |
-| --- | --- | --- |
-| Multiplicador de impacto o daño por caída | Alta | Escala cada partida que intentas |
-| Potencia de lanzamiento o velocidad | Alta | Más energía por intento significa más roturas por intento |
-| Control del ragdoll | Media | Te ayuda a apuntar el segundo y el tercer impacto |
-| Bonos específicos de hueso | Media | Excelentes cuando ya puedes golpear esos huesos con fiabilidad |
-| Desbloqueos cosméticos | Baja | Sin efecto en el número de huesos |
+Si quieres comprobar si algún día llegan códigos, haz esto: abre la página oficial y lee la descripción con atención, luego busca un grupo o página comunitaria de High Effort Projects. Los desarrolladores anuncian ese tipo de función donde ya se reúnen los jugadores. Si no hay nada ahí, no hay nada que canjear.
 
-Una buena regla general: compra la mejora que te ayuda en una mala partida, no la que te ayuda en una perfecta. Los multiplicadores planos de daño hacen exactamente eso. Los bonos muy específicos solo rinden cuando tu técnica ya es consistente.
+## FAQ
 
-## Errores que te cuestan roturas sin que te des cuenta
+**¿Break your Bones es lo mismo que Broken Bones IV?**
+No. Son experiencias de Roblox diferentes de creadores diferentes.
 
-| Error | Qué te cuesta |
-| --- | --- |
-| Cancelar la animación antes de tiempo | Mata la cadena de caída antes de que se desarrolle |
-| Aterrizar plano de espaldas | Reparte la fuerza en lugar de concentrarla |
-| Ignorar el tipo de terreno | El suelo blando absorbe la energía que necesitabas |
-| Buscar altura en vez de ángulo | Las caídas largas con malos ángulos producen una sola rotura |
-| Comprar mejoras al azar | Desperdicia moneda en ventajas de bajo impacto |
-| Repetir una ruta fallida | Las mismas entradas, el mismo resultado |
+**¿Cuánta gente puede jugar a la vez?**
+Hasta 20 por servidor, según el registro oficial de Roblox.
 
-La última merece énfasis. Si un salto produjo dos huesos tres veces seguidas, producirá dos huesos una cuarta vez. Cambia la superficie, la extremidad o el ángulo de entrada, y cambia solo una cosa a la vez para que de verdad aprendas qué funcionó.
+**¿Cuándo se lanzó el juego?**
+El lugar se creó el 5 de junio de 2025. Se actualizó por última vez el 13 de octubre de 2026.
 
-## Preguntas frecuentes
+**¿Cómo desbloqueo nuevos ragdolls?**
+La descripción oficial confirma que existen desbloqueos pero no explica el método. Consulta la interfaz del juego y los canales comunitarios del desarrollador para detalles actuales.
 
-**¿Cómo rompo más huesos sin comprar mejoras?**
-Céntrate primero en la técnica. Los aterrizajes limpios con una sola extremidad sobre superficies duras, las caídas encadenadas por escaleras y los aterrizajes en bordes subirán tu número de huesos de forma notable antes de que gastes una sola moneda. Las mejoras amplifican las buenas partidas; no las crean.
+**¿Hay códigos?**
+No hay ninguno documentado en la página oficial. Verifícalo ahí antes de confiar en cualquier lista de terceros.
 
-**¿Caer desde más alto significa siempre más roturas en Break Your Bones?**
-No. La altura solo ayuda si conservas la velocidad y aterrizas sobre una superficie dura con un buen ángulo. Una caída controlada sobre hormigón normalmente supera a una caída caótica sobre hierba, aunque la de hierba sea el doble de larga.
+**¿Necesito romper todos los huesos para progresar?**
+La descripción plantea "romperte todos los huesos" como el objetivo, pero no describe una recompensa de finalización ni un requisito de progresión.
 
-**¿Cuál es la forma más rápida de subir mi puntuación en Break Your Bones?**
-Acumula multiplicadores. Logra una rotura limpia para iniciar la cadena, mantén el ragdoll avanzando hacia una segunda superficie dura y termina dentro de un bono de zona mientras el temporizador de cadena sigue activo. Solapar dos o más multiplicadores es lo que produce las partidas más grandes.
-
-**¿De verdad funcionan los trucos de la comunidad?**
-Muchos sí, pero tómalos como puntos de partida y no como reglas. La experiencia de los jugadores varía según el mapa y según cómo se ajuste el motor físico en cada actualización, así que prueba cualquier técnica por tu cuenta y quédate con las partes que producen roturas de forma consistente.
-
-La versión corta: entiende la física, aterriza con intención, mantén la cadena viva y gasta tu moneda en mejoras que ayuden en todas las partidas. Haz esas cuatro cosas y cómo romper más huesos deja de ser un misterio: se convierte en una rutina.
+La forma más segura de disfrutar Break your Bones es tratarlo como lo que el desarrollador dice que es: un sandbox de física sobre lanzar un ragdoll contra cosas y observar los resultados. Todo lo demás —tasas de desbloqueo, seguimiento de huesos, funciones ocultas— se confirma mejor en el juego o en la página oficial que darlo por sentado.

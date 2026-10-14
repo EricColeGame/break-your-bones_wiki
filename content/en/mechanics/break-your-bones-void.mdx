@@ -1,120 +1,97 @@
 export const metadata = {
-  title: "Break your Bones Void Mechanic Explained: Fall Damage, Bone Breaks, and Reset Rules",
-  description: "A clear guide to the Break your Bones void mechanic — how fall damage, bone breaks, and out-of-bounds resets interact, plus tips to survive both.",
+  title: "Break Your Bones on Roblox: How the Ragdoll Sandbox Works",
+  description: "A grounded guide to Break your Bones on Roblox: what the official page confirms, how the ragdoll physics plays, and what remains undocumented.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-A broken femur in the middle of a boss fight is bad. A broken femur followed by a tumble into the void is worse. That double punishment is exactly why the **Break your Bones void** interaction frustrates so many players — a single mistake gets billed twice. Once you understand how the **Break your Bones void** mechanic is wired together, though, it stops feeling random and starts feeling like a rule you can play around. This guide breaks down what the bone-break state actually does, how out-of-bounds voids interact with it, and the habits that keep you alive when the floor disappears.
+Break your Bones is a Roblox physics sandbox built around a simple, morbidly funny premise: throw a ragdoll character into things and see how much damage the skeleton takes. Created by the group High Effort Projects, the experience was published on June 5, 2025 and was still receiving updates as of October 13, 2026, according to the official Roblox record. It supports up to 20 players per server and has accumulated roughly 133 million visits — numbers that suggest a lot of people enjoy watching a cartoon body bounce off a staircase.
 
-## What "Break your Bones" and the Void Actually Mean
+This article sticks to what is actually documented. The official page for [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) advertises a short list of features and nothing more: breaking all your bones, a bone-smashing simulator, unlocking new ragdolls, flinging yourself from a huge drop, and ragdoll physics. There is no published code system, no currency list, no price sheet, and no damage table. Anything beyond that list comes from player observation, not developer documentation, and should be treated accordingly.
 
-Two separate systems are talking to each other here, and most of the confusion comes from treating them as one thing. The bone-break system is a *status effect* — it reacts to impact and changes what your character can physically do. The void is a *boundary* — an invisible kill plane that removes you from the level the moment you cross it.
+## What the Official Description Actually Says
 
-Neither system knows or cares about the other by default. That independence is why the outcome feels inconsistent from map to map and patch to patch.
+The Roblox listing is deliberately terse. Its advertised features are:
 
-| Term | What it does | Typical trigger |
+- Try to break all of your bones
+- A fun bone-smashing simulator
+- Unlock new ragdolls
+- Fling yourself from a huge drop
+- A ragdoll physics simulation
+
+That is the entire verified feature set. Notice what is absent: no mention of codes, no in-game currency name, no shop inventory, no upgrade tiers, no bone-count mechanics, and no specific hazards. If you see a guide claiming to know the exact number of bones in the model or the damage value of a particular fall, that information is not coming from the official page.
+
+The important structural takeaway is that Break your Bones is a **sandbox**, not a progression RPG. The loop is physics experimentation plus ragdoll unlocks. That framing explains almost everything about how the game plays.
+
+## How the Ragdoll Physics Loop Works
+
+Based on the advertised features, the core interaction is straightforward: your character becomes a physics-driven ragdoll, you apply force to it — through a fling, a drop, or an environmental hazard — and the simulation resolves what happens to the body. The "huge drop" mentioned in the description is the clearest example: you launch yourself from height, gravity does the work, and the ragdoll reacts on impact.
+
+Because the game is a physics simulation rather than a scripted animation set, outcomes vary. Position, angle, speed, and what you land on all influence the result. That variability is the appeal — it is the same reason players enjoy stacking objects in other sandbox titles. It also means no guide can hand you a guaranteed method for a specific result, because the simulation itself is the variable.
+
+A practical approach for new players:
+
+1. Start with the huge drop. It is explicitly advertised and requires no unlocks.
+2. Try different landing surfaces and entry angles rather than repeating the same fall.
+3. Watch how the ragdoll settles — the physics response is the content.
+4. Use multiplayer servers to observe what other players are doing. With up to 20 players per server, there is usually something happening.
+
+## Unlocking New Ragdolls
+
+"Unlock new ragdolls" is the only progression element the official description names. It does not explain the unlock condition, whether unlocks are permanent, how many ragdolls exist, or whether any are paid.
+
+Third-party guides sometimes describe unlock methods, but those are community observations rather than developer documentation, and they can go stale quickly — the place was last updated October 13, 2026, one day before this writing, so the current build may differ from any guide written earlier. The reliable way to check is to open the game and look at whatever interface appears in-game for ragdoll selection.
+
+| Question | Documented answer | How to verify |
 |---|---|---|
-| Bone break | Applies a persistent injured state that limits movement or actions | Hard falls, heavy impacts, scripted traps |
-| Break animation | A ragdoll-style tumble that removes control while the break resolves | Damage crossing a break threshold |
-| Void / kill plane | An invisible boundary below or outside the map that removes the player from play | Walking off an edge, knockback, clipping geometry |
-| Reset | Returns you to a checkpoint, spawn point, or last safe position | Void contact, health reaching zero |
-| Recovery item | A consumable or ability that clears the injured state early | Splints, healing, teammate revives |
+| How many ragdolls exist? | Not documented | Check the in-game ragdoll menu |
+| How do you unlock them? | Not documented | Play and observe the unlock prompt |
+| Are any ragdolls paid? | Not documented | Check the in-game shop or Robux prompts |
+| Do ragdolls change physics? | Not documented | Test the same drop with different ragdolls |
 
-The practical takeaway: breaking a bone is something that happens *to your character*, while the void is something that happens *to the map*. They collide constantly because bone breaks usually cost you the mobility you need to avoid falling.
+That table is intentionally mostly empty on the answers side. Filling it in with guesses would be worse than leaving it blank.
 
-## How the Break your Bones Void Loop Actually Works
+## Codes, Currency, and Other Undocumented Systems
 
-The sequence almost always follows the same shape. You take an impact, the break threshold trips, control drops, and the loss of control is what carries you over the edge. By the time the ragdoll phase ends, you are already past the point of no return.
+Searches for Break your Bones codes are common, and the honest answer is that **the official Roblox page documents no code system at all**. There is no redemption box described, no code list published, and no developer post referenced on the listing. If codes exist, they are not part of the advertised feature set and cannot be confirmed from official sources.
 
-| Step | What happens | What you can still control |
-|---|---|---|
-| 1 | Hard impact lands (fall, knockback, trap) | Positioning, armor, landing perks |
-| 2 | Damage crosses the break threshold; injured state applies | Damage reduction, defensive buffs |
-| 3 | Movement is limited; limp or ragdoll phase begins | Very little — usually a short timing window |
-| 4 | Reduced control carries you toward the map edge | Nothing once airborne |
-| 5 | Void contact triggers a reset or a second lethal event | Nothing |
-| 6 | Respawn, with or without the injury persisting | Loadout, checkpoint choice |
+The same applies to currency. No currency name appears in the description. No item prices appear either. Any article quoting a specific price, a coin name, or a damage formula is working from assumptions or from an older build, not from documentation.
 
-Depending on how a given game is built, you will see one of three outcomes after step 5:
+To check for yourself:
 
-- **Mercy reset** — the void wipes the injury entirely and you respawn clean. This is the friendliest version and the one most players assume is universal.
-- **Persistent injury** — you respawn still broken, which turns one mistake into a slow, punishing recovery loop.
-- **Stacked penalty** — the void applies its own lethal damage on top of the break, so you lose both a life and a healing resource.
+- Open the official page and read the full description — it is short, so you can read all of it.
+- Look at the High Effort Projects group page on Roblox for developer announcements.
+- Join the game and look for any code entry field in the menus. If there is none, there is nothing to redeem.
 
-Community reports suggest the "mercy reset" version is the most common in modern action games, but player experience varies wildly between titles and even between maps in the same title. If you are unsure which version you are playing, test it somewhere harmless before you test it in a boss arena.
+If the developers add a code system later, the group page is where it would most likely be announced first.
 
-## Bone Break Severity Tiers and Void Reset Behavior
+## Playing With Others and Setting Expectations
 
-Most implementations sort injuries into rough tiers. The exact numbers behind those tiers are game-specific and often change between patches, so treat the table below as a framework rather than a fixed chart. What matters is recognizing which tier you are in, because your recovery options shrink fast as severity climbs.
+Servers hold up to 20 players, which makes Break your Bones as much a social toy as a solo sandbox. The physics simulation runs for everyone in the server, so multiplayer sessions tend to be chaotic in a good way.
 
-| Tier | In-game cue | Movement effect | Usual fix |
-|---|---|---|---|
-| Hairline | Slight limp, faint screen tint | Minor speed loss | Short rest or basic heal |
-| Moderate | Limb visibly out of place, actions restricted | No sprint, slower climbing | Splint or dedicated item |
-| Severe | Crawl-only or prone state | Cannot fight normally | Long heal timer, teammate assist |
-| Critical | Heavy screen effects, countdown | Incapacitated | Revive or full reset |
+Two expectations worth setting honestly:
 
-Severity also decides how the void treats you. A hairline break rarely stops you from steering back to safety, so the void never comes into play. A severe or critical break removes steering entirely, which is why high-tier injuries and void deaths are so strongly correlated.
+- **No guide guarantees a specific outcome.** Physics sandboxes are non-deterministic by design. You can improve your odds of an interesting result by varying your approach, but you cannot script it.
+- **Undocumented means undocumented.** Bone counts, damage values, unlock thresholds, and shop contents are simply not published. Treat any specific number you read elsewhere as unverified until you confirm it in-game.
 
-| Question | Void reset | Bone break |
-|---|---|---|
-| Root cause | Leaving the playable area | Impact above the break threshold |
-| Damage model | Instant or percentage-based | Threshold-based status effect |
-| Duration | Instant, followed by respawn | Persists until healed or timed out |
-| Counterplay | Stay inside geometry, respect ledges | Armor, landing perks, safer routes |
-| Interaction | Can cancel an active break | Can be cancelled by a void reset |
+Break your Bones is best understood as a physics playground with a darkly comic theme, not a stat-optimization game. The official description promises a bone-smashing simulator with unlockable ragdolls and a big drop. That is exactly what it delivers, and the rest is for you to discover by playing.
 
-That last row is the whole argument in miniature. When the void resolves *before* the break finishes applying, you often get a free cleanup. When the break resolves first, you get the slow version.
+## FAQ
 
-## Practical Tips to Survive the Break your Bones Void Loop
+**Is Break your Bones the same as Broken Bones IV?**
+No. They are separate Roblox experiences with different creators and different official descriptions. Mechanics from one should not be assumed to apply to the other.
 
-Surviving the **Break your Bones void** combination is mostly about removing the second half of the equation. You cannot always prevent a break — knockback exists, traps exist, and bosses cheat — but you can almost always prevent the fall that follows it.
+**Does Break your Bones have codes?**
+The official Roblox page documents no code system, no redemption box, and no code list. Check the official page and the High Effort Projects group for any future announcements.
 
-- **Test ledges before you trust them.** Walk, do not sprint, along any edge you have not personally verified.
-- **Keep one healing item in reserve.** Never spend your last splint on a hairline break mid-fight.
-- **Learn the kill plane.** Many voids sit well below the visible floor, so the "safe-looking" drop is not safe.
-- **Read knockback direction, not just knockback size.** Being pushed *toward* the map center is survivable; being pushed outward rarely is.
-- **Treat movement abilities as recovery tools.** Save the dash or double jump for the moment you lose control, not for travel.
-- **Fight with your back to solid geometry.** It costs you almost nothing and removes most void risk from the encounter.
+**How many players can join a server?**
+Up to 20, per the official Roblox record.
 
-| Risk factor | Mitigation | Why it works |
-|---|---|---|
-| Unverified ledge | Walk-test first | Confirms collision before you commit momentum |
-| Outward knockback | Position with a wall behind you | Converts a void death into a wall slam |
-| No healing left | Reserve one item slot | Preserves a recovery option after a break |
-| Ragdoll near an edge | Pre-plan an escape route | Gives you a direction the instant control returns |
-| Panic inputs | Slow down after a break | Prevents the second mistake that sends you off |
+**Who made it?**
+The Roblox group High Effort Projects. The place was created June 5, 2025.
 
-If you take only one habit from this section, make it the wall-behind-you rule. It is the single cheapest way to defuse the **Break your Bones void** trap in any encounter that features both mechanics.
+**How do I unlock ragdolls?**
+Unlocking is advertised, but the method is not documented. Check the in-game ragdoll menu for the current requirement.
 
-## Myths, Edge Cases, and Community Reports
-
-A lot of what circulates about this mechanic is folklore. Player experience is genuinely useful here, but it is also anecdotal, so it is worth separating what the systems actually do from what people assume they do.
-
-| Myth | Reality |
-|---|---|
-| "The void always heals your bones." | Only in builds that explicitly clear status effects on reset. Many do not. |
-| "You can air-control out of a break." | Usually false once the ragdoll phase starts; check your specific title. |
-| "Higher difficulty makes the void deadlier." | Sometimes true for damage scaling, rarely true for the boundary itself. |
-| "A break near an edge is always fatal." | False — it depends entirely on severity tier and knockback direction. |
-
-For a neutral reference on how out-of-bounds boundaries and kill planes are defined across the medium, the [glossary of video game terms covering out-of-bounds behavior](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) is a solid starting point. It will not tell you the numbers for your game, but it will keep you from mixing up related concepts.
-
-One edge case worth flagging: geometry clipping. If you fall *through* the map rather than off it, some engines register a void contact instantly while others register a normal fall first. Community reports describe both behaviors, sometimes within the same game on different maps, so do not assume consistency.
-
-## Frequently Asked Questions
-
-**Does falling into the void always break your bones?**
-No. The void is a boundary, not an impact. It only breaks your bones if the game routes void contact through its damage or fall system. In many titles, the void simply resets you, and the **Break your Bones void** interaction only appears when you were already injured before you fell.
-
-**Can you cancel the Break your Bones void interaction?**
-Sometimes, and usually by accident. If the reset resolves before the break status finishes applying, the injury is often wiped. There is rarely a deliberate button for this — it is a timing artifact of how the two systems resolve in order.
-
-**Is the Break your Bones void mechanic identical in every game?**
-Not remotely. The threshold values, severity tiers, reset behavior, and whether injuries persist through respawn all vary by title, mode, and patch. Treat any universal claim you read online with suspicion and verify it in your own build.
-
-**What is the fastest recovery after a break near the void?**
-Get to solid ground before you heal. Healing while you are still on an unstable edge wastes the item and often ends with a second, worse break. Stabilize your position, then commit the resource.
-
-The short version: bone breaks are a mobility tax, and the void is what collects on the debt. Learn to recognize the threshold, respect the ledges, and keep one escape route in your head at all times. Do that, and the **Break your Bones void** loop stops being a coin flip and becomes just another mechanic you have already solved.
+**Can I break every bone?**
+That is the stated goal in the official description — "try to break all of your bones." Whether a specific run achieves it depends on the physics simulation, and no verified bone count is published.

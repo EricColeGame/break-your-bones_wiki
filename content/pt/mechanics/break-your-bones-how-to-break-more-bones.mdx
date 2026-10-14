@@ -1,115 +1,85 @@
 export const metadata = {
-  title: "Break Your Bones: Como Quebrar Mais Ossos com Física e Combos Mais Inteligentes",
-  description: "Aprenda as mecânicas centrais de Break Your Bones: como quebrar mais ossos com melhores ângulos de impacto, acúmulo de combos e escolhas de upgrade mais inteligentes.",
+  title: "Break your Bones no Roblox: Física de Ragdoll, Desbloqueios e o que Realmente Está Documentado",
+  description: "Um guia fundamentado sobre Break your Bones no Roblox: como funciona o sandbox de ragdoll, o que a página oficial confirma e o que os jogadores ainda precisam testar por conta própria.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Em Break Your Bones, sua pontuação é escrita em fraturas — e a diferença entre uma run de dois ossos e uma de dez ossos quase nunca é sorte. Jogadores que entendem velocidade de impacto, ângulo de contato e acúmulo de multiplicadores superam consistentemente aqueles que simplesmente pulam do lugar mais alto que conseguem encontrar. Se você já se perguntou como quebrar mais ossos sem passar horas grindando, este guia detalha as mecânicas que realmente controlam o dano.
+Se você já passou algum tempo nas paradas de sucesso do Roblox, provavelmente já viu a miniatura de um personagem mole cambaleando para fora de uma borda. Essa imagem pertence a Break your Bones, um sandbox de física do grupo High Effort Projects. O lugar foi criado em 5 de junho de 2025 e foi atualizado recentemente em 13 de outubro de 2026, de acordo com seu registro oficial no Roblox. No momento em que este artigo foi escrito, ele acumula cerca de 133 milhões de visitas e suporta até 20 jogadores por servidor.
 
-Essa distinção importa porque a maioria das runs fracassadas não é causada por falta de habilidade. Elas são causadas por direcionar energia para a superfície errada, o membro errado ou o momento errado. Quando você consegue enxergar o sistema por trás da simulação, cada tentativa se torna um teste que você pode planejar, em vez de uma aposta que você repete.
+Essa combinação — uma premissa simples, um motor de física e um servidor compartilhado — explica a maior parte do apelo do jogo. Mas também gera muita confusão online, porque a maior parte do que circula sobre o jogo é especulação. Este artigo separa o que o desenvolvedor realmente anuncia do que a comunidade observa, e é honesto sobre as lacunas.
 
-## Por Que a Contagem de Ossos É a Pontuação Real em Break Your Bones
+## O que Break your Bones Realmente É
 
-O placar de líderes em Break Your Bones não recompensa a distância percorrida nem o quão dramática a queda pareceu. Ele recompensa o número de ossos que se quebraram durante a queda. Esse único número determina seu rank, sua moeda e a rapidez com que você desbloqueia os upgrades que tornam a próxima tentativa mais fácil.
+Acesse a página oficial em [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) e você encontrará uma descrição curta. Ela diz, em essência, que você tenta quebrar todos os seus ossos, que é um divertido simulador de esmagamento de ossos, que você desbloqueia novos ragdolls, que você se arremessa de uma queda enorme e que é uma simulação de física de ragdoll.
 
-Jogadores novos geralmente assumem que a contagem de ossos é aleatória. Não é. O jogo roda uma simulação de física contínua, e cada quebra é o resultado de um pequeno conjunto de entradas: velocidade no momento do contato, o ângulo do membro, a dureza da superfície e quaisquer multiplicadores que você tenha acumulado por cima. Mude uma entrada e o resultado muda. Controle as quatro e você para de torcer por uma run grande e começa a construí-la.
+Esse é todo o pitch. Observe o que não está lá: nenhuma menção a moeda, nenhum inventário de loja, nenhum valor de dano, nenhum sistema de códigos. A descrição oficial não documenta nada disso, e este artigo não vai inventá-los.
 
-Há também um efeito de segunda ordem que jogadores experientes exploram constantemente. Um osso que quebra cedo muda como o corpo se move depois. Uma perna quebrada joga o torso em um giro diferente, o que muitas vezes prepara uma segunda aterrissagem mais forte. Em outras palavras, sua primeira quebra não é o fim da run — é a preparação para o resto dela.
+O que a página confirma é a estrutura. É uma experiência do Roblox no gênero sandbox, construída em torno de física de ragdoll, publicada sob o grupo High Effort Projects e projetada para até 20 jogadores ao mesmo tempo. O enquadramento de "quebrar todos os seus ossos" é o objetivo que o desenvolvedor coloca diante de você. A linha "arremesse-se de uma queda enorme" indica o método pretendido.
 
-## A Física Que Decide Se um Osso Quebra
+## O Loop Central: Lançar, Cair, Quebrar, Repetir
 
-A maior parte da frustração nesse gênero vem de tratar o ragdoll como um personagem que você dirige. Ele não é. É uma coleção de massas conectadas por articulações, e responde à força da mesma forma que um objeto real responderia. Relatos da comunidade apontam consistentemente para quatro variáveis que decidem se uma aterrissagem produz uma fratura ou apenas um quique.
+O loop anunciado é curto e mecânico. Você move um personagem para dentro de um perigo, o deixa cair de uma altura ou o submete de outra forma a forças que o motor de física vai resolver. Se você já viu um ragdoll em um jogo se dobrando sobre si mesmo após um pouso ruim, você já entende a linguagem visual aqui.
 
-| Fator de impacto | O que ele controla | Como usá-lo |
-| --- | --- | --- |
-| Velocidade no contato | Energia total entregue ao corpo | Ganhe velocidade antes do impacto; uma queda longa geralmente supera um pulo curto |
-| Ângulo de contato | Como a força percorre um membro | Aterrisse sobre o membro que você quer quebrar, não de costas retas |
-| Dureza da superfície | Quanta energia o chão absorve | Prefira concreto, rocha e metal em vez de grama, areia ou água |
-| Caminho de carga | Qual osso recebe a força primeiro | Lidere com um braço ou perna para converter uma aterrissagem em várias quebras |
-| Momento residual | Se o corpo continua rolando | Deixe o ragdoll rolar em vez de cancelar a animação |
+Duas escolhas de design decorrem disso. Primeiro, o ragdoll é a estrela — o jogo não está pedindo que você lute contra nada, está pedindo que você observe um corpo reagir à física. Segundo, a "queda enorme" é uma peça central deliberada, não uma atividade secundária, porque produz os resultados mais dramáticos.
 
-O modelo de física por trás disso é bem documentado — se você quer entender por que os ragdolls se debatem do jeito que fazem, [o catálogo de jogos sandbox com física na Steam](https://store.steampowered.com/tags/en/Physics/) é um bom lugar para ver como títulos diferentes ajustam a mesma simulação subjacente.
+O que não está documentado: o modelo específico de dano, se ossos individuais são rastreados separadamente ou como um grupo, se há uma recompensa de conclusão por "todos os ossos" e se os perigos são estáticos ou rotativos. Esses detalhes são visíveis em jogo, mas ausentes do registro oficial.
 
-Uma regra prática: energia absorvida é energia que não quebra nada. Terreno macio, aterrissagens planas e quedas curtas absorvem energia. Terreno duro, aterrissagens na borda e quedas longas a convertem em dano. Quando uma run parece fraca, pergunte-se qual desses três você errou.
+| Pergunta | O que a página oficial diz | Como verificar |
+|---|---|---|
+| Quantos jogadores por servidor? | Até 20 (conforme registro do Roblox) | Confira a contagem de jogadores na página do jogo |
+| Existe um sistema de códigos? | Nenhum sistema de códigos está documentado | Procure um campo de código na interface ou uma postagem do desenvolvedor |
+| Existem ragdolls desbloqueáveis? | Sim, "desbloqueie novos ragdolls" | Jogue e fique atento a notificações de desbloqueio |
+| Como o dano é calculado? | Não documentado | Teste quedas em alturas conhecidas você mesmo |
+| Quem fez? | High Effort Projects | Criador exibido na página do jogo |
 
-## Como Quebrar Mais Ossos: Técnicas Que Funcionam
+## Desbloqueando Novos Ragdolls
 
-A técnica importa mais do que a altura bruta depois que você passa dos mapas para iniciantes. Estas são as abordagens que aparecem repetidamente em runs de alta pontuação, ordenadas mais ou menos pela dificuldade de execução.
+A descrição oficial nomeia um gancho de progressão e apenas um: "desbloqueie novos ragdolls". Esse é um detalhe significativo porque nos diz que o jogo tem alguma forma de loop de retenção, mas a página oficial não diz como os desbloqueios são conquistados. Ela não nomeia uma moeda, não lista preços, não descreve um sistema de XP nem menciona uma loja ou caixa.
 
-- **Impacto com um único membro.** Encolha um membro sob o corpo para que ele absorva todo o impacto. Simples, repetível e a base de todo o resto.
-- **Rolamento encadeado.** Depois da primeira quebra, resista à vontade de parar de se mover. Deixe o corpo rolar ladeira abaixo ou por uma escada para que cada rotação produza outro ponto de contato.
-- **Quique na escada.** Escadas são um multiplicador disfarçado: cada degrau é uma superfície dura separada, então uma queda pode gerar vários impactos distintos.
-- **Aterrissagem na borda.** Mire no canto de uma plataforma em vez do meio. Concentrar força em uma área pequena tende a produzir mais quebras do que um impacto largo e plano.
-- **Auxílio de veículo ou objeto.** Ser atingido por algo em movimento costuma valer mais do que uma queda longa, mas é muito mais difícil de mirar.
-- **Finalizador de combo.** Guarde sua queda mais alta para o fim de uma corrente, quando seus multiplicadores já estiverem ativos.
+Guias e vídeos da comunidade frequentemente apresentam rotas de desbloqueio como fato estabelecido. Trate-os como observações de terceiros, não como documentação do desenvolvedor. Eles podem estar precisos, incompletos ou desatualizados após um patch, e o jogo foi atualizado em 13 de outubro de 2026, o que é recente o suficiente para que guias mais antigos possam não refletir a versão atual.
 
-| Técnica | Dificuldade | Retorno típico |
-| --- | --- | --- |
-| Impacto com um único membro | Baixa | Um a dois ossos |
-| Rolamento encadeado | Média | Três a cinco ossos |
-| Quique na escada | Média | Várias quebras por lance |
-| Aterrissagem na borda | Média | Mais dano por contato |
-| Auxílio de veículo ou objeto | Alta | Totais grandes, mas inconsistentes |
-| Finalizador de combo | Alta | Multiplica uma sequência existente |
+Se você quer saber como os desbloqueios funcionam agora, o caminho confiável é direto:
 
-Se você está começando agora, não persiga as opções de alta dificuldade. Um jogador que acerta um impacto limpo com um único membro em todas as tentativas vai lucrar mais do que um jogador que acerta uma queda espetacular a cada dez tentativas.
+1. Jogue uma sessão e fique atento a notificações na tela quando você atingir um marco.
+2. Confira a página oficial do jogo para atualizações na descrição.
+3. Procure um espaço comunitário, página de grupo ou canal social do High Effort Projects onde o desenvolvedor publica.
+4. Compare anotações com outros jogadores no próprio servidor e depois confirme testando.
 
-## Acumulando Multiplicadores: Transformando Uma Quebra em Cinco
+## A Camada de Sandbox Multijogador
 
-É aqui que a diferença entre jogadores medianos e elite realmente se abre. Em Break Your Bones, o dano não é apenas somado — ele é multiplicado. Vários sistemas rodam ao mesmo tempo, e a run só fica realmente grande quando dois ou mais deles se sobrepõem.
+Com até 20 jogadores por servidor, Break your Bones não é um brinquedo de física solitário. Outros jogadores geralmente estão visíveis, o que molda a experiência de maneiras que a descrição oficial não detalha. Sandboxes de física desse tipo tendem a produzir espetáculos compartilhados: alguém encontra um ponto alto, outra pessoa copia e o servidor se aglomera em torno do mesmo perigo.
 
-| Fonte de multiplicador | Como acioná-la | Observações |
-| --- | --- | --- |
-| Bônus de velocidade | Atingir o chão acima de um limite de velocidade | Geralmente tem teto, então acumule outras fontes |
-| Bônus de corrente | Quebrar ossos dentro de uma janela curta de tempo | O cronômetro costuma reiniciar em uma aterrissagem macia |
-| Acerto em ponto fraco | Quebrar um osso pequeno, como dedo, costela ou mandíbula | Dano base baixo, valor de multiplicador alto |
-| Bônus de zona | Aterrissar dentro de uma área destacada do mapa | Fique de olho em superfícies marcadas antes de pular |
-| Multiplicador de upgrade | Comprá-lo na árvore de progressão | Permanente, aplica-se a todas as runs futuras |
+É também aqui que as expectativas de desempenho importam. A física de ragdoll é computacionalmente mais pesada do que uma cena estática, e um servidor lotado com múltiplos corpos ativos é uma experiência diferente de um tranquilo. Se sua sessão estiver travando, tentar um servidor menos populoso é um primeiro passo razoável — embora o desenvolvedor não tenha publicado nenhuma orientação de desempenho, então isso é um hábito prático e não uma recomendação oficial.
 
-O erro mais comum aqui é tratar esses itens como objetivos separados. Eles não são. Uma run forte geralmente se parece com isto: ganhe velocidade em uma queda longa, aterrisse sobre um osso pequeno para acionar o bônus de ponto fraco, mantenha a corrente viva rolando para uma segunda superfície dura e termine dentro de um bônus de zona enquanto o cronômetro da corrente ainda está rodando.
+## Sobre Códigos e Moeda no Jogo
 
-O timing é tudo. Relatos da comunidade sugerem que a maioria das janelas de corrente é curta — tempo suficiente para conectar dois ou três impactos, mas não o bastante para caminhar até um lugar melhor. Planeje sua rota antes de pular, não depois de aterrissar.
+Pesquise por Break your Bones e você rapidamente encontrará páginas prometendo códigos. Tenha cuidado aqui.
 
-## Upgrades: Onde Seus Ossos Devem Ser Investidos
+A descrição oficial do Roblox não documenta nenhum sistema de resgate de códigos. Não há campo de código mencionado, nenhum nome de moeda fornecido e nenhum preço de item listado. Isso não prova que não existe um sistema de códigos — significa que nenhum está documentado pelo desenvolvedor na página que normalmente o anunciaria.
 
-Cada run se converte em moeda, e cada compra muda permanentemente seu teto de dano. Gastar mal é a maneira mais rápida de estagnar.
+Por causa disso, nenhum artigo pode honestamente lhe entregar uma lista de códigos funcionais. Qualquer um que publique uma está adivinhando, reciclando códigos de um jogo diferente ou pegando de um aplicativo mobile com nome similar. Break Bones: Fall Challenge, os vários apps de quebrar ossos no Google Play e a experiência do Roblox Broken Bones IV são todos produtos separados com seus próprios sistemas. Mecânicas e códigos não se transferem entre eles.
 
-| Tipo de upgrade | Prioridade | Por que importa |
-| --- | --- | --- |
-| Multiplicador de impacto ou dano de queda | Alta | Escala cada run que você tenta |
-| Potência de lançamento ou velocidade | Alta | Mais energia por tentativa significa mais quebras por tentativa |
-| Controle do ragdoll | Média | Ajuda a mirar o segundo e o terceiro impacto |
-| Bônus específicos de ossos | Média | Excelentes quando você consegue acertar esses ossos de forma confiável |
-| Desbloqueios cosméticos | Baixa | Nenhum efeito na contagem de ossos |
+Se você quer verificar se os códigos algum dia chegarão, faça o seguinte: abra a página oficial e leia a descrição com atenção, depois procure um grupo ou página comunitária do High Effort Projects. Desenvolvedores anunciam esse tipo de recurso onde os jogadores já se reúnem. Se não há nada lá, não há nada para resgatar.
 
-Uma boa regra geral: compre o upgrade que ajuda você em uma run ruim, não o que ajuda em uma run perfeita. Multiplicadores fixos de dano fazem exatamente isso. Bônus nichados só compensam quando sua técnica já está consistente.
+## FAQ
 
-## Erros Que Custam Quebras Silenciosamente
+**Break your Bones é o mesmo que Broken Bones IV?**
+Não. São experiências diferentes do Roblox de criadores diferentes.
 
-| Erro | O que ele custa |
-| --- | --- |
-| Cancelar a animação cedo demais | Mata a corrente de rolamento antes que ela se desenvolva |
-| Aterrissar de costas retas | Espalha a força em vez de concentrá-la |
-| Ignorar o tipo de terreno | Chão macio absorve a energia que você precisava |
-| Perseguir altura em vez de ângulo | Quedas longas com ângulos ruins produzem uma quebra |
-| Comprar upgrades aleatoriamente | Desperdiça moeda em vantagens de baixo impacto |
-| Repetir uma rota fracassada | Mesmas entradas, mesmo resultado |
+**Quantas pessoas podem jogar ao mesmo tempo?**
+Até 20 por servidor, de acordo com o registro oficial do Roblox.
 
-Vale enfatizar o último. Se um pulo produziu dois ossos três vezes seguidas, ele vai produzir dois ossos na quarta vez. Mude a superfície, o membro ou o ângulo de entrada — e mude apenas uma coisa de cada vez, para que você realmente aprenda o que funcionou.
+**Quando o jogo foi lançado?**
+O lugar foi criado em 5 de junho de 2025. Foi atualizado pela última vez em 13 de outubro de 2026.
 
-## Perguntas Frequentes
+**Como desbloqueio novos ragdolls?**
+A descrição oficial confirma que os desbloqueios existem, mas não explica o método. Confira a interface do jogo e os canais comunitários do desenvolvedor para detalhes atuais.
 
-**Como quebro mais ossos sem comprar upgrades?**
-Foque na técnica primeiro. Aterrissagens limpas com um único membro em superfícies duras, rolamentos encadeados por escadas e aterrissagens na borda vão aumentar sua contagem de ossos de forma perceptível antes de você gastar uma única moeda. Upgrades amplificam runs boas; eles não as criam.
+**Existem códigos?**
+Nenhum está documentado na página oficial. Verifique lá antes de confiar em qualquer lista de terceiros.
 
-**Cair de mais alto sempre significa mais quebras em Break Your Bones?**
-Não. A altura só ajuda se você mantiver sua velocidade e aterrissar em uma superfície dura com um bom ângulo. Uma queda controlada sobre concreto geralmente supera uma queda caótica sobre grama, mesmo que a queda na grama seja duas vezes mais longa.
+**Preciso quebrar todos os ossos para progredir?**
+A descrição enquadra "quebre todos os seus ossos" como o objetivo, mas não descreve uma recompensa de conclusão ou requisito de progressão.
 
-**Qual é a maneira mais rápida de aumentar minha pontuação em Break Your Bones?**
-Acumule multiplicadores. Acerte uma quebra limpa para iniciar a corrente, mantenha o ragdoll se movendo para uma segunda superfície dura e termine dentro de um bônus de zona enquanto o cronômetro da corrente ainda está ativo. Sobrepor dois ou mais multiplicadores é o que produz as runs maiores.
-
-**Truques da comunidade realmente funcionam?**
-Muitos funcionam, mas trate-os como pontos de partida, e não como regras. A experiência dos jogadores varia conforme o mapa e conforme o ajuste do motor de física em uma atualização específica, então teste qualquer técnica você mesmo e mantenha as partes que produzem quebras de forma consistente.
-
-A versão curta: entenda a física, aterrisse de forma deliberada, mantenha a corrente viva e gaste sua moeda em upgrades que ajudam em todas as runs. Faça essas quatro coisas e como quebrar mais ossos deixa de ser um mistério — vira rotina.
+A maneira mais segura de aproveitar Break your Bones é tratá-lo como o que o desenvolvedor diz que ele é: um sandbox de física sobre lançar um ragdoll contra as coisas e observar os resultados. Tudo além disso — taxas de desbloqueio, rastreamento de ossos, recursos ocultos — é melhor confirmado em jogo ou na página oficial do que aceito por fé.

@@ -1,120 +1,97 @@
 export const metadata = {
-  title: "Mecânica da Void do Break your Bones Explicada: Dano de Queda, Fraturas Ósseas e Regras de Reset",
-  description: "Um guia claro sobre a mecânica da void do Break your Bones — como dano de queda, fraturas ósseas e resets de fora dos limites interagem, além de dicas para sobreviver aos dois.",
+  title: "Break Your Bones no Roblox: Como Funciona o Sandbox de Ragdoll",
+  description: "Um guia fundamentado sobre Break your Bones no Roblox: o que a página oficial confirma, como funciona a física de ragdoll e o que permanece sem documentação.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Um fêmur quebrado no meio de uma luta contra um chefe já é ruim. Um fêmur quebrado seguido de uma queda na void é pior ainda. Esse castigo duplo é exatamente o motivo pelo qual a interação da **void do Break your Bones** frustra tantos jogadores — um único erro é cobrado duas vezes. Porém, quando você entende como a mecânica da **void do Break your Bones** está conectada, ela deixa de parecer aleatória e começa a parecer uma regra com a qual você pode jogar. Este guia explica o que o estado de fratura óssea realmente faz, como as voids fora dos limites interagem com ele e os hábitos que mantêm você vivo quando o chão desaparece.
+Break your Bones é um sandbox de física do Roblox construído em torno de uma premissa simples e morbidamente engraçada: arremessar um personagem ragdoll contra objetos e ver quanto dano o esqueleto sofre. Criado pelo grupo High Effort Projects, o jogo foi publicado em 5 de junho de 2025 e ainda estava recebendo atualizações em 13 de outubro de 2026, de acordo com o registro oficial do Roblox. Ele suporta até 20 jogadores por servidor e acumulou aproximadamente 133 milhões de visitas — números que sugerem que muita gente gosta de assistir um corpo de desenho animado quicar numa escada.
 
-## O Que "Break your Bones" e a Void Realmente Significam
+Este artigo se atém ao que está de fato documentado. A página oficial de [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) anuncia uma lista curta de recursos e nada mais: quebrar todos os seus ossos, um simulador de esmagamento de ossos, desbloquear novos ragdolls, se arremessar de uma queda enorme e física de ragdoll. Não há sistema de códigos publicado, nem lista de moedas, nem tabela de preços, nem tabela de dano. Qualquer coisa além dessa lista vem da observação dos jogadores, não da documentação do desenvolvedor, e deve ser tratada como tal.
 
-Dois sistemas separados estão conversando entre si aqui, e a maior parte da confusão vem de tratá-los como uma coisa só. O sistema de fratura óssea é um *efeito de status* — ele reage ao impacto e muda o que seu personagem consegue fisicamente fazer. A void é um *limite* — um plano de morte invisível que remove você da fase no momento em que você o atravessa.
+## O Que a Descrição Oficial Realmente Diz
 
-Nenhum dos dois sistemas conhece ou se importa com o outro por padrão. Essa independência é o motivo pelo qual o resultado parece inconsistente de mapa para mapa e de patch para patch.
+A listagem no Roblox é deliberadamente sucinta. Seus recursos anunciados são:
 
-| Termo | O que faz | Gatilho típico |
+- Tentar quebrar todos os seus ossos
+- Um divertido simulador de esmagamento de ossos
+- Desbloquear novos ragdolls
+- Se arremessar de uma queda enorme
+- Uma simulação de física de ragdoll
+
+Esse é todo o conjunto de recursos verificados. Observe o que está ausente: nenhuma menção a códigos, nenhum nome de moeda no jogo, nenhum inventário de loja, nenhum nível de upgrade, nenhuma mecânica de contagem de ossos e nenhum perigo específico. Se você encontrar um guia alegando saber o número exato de ossos no modelo ou o valor de dano de uma queda específica, essa informação não vem da página oficial.
+
+A conclusão estrutural importante é que Break your Bones é um **sandbox**, não um RPG de progressão. O loop é experimentação de física mais desbloqueio de ragdolls. Esse enquadramento explica quase tudo sobre como o jogo funciona.
+
+## Como Funciona o Loop de Física de Ragdoll
+
+Com base nos recursos anunciados, a interação principal é direta: seu personagem se torna um ragdoll movido por física, você aplica força a ele — por meio de um arremesso, uma queda ou um perigo ambiental — e a simulação resolve o que acontece com o corpo. A "queda enorme" mencionada na descrição é o exemplo mais claro: você se lança de uma altura, a gravidade faz o trabalho e o ragdoll reage ao impacto.
+
+Como o jogo é uma simulação de física e não um conjunto de animações roteirizadas, os resultados variam. Posição, ângulo, velocidade e aquilo em que você aterrissa influenciam o resultado. Essa variabilidade é o atrativo — é o mesmo motivo pelo qual jogadores gostam de empilhar objetos em outros títulos de sandbox. Isso também significa que nenhum guia pode oferecer um método garantido para um resultado específico, porque a própria simulação é a variável.
+
+Uma abordagem prática para novos jogadores:
+
+1. Comece pela queda enorme. Ela é explicitamente anunciada e não exige desbloqueios.
+2. Experimente diferentes superfícies de aterrissagem e ângulos de entrada em vez de repetir a mesma queda.
+3. Observe como o ragdoll se acomoda — a resposta da física é o conteúdo.
+4. Use servidores multiplayer para observar o que outros jogadores estão fazendo. Com até 20 jogadores por servidor, geralmente há algo acontecendo.
+
+## Desbloqueando Novos Ragdolls
+
+"Desbloquear novos ragdolls" é o único elemento de progressão que a descrição oficial nomeia. Ela não explica a condição de desbloqueio, se os desbloqueios são permanentes, quantos ragdolls existem ou se algum é pago.
+
+Guias de terceiros às vezes descrevem métodos de desbloqueio, mas essas são observações da comunidade e não documentação do desenvolvedor, e podem ficar desatualizadas rapidamente — o jogo foi atualizado pela última vez em 13 de outubro de 2026, um dia antes desta redação, então a versão atual pode diferir de qualquer guia escrito anteriormente. A forma confiável de verificar é abrir o jogo e olhar qualquer interface que apareça in-game para seleção de ragdoll.
+
+| Pergunta | Resposta documentada | Como verificar |
 |---|---|---|
-| Fratura óssea | Aplica um estado persistente de ferimento que limita movimento ou ações | Quedas fortes, impactos pesados, armadilhas roteirizadas |
-| Animação de quebra | Uma cambalhota estilo ragdoll que remove o controle enquanto a fratura é resolvida | Dano cruzando um limite de quebra |
-| Void / plano de morte | Um limite invisível abaixo ou fora do mapa que remove o jogador de jogo | Andar para fora de uma borda, knockback, atravessar geometria |
-| Reset | Retorna você a um checkpoint, ponto de spawn ou última posição segura | Contato com a void, vida chegando a zero |
-| Item de recuperação | Um consumível ou habilidade que limpa o estado de ferimento antecipadamente | Talas, cura, reanimação por aliado |
+| Quantos ragdolls existem? | Não documentado | Confira o menu de ragdolls no jogo |
+| Como desbloqueá-los? | Não documentado | Jogue e observe o prompt de desbloqueio |
+| Algum ragdoll é pago? | Não documentado | Confira a loja no jogo ou prompts de Robux |
+| Os ragdolls alteram a física? | Não documentado | Teste a mesma queda com ragdolls diferentes |
 
-A conclusão prática: quebrar um osso é algo que acontece *com o seu personagem*, enquanto a void é algo que acontece *com o mapa*. Eles colidem constantemente porque fraturas ósseas geralmente custam a mobilidade que você precisa para evitar cair.
+Essa tabela está intencionalmente quase vazia no lado das respostas. Preenchê-la com suposições seria pior do que deixá-la em branco.
 
-## Como o Loop da Void do Break your Bones Realmente Funciona
+## Códigos, Moeda e Outros Sistemas Não Documentados
 
-A sequência quase sempre segue o mesmo formato. Você sofre um impacto, o limite de quebra é atingido, o controle cai, e a perda de controle é o que te leva para fora da borda. Quando a fase de ragdoll termina, você já passou do ponto sem retorno.
+Buscas por códigos de Break your Bones são comuns, e a resposta honesta é que **a página oficial do Roblox não documenta nenhum sistema de códigos**. Não há caixa de resgate descrita, nem lista de códigos publicada, nem post de desenvolvedor referenciado na listagem. Se códigos existem, eles não fazem parte do conjunto de recursos anunciados e não podem ser confirmados por fontes oficiais.
 
-| Etapa | O que acontece | O que você ainda pode controlar |
-|---|---|---|
-| 1 | Impacto forte acontece (queda, knockback, armadilha) | Posicionamento, armadura, vantagens de aterrissagem |
-| 2 | O dano cruza o limite de quebra; estado de ferimento é aplicado | Redução de dano, buffs defensivos |
-| 3 | O movimento é limitado; fase de mancar ou ragdoll começa | Muito pouco — geralmente uma janela curta de timing |
-| 4 | O controle reduzido te carrega em direção à borda do mapa | Nada depois de estar no ar |
-| 5 | Contato com a void dispara um reset ou um segundo evento letal | Nada |
-| 6 | Respawn, com ou sem o ferimento persistindo | Loadout, escolha de checkpoint |
+O mesmo se aplica à moeda. Nenhum nome de moeda aparece na descrição. Nenhum preço de item aparece também. Qualquer artigo citando um preço específico, um nome de moeda ou uma fórmula de dano está trabalhando com suposições ou com uma versão antiga, não com documentação.
 
-Dependendo de como um determinado jogo é construído, você verá um de três resultados após a etapa 5:
+Para verificar por conta própria:
 
-- **Reset misericordioso** — a void apaga o ferimento completamente e você reaparece limpo. Essa é a versão mais amigável e a que a maioria dos jogadores assume ser universal.
-- **Ferimento persistente** — você reaparece ainda quebrado, o que transforma um erro em um loop de recuperação lento e punitivo.
-- **Penalidade acumulada** — a void aplica seu próprio dano letal em cima da fratura, então você perde tanto uma vida quanto um recurso de cura.
+- Abra a página oficial e leia a descrição completa — ela é curta, então você pode ler tudo.
+- Veja a página do grupo High Effort Projects no Roblox para anúncios dos desenvolvedores.
+- Entre no jogo e procure qualquer campo de entrada de código nos menus. Se não houver nenhum, não há nada para resgatar.
 
-Relatos da comunidade sugerem que a versão de "reset misericordioso" é a mais comum em jogos de ação modernos, mas a experiência do jogador varia muito entre títulos e até entre mapas do mesmo título. Se você não tem certeza de qual versão está jogando, teste em algum lugar inofensivo antes de testar em uma arena de chefe.
+Se os desenvolvedores adicionarem um sistema de códigos depois, a página do grupo é onde isso provavelmente seria anunciado primeiro.
 
-## Níveis de Gravidade da Fratura Óssea e Comportamento do Reset da Void
+## Jogando com Outros e Ajustando Expectativas
 
-A maioria das implementações classifica os ferimentos em níveis aproximados. Os números exatos por trás desses níveis são específicos de cada jogo e frequentemente mudam entre patches, então trate a tabela abaixo como um framework, não como um gráfico fixo. O que importa é reconhecer em qual nível você está, porque suas opções de recuperação encolhem rápido conforme a gravidade aumenta.
+Os servidores comportam até 20 jogadores, o que torna Break your Bones tanto um brinquedo social quanto um sandbox solo. A simulação de física roda para todos no servidor, então sessões multiplayer tendem a ser caóticas de um jeito bom.
 
-| Nível | Indício no jogo | Efeito no movimento | Solução usual |
-|---|---|---|---|
-| Fissura | Leve mancar, leve tom na tela | Perda menor de velocidade | Descanso curto ou cura básica |
-| Moderada | Membro visivelmente fora de lugar, ações restritas | Sem corrida, escalada mais lenta | Tala ou item dedicado |
-| Grave | Estado de apenas engatinhar ou de bruços | Não pode lutar normalmente | Timer longo de cura, ajuda de aliado |
-| Crítica | Efeitos pesados na tela, contagem regressiva | Incapacitado | Reanimação ou reset completo |
+Duas expectativas que vale a pena estabelecer com honestidade:
 
-A gravidade também decide como a void te trata. Uma fissura raramente impede você de se guiar de volta à segurança, então a void nunca entra em jogo. Uma fratura grave ou crítica remove completamente a capacidade de se guiar, e é por isso que ferimentos de alto nível e mortes por void estão tão fortemente correlacionados.
+- **Nenhum guia garante um resultado específico.** Sandboxes de física são não determinísticos por design. Você pode melhorar suas chances de um resultado interessante variando sua abordagem, mas não pode roteirizá-lo.
+- **Não documentado significa não documentado.** Contagens de ossos, valores de dano, limites de desbloqueio e conteúdos da loja simplesmente não são publicados. Trate qualquer número específico que você ler em outro lugar como não verificado até confirmá-lo no jogo.
 
-| Pergunta | Reset da void | Fratura óssea |
-|---|---|---|
-| Causa raiz | Sair da área jogável | Impacto acima do limite de quebra |
-| Modelo de dano | Instantâneo ou baseado em porcentagem | Efeito de status baseado em limite |
-| Duração | Instantânea, seguida de respawn | Persiste até ser curada ou expirar |
-| Contra-jogo | Ficar dentro da geometria, respeitar bordas | Armadura, vantagens de aterrissagem, rotas mais seguras |
-| Interação | Pode cancelar uma fratura ativa | Pode ser cancelada por um reset da void |
+Break your Bones é melhor entendido como um playground de física com um tema comicamente sombrio, não um jogo de otimização de atributos. A descrição oficial promete um simulador de esmagamento de ossos com ragdolls desbloqueáveis e uma grande queda. É exatamente isso que ele entrega, e o resto é para você descobrir jogando.
 
-Essa última linha é o argumento inteiro em miniatura. Quando a void se resolve *antes* que a fratura termine de ser aplicada, você geralmente ganha uma limpeza gratuita. Quando a fratura se resolve primeiro, você fica com a versão lenta.
+## FAQ
 
-## Dicas Práticas para Sobreviver ao Loop da Void do Break your Bones
+**Break your Bones é a mesma coisa que Broken Bones IV?**
+Não. São experiências separadas do Roblox com criadores diferentes e descrições oficiais diferentes. Mecânicas de uma não devem ser presumidas como aplicáveis à outra.
 
-Sobreviver à combinação da **void do Break your Bones** é, na maior parte, uma questão de remover a segunda metade da equação. Você nem sempre pode evitar uma fratura — knockback existe, armadilhas existem, e chefes trapaceiam — mas você quase sempre pode evitar a queda que a segue.
+**Break your Bones tem códigos?**
+A página oficial do Roblox não documenta nenhum sistema de códigos, nenhuma caixa de resgate e nenhuma lista de códigos. Confira a página oficial e o grupo High Effort Projects para quaisquer anúncios futuros.
 
-- **Teste as bordas antes de confiar nelas.** Ande, não corra, ao longo de qualquer borda que você não tenha verificado pessoalmente.
-- **Mantenha um item de cura na reserva.** Nunca gaste sua última tala em uma fissura no meio da luta.
-- **Aprenda o plano de morte.** Muitas voids ficam bem abaixo do chão visível, então a queda que "parece segura" não é segura.
-- **Leia a direção do knockback, não só o tamanho dele.** Ser empurrado *em direção* ao centro do mapa é sobrevivível; ser empurrado para fora raramente é.
-- **Trate habilidades de movimento como ferramentas de recuperação.** Guarde o dash ou o pulo duplo para o momento em que você perde o controle, não para deslocamento.
-- **Lute com as costas voltadas para geometria sólida.** Isso quase não te custa nada e remove a maior parte do risco de void do combate.
+**Quantos jogadores podem entrar em um servidor?**
+Até 20, de acordo com o registro oficial do Roblox.
 
-| Fator de risco | Mitigação | Por que funciona |
-|---|---|---|
-| Borda não verificada | Testar andando primeiro | Confirma a colisão antes de você comprometer o impulso |
-| Knockback para fora | Posicionar-se com uma parede atrás de você | Converte uma morte por void em um choque contra a parede |
-| Sem cura restante | Reservar um slot de item | Preserva uma opção de recuperação após uma fratura |
-| Ragdoll perto de uma borda | Pré-planejar uma rota de fuga | Dá a você uma direção no instante em que o controle retorna |
-| Inputs de pânico | Desacelerar após uma fratura | Evita o segundo erro que te manda para fora |
+**Quem fez o jogo?**
+O grupo do Roblox High Effort Projects. O jogo foi criado em 5 de junho de 2025.
 
-Se você tirar apenas um hábito desta seção, que seja a regra da parede atrás de você. É a forma mais barata de desarmar a armadilha da **void do Break your Bones** em qualquer combate que apresente ambas as mecânicas.
+**Como desbloqueio ragdolls?**
+O desbloqueio é anunciado, mas o método não é documentado. Confira o menu de ragdolls no jogo para o requisito atual.
 
-## Mitos, Casos Extremos e Relatos da Comunidade
-
-Muito do que circula sobre essa mecânica é folclore. A experiência do jogador é genuinamente útil aqui, mas também é anedótica, então vale a pena separar o que os sistemas realmente fazem do que as pessoas assumem que eles fazem.
-
-| Mito | Realidade |
-|---|---|
-| "A void sempre cura seus ossos." | Apenas em builds que explicitamente limpam efeitos de status no reset. Muitas não fazem isso. |
-| "Você pode controlar no ar para sair de uma fratura." | Geralmente falso depois que a fase de ragdoll começa; verifique seu título específico. |
-| "Dificuldade maior torna a void mais letal." | Às vezes verdadeiro para escalonamento de dano, raramente verdadeiro para o limite em si. |
-| "Uma fratura perto de uma borda é sempre fatal." | Falso — depende inteiramente do nível de gravidade e da direção do knockback. |
-
-Para uma referência neutra sobre como limites fora dos limites e planos de morte são definidos no meio, o [glossário de termos de videogame cobrindo comportamento fora dos limites](https://en.wikipedia.org/wiki/Glossary_of_video_game_terms) é um bom ponto de partida. Ele não vai te dizer os números do seu jogo, mas vai evitar que você confunda conceitos relacionados.
-
-Um caso extremo que vale destacar: atravessar geometria. Se você cair *através* do mapa em vez de cair dele, alguns engines registram um contato com a void instantaneamente, enquanto outros registram uma queda normal primeiro. Relatos da comunidade descrevem ambos os comportamentos, às vezes no mesmo jogo em mapas diferentes, então não assuma consistência.
-
-## Perguntas Frequentes
-
-**Cair na void sempre quebra seus ossos?**
-Não. A void é um limite, não um impacto. Ela só quebra seus ossos se o jogo encaminhar o contato com a void através do seu sistema de dano ou de queda. Em muitos títulos, a void simplesmente reseta você, e a interação da **void do Break your Bones** só aparece quando você já estava ferido antes de cair.
-
-**Você pode cancelar a interação da void do Break your Bones?**
-Às vezes, e geralmente por acidente. Se o reset se resolve antes que o status de fratura termine de ser aplicado, o ferimento costuma ser apagado. Raramente existe um botão deliberado para isso — é um artefato de timing de como os dois sistemas se resolvem em ordem.
-
-**A mecânica da void do Break your Bones é idêntica em todos os jogos?**
-Nem de longe. Os valores de limite, os níveis de gravidade, o comportamento do reset e se os ferimentos persistem através do respawn variam por título, modo e patch. Trate qualquer afirmação universal que você ler online com desconfiança e verifique na sua própria build.
-
-**Qual é a recuperação mais rápida após uma fratura perto da void?**
-Chegue a chão sólido antes de se curar. Curar-se enquanto você ainda está em uma borda instável desperdiça o item e frequentemente termina com uma segunda fratura, pior. Estabilize sua posição, depois comprometa o recurso.
-
-A versão curta: fraturas ósseas são um imposto sobre a mobilidade, e a void é quem cobra a dívida. Aprenda a reconhecer o limite, respeite as bordas e mantenha uma rota de fuga na cabeça o tempo todo. Faça isso, e o loop da **void do Break your Bones** deixa de ser um cara ou coroa e se torna apenas mais uma mecânica que você já resolveu.
+**Posso quebrar todos os ossos?**
+Esse é o objetivo declarado na descrição oficial — "tentar quebrar todos os seus ossos." Se uma partida específica consegue isso depende da simulação de física, e nenhuma contagem de ossos verificada é publicada.

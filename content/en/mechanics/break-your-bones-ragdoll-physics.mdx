@@ -1,134 +1,87 @@
 export const metadata = {
-  title: "Break Your Bones Ragdoll Physics Explained: How Bone-Breaking Mechanics Work",
-  description: "Learn how Break your Bones ragdoll physics works — impulse thresholds, joint constraints, fracture states, and tips to rack up more bone breaks.",
+  title: "Break your Bones: How the Roblox Ragdoll Sandbox Works",
+  description: "A grounded look at Break your Bones on Roblox: what the official page confirms, what third-party guides claim, and what is simply undocumented.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-## Why Break Your Bones Ragdoll Physics Feels So Good
+The Roblox experience **Break your Bones** takes a simple, morbidly funny idea and turns it into a physics playground. You launch a character off a ledge, send them into hazards, and watch a ragdoll flail as the game tallies up the damage. It is a sandbox about destruction rather than a story-driven adventure, and its appeal comes from the same loop that makes many physics games satisfying: set up a chaotic scenario, watch it play out, and try to top it.
 
-Few things in gaming deliver instant, dumb joy like watching a character tumble down a flight of stairs and hearing a collarbone snap. Break your Bones ragdoll physics turns that small pleasure into an entire design philosophy: a body that bends, flops, and fractures based on real simulated forces rather than canned animations. Understanding the system matters because it changes how you play — where you aim, how you fall, and why some hits crack a rib while others just bruise an ego.
+This article sticks to what can actually be verified. The official Roblox page is the authority on the game's identity and advertised features. Community guides are treated as secondary observations, not developer documentation. Anything that is not documented is called out as undocumented, so you know the difference between a confirmed fact and a rumor.
 
-At its core, Break your Bones ragdoll physics is a physics-driven damage model layered on top of a jointed skeleton. Instead of playing a pre-recorded "ouch" animation, the character is a stack of rigid bodies connected by constraints, and every impact is measured, weighted, and converted into injury. Once you understand that pipeline, the chaos stops looking random.
+## What the Official Roblox Page Confirms
 
-## What Break Your Bones Ragdoll Physics Actually Simulates
+According to the official Roblox record, **Break your Bones** is created by the group **High Effort Projects**. The place was created on June 5, 2025, and was last updated on October 13, 2026. Servers support up to 20 players, and the game has accumulated roughly 133 million visits as of the record retrieved on October 14, 2026. Those are the numbers the platform itself reports.
 
-A ragdoll is not a single object. It is a collection of rigid bodies — usually a pelvis, torso segments, head, upper and lower arms, and upper and lower legs — wired together with constraints that behave like joints. Each body has mass, drag, and a collision shape. The engine steps the whole assembly forward in small time increments, resolves collisions, and applies the results back to the joints.
+The official description advertises a short list of features:
 
-That structure is why a hit to the head reads differently than a hit to the shin. The head sits at the top of a long lever arm, so a modest impulse produces a large angular velocity. The shin is closer to the ground and often braced, so it absorbs less rotational force. Good bone-breaking systems weight these differences rather than treating every collision as equal.
+- Try to break all of your bones.
+- A fun bone-smashing simulator.
+- Unlock new ragdolls.
+- Fling yourself from a huge drop.
+- A ragdoll physics simulation.
 
-| Ragdoll Rig Part | Human Equivalent | Typical Role in Damage | Why It Matters |
-|---|---|---|---|
-| Head body | Skull and jaw | High-value target, low mass | Large lever arm creates violent rotation |
-| Chest / spine segments | Ribcage, vertebrae | Damage accumulator | Transfers force between limbs and head |
-| Pelvis body | Hips | Anchor point | Stabilizes or destabilizes the whole rig |
-| Upper arm | Humerus | Contact limb | Absorbs impacts during falls |
-| Forearm and hand | Radius, ulna | Secondary contact | Often the first thing to hit a surface |
-| Upper leg | Femur | Load bearer | Strongest bone, highest break threshold |
-| Lower leg and foot | Tibia, fibula | Landing limb | Common fracture site in vertical falls |
+That description is deliberately short. It does not list a code system, currency names, item prices, damage values, or a shop. If you have seen a guide promising a list of active codes, treat it with suspicion. There is no redemption box documented on the official page, and no working codes have been confirmed by the developer. The honest answer to "are there codes?" is: none are documented. To check for yourself, open the official page and look at the description, then check the developer's community channels for any announcements. If the developer has not posted it, it is not confirmed.
 
-Most engines implement this with a physics engine such as PhysX, Havok, Bullet, or a custom solver. The underlying concept — articulating a character with constrained rigid bodies — is well documented in the [general reference on ragdoll physics implementation](https://en.wikipedia.org/wiki/Ragdoll_physics), and the same principles show up whether the game is a sandbox toy or a AAA action title.
+## The Core Loop: Ragdoll Physics and Bone Smashing
 
-## How Break Your Bones Ragdoll Physics Decides When a Bone Breaks
+The advertised premise is straightforward. You control a character, put them in harm's way, and the ragdoll physics simulation does the rest. The goal is to break as many bones as possible, and the game frames this as a score or progress metric.
 
-Three things usually have to line up before the game declares a fracture: enough force, the right direction, and a vulnerable body part.
+What makes this work as a sandbox is that the physics are not scripted animations. A ragdoll behaves like a loose collection of joints and limbs, so the same fall can produce different results depending on angle, speed, and what the character hits on the way down. That variability is the point. It rewards experimentation: different launch points, different hazards, different body positions.
 
-### Impulse thresholds
+The official description mentions "a huge drop," which suggests verticality is a central part of the design. A long fall gives the ragdoll time to build momentum and gives you a clear view of the impact. Beyond that, the specific layout of the map, the names of individual hazards, and the exact damage each one inflicts are not documented in the official description.
 
-Every bone in the rig gets a threshold value. When a collision generates an impulse above that number, the bone enters a damaged state. Below it, the impact is cosmetic — the ragdoll flails, but nothing snaps. Thresholds are typically tuned per body part, which is why a fall onto your feet is survivable but the same fall onto your neck is not.
+| Confirmed by the official page | Not documented |
+| --- | --- |
+| Creator group: High Effort Projects | Currency names or shop prices |
+| Place created June 5, 2025; updated October 13, 2026 | Damage values or bone-break formulas |
+| Up to 20 players per server | A full list of ragdolls |
+| About 133 million visits (record retrieved October 14, 2026) | Any code redemption system |
+| Advertised: break bones, unlock ragdolls, huge drop, ragdoll physics | Hotkeys, patch notes, or release roadmap |
 
-### Damage accumulation
+## Unlocking New Ragdolls
 
-Single-hit breaks are rare outside of extreme scenarios. More commonly, damage stacks. A character who clips a railing, bounces off a crate, and then hits the floor accumulates three smaller impulses that together cross the threshold. This is why long, chaotic tumbles produce more fractures than one clean wallop.
+"Unlock new ragdolls" is one of the few progression hooks the developer advertises. In practice, this usually means playing enough or accomplishing enough to gain access to additional character models or ragdoll variants. What is not documented is the unlock condition for any specific ragdoll. There is no official list of ragdolls, no stated requirement, and no price.
 
-### Fracture states and feedback
+Third-party guides sometimes describe unlock methods, but those are community observations, not developer documentation. They can be useful as a starting point, but they can also go stale after an update. The reliable way to check is to look inside the game itself. Open the menu or progression screen, see what is listed as locked, and read whatever in-game text describes the requirement. If the game does not state a requirement, then it is not documented, full stop.
 
-Once a break registers, the system usually swaps the constraint for a looser one, adds a limp pose, plays an audio cue, and tags the injury for the HUD. Higher-end implementations distinguish severity levels, which is where the anatomy vocabulary starts to matter.
+It is worth noting that the game was last updated on October 13, 2026, one day before the record was retrieved. A live game changes. Any guide written before that date may describe systems that no longer exist.
 
-| Severity Tier | Analogy | Mechanical Effect | Player-Facing Feedback |
-|---|---|---|---|
-| Stress | Hairline crack | Minor constraint softening | Small pop, slight limp |
-| Simple fracture | Clean break | Joint range increases sharply | Audible crack, visible bend |
-| Displaced | Bone out of alignment | Limb stops bearing weight | Ragdoll drags the limb |
-| Compound / catastrophic | Multiple breaks | Rig loses structural integrity | Full collapse, ragdoll reset |
+## Playing With the Physics Simulation
 
-## Passive, Active, and Partial Ragdolls Compared
+The most interesting thing about **Break your Bones** is that it is less a game to beat and more a toy to fiddle with. The ragdoll physics simulation is the main attraction. You can spend a session chasing a personal best, or you can spend a session just watching what happens when a character clips a corner at high speed.
 
-Not every bone-breaking system is built the same way. The choice of ragdoll type shapes how the game feels and how much control you keep.
+A few practical habits help:
 
-| Ragdoll Type | How It Behaves | Pros | Cons |
-|---|---|---|---|
-| Passive | Fully physics-driven, no input | Predictable, cheap to run | Zero player agency mid-fall |
-| Active | Physics with balance and muscle forces | Character stays upright, feels alive | Expensive, harder to tune |
-| Partial / blended | Animation until impact, physics after | Best of both worlds | Blend artifacts, popping |
-| Procedural | Bones re-posed by solver each frame | Extremely dynamic | Can look rubbery without tuning |
+- **Watch the whole fall.** The interesting physics often happen on the way down, not just at the impact.
+- **Change one variable at a time.** If you want to understand what a hazard does, keep the launch the same and change only the target.
+- **Use the multiplayer server.** With up to 20 players per server, other people's attempts are a free source of ideas. You can see angles and approaches you would not have thought of.
+- **Re-check after updates.** Because the place was updated recently, behavior can shift. If something feels different, it may genuinely be different.
 
-Many ragdoll sandboxes land on a partial or blended approach: the character behaves normally until a break condition triggers, then hands control to the solver. That handoff is where most of the comedy — and most of the bugs — live.
+You can find the official experience at [Break your Bones on Roblox](https://www.roblox.com/games/123821081589134/Break-your-Bones). That page is the best place to confirm the current description, player count, and update status.
 
-## Tips to Score More Bone Breaks
+## Separating Fact From Guesswork
 
-If your goal is maximum skeletal damage, the physics gives you clear levers to pull.
+The biggest trap with a game like this is assuming that popular claims are official. Roblox has several games with similar names, including a different title often called Broken Bones IV and various mobile bone-breaking apps on app stores. Those are separate products with separate mechanics. Do not import assumptions from them into this game. The ragdolls, progression, and any systems here belong to High Effort Projects' place and nothing else.
 
-| Tactic | Why It Works | Risk |
-|---|---|---|
-| Aim for the head and neck | Long lever arm amplifies rotation | Can end the run early |
-| Chain impacts together | Damage accumulates across collisions | Requires open terrain |
-| Use height over speed | Gravity adds consistent vertical force | Longer setup time |
-| Land on limbs, not the torso | Limbs have lower break thresholds | Less overall damage per hit |
-| Avoid soft surfaces | Soft bodies absorb impulse | Limits map options |
-| Keep the ragdoll moving | Momentum drives secondary impacts | Harder to aim |
-
-**Player experience tip:** the most reliable damage comes from controlled chains, not single spectacular stunts. A moderate fall that bounces the ragdoll through three hard surfaces will usually out-score one massive drop onto a flat floor.
-
-### Timing beats brute force
-
-Impulse is mass times change in velocity, so a fast-moving ragdoll hitting a rigid object transfers far more force than a slow one leaning into it. Building speed before contact — sliding, swinging, or accelerating downhill — matters more than raw height. Community reports consistently favor momentum-based setups for exactly this reason.
-
-## Settings and Performance: Keeping the Physics Stable
-
-Bone-breaking systems are solver-heavy. When frame rate drops, the simulation steps get larger, collisions get missed, and the ragdoll starts behaving like it is made of jelly. A few settings make an outsized difference.
-
-| Setting | What It Changes | Recommendation |
-|---|---|---|
-| Physics substeps | How finely collisions resolve | Raise it if limbs pass through walls |
-| Solver iterations | Joint stiffness accuracy | Moderate; higher is costlier |
-| Fixed timestep | Simulation consistency | Keep on for stable damage numbers |
-| Ragdoll count limit | How many bodies simulate at once | Lower it on weak hardware |
-| Collision layers | Which surfaces register force | Make sure terrain is included |
-| Gravity multiplier | Fall force | Leave default unless experimenting |
-
-If you are testing Break your Bones ragdoll physics on a lower-end device, the single biggest stability win is usually locking the physics timestep and reducing simultaneous ragdoll count. Visual fidelity matters far less than a consistent simulation step.
-
-## Myths, Community Reports, and What Players Get Wrong
-
-| Myth | Reality |
-|---|---|
-| More bones means more realistic | Rigid body count matters more than bone labels |
-| Harder surfaces always break more | Surface hardness matters, but angle and velocity matter more |
-| Breaks are random | They are threshold-driven and deterministic given identical inputs |
-| Higher gravity always helps | It adds force but destabilizes joints and causes tunneling |
-| Bigger ragdolls take more damage | Mass distribution, not size, drives impulse transfer |
-
-**Community reports** also point to a common misunderstanding about "ragdoll mode." Players often assume the physics turns on the moment a character is launched. In practice, most systems run an animated or active state first and only switch to a full ragdoll when a break condition fires — which is why the first frame of a fall sometimes looks stiff.
+When a claim is not on the official page, the correct label is "undocumented." That is not a criticism of the game. It just means the developer has chosen to keep the description minimal, which is common for physics sandboxes. The in-game UI and the developer's own community posts are where new details would appear first.
 
 ## FAQ
 
-**Is Break your Bones ragdoll physics deterministic?**
+**Is Break your Bones free to play?**
+The official Roblox page is the place to confirm access details. Roblox experiences are generally playable through the platform, and the page will show whether any paid access applies.
 
-Largely yes, within a single session. Given identical starting conditions, gravity, and collision geometry, the same impulses should produce the same breaks. Small floating-point differences and variable frame timing can still change outcomes, which is why two nearly identical stunts occasionally score differently.
+**Are there codes for Break your Bones?**
+None are documented. The official description does not mention a code system or a redemption box. Check the official page and the developer's community channels for announcements.
 
-**Why does my ragdoll pass through walls?**
+**How many players can join a server?**
+Up to 20 players per server, according to the official record.
 
-This is usually a timestep problem, not a damage problem. When the simulation step is too large relative to the ragdoll's speed, the solver skips the collision entirely. Raising physics substeps or capping velocity normally fixes it.
+**Who made the game?**
+The Roblox group High Effort Projects.
 
-**Which body part breaks the easiest?**
+**How do I unlock new ragdolls?**
+The official page says you can unlock new ragdolls but does not state the requirements. Check the in-game menu or progression screen for the current conditions.
 
-In most rigs, the neck, forearms, and lower legs have the lowest thresholds. The femur and pelvis are typically the toughest because they carry the most load and are wrapped in the most mass.
-
-**Do soft surfaces prevent bone breaks?**
-
-They reduce impulse transfer, so yes — landing on padding usually converts a fracture into a bruise. That said, soft surfaces can also cause awkward joint angles that produce breaks on the rebound, so they are not a guaranteed safety net.
-
-## The Bottom Line
-
-Break your Bones ragdoll physics rewards players who think in terms of force, angle, and accumulation rather than luck. Aim for high-leverage body parts, chain impacts instead of chasing one huge hit, and keep your physics settings stable so the simulation stays honest. Do that, and the satisfying crack of a well-earned fracture stops being an accident and starts being a strategy.
+**Is this the same as Broken Bones IV?**
+No. They are different Roblox experiences. Mechanics from one should not be assumed to apply to the other.

@@ -1,134 +1,87 @@
 export const metadata = {
-  title: "Break Your Bones Ragdoll-Physik erklärt: Wie Knochenbruch-Mechaniken funktionieren",
-  description: "Erfahre, wie die Ragdoll-Physik von Break your Bones funktioniert – Impulsschwellen, Gelenk-Constraints, Frakturzustände und Tipps für mehr Knochenbrüche.",
+  title: "Break your Bones: Wie der Roblox-Ragdoll-Sandbox funktioniert",
+  description: "Ein sachlicher Blick auf Break your Bones auf Roblox: Was die offizielle Seite bestätigt, was Drittanbieter-Guides behaupten und was schlicht undokumentiert ist.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-## Warum sich die Ragdoll-Physik von Break your Bones so gut anfühlt
+Das Roblox-Erlebnis **Break your Bones** nimmt eine einfache, morbid-amüsante Idee und verwandelt sie in einen Physik-Spielplatz. Du schleuderst eine Spielfigur von einer Kante, schickst sie in Gefahren und siehst zu, wie eine Ragdoll-Puppe herumfliegt, während das Spiel den Schaden zusammenzählt. Es ist ein Sandbox-Spiel über Zerstörung und kein storygetriebenes Abenteuer, und sein Reiz entspringt derselben Schleife, die viele Physikspiele befriedigend macht: ein chaotisches Szenario aufbauen, es sich entfalten lassen und versuchen, es zu übertreffen.
 
-Nur wenige Dinge im Gaming liefern so eine sofortige, dumme Freude wie der Anblick eines Charakters, der eine Treppe hinunterpurzelt und dessen Schlüsselbein hörbar bricht. Die Ragdoll-Physik von Break your Bones macht aus diesem kleinen Vergnügen eine ganze Designphilosophie: einen Körper, der sich biegt, umfällt und bricht – basierend auf echten simulierten Kräften statt auf vorgefertigten Animationen. Das System zu verstehen ist wichtig, weil es verändert, wie du spielst – worauf du zielst, wie du fällst und warum manche Treffer eine Rippe brechen, während andere nur das Ego prellen.
+Dieser Artikel hält sich an das, was tatsächlich überprüfbar ist. Die offizielle Roblox-Seite ist die Autorität für die Identität des Spiels und die beworbenen Funktionen. Community-Guides werden als sekundäre Beobachtungen behandelt, nicht als Entwicklerdokumentation. Alles, was nicht dokumentiert ist, wird als undokumentiert gekennzeichnet, damit du den Unterschied zwischen einer bestätigten Tatsache und einem Gerücht erkennst.
 
-Im Kern ist die Ragdoll-Physik von Break your Bones ein physikgesteuertes Schadensmodell, das auf einem gegliederten Skelett aufsetzt. Statt eine voraufgezeichnete „Aua“-Animation abzuspielen, ist der Charakter ein Stapel starrer Körper, die durch Constraints verbunden sind, und jeder Aufprall wird gemessen, gewichtet und in Verletzung umgerechnet. Sobald du diese Pipeline verstehst, wirkt das Chaos nicht mehr zufällig.
+## Was die offizielle Roblox-Seite bestätigt
 
-## Was die Ragdoll-Physik von Break your Bones tatsächlich simuliert
+Laut dem offiziellen Roblox-Eintrag wird **Break your Bones** von der Gruppe **High Effort Projects** erstellt. Der Place wurde am 5. Juni 2025 erstellt und zuletzt am 13. Oktober 2026 aktualisiert. Server unterstützen bis zu 20 Spieler, und das Spiel hat bis zum am 14. Oktober 2026 abgerufenen Eintrag etwa 133 Millionen Besuche angesammelt. Das sind die Zahlen, die die Plattform selbst meldet.
 
-Ein Ragdoll ist kein einzelnes Objekt. Es ist eine Sammlung starrer Körper – meist ein Becken, Torso-Segmente, Kopf, Ober- und Unterarme sowie Ober- und Unterschenkel –, die mit Constraints verbunden sind, die sich wie Gelenke verhalten. Jeder Körper hat Masse, Luftwiderstand und eine Kollisionsform. Die Engine bewegt das gesamte Gebilde in kleinen Zeitschritten vorwärts, löst Kollisionen auf und wendet die Ergebnisse auf die Gelenke zurück an.
+Die offizielle Beschreibung bewirbt eine kurze Liste von Funktionen:
 
-Diese Struktur ist der Grund, warum ein Treffer am Kopf anders wirkt als ein Treffer am Schienbein. Der Kopf sitzt oben an einem langen Hebelarm, daher erzeugt ein moderater Impuls eine große Winkelgeschwindigkeit. Das Schienbein ist näher am Boden und oft abgestützt, weshalb es weniger Rotationskraft aufnimmt. Gute Knochenbruchsysteme gewichten diese Unterschiede, statt jede Kollision als gleich zu behandeln.
+- Versuche, alle deine Knochen zu brechen.
+- Ein unterhaltsamer Knochenzertrümmerungs-Simulator.
+- Schalte neue Ragdolls frei.
+- Schleudere dich von einem riesigen Sturz in die Tiefe.
+- Eine Ragdoll-Physiksimulation.
 
-| Ragdoll-Rig-Teil | Menschliches Äquivalent | Typische Rolle bei Schaden | Warum es wichtig ist |
-|---|---|---|---|
-| Kopfkörper | Schädel und Kiefer | Hochwertiges Ziel, geringe Masse | Langer Hebelarm erzeugt heftige Rotation |
-| Brust-/Wirbelsäulensegmente | Brustkorb, Wirbel | Schadenssammler | Überträgt Kraft zwischen Gliedmaßen und Kopf |
-| Beckenkörper | Hüften | Ankerpunkt | Stabilisiert oder destabilisiert das gesamte Rig |
-| Oberarm | Oberarmknochen | Kontaktgliedmaße | Dämpft Aufprälle bei Stürzen |
-| Unterarm und Hand | Speiche, Elle | Sekundärer Kontakt | Oft das Erste, was eine Oberfläche trifft |
-| Oberschenkel | Oberschenkelknochen | Lastträger | Stärkster Knochen, höchste Bruchschwelle |
-| Unterschenkel und Fuß | Schienbein, Wadenbein | Landegliedmaße | Häufige Frakturstelle bei vertikalen Stürzen |
+Diese Beschreibung ist bewusst kurz. Sie listet kein Codesystem, keine Währungsnamen, keine Gegenstandspreise, keine Schadenswerte und keinen Shop auf. Falls du einen Guide gesehen hast, der eine Liste aktiver Codes verspricht, behandle ihn mit Skepsis. Auf der offiziellen Seite ist keine Einlösebox dokumentiert, und es wurden keine funktionierenden Codes vom Entwickler bestätigt. Die ehrliche Antwort auf „Gibt es Codes?" lautet: Es sind keine dokumentiert. Um es selbst zu überprüfen, öffne die offizielle Seite und lies die Beschreibung, und prüfe dann die Community-Kanäle des Entwicklers auf Ankündigungen. Wenn der Entwickler es nicht gepostet hat, ist es nicht bestätigt.
 
-Die meisten Engines setzen dafür eine Physik-Engine wie PhysX, Havok, Bullet oder einen eigenen Solver ein. Das zugrunde liegende Konzept – einen Charakter mit beschränkten starren Körpern zu artikulieren – ist in der [allgemeinen Referenz zur Ragdoll-Physik-Implementierung](https://en.wikipedia.org/wiki/Ragdoll_physics) gut dokumentiert, und dieselben Prinzipien tauchen auf, egal ob das Spiel eine Sandbox-Spielerei oder ein AAA-Actiontitel ist.
+## Die Kernschleife: Ragdoll-Physik und Knochenzertrümmerung
 
-## Wie die Ragdoll-Physik von Break your Bones entscheidet, wann ein Knochen bricht
+Die beworbene Prämisse ist unkompliziert. Du steuerst eine Spielfigur, bringst sie in Gefahr, und die Ragdoll-Physiksimulation erledigt den Rest. Das Ziel ist, so viele Knochen wie möglich zu brechen, und das Spiel rahmt dies als Punktestand oder Fortschrittsmetrik ein.
 
-Drei Dinge müssen meist zusammenkommen, bevor das Spiel eine Fraktur erklärt: genug Kraft, die richtige Richtung und ein verletzlicher Körperteil.
+Was dies als Sandbox funktionieren lässt, ist die Tatsache, dass die Physik keine geskripteten Animationen sind. Eine Ragdoll verhält sich wie eine lockere Ansammlung von Gelenken und Gliedmaßen, sodass derselbe Sturz je nach Winkel, Geschwindigkeit und dem, was die Figur auf dem Weg nach unten trifft, unterschiedliche Ergebnisse liefern kann. Diese Variabilität ist der Punkt. Sie belohnt Experimentieren: verschiedene Abschusspunkte, verschiedene Gefahren, verschiedene Körperpositionen.
 
-### Impulsschwellen
+Die offizielle Beschreibung erwähnt „einen riesigen Sturz", was darauf hindeutet, dass Vertikalität ein zentraler Teil des Designs ist. Ein langer Fall gibt der Ragdoll Zeit, Schwung aufzubauen, und gibt dir einen klaren Blick auf den Aufprall. Darüber hinaus sind das konkrete Layout der Karte, die Namen einzelner Gefahren und der genaue Schaden, den jede verursacht, in der offiziellen Beschreibung nicht dokumentiert.
 
-Jeder Knochen im Rig bekommt einen Schwellenwert. Wenn eine Kollision einen Impuls über dieser Zahl erzeugt, geht der Knochen in einen beschädigten Zustand über. Darunter ist der Aufprall kosmetisch – das Ragdoll rudert, aber nichts bricht. Schwellenwerte werden typischerweise pro Körperteil abgestimmt, weshalb ein Sturz auf die Füße überlebbar ist, derselbe Sturz auf den Hals aber nicht.
+| Von der offiziellen Seite bestätigt | Nicht dokumentiert |
+| --- | --- |
+| Ersteller-Gruppe: High Effort Projects | Währungsnamen oder Shop-Preise |
+| Place erstellt am 5. Juni 2025; aktualisiert am 13. Oktober 2026 | Schadenswerte oder Knochenbruch-Formeln |
+| Bis zu 20 Spieler pro Server | Eine vollständige Liste der Ragdolls |
+| Etwa 133 Millionen Besuche (Eintrag abgerufen am 14. Oktober 2026) | Ein etwaiges Code-Einlösesystem |
+| Beworben: Knochen brechen, Ragdolls freischalten, riesiger Sturz, Ragdoll-Physik | Hotkeys, Patchnotizen oder Release-Roadmap |
 
-### Schadensakkumulation
+## Neue Ragdolls freischalten
 
-Einzelbrüche durch einen Treffer sind außerhalb extremer Szenarien selten. Häufiger stapelt sich Schaden. Ein Charakter, der ein Geländer streift, von einer Kiste abprallt und dann auf den Boden trifft, sammelt drei kleinere Impulse, die zusammen die Schwelle überschreiten. Deshalb erzeugen lange, chaotische Stürze mehr Frakturen als ein sauberer einzelner Schlag.
+„Schalte neue Ragdolls frei" ist einer der wenigen Fortschrittsanker, die der Entwickler bewirbt. In der Praxis bedeutet dies meist, dass man genug spielt oder genug erreicht, um Zugang zu zusätzlichen Charaktermodellen oder Ragdoll-Varianten zu erhalten. Was nicht dokumentiert ist, ist die Freischaltbedingung für eine bestimmte Ragdoll. Es gibt keine offizielle Liste der Ragdolls, keine genannte Voraussetzung und keinen Preis.
 
-### Frakturzustände und Feedback
+Drittanbieter-Guides beschreiben manchmal Freischaltmethoden, aber das sind Community-Beobachtungen, keine Entwicklerdokumentation. Sie können als Ausgangspunkt nützlich sein, können aber nach einem Update auch veralten. Der zuverlässige Weg, dies zu prüfen, ist, im Spiel selbst nachzusehen. Öffne das Menü oder den Fortschrittsbildschirm, sieh nach, was als gesperrt aufgeführt ist, und lies den In-Game-Text, der die Voraussetzung beschreibt. Wenn das Spiel keine Voraussetzung nennt, dann ist sie nicht dokumentiert, Punkt.
 
-Sobald ein Bruch registriert wird, tauscht das System normalerweise das Constraint gegen ein lockereres, fügt eine schlaffe Pose hinzu, spielt ein Audio-Signal und markiert die Verletzung für das HUD. Hochwertigere Implementierungen unterscheiden Schweregrade – hier beginnt die anatomische Wortwahl wichtig zu werden.
+Es ist erwähnenswert, dass das Spiel zuletzt am 13. Oktober 2026 aktualisiert wurde, einen Tag bevor der Eintrag abgerufen wurde. Ein lebendiges Spiel verändert sich. Jeder Guide, der vor diesem Datum geschrieben wurde, könnte Systeme beschreiben, die nicht mehr existieren.
 
-| Schweregrad | Analogie | Mechanische Wirkung | Spielerfeedback |
-|---|---|---|---|
-| Belastung | Haarriss | Geringfügige Constraint-Lockerung | Leises Knacken, leichtes Hinken |
-| Einfache Fraktur | Sauberer Bruch | Gelenkbeweglichkeit steigt stark | Hörbares Knacken, sichtbare Biegung |
-| Verschoben | Knochen nicht mehr ausgerichtet | Gliedmaße trägt kein Gewicht mehr | Ragdoll zieht die Gliedmaße nach |
-| Offen / katastrophal | Mehrfachbrüche | Rig verliert strukturelle Integrität | Völliger Zusammenbruch, Ragdoll-Reset |
+## Mit der Physiksimulation spielen
 
-## Passive, aktive und teilweise Ragdolls im Vergleich
+Das Interessanteste an **Break your Bones** ist, dass es weniger ein Spiel zum Durchspielen als vielmehr ein Spielzeug zum Herumprobieren ist. Die Ragdoll-Physiksimulation ist die Hauptattraktion. Du kannst eine Sitzung damit verbringen, einer persönlichen Bestleistung nachzujagen, oder du kannst eine Sitzung damit verbringen, einfach zu beobachten, was passiert, wenn eine Figur mit hoher Geschwindigkeit eine Ecke streift.
 
-Nicht jedes Knochenbruchsystem ist gleich aufgebaut. Die Wahl des Ragdoll-Typs prägt, wie sich das Spiel anfühlt und wie viel Kontrolle du behältst.
+Ein paar praktische Gewohnheiten helfen:
 
-| Ragdoll-Typ | Verhalten | Vorteile | Nachteile |
-|---|---|---|---|
-| Passiv | Vollständig physikgesteuert, keine Eingabe | Vorhersehbar, günstig zu berechnen | Keine Spielerkontrolle während des Sturzes |
-| Aktiv | Physik mit Balance- und Muskelkräften | Charakter bleibt aufrecht, wirkt lebendig | Teuer, schwieriger abzustimmen |
-| Teilweise / gemischt | Animation bis zum Aufprall, danach Physik | Das Beste aus beiden Welten | Blend-Artefakte, Popping |
-| Prozedural | Knochen werden vom Solver pro Frame neu positioniert | Extrem dynamisch | Kann ohne Tuning gummiartig aussehen |
+- **Beobachte den gesamten Sturz.** Die interessanten Physikmomente passieren oft auf dem Weg nach unten, nicht nur beim Aufprall.
+- **Ändere immer nur eine Variable.** Wenn du verstehen willst, was eine Gefahr bewirkt, halte den Abschuss gleich und ändere nur das Ziel.
+- **Nutze den Mehrspieler-Server.** Mit bis zu 20 Spielern pro Server sind die Versuche anderer eine kostenlose Ideenquelle. Du siehst Winkel und Herangehensweisen, auf die du selbst nicht gekommen wärst.
+- **Prüfe nach Updates erneut.** Da der Place kürzlich aktualisiert wurde, kann sich das Verhalten verschieben. Wenn sich etwas anders anfühlt, ist es möglicherweise tatsächlich anders.
 
-Viele Ragdoll-Sandboxes setzen auf einen teilweisen oder gemischten Ansatz: Der Charakter verhält sich normal, bis eine Bruchbedingung ausgelöst wird, dann übergibt er die Kontrolle an den Solver. Bei dieser Übergabe entsteht der meiste Humor – und die meisten Bugs.
+Du findest das offizielle Erlebnis unter [Break your Bones on Roblox](https://www.roblox.com/games/123821081589134/Break-your-Bones). Diese Seite ist der beste Ort, um die aktuelle Beschreibung, die Spielerzahl und den Update-Status zu bestätigen.
 
-## Tipps für mehr Knochenbrüche
+## Fakten von Vermutungen trennen
 
-Wenn dein Ziel maximaler Skelettschaden ist, gibt dir die Physik klare Hebel an die Hand.
+Die größte Falle bei einem Spiel wie diesem ist die Annahme, dass populäre Behauptungen offiziell sind. Roblox hat mehrere Spiele mit ähnlichen Namen, darunter einen anderen Titel, der oft Broken Bones IV genannt wird, und verschiedene mobile Knochenbruch-Apps in App-Stores. Das sind separate Produkte mit separaten Mechaniken. Übernimm keine Annahmen von ihnen in dieses Spiel. Die Ragdolls, der Fortschritt und alle Systeme hier gehören zum Place von High Effort Projects und nichts anderem.
 
-| Taktik | Warum es funktioniert | Risiko |
-|---|---|---|
-| Ziele auf Kopf und Hals | Langer Hebelarm verstärkt Rotation | Kann den Run früh beenden |
-| Verkette Aufprälle miteinander | Schaden summiert sich über Kollisionen | Erfordert offenes Gelände |
-| Nutze Höhe statt Geschwindigkeit | Schwerkraft fügt konstante vertikale Kraft hinzu | Längere Vorbereitungszeit |
-| Lande auf Gliedmaßen, nicht auf dem Torso | Gliedmaßen haben niedrigere Bruchschwellen | Weniger Gesamtschaden pro Treffer |
-| Meide weiche Oberflächen | Weiche Körper absorbieren Impuls | Schränkt Kartenoptionen ein |
-| Halte das Ragdoll in Bewegung | Impuls treibt Sekundäraufprälle an | Schwerer zu zielen |
-
-**Spielerfahrungs-Tipp:** Die zuverlässigsten Schäden entstehen durch kontrollierte Ketten, nicht durch einzelne spektakuläre Stunts. Ein mittlerer Sturz, bei dem das Ragdoll durch drei harte Oberflächen prallt, erzielt meist mehr Punkte als ein massiver Fall auf einen flachen Boden.
-
-### Timing schlägt rohe Gewalt
-
-Impuls ist Masse mal Geschwindigkeitsänderung, daher überträgt ein schnell bewegtes Ragdoll, das auf ein starres Objekt trifft, weit mehr Kraft als eines, das sich langsam hineinlehnt. Geschwindigkeit vor dem Kontakt aufzubauen – rutschen, schwingen oder bergab beschleunigen – ist wichtiger als reine Höhe. Community-Berichte bevorzugen aus genau diesem Grund konsequent impulsbasierte Setups.
-
-## Einstellungen und Performance: Die Physik stabil halten
-
-Knochenbruchsysteme sind solver-intensiv. Wenn die Bildrate sinkt, werden die Simulationsschritte größer, Kollisionen werden verpasst, und das Ragdoll beginnt sich zu verhalten, als bestünde es aus Wackelpudding. Ein paar Einstellungen machen einen überproportionalen Unterschied.
-
-| Einstellung | Was sie ändert | Empfehlung |
-|---|---|---|
-| Physik-Substeps | Wie fein Kollisionen aufgelöst werden | Erhöhe sie, wenn Gliedmaßen durch Wände gehen |
-| Solver-Iterationen | Genauigkeit der Gelenksteifigkeit | Mittel; höher ist teurer |
-| Fester Zeitschritt | Konsistenz der Simulation | Eingeschaltet lassen für stabile Schadenswerte |
-| Ragdoll-Anzahl-Limit | Wie viele Körper gleichzeitig simuliert werden | Auf schwacher Hardware senken |
-| Kollisions-Layer | Welche Oberflächen Kraft registrieren | Stelle sicher, dass Gelände enthalten ist |
-| Schwerkraft-Multiplikator | Fallkraft | Standard lassen, außer du experimentierst |
-
-Wenn du die Ragdoll-Physik von Break your Bones auf einem schwächeren Gerät testest, ist der größte Stabilitätsgewinn meistens, den Physik-Zeitschritt zu fixieren und die Anzahl gleichzeitiger Ragdolls zu reduzieren. Visuelle Wiedergabetreue ist weit weniger wichtig als ein konsistenter Simulationsschritt.
-
-## Mythen, Community-Berichte und was Spieler falsch verstehen
-
-| Mythos | Realität |
-|---|---|
-| Mehr Knochen bedeutet realistischer | Anzahl starrer Körper zählt mehr als Knochenbezeichnungen |
-| Härtere Oberflächen brechen immer mehr | Oberflächenhärte zählt, aber Winkel und Geschwindigkeit zählen mehr |
-| Brüche sind zufällig | Sie sind schwellenwertgesteuert und bei identischen Eingaben deterministisch |
-| Höhere Schwerkraft hilft immer | Sie fügt Kraft hinzu, destabilisiert aber Gelenke und verursacht Tunneling |
-| Größere Ragdolls nehmen mehr Schaden | Massenverteilung, nicht Größe, treibt den Impulstransfer |
-
-**Community-Berichte** weisen auch auf ein häufiges Missverständnis über den „Ragdoll-Modus“ hin. Spieler nehmen oft an, die Physik schalte sich in dem Moment ein, in dem ein Charakter abgeschossen wird. In der Praxis laufen die meisten Systeme zuerst in einem animierten oder aktiven Zustand und wechseln erst dann zu einem vollständigen Ragdoll, wenn eine Bruchbedingung ausgelöst wird – deshalb sieht das erste Frame eines Sturzes manchmal steif aus.
+Wenn eine Behauptung nicht auf der offiziellen Seite steht, lautet die korrekte Bezeichnung „undokumentiert". Das ist keine Kritik am Spiel. Es bedeutet nur, dass der Entwickler sich entschieden hat, die Beschreibung minimal zu halten, was für Physik-Sandboxes üblich ist. Die In-Game-Benutzeroberfläche und die eigenen Community-Beiträge des Entwicklers sind der Ort, an dem neue Details zuerst auftauchen würden.
 
 ## FAQ
 
-**Ist die Ragdoll-Physik von Break your Bones deterministisch?**
+**Ist Break your Bones kostenlos spielbar?**
+Die offizielle Roblox-Seite ist der Ort, um Zugangsdetails zu bestätigen. Roblox-Erlebnisse sind im Allgemeinen über die Plattform spielbar, und die Seite zeigt, ob ein kostenpflichtiger Zugang gilt.
 
-Weitgehend ja, innerhalb einer einzelnen Sitzung. Bei identischen Startbedingungen, Schwerkraft und Kollisionsgeometrie sollten dieselben Impulse dieselben Brüche erzeugen. Kleine Gleitkommaunterschiede und variable Frame-Timings können Ergebnisse dennoch verändern, weshalb zwei fast identische Stunts gelegentlich unterschiedlich punkten.
+**Gibt es Codes für Break your Bones?**
+Es sind keine dokumentiert. Die offizielle Beschreibung erwähnt kein Codesystem und keine Einlösebox. Prüfe die offizielle Seite und die Community-Kanäle des Entwicklers auf Ankündigungen.
 
-**Warum geht mein Ragdoll durch Wände?**
+**Wie viele Spieler können einem Server beitreten?**
+Bis zu 20 Spieler pro Server, laut dem offiziellen Eintrag.
 
-Das ist meist ein Zeitschrittproblem, kein Schadensproblem. Wenn der Simulationsschritt im Verhältnis zur Geschwindigkeit des Ragdolls zu groß ist, überspringt der Solver die Kollision vollständig. Physik-Substeps erhöhen oder Geschwindigkeit begrenzen behebt das normalerweise.
+**Wer hat das Spiel gemacht?**
+Die Roblox-Gruppe High Effort Projects.
 
-**Welcher Körperteil bricht am leichtesten?**
+**Wie schalte ich neue Ragdolls frei?**
+Die offizielle Seite sagt, dass du neue Ragdolls freischalten kannst, nennt aber nicht die Voraussetzungen. Prüfe das In-Game-Menü oder den Fortschrittsbildschirm auf die aktuellen Bedingungen.
 
-In den meisten Rigs haben Hals, Unterarme und Unterschenkel die niedrigsten Schwellenwerte. Oberschenkelknochen und Becken sind typischerweise am robustesten, weil sie die meiste Last tragen und von der meisten Masse umgeben sind.
-
-**Verhindern weiche Oberflächen Knochenbrüche?**
-
-Sie reduzieren den Impulstransfer, also ja – die Landung auf Polster verwandelt eine Fraktur meist in eine Prellung. Allerdings können weiche Oberflächen auch unangenehme Gelenkwinkel verursachen, die beim Abprallen Brüche erzeugen, daher sind sie kein garantierter Schutz.
-
-## Das Fazit
-
-Die Ragdoll-Physik von Break your Bones belohnt Spieler, die in Kräften, Winkeln und Akkumulation statt in Glück denken. Ziele auf Körperteile mit hohem Hebel, verkette Aufprälle, statt einem riesigen Treffer nachzujagen, und halte deine Physikeinstellungen stabil, damit die Simulation ehrlich bleibt. Dann ist das befriedigende Knacken eines verdienten Bruchs kein Unfall mehr, sondern Strategie.
+**Ist das dasselbe wie Broken Bones IV?**
+Nein. Es sind unterschiedliche Roblox-Erlebnisse. Mechaniken des einen sollten nicht als auf das andere zutreffend angenommen werden.

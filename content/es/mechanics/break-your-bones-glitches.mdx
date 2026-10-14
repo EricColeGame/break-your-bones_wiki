@@ -1,143 +1,90 @@
 export const metadata = {
-  title: "Glitches de Break Your Bones: Mecánicas, Rarezas Físicas y Cómo Usarlos",
-  description: "Una guía práctica sobre los glitches de Break your Bones: por qué ocurren las rarezas físicas, cuáles reportan más los jugadores y cómo probarlos sin perder progreso.",
+  title: "Break your Bones en Roblox: Guía de un sandbox de física",
+  description: "Qué es realmente Break your Bones en Roblox: un sandbox de física ragdoll de High Effort Projects. Características anunciadas, observaciones de la comunidad y límites.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-Los juegos de ragdoll viven y mueren por su caos, y *Break Your Bones* no es la excepción. Si alguna vez has visto a tu personaje doblarse en una forma que no debería ser físicamente posible, ya te has topado con el extraño mundo de los **glitches de Break your Bones**. Entenderlos importa porque las mismas rarezas físicas que lanzan tu ragdoll a la órbita también pueden atascar tu contador de huesos, congelar la compra de una mejora o arruinar una partida justo antes de un hito. Esta guía desglosa las mecánicas que producen los **glitches de Break your Bones**, cuáles reporta la comunidad con más frecuencia y cómo probarlos sin arriesgar tu progreso.
+Si buscas "Break your Bones", obtendrás un montón confuso de resultados: juegos móviles de tocar para romper huesos, otro juego de Roblox llamado Broken Bones IV y páginas de diccionario sobre fracturas. Este artículo trata solo de uno de ellos: la experiencia de Roblox [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones), publicada por el grupo de Roblox High Effort Projects.
 
-## Por Qué los Juegos Basados en Física Fallan Tan Fácilmente
+Esa distinción importa porque la propia página de la tienda del juego no promete gran cosa, y la mayor parte de la confusión proviene de que los jugadores asumen que sí lo hace. Según el registro oficial de Roblox (consultado el 14 de octubre de 2026), el lugar se creó el 5 de junio de 2025, se actualizó por última vez el 13 de octubre de 2026, admite hasta 20 jugadores por servidor y tiene alrededor de 133 millones de visitas. El registro no incluye códigos, monedas, artículos de tienda, precios ni cifras de daño. Cualquier cosa de ese tipo que veas en otro lugar es una observación de terceros o una suposición.
 
-*Break Your Bones* se construye sobre un bucle simple: lanzas, dejas caer y destrozas tu ragdoll para acumular huesos, y luego gastas esa moneda en mejoras que te permiten sobrevivir a caídas más grandes. La diversión viene del hecho de que casi nada del personaje está programado de forma fija. Las extremidades, las articulaciones y el impulso se calculan sobre la marcha.
+Esto es lo que el desarrollador realmente anuncia, lo que reporta la comunidad y lo que nadie ha documentado.
 
-Esa decisión de diseño es exactamente la razón por la que los glitches son tan comunes. Cuando docenas de piezas físicas chocan a alta velocidad, el motor resuelve la colisión incorrectamente de vez en cuando. El resultado puede ser una comedia inofensiva — una pierna que se dobla hacia atrás, un cuerpo que vibra contra una pared — o algo que realmente afecta tu partida, como un ragdoll que nunca se registra como "aterrizado" y por lo tanto nunca paga.
+## Qué se anuncia que hace Break your Bones
 
-Los reportes de la comunidad sugieren que la frecuencia de estos problemas aumenta drásticamente cuando hay más objetos activos a la vez, y por eso los servidores llenos tienden a sentirse más inestables que los tranquilos.
+La descripción oficial es breve y vale la pena leerla literalmente. Anuncia cinco cosas:
 
-### Los Tres Ingredientes de Casi Todos los Glitches
+- Intenta romperte todos los huesos.
+- Un divertido simulador de destrozar huesos.
+- Desbloquea nuevos ragdolls.
+- Lánzate desde una caída enorme.
+- Una simulación de física ragdoll.
 
-La mayoría de los problemas reportados se remontan a una de tres causas raíz:
+Ese es todo el planteamiento. No hay un sistema de progresión prometido, ni una moneda declarada, ni mención de una tienda, ni una caja de canje de códigos. El género se describe mejor como un sandbox de física ragdoll: controlas un personaje que reacciona a la física en lugar de a un conjunto fijo de animaciones, y el objetivo es lanzarlo contra peligros, caídas y colisiones para ver qué se rompe.
 
-- **Acumulación de colisiones** — demasiadas piezas físicas superponiéndose en un espacio pequeño.
-- **Desincronización de red** — tu cliente y el servidor no coinciden sobre dónde está realmente tu ragdoll.
-- **Conflictos de sincronización** — una mejora, un respawn o un pago se activan en el mismo fotograma que un evento físico.
+El límite de 20 jugadores por servidor también es relevante para las expectativas. Este no es un juego de puzles para un solo jugador con una solución fija; es un patio de recreo de física donde otros jugadores están en la misma simulación. Cómo se ve eso en la práctica puede variar según el servidor.
 
-Entender en qué categoría cae un error te dice si es un truco divertido que vale la pena repetir o un peligro que conviene evitar.
+## Cómo funciona el bucle ragdoll
 
-## Mecánicas Principales Que Interactúan Con los Glitches
+En un sandbox ragdoll, tu personaje no es un modelo rígido. Las extremidades, las articulaciones y la masa interactúan con el entorno, por lo que la misma caída puede producir resultados diferentes según el ángulo, la velocidad y dónde impactes. Esa variabilidad es el atractivo principal, y es por eso que el género tiende a atraer a jugadores a quienes les gusta experimentar en lugar de completar una lista de tareas.
 
-Antes de perseguir cualquier exploit, ayuda saber qué sistemas tienen más probabilidades de estar implicados. La tabla a continuación relaciona las mecánicas principales con el tipo de comportamiento glitch que los jugadores suelen ver.
+El bucle anunciado es sencillo:
 
-| Mecánica | Qué Hace | Interacción Típica Con Glitches |
-|---|---|---|
-| Física del ragdoll | Simula extremidades y articulaciones en tiempo real | Estiramiento de extremidades, clipping, rebote infinito |
-| Contador de huesos | Registra la moneda ganada por los impactos | Pagos retrasados, doble conteo, totales congelados |
-| Tienda de mejoras | Gasta huesos en potencia y durabilidad | Compra que no se registra, cargos duplicados |
-| Sistema de respawn | Reinicia tu personaje tras una "muerte" | Personaje atrapado en el limbo, colisiones fantasma |
-| Replicación del servidor | Sincroniza tu estado con otros jugadores | Rubber-banding, teletransporte de vuelta al spawn |
-| Tablas de clasificación | Clasifica a los jugadores por huesos ganados | Estadísticas que van por detrás de tu total real |
+1. Lleva tu ragdoll a una situación dañina: una caída, un peligro, una colisión.
+2. Observa cómo se resuelve la física.
+3. Desbloquea nuevos ragdolls.
+4. Repite con un ragdoll diferente o un enfoque diferente.
 
-Si tu problema involucra el contador de huesos o la tienda, trátalo como un problema de progresión y detente de inmediato. Si solo involucra posiciones de extremidades, es casi con seguridad algo cosmético.
+Lo que la página oficial no dice es cómo funciona el desbloqueo. No indica si los ragdolls se obtienen rompiendo un número determinado de huesos, llegando a una ubicación, por tiempo jugado o por algún otro desencadenante. No nombra ningún ragdoll. Si quieres saber las condiciones reales de desbloqueo, el método fiable es jugar y observar qué cambia en tu pantalla de selección de personaje, o consultar los propios canales de comunidad del desarrollador.
 
-## Los Glitches de Break Your Bones Reportados Con Más Frecuencia
+## El objetivo de "todos los huesos" y por qué es vago
 
-La lista a continuación refleja patrones que aparecen repetidamente en la experiencia de los jugadores y en los reportes de la comunidad. La fiabilidad varía según la plataforma y la carga del servidor, así que trata cada entrada como "a veces ocurre" y no como un truco garantizado.
+"Intenta romperte todos los huesos" es una invitación, no una especificación. La descripción nunca define cuántos huesos existen en un ragdoll, si todos los ragdolls tienen el mismo número de huesos o si una rotura completa es siquiera posible en un solo intento.
 
-| Glitch Reportado | Qué Describen los Jugadores | Fiabilidad | Nivel de Riesgo |
-|---|---|---|---|
-| Rebote infinito | El ragdoll sigue rebotando contra una superficie y nunca se asienta | Moderada | Bajo |
-| Retraso en el pago de huesos | El contador se actualiza varios segundos después del impacto | Alta | Bajo |
-| Glitch de estiramiento | Las extremidades se extienden mucho más allá del rango normal | Alta | Bajo |
-| Atravesar paredes | El personaje pasa parcialmente a través de geometría fina | Moderada | Medio |
-| Respawn atascado | El nuevo personaje aparece dentro de datos de colisión antiguos | Baja | Alto |
-| Compra doble | La mejora se compra dos veces con un solo clic | Baja | Alto |
+Algunas guías de terceros describen la rotura de huesos como una barra de progreso o un porcentaje. Trátalas como observaciones secundarias, no como documentación del desarrollador. Pueden reflejar lo que los jugadores ven en el juego, pero no están confirmadas por la página oficial, y pueden cambiar con las actualizaciones: ten en cuenta que el lugar se actualizó el 13 de octubre de 2026, un día antes de que se consultaran los datos de este artículo.
 
-Vale la pena señalar el patrón: los glitches que son divertidos de ver suelen ser los que menos impacto tienen en tu cuenta, mientras que los que resultan aburridos — un contador retrasado, una compra que no se registra — son los que realmente te cuestan tiempo.
+Un enfoque práctico: elige un ragdoll, elige un peligro y repítelo. Los sandbox de física recompensan la consistencia porque aprendes el momento y el ángulo que producen el resultado que quieres. Si cambias tanto el ragdoll como el peligro en cada intento, no puedes saber qué variable importó.
 
-### Por Qué los Glitches "Divertidos" Suelen Ser Seguros
+## Códigos, moneda y tienda: lo que no está documentado
 
-Una extremidad estirada o un rebote sin fin es un artefacto visual del lado del cliente. El servidor sigue sabiendo más o menos dónde está tu personaje, así que tu total de huesos y tus mejoras permanecen intactos. Estos son los glitches que vale la pena experimentar, porque el peor resultado posible es una captura de pantalla rara.
+Esta es la parte donde la mayoría de los resultados de búsqueda te engañan. La página oficial de Roblox de Break your Bones no documenta **ningún sistema de códigos en absoluto**. No hay ninguna caja de canje descrita, ningún código listado y ninguna recompensa declarada por introducir nada.
 
-### Por Qué los Glitches "Aburridos" Merecen Precaución
+Eso tiene consecuencias reales sobre cómo deberías tratar el contenido de "códigos":
 
-Cuando el contador de huesos o la tienda se comportan de forma extraña, estás ante una desincronización entre lo que ves y lo que el servidor registró. Volver a hacer clic en la tienda para "arreglarlo" puede provocar un cargo duplicado o una compra que nunca se concreta. En esos momentos, la paciencia es sinceramente la mejor estrategia.
+| Tipo de afirmación | Estado |
+|---|---|
+| Listas de "códigos activos" para Break your Bones | No documentado por el desarrollador |
+| Moneda nombrada en el juego | No documentada |
+| Precios de artículos o costes de mejoras | No documentados |
+| Valores de daño o recuentos de huesos | No documentados |
 
-## Cómo Probar un Glitch Sin Perder Progreso
+Si una página afirma que un código específico otorga una recompensa específica, está aseverando algo que el registro oficial no respalda. Para comprobarlo tú mismo, abre la página de Roblox del juego y lee la descripción completa, luego busca cualquier grupo, Discord o canal social vinculado al desarrollador que aparezca allí. Los desarrolladores anuncian sistemas como los códigos en sus propios espacios, no en artículos de terceros. Si no se menciona ningún sistema de ese tipo allí, asume que no existe hasta que el desarrollador diga lo contrario.
 
-Si quieres experimentar, hazlo de forma controlada. La siguiente rutina se basa en las mejores prácticas de la comunidad y en hábitos generales de seguridad en multijugador.
+## Desbloquear ragdolls sin una guía
 
-| Paso | Acción | Por Qué Ayuda |
-|---|---|---|
-| 1 | Únete a un servidor con poca población | Menos objetos físicos significa menos variables |
-| 2 | Anota tu total actual de huesos | Te da una base con la que comparar |
-| 3 | Reproduce la configuración dos veces | Un éxito puede ser suerte; dos sugiere un patrón |
-| 4 | Revisa tu contador después de cada intento | Confirma si el servidor registró algo |
-| 5 | Cierra sesión y vuelve a entrar | Verifica si el efecto persiste o era visual |
-| 6 | Detente si el progreso parece incorrecto | Evita agravar un problema de desincronización |
+Como las condiciones de desbloqueo no están documentadas, el consejo honesto es procedimental más que prescriptivo.
 
-Seguir esta secuencia convierte la experimentación aleatoria en algo más parecido a una prueba repetible. También te protege del peor resultado, que no es un ragdoll roto sino un estado de guardado roto.
+Juega el bucle anunciado de una forma que produzca un cambio medible. Prueba la caída enorme repetidamente, ya que es la única característica que el desarrollador menciona explícitamente. Anota cómo se ve tu selección de personaje antes y después de una sesión. Si aparece un nuevo ragdoll, has encontrado un desencadenante; si nada cambia, prueba una categoría de peligro diferente.
 
-## Glitch Versus Mecánica Intencionada: Cómo Distinguirlos
+También presta atención al comportamiento de las actualizaciones. Un lugar actualizado tan recientemente como el 13 de octubre de 2026 probablemente se mantenga activamente, lo que significa que las guías de terceros escritas antes de esa fecha pueden describir mecánicas que ya no se aplican o que nunca se aplicaron.
 
-No todo lo que parece extraño es un error. Algunos de los comportamientos de ragdoll más espectaculares son exactamente lo que los desarrolladores pretendían, y confundir el diseño con un defecto lleva a mucho esfuerzo desperdiciado.
+## FAQ
 
-| Comportamiento | ¿Parece un Glitch? | ¿Es Realmente Intencionado? |
-|---|---|---|
-| Ragdoll volando por el mapa tras un golpe fuerte | Sí | A menudo sí — esa es la recompensa |
-| Extremidades doblándose en ángulos imposibles | Sí | Normalmente una rareza física genuina |
-| Huesos otorgados por un choque espectacular | No | Bucle de recompensa intencionado |
-| Personaje sobreviviendo a una caída que no debería | Sí | A menudo una mejora de durabilidad intencionada |
-| El botón de la tienda no hace nada | Sí | Normalmente un problema real de desincronización |
+**¿Break your Bones es lo mismo que Broken Bones IV?**
+No. Son experiencias de Roblox separadas con creadores diferentes y páginas diferentes. No debe asumirse que las mecánicas de una existan en la otra.
 
-Una regla útil: si el comportamiento te recompensa con más huesos o un espectáculo mayor, probablemente forma parte del diseño. Si bloquea una acción por la que ya pagaste, probablemente es un glitch.
+**¿Es lo mismo que los juegos móviles de romper huesos?**
+No. Break Bones: Fall Challenge y títulos similares de tiendas de aplicaciones son productos no relacionados que casualmente comparten palabras similares. No están conectados con la experiencia de Roblox de High Effort Projects.
 
-## Reducir el Lag Para Que Ocurran Menos Glitches
+**¿Break your Bones tiene códigos?**
+La descripción oficial de Roblox no documenta ningún sistema de códigos. Consulta la página del juego y los propios canales de comunidad del desarrollador para cualquier anuncio antes de confiar en una lista de códigos de otro lugar.
 
-Una gran parte de las rarezas físicas son problemas de rendimiento disfrazados. Cuando la tasa de fotogramas baja, la simulación da pasos más grandes entre cálculos y las colisiones se resuelven de forma más tosca. Ajustar tu configuración reduce la frecuencia con la que eso ocurre.
+**¿Cuántos jugadores por servidor?**
+El registro oficial indica hasta 20.
 
-- **Baja la configuración gráfica** si tu dispositivo sufre durante los choques grandes.
-- **Cierra las aplicaciones en segundo plano** en PC, sobre todo cualquiera que use mucho la red.
-- **Prefiere una conexión por cable** si juegas en un ordenador de escritorio; los picos de Wi-Fi causan desincronización.
-- **Evita los servidores llenos** cuando estés probando algo.
-- **Reinicia el cliente del juego** entre sesiones largas para limpiar el estado físico acumulado.
+**¿Puedo romper todos los huesos?**
+El desarrollador dice que lo intentes. La descripción no define recuentos de huesos ni confirma que una rotura completa sea posible, así que trátalo como un objetivo y no como una garantía.
 
-Ninguna de estas medidas eliminará por completo los **glitches de Break your Bones**, porque están integrados en cómo funciona la simulación física. Pero reducen de forma fiable la frecuencia, y eso hace que tus partidas sean más predecibles. Para hacerte una idea general de cómo la plataforma gestiona la física en tiempo real en distintos dispositivos, el [sitio web oficial de Roblox](https://www.roblox.com/) es un punto de referencia útil.
-
-### Diferencias Entre Plataformas Que Conviene Conocer
-
-Los jugadores de móvil reportan más artefactos visuales y más rubber-banding que los de PC, en gran medida por las tasas de fotogramas variables y la sincronización de la entrada táctil. Las sesiones de consola y PC tienden a ser más estables, pero siguen mostrando las mismas categorías de errores. Si estás persiguiendo un **glitch de Break your Bones** concreto, pruébalo en la plataforma donde realmente juegas en lugar de asumir que un clip de vídeo se reproducirá igual para ti.
-
-## Qué Hacer Cuando un Glitch Arruina Tu Partida
-
-Si algo sale mal a mitad de sesión, resiste la tentación de seguir jugando. El error más común es intentar "aguantar" una desincronización, lo que a menudo empeora el estado registrado.
-
-1. Deja de interactuar con la tienda o los menús de mejoras.
-2. Anota tu total de huesos y la última mejora que compraste.
-3. Sal del servidor y vuelve a entrar.
-4. Compara tus totales con lo que recuerdas.
-5. Si falta progreso, repórtalo a través del canal de soporte oficial del juego en lugar de un foro de fans.
-
-La mayoría de los problemas de pagos retrasados se resuelven solos tras volver a entrar. Las pérdidas persistentes son las que vale la pena reportar, y unas notas claras hacen que ese reporte sea mucho más útil.
-
-## Preguntas Frecuentes
-
-**¿Los glitches de Break your Bones pueden provocar un baneo?**
-
-La gran mayoría no, porque son comportamientos físicos no intencionados y no exploits deliberados. Sin embargo, abusar intencionadamente de un error que duplica moneda o mejoras puede caer bajo las reglas del juego contra el exploiting. Si un glitch te da algo a cambio de nada, trátalo como riesgoso en lugar de ingenioso.
-
-**¿Por qué ocurren los glitches con más frecuencia en servidores llenos?**
-
-Más ragdolls activos significan más cálculos físicos simultáneos. Cuando la simulación no puede seguir el ritmo, las colisiones se resuelven con menos precisión, lo que produce el clipping, el estiramiento y los rebotes que los jugadores reportan con más frecuencia.
-
-**¿Puedo arreglar un contador de huesos congelado?**
-
-Normalmente, sí. Salir del servidor y volver a entrar resuelve la mayoría de los problemas de pagos retrasados, ya que el cliente se resincroniza con el servidor al cargar. Si el total sigue siendo incorrecto después de volver a entrar, ese es el punto en el que tiene sentido enviar un reporte de soporte.
-
-**¿Los glitches funcionan igual en todas las plataformas?**
-
-No. Las sesiones de móvil tienden a mostrar más artefactos visuales por la variación en la tasa de fotogramas, mientras que las de PC y consola son generalmente más estables. Cualquier **glitch de Break your Bones** que veas en un vídeo puede comportarse de forma distinta en tu propio dispositivo.
-
-## Reflexiones Finales
-
-Los glitches en un juego de ragdoll no son realmente un defecto que haya que eliminar — son un efecto secundario del caos que hace divertido al juego. El enfoque inteligente es separar lo inofensivo de lo dañino: disfruta del estiramiento, los rebotes y los aterrizajes imposibles, pero mantente cauteloso con todo lo que toque tu contador de huesos o tus mejoras. Prueba en servidores tranquilos, toma notas, vuelve a entrar cuando algo parezca raro y obtendrás el entretenimiento sin perder el progreso.
+**¿Cómo desbloqueo ragdolls?**
+Los desbloqueos se anuncian pero no se explican. Experimenta en el juego y observa tu pantalla de selección.

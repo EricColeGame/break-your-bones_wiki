@@ -1,115 +1,85 @@
 export const metadata = {
-  title: "Break Your Bones: How to Break More Bones With Smarter Physics and Combos",
-  description: "Learn the core mechanics behind Break Your Bones: how to break more bones with better impact angles, combo stacking, and smarter upgrade choices.",
+  title: "Break your Bones on Roblox: Ragdoll Physics, Unlocks, and What's Actually Documented",
+  description: "A grounded guide to Break your Bones on Roblox: how the ragdoll sandbox works, what the official page confirms, and what players still have to test themselves.",
   category: "mechanics",
-  date: "2026-10-13",
-}
+  date: "2026-10-14",
+};
 
-In Break Your Bones, your score is written in fractures — and the gap between a two-bone run and a ten-bone run is almost never luck. Players who understand impact speed, contact angle, and multiplier stacking consistently outperform players who simply jump off the tallest thing they can find. If you have ever wondered how to break more bones without grinding for hours, this guide breaks down the mechanics that actually control damage.
+If you have spent any time on the Roblox charts, you have probably seen a thumbnail of a limp character tumbling off a ledge. That image belongs to Break your Bones, a physics sandbox from the group High Effort Projects. The place was created on June 5, 2025, and has been updated as recently as October 13, 2026, according to its official Roblox record. At the time of writing, it sits at roughly 133 million visits and supports up to 20 players per server.
 
-That distinction matters because most failed runs are not caused by a lack of skill. They are caused by feeding energy into the wrong surface, the wrong limb, or the wrong moment. Once you can see the system behind the simulation, every attempt becomes a test you can plan rather than a gamble you repeat.
+That combination — a simple premise, a physics engine, and a shared server — explains most of the game's appeal. But it also creates a lot of confusion online, because most of what circulates about the game is guesswork. This article separates what the developer actually advertises from what the community observes, and is honest about the gaps.
 
-## Why Bone Count Is the Real Score in Break Your Bones
+## What Break your Bones Actually Is
 
-The leaderboard in Break Your Bones does not reward distance traveled or how dramatic the crash looked. It rewards the number of bones that snapped on the way down. That single number drives your rank, your currency, and how quickly you unlock the upgrades that make the next attempt easier.
+Head to the official page at [Break your Bones](https://www.roblox.com/games/123821081589134/Break-your-Bones) and you will find a short description. It says, in essence, that you try to break all of your bones, that it is a fun bone-smashing simulator, that you unlock new ragdolls, that you fling yourself from a huge drop, and that it is a ragdoll physics simulation.
 
-New players usually assume bone count is random. It is not. The game runs a continuous physics simulation, and every break is the result of a small set of inputs: speed at the moment of contact, the angle of the limb, the hardness of the surface, and any multipliers you have stacked on top. Change one input and the outcome changes. Control all four and you stop hoping for a big run and start building one.
+That is the whole pitch. Notice what is not there: no mention of currency, no shop inventory, no damage values, no code system. The official description documents none of those things, and this article will not invent them.
 
-There is also a second-order effect that experienced players exploit constantly. A bone that breaks early changes how the body moves afterward. A snapped leg sends the torso into a different spin, which often sets up a second, harder landing. In other words, your first break is not the end of the run — it is the setup for the rest of it.
+What the page does confirm is the structure. It is a Roblox experience in the sandbox genre, built around ragdoll physics, published under the group High Effort Projects, and designed for up to 20 players at once. The "break all your bones" framing is the goal the developer puts in front of you. The "fling yourself from a huge drop" line tells you the intended method.
 
-## The Physics That Decide Whether a Bone Breaks
+## The Core Loop: Launch, Fall, Break, Repeat
 
-Most of the frustration in this genre comes from treating the ragdoll as a character you steer. It is not. It is a collection of masses connected by joints, and it responds to force the same way a real object would. Community reports consistently point to four variables that decide whether a landing produces a fracture or just a bounce.
+The advertised loop is short and mechanical. You move a character into a hazard, drop them from height, or otherwise subject them to forces the physics engine will resolve. If you have ever watched a ragdoll in a game fold in on itself after a bad landing, you already understand the visual language here.
 
-| Impact factor | What it controls | How to use it |
-| --- | --- | --- |
-| Speed at contact | Total energy delivered to the body | Build speed before impact; a long fall usually beats a short jump |
-| Contact angle | How force travels through a limb | Land on the limb you want to break, not flat on your back |
-| Surface hardness | How much energy the ground absorbs | Favor concrete, rock, and metal over grass, sand, or water |
-| Load path | Which bone takes the force first | Lead with an arm or leg to convert one landing into several breaks |
-| Residual momentum | Whether the body keeps tumbling | Let the ragdoll roll instead of canceling the animation |
+Two design choices follow from that. First, the ragdoll is the star — the game is not asking you to fight anything, it is asking you to watch a body react to physics. Second, the "huge drop" is a deliberate centerpiece, not a side activity, because it produces the most dramatic results.
 
-The physics model behind this is well documented — if you want to understand why ragdolls flail the way they do, [the physics-driven sandbox games catalog on Steam](https://store.steampowered.com/tags/en/Physics/) is a good place to see how different titles tune the same underlying simulation.
+What is not documented: the specific damage model, whether individual bones are tracked separately or as a group, whether there is a completion reward for "all bones," and whether hazards are static or rotating. Those details are visible in play but absent from the official record.
 
-A practical rule: energy that is absorbed is energy that does not break anything. Soft terrain, flat landings, and short drops all absorb energy. Hard terrain, edge landings, and long drops convert it into damage. When a run feels weak, ask which of those three you got wrong.
+| Question | What the official page says | How to verify |
+|---|---|---|
+| How many players per server? | Up to 20 (per Roblox record) | Check the player count on the game page |
+| Is there a code system? | No code system is documented | Look for a code field in the UI or a developer post |
+| Are there unlockable ragdolls? | Yes, "unlock new ragdolls" | Play and watch for unlock notifications |
+| How is damage calculated? | Not documented | Test falls at known heights yourself |
+| Who made it? | High Effort Projects | Creator shown on the game page |
 
-## How to Break More Bones: Techniques That Work
+## Unlocking New Ragdolls
 
-Technique matters more than raw height once you are past the beginner maps. These are the approaches that show up again and again in high-scoring runs, ordered roughly by how hard they are to pull off.
+The official description names one progression hook and only one: "unlock new ragdolls." That is a meaningful detail because it tells us the game has some form of retention loop, but the official page does not say how unlocks are earned. It does not name a currency, list prices, describe an XP system, or mention a shop or crate.
 
-- **Single-limb slam.** Tuck one limb under the body so it takes the full impact. Simple, repeatable, and the foundation for everything else.
-- **Chained tumble.** After the first break, resist the urge to stop moving. Let the body roll downhill or down a staircase so each rotation produces another contact point.
-- **Staircase bounce.** Stairs are a multiplier in disguise: each step is a separate hard surface, so one fall can generate several distinct impacts.
-- **Edge landing.** Aim for the corner of a platform rather than the middle. Concentrating force on a small area tends to produce more breaks than a wide, flat impact.
-- **Vehicle or prop assist.** Getting hit by something moving is often worth more than a long fall, but it is much harder to aim.
-- **Combo finisher.** Save your highest drop for the end of a chain, when your multipliers are already running.
+Community guides and videos often present unlock routes as settled fact. Treat those as third-party observations rather than developer documentation. They may be accurate, incomplete, or outdated after a patch, and the game was updated on October 13, 2026, which is recent enough that older guides may not reflect the current build.
 
-| Technique | Difficulty | Typical payoff |
-| --- | --- | --- |
-| Single-limb slam | Low | One to two bones |
-| Chained tumble | Medium | Three to five bones |
-| Staircase bounce | Medium | Several breaks per flight |
-| Edge landing | Medium | Higher damage per contact |
-| Vehicle or prop assist | High | Large but inconsistent totals |
-| Combo finisher | High | Multiplies an existing streak |
+If you want to know how unlocks work right now, the reliable path is straightforward:
 
-If you are just starting out, do not chase the high-difficulty options. A player who lands a clean single-limb slam every single attempt will out-earn a player who lands one spectacular crash every ten tries.
+1. Play a session and watch for on-screen notifications when you reach a milestone.
+2. Check the official game page for description updates.
+3. Look for a High Effort Projects community space, group page, or social channel where the developer posts.
+4. Compare notes with other players in the server itself, then confirm by testing.
 
-## Stacking Multipliers: Turning One Break Into Five
+## The Multiplayer Sandbox Layer
 
-This is where the gap between average and elite players really opens up. In Break Your Bones, damage is not just added — it is multiplied. Several systems run at the same time, and the run only gets truly big when two or more of them overlap.
+With up to 20 players per server, Break your Bones is not a solitary physics toy. Other players are usually visible, which shapes the experience in ways the official description does not spell out. Physics sandboxes of this type tend to produce shared spectacles: someone finds a high point, someone else copies it, and the server crowds around the same hazard.
 
-| Multiplier source | How to trigger it | Notes |
-| --- | --- | --- |
-| Speed bonus | Hit the ground above a speed threshold | Often capped, so stack other sources instead |
-| Chain bonus | Break bones within a short time window | The timer usually resets on a soft landing |
-| Weak-point hit | Break a small bone such as a finger, rib, or jaw | Low base damage, high multiplier value |
-| Zone bonus | Land inside a highlighted area of the map | Watch for marked surfaces before you jump |
-| Upgrade multiplier | Purchase it in the progression tree | Permanent, applies to every future run |
+This is also where performance expectations matter. Ragdoll physics is computationally heavier than a static scene, and a crowded server with multiple active bodies is a different experience from a quiet one. If your session feels rough, trying a less populated server is a reasonable first step — though the developer has published no performance guidance, so that is a practical habit rather than an official recommendation.
 
-The most common mistake here is treating these as separate goals. They are not. A strong run usually looks like this: build speed on a long drop, land on a small bone to trigger the weak-point bonus, keep the chain alive by rolling into a second hard surface, and finish inside a zone bonus while the chain timer is still running.
+## About Codes and In-Game Currency
 
-Timing is everything. Community reports suggest that most chain windows are short — long enough to connect two or three impacts, but not long enough to walk to a better spot. Plan your route before you jump, not after you land.
+Search for Break your Bones and you will quickly run into pages promising codes. Be careful here.
 
-## Upgrades: Where Your Bones Should Go
+The official Roblox description documents no code redemption system. There is no code field mentioned, no currency name given, and no item prices listed. That does not prove no code system exists — it means none is documented by the developer on the page that would normally announce it.
 
-Every run converts into currency, and every purchase permanently changes your damage ceiling. Spending it badly is the fastest way to stall out.
+Because of that, no article can honestly hand you a list of working codes. Anyone publishing one is either guessing, recycling codes from a different game, or pulling from a mobile app with a similar name. Break Bones: Fall Challenge, the various bone-breaking apps on Google Play, and the Roblox experience Broken Bones IV are all separate products with their own systems. Mechanics and codes do not transfer between them.
 
-| Upgrade type | Priority | Why it matters |
-| --- | --- | --- |
-| Impact or fall-damage multiplier | High | Scales every single run you attempt |
-| Launch power or speed | High | More energy per attempt means more breaks per attempt |
-| Ragdoll control | Medium | Helps you aim the second and third impact |
-| Bone-specific bonuses | Medium | Excellent once you can hit those bones reliably |
-| Cosmetic unlocks | Low | No effect on bone count |
-
-A good rule of thumb: buy the upgrade that helps you on a bad run, not the one that helps you on a perfect one. Flat damage multipliers do exactly that. Niche bonuses only pay off once your technique is already consistent.
-
-## Mistakes That Quietly Cost You Breaks
-
-| Mistake | What it costs you |
-| --- | --- |
-| Canceling the animation early | Kills the tumble chain before it develops |
-| Landing flat on your back | Spreads force instead of concentrating it |
-| Ignoring terrain type | Soft ground absorbs the energy you needed |
-| Chasing height over angle | Long falls with bad angles produce one break |
-| Buying upgrades at random | Wastes currency on low-impact perks |
-| Repeating a failed route | Same inputs, same result |
-
-The last one is worth emphasizing. If a jump produced two bones three times in a row, it will produce two bones a fourth time. Change the surface, the limb, or the entry angle — and change only one thing at a time so you actually learn what worked.
+If you want to check whether codes ever arrive, do this: open the official page and read the description carefully, then look for a High Effort Projects group or community page. Developers announce that kind of feature where players already gather. If there is nothing there, there is nothing to redeem.
 
 ## FAQ
 
-**How do I break more bones without buying upgrades?**
-Focus on technique first. Clean single-limb landings on hard surfaces, chained tumbles down stairs, and edge landings will raise your bone count noticeably before you spend a single coin. Upgrades amplify good runs; they do not create them.
+**Is Break your Bones the same as Broken Bones IV?**
+No. They are different Roblox experiences by different creators.
 
-**Does falling from higher always mean more breaks in Break Your Bones?**
-No. Height only helps if you keep your speed and land on a hard surface at a good angle. A controlled drop onto concrete will usually beat a chaotic fall onto grass, even if the grass fall is twice as long.
+**How many people can play at once?**
+Up to 20 per server, according to the official Roblox record.
 
-**What is the fastest way to raise my score in Break Your Bones?**
-Stack multipliers. Land one clean break to start the chain, keep the ragdoll moving into a second hard surface, and finish inside a zone bonus while the chain timer is still active. Overlapping two or more multipliers is what produces the biggest runs.
+**When was the game released?**
+The place was created on June 5, 2025. It was last updated on October 13, 2026.
 
-**Do community tricks actually work?**
-Many do, but treat them as starting points rather than rules. Player experience varies by map and by how the physics engine is tuned in a given update, so test any technique yourself and keep the parts that consistently produce breaks.
+**How do I unlock new ragdolls?**
+The official description confirms unlocks exist but does not explain the method. Check the game's UI and the developer's community channels for current details.
 
-The short version: understand the physics, land deliberately, keep the chain alive, and spend your currency on upgrades that help every run. Do those four things and how to break more bones stops being a mystery — it becomes a routine.
+**Are there codes?**
+None are documented on the official page. Verify there before trusting any third-party list.
+
+**Do I need to break every bone to progress?**
+The description frames "break all of your bones" as the goal, but does not describe a completion reward or progression requirement.
+
+The safest way to enjoy Break your Bones is to treat it as what the developer says it is: a physics sandbox about launching a ragdoll into things and watching the results. Everything beyond that — unlock rates, bone tracking, hidden features — is best confirmed in-game or on the official page rather than taken on faith.
